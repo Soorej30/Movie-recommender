@@ -1,0 +1,207 @@
+:root {
+  --bg: #f7f7f4;
+  --surface: #ffffff;
+  --ink: #1f2421;
+  --ink-soft: #52584f;
+  --accent: #1f6f5c;
+  --accent-soft: #e4f0ec;
+  --border: #e2e2dc;
+  --max-width: 980px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+}
+
+header.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand-bar {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.1rem 1.25rem 0.4rem;
+}
+
+.brand-bar h1 {
+  margin: 0;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+}
+
+.brand-bar p {
+  margin: 0.2rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+nav.tabs {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem;
+  padding: 0.6rem 1.25rem 0;
+}
+
+nav.tabs a {
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.55rem 0.8rem;
+  border-radius: 6px 6px 0 0;
+  border-bottom: 3px solid transparent;
+}
+
+nav.tabs a:hover {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+nav.tabs a.active {
+  color: var(--accent);
+  border-bottom: 3px solid var(--accent);
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+main h2.page-title {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+section.block {
+  margin-bottom: 2.5rem;
+}
+
+section.block h3 {
+  font-size: 1.2rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 0.6rem;
+  margin-bottom: 0.9rem;
+}
+
+p { margin: 0 0 1rem; }
+
+.status-note {
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  color: var(--ink);
+  padding: 0.9rem 1.1rem;
+  border-radius: 8px;
+  font-size: 0.92rem;
+}
+
+.questions-list {
+  padding-left: 1.3rem;
+}
+
+.questions-list li { margin-bottom: 0.5rem; }
+
+figure.intro-figure, figure.fig {
+  margin: 1.2rem 0;
+  text-align: center;
+}
+
+figure.intro-figure img {
+  max-width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.4rem;
+}
+
+.gallery figure {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.7rem 0.7rem 0.9rem;
+  margin: 0;
+}
+
+.gallery figure img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+
+.gallery figcaption {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  margin-top: 0.5rem;
+}
+
+.gallery figcaption strong {
+  display: block;
+  color: var(--ink);
+  font-size: 0.88rem;
+  margin-bottom: 0.15rem;
+}
+
+.data-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.8rem 0 1.2rem;
+}
+
+.data-links a {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.data-links a:hover { background: var(--accent-soft); }
+
+code, pre {
+  background: #f0f0eb;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+pre {
+  padding: 0.9rem 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+}
+
+table.preview-table {
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+footer.site-footer {
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  padding: 2rem 1rem;
+}
+
+@media (max-width: 600px) {
+  nav.tabs { overflow-x: auto; flex-wrap: nowrap; }
+  main h2.page-title { font-size: 1.4rem; }
+}

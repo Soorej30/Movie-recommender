@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DataPrep / EDA | What Drives Movie Success</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand-bar">
+    <h1>What Drives Movie Success?</h1>
+    <p>A data science exploration of the global film industry, built on The Movie Database (TMDB)</p>
+  </div>
+  <nav class="tabs">
+    <a href="index.html">Introduction</a>
+    <a href="dataprep_eda.html" class="active">DataPrep / EDA</a>
+    <a href="clustering.html">Clustering</a>
+    <a href="pca.html">PCA</a>
+    <a href="naive_bayes.html">Naive Bayes</a>
+    <a href="decision_trees.html">Decision Trees</a>
+    <a href="svm.html">SVMs</a>
+    <a href="regression.html">Regression</a>
+    <a href="neural_networks.html">Neural Networks</a>
+    <a href="conclusions.html">Conclusions</a>
+    <a href="about.html">About Me</a>
+  </nav>
+</header>
+
+<main>
+  <h2 class="page-title">Data Preparation &amp; Exploratory Data Analysis</h2>
+
+  <p class="status-note">
+    Data collection pipeline status: scripts are built and ready to run; figures below will
+    populate automatically in this same layout once the TMDB pull completes and
+    <code>scripts/clean_data.py</code> / <code>scripts/eda_visualize.py</code> are run.
+  </p>
+
+  <section class="block">
+    <h3>Data Sources</h3>
+    <p>
+      The primary dataset is gathered directly from The Movie Database (TMDB), a community-built
+      movie and TV database with a free public API, via its <code>/discover/movie</code> and
+      <code>/movie/{id}</code> endpoints. Discovery queries are filterable by release year range,
+      genre, original language, release region, minimum vote count, and vote average (rating)
+      range, and can be sorted by popularity, rating, revenue, or release date. Per-movie detail
+      calls add fields the discovery endpoint does not return, including budget, revenue, runtime,
+      and production countries.
+    </p>
+    <ul>
+      <li>Website: <code>https://www.themoviedb.org/</code></li>
+      <li>API docs: <code>https://developer.themoviedb.org/reference/discover-movie</code></li>
+      <li>Core endpoint: <code>GET https://api.themoviedb.org/3/discover/movie</code></li>
+      <li>Example GET: <code>https://api.themoviedb.org/3/discover/movie?api_key=API_KEY&amp;sort_by=popularity.desc&amp;primary_release_date.gte=2000-01-01&amp;primary_release_date.lte=2023-12-31&amp;with_original_language=en&amp;vote_count.gte=50&amp;page=1</code></li>
+    </ul>
+    <p>
+      A second, government-sourced dataset comes from the World Bank Open Data API, used to add
+      economic context (GDP per capita and population) for each film's primary production country
+      and release year, with no key required.
+    </p>
+    <ul>
+      <li>Website: <code>https://data.worldbank.org/</code></li>
+      <li>Core endpoint: <code>GET https://api.worldbank.org/v2/country/all/indicator/{INDICATOR}</code></li>
+      <li>Example GET: <code>https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.CD?format=json&amp;per_page=20000&amp;date=1990:2024</code></li>
+    </ul>
+
+    <div class="data-links">
+      <a href="../scripts/fetch_tmdb.py">fetch_tmdb.py</a>
+      <a href="../scripts/fetch_tmdb_details.py">fetch_tmdb_details.py</a>
+      <a href="../scripts/fetch_worldbank.py">fetch_worldbank.py</a>
+      <a href="../scripts/clean_data.py">clean_data.py</a>
+      <a href="../scripts/eda_visualize.py">eda_visualize.py</a>
+      <a href="../data/raw/tmdb_movies_raw.csv">Raw TMDB data (CSV)</a>
+      <a href="../data/raw/worldbank_country_indicators_raw.csv">Raw World Bank data (CSV)</a>
+      <a href="../data/clean/tmdb_movies_clean.csv">Cleaned dataset (CSV)</a>
+    </div>
+  </section>
+
+  <section class="block">
+    <h3>Raw vs. Cleaned Data</h3>
+    <p>
+      Below are small previews of the data before and after cleaning. The full files are linked
+      above rather than pasted in directly.
+    </p>
+    <div class="gallery">
+      <figure>
+        <img src="assets/img/dataprep/raw_sample.png" alt="Sample rows of raw TMDB API response">
+        <figcaption><strong>Raw data sample.</strong> A few rows and columns exactly as returned by the TMDB API, before any cleaning.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/dataprep/clean_sample.png" alt="Sample rows of cleaned dataset">
+        <figcaption><strong>Cleaned data sample.</strong> The same movies after type conversion, derived columns, and tiering are applied.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="block">
+    <h3>Cleaning Steps</h3>
+    <p>The following cleaning steps are applied in <code>scripts/clean_data.py</code>:</p>
+    <ul>
+      <li>Duplicate movie records (by TMDB id) are dropped.</li>
+      <li>Rows missing an essential field (release date, title, popularity, vote average, or vote count) are dropped.</li>
+      <li>TMDB reports budget/revenue of 0 as "unknown," not "free" &mdash; these are converted to missing values and flagged (<code>has_budget_data</code>, <code>has_revenue_data</code>) rather than treated as real zeros.</li>
+      <li>Impossible values are removed: negative vote counts and runtimes under five minutes (data errors, not real films).</li>
+      <li>Release year, month, and decade are derived from the release date.</li>
+      <li>Genre lists are parsed into a primary genre, a genre count, and a pipe-separated full list.</li>
+      <li>Language codes are mapped to readable language names.</li>
+      <li>Profit and return on investment are computed only where both budget and revenue are known.</li>
+      <li>Popularity and rating are discretized into tiers (Low/Medium/High/Very High and Poor/Mixed/Good/Excellent) for later categorical analysis.</li>
+      <li>Core numeric columns are min-max normalized (0-1) for use in later modeling modules.</li>
+      <li>World Bank GDP-per-capita and population are joined in by production country and release year.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h3>Exploratory Visualizations</h3>
+    <p>Each figure below is generated by <code>scripts/eda_visualize.py</code> from the cleaned dataset.</p>
+    <div class="gallery">
+      <figure>
+        <img src="assets/img/eda/hist_release_years.png" alt="Histogram of movies by release year">
+        <figcaption><strong>Release year distribution.</strong> Shows how the collected sample of movies is spread across release years. Skew toward recent years reflects both TMDB's coverage and the vote-count filter used during collection.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/eda/bar_genre_counts.png" alt="Bar chart of movie counts by primary genre">
+        <figcaption><strong>Movies by genre.</strong> Ranks the twelve most common primary genres in the collected sample. Genre imbalance here motivates the per-genre comparisons used throughout the rest of the analysis.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/eda/box_popularity_by_genre.png" alt="Box plot of popularity by genre">
+        <figcaption><strong>Popularity by genre.</strong> Compares the spread of popularity scores across the most common genres. Wide boxes or long whiskers indicate genres where popularity is especially unpredictable.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/eda/scatter_budget_revenue.png" alt="Scatter plot of budget versus revenue">
+        <figcaption><strong>Budget vs. revenue.</strong> Plots production budget against box-office revenue on a log-log scale for movies where both are known. The overall trend and its outliers speak directly to how reliably spending predicts return.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/eda/line_avg_rating_by_decade.png" alt="Line chart of average rating by decade">
+        <figcaption><strong>Average rating by decade.</strong> Tracks how the mean audience vote has shifted across decades of film history. Any drift here suggests changing audience standards or changing catalog composition over time.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/eda/bar_top_languages.png" alt="Bar chart of top 10 original languages">
+        <figcaption><strong>Top languages.</strong> Ranks the ten most common original languages in the sample by movie count. This highlights how language-diverse (or English-dominated) the collected data is.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/eda/heatmap_correlation.png" alt="Correlation heatmap of numeric movie attributes">
+        <figcaption><strong>Correlation heatmap.</strong> Shows pairwise correlation between popularity, rating, vote count, budget, revenue, runtime, profit, and ROI. Strong correlations here point to redundant features worth watching in later modeling.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/eda/hist_vote_average.png" alt="Histogram of vote average distribution">
+        <figcaption><strong>Rating distribution.</strong> Shows the overall shape of audience vote averages across the sample. A roughly bell-shaped curve centered above the midpoint is typical, since very low-rated films rarely accumulate enough votes to pass the collection filter.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/eda/bar_avg_popularity_by_country.png" alt="Bar chart of average popularity by production country">
+        <figcaption><strong>Popularity by production country.</strong> Ranks the ten production countries with the highest average popularity score. This feeds directly into the regional questions posed in the Introduction.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/eda/scatter_votecount_voteaverage.png" alt="Scatter plot of vote count versus vote average">
+        <figcaption><strong>Attention vs. quality.</strong> Plots how many people voted on a film against how highly they rated it. Points far from the main trend represent films with an unusually large gap between attention and acclaim.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/eda/line_movies_per_year.png" alt="Line chart of number of movies released per year">
+        <figcaption><strong>Releases per year.</strong> Counts how many movies in the sample were released each year. Rises and dips can reflect real industry growth as well as gaps in TMDB's historical coverage.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/eda/scatter_gdp_popularity.png" alt="Scatter plot of GDP per capita versus average movie popularity by country">
+        <figcaption><strong>Economic context vs. popularity.</strong> Compares each production country's GDP per capita against the average popularity of films made there. Point size reflects how many films from that country appear in the sample.</figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  CSCI 5612 &middot; Individual Course Project &middot; Movie data sourced from TMDB
+</footer>
+
+</body>
+</html>

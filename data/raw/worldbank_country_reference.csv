@@ -1,0 +1,218 @@
+iso2_code,country_code,country_name
+AW,ABW,Aruba
+AF,AFG,Afghanistan
+AO,AGO,Angola
+AL,ALB,Albania
+AD,AND,Andorra
+AE,ARE,United Arab Emirates
+AR,ARG,Argentina
+AM,ARM,Armenia
+AS,ASM,American Samoa
+AG,ATG,Antigua and Barbuda
+AU,AUS,Australia
+AT,AUT,Austria
+AZ,AZE,Azerbaijan
+BI,BDI,Burundi
+BE,BEL,Belgium
+BJ,BEN,Benin
+BF,BFA,Burkina Faso
+BD,BGD,Bangladesh
+BG,BGR,Bulgaria
+BH,BHR,Bahrain
+BS,BHS,"Bahamas, The"
+BA,BIH,Bosnia and Herzegovina
+BY,BLR,Belarus
+BZ,BLZ,Belize
+BM,BMU,Bermuda
+BO,BOL,Bolivia
+BR,BRA,Brazil
+BB,BRB,Barbados
+BN,BRN,Brunei Darussalam
+BT,BTN,Bhutan
+BW,BWA,Botswana
+CF,CAF,Central African Republic
+CA,CAN,Canada
+CH,CHE,Switzerland
+JG,CHI,Channel Islands
+CL,CHL,Chile
+CN,CHN,China
+CI,CIV,Cote d'Ivoire
+CM,CMR,Cameroon
+CD,COD,"Congo, Dem. Rep."
+CG,COG,"Congo, Rep."
+CO,COL,Colombia
+KM,COM,Comoros
+CV,CPV,Cabo Verde
+CR,CRI,Costa Rica
+CU,CUB,Cuba
+CW,CUW,Curacao
+KY,CYM,Cayman Islands
+CY,CYP,Cyprus
+CZ,CZE,Czechia
+DE,DEU,Germany
+DJ,DJI,Djibouti
+DM,DMA,Dominica
+DK,DNK,Denmark
+DO,DOM,Dominican Republic
+DZ,DZA,Algeria
+EC,ECU,Ecuador
+EG,EGY,"Egypt, Arab Rep."
+ER,ERI,Eritrea
+ES,ESP,Spain
+EE,EST,Estonia
+ET,ETH,Ethiopia
+FI,FIN,Finland
+FJ,FJI,Fiji
+FR,FRA,France
+FO,FRO,Faroe Islands
+FM,FSM,"Micronesia, Fed. Sts."
+GA,GAB,Gabon
+GB,GBR,United Kingdom
+GE,GEO,Georgia
+GH,GHA,Ghana
+GI,GIB,Gibraltar
+GN,GIN,Guinea
+GM,GMB,"Gambia, The"
+GW,GNB,Guinea-Bissau
+GQ,GNQ,Equatorial Guinea
+GR,GRC,Greece
+GD,GRD,Grenada
+GL,GRL,Greenland
+GT,GTM,Guatemala
+GU,GUM,Guam
+GY,GUY,Guyana
+HK,HKG,"Hong Kong SAR, China"
+HN,HND,Honduras
+HR,HRV,Croatia
+HT,HTI,Haiti
+HU,HUN,Hungary
+ID,IDN,Indonesia
+IM,IMN,Isle of Man
+IN,IND,India
+IE,IRL,Ireland
+IR,IRN,"Iran, Islamic Rep."
+IQ,IRQ,Iraq
+IS,ISL,Iceland
+IL,ISR,Israel
+IT,ITA,Italy
+JM,JAM,Jamaica
+JO,JOR,Jordan
+JP,JPN,Japan
+KZ,KAZ,Kazakhstan
+KE,KEN,Kenya
+KG,KGZ,Kyrgyz Republic
+KH,KHM,Cambodia
+KI,KIR,Kiribati
+KN,KNA,St. Kitts and Nevis
+KR,KOR,"Korea, Rep."
+KW,KWT,Kuwait
+LA,LAO,Lao PDR
+LB,LBN,Lebanon
+LR,LBR,Liberia
+LY,LBY,Libya
+LC,LCA,St. Lucia
+LI,LIE,Liechtenstein
+LK,LKA,Sri Lanka
+LS,LSO,Lesotho
+LT,LTU,Lithuania
+LU,LUX,Luxembourg
+LV,LVA,Latvia
+MO,MAC,"Macao SAR, China"
+MF,MAF,St. Martin (French part)
+MA,MAR,Morocco
+MC,MCO,Monaco
+MD,MDA,Moldova
+MG,MDG,Madagascar
+MV,MDV,Maldives
+MX,MEX,Mexico
+MH,MHL,Marshall Islands
+MK,MKD,North Macedonia
+ML,MLI,Mali
+MT,MLT,Malta
+MM,MMR,Myanmar
+ME,MNE,Montenegro
+MN,MNG,Mongolia
+MP,MNP,Northern Mariana Islands
+MZ,MOZ,Mozambique
+MR,MRT,Mauritania
+MU,MUS,Mauritius
+MW,MWI,Malawi
+MY,MYS,Malaysia
+NA,NAM,Namibia
+NC,NCL,New Caledonia
+NE,NER,Niger
+NG,NGA,Nigeria
+NI,NIC,Nicaragua
+NL,NLD,Netherlands
+NO,NOR,Norway
+NP,NPL,Nepal
+NR,NRU,Naoero
+NZ,NZL,New Zealand
+OM,OMN,Oman
+PK,PAK,Pakistan
+PA,PAN,Panama
+PE,PER,Peru
+PH,PHL,Philippines
+PW,PLW,Palau
+PG,PNG,Papua New Guinea
+PL,POL,Poland
+PR,PRI,Puerto Rico (US)
+KP,PRK,"Korea, Dem. People's Rep."
+PT,PRT,Portugal
+PY,PRY,Paraguay
+PS,PSE,West Bank and Gaza
+PF,PYF,French Polynesia
+QA,QAT,Qatar
+RO,ROU,Romania
+RU,RUS,Russian Federation
+RW,RWA,Rwanda
+SA,SAU,Saudi Arabia
+SD,SDN,Sudan
+SN,SEN,Senegal
+SG,SGP,Singapore
+SB,SLB,Solomon Islands
+SL,SLE,Sierra Leone
+SV,SLV,El Salvador
+SM,SMR,San Marino
+SO,SOM,"Somalia, Fed. Rep."
+RS,SRB,Serbia
+SS,SSD,South Sudan
+ST,STP,Sao Tome and Principe
+SR,SUR,Suriname
+SK,SVK,Slovak Republic
+SI,SVN,Slovenia
+SE,SWE,Sweden
+SZ,SWZ,Eswatini
+SX,SXM,Sint Maarten (Dutch part)
+SC,SYC,Seychelles
+SY,SYR,Syrian Arab Republic
+TC,TCA,Turks and Caicos Islands
+TD,TCD,Chad
+TG,TGO,Togo
+TH,THA,Thailand
+TJ,TJK,Tajikistan
+TM,TKM,Turkmenistan
+TL,TLS,Timor-Leste
+TO,TON,Tonga
+TT,TTO,Trinidad and Tobago
+TN,TUN,Tunisia
+TR,TUR,Turkiye
+TV,TUV,Tuvalu
+TZ,TZA,Tanzania
+UG,UGA,Uganda
+UA,UKR,Ukraine
+UY,URY,Uruguay
+US,USA,United States
+UZ,UZB,Uzbekistan
+VC,VCT,St. Vincent and the Grenadines
+VE,VEN,"Venezuela, RB"
+VG,VGB,British Virgin Islands
+VI,VIR,Virgin Islands (U.S.)
+VN,VNM,Viet Nam
+VU,VUT,Vanuatu
+WS,WSM,Samoa
+XK,XKX,Kosovo
+YE,YEM,"Yemen, Rep."
+ZA,ZAF,South Africa
+ZM,ZMB,Zambia
+ZW,ZWE,Zimbabwe

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introduction | What Drives Movie Success</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand-bar">
+    <h1>What Drives Movie Success?</h1>
+    <p>A data science exploration of the global film industry, built on The Movie Database (TMDB)</p>
+  </div>
+  <nav class="tabs">
+    <a href="index.html" class="active">Introduction</a>
+    <a href="dataprep_eda.html">DataPrep / EDA</a>
+    <a href="clustering.html">Clustering</a>
+    <a href="pca.html">PCA</a>
+    <a href="naive_bayes.html">Naive Bayes</a>
+    <a href="decision_trees.html">Decision Trees</a>
+    <a href="svm.html">SVMs</a>
+    <a href="regression.html">Regression</a>
+    <a href="neural_networks.html">Neural Networks</a>
+    <a href="conclusions.html">Conclusions</a>
+    <a href="about.html">About Me</a>
+  </nav>
+</header>
+
+<main>
+  <h2 class="page-title">Introduction</h2>
+
+  <section class="block">
+    <p>
+      The global film industry occupies a unique place in modern culture, generating tens of
+      billions of dollars in ticket sales, streaming revenue, and merchandising each year while
+      shaping how audiences understand history, identity, and imagination. A single film can
+      influence fashion, language, tourism, and even political discourse, and the difference
+      between a movie that becomes a cultural phenomenon and one that disappears within weeks of
+      release carries enormous consequences. Studios routinely commit hundreds of millions of
+      dollars to a single production, betting that a combination of story, cast, and marketing
+      will resonate with audiences spread across dozens of countries and languages. When that bet
+      fails, the financial losses can threaten an entire studio, while a successful release can
+      fund years of future productions and sustain thousands of jobs in acting, writing, visual
+      effects, sound design, distribution, and theater operations. Success or failure also affects
+      communities well beyond the studio lot: film tourism boosts local economies in filming
+      locations, festival circuits elevate independent creators, and streaming platforms reshape
+      how smaller countries' film industries reach global audiences. Audiences themselves are far
+      from a single, uniform group; a movie beloved in one region or language market may be
+      overlooked entirely in another, reflecting deep cultural, linguistic, and historical
+      differences in taste. Critics and everyday viewers do not always agree either, and a film
+      can be showered with awards while leaving average moviegoers unmoved, or vice versa.
+      Researchers, journalists, and industry analysts have long tried to identify patterns behind
+      box-office hits and audience favorites, from classic studies of star power and genre cycles
+      to more recent attention on how streaming and social media accelerate or dampen a film's
+      momentum. Despite decades of attention, the film industry remains famously unpredictable,
+      with even seasoned executives openly admitting that no one can reliably say in advance which
+      films will succeed. This unpredictability is part of what makes the topic so compelling: it
+      sits at the intersection of art, commerce, technology, and human psychology, and it touches
+      nearly everyone who has ever gone to a theater, opened a streaming app, or hummed a movie's
+      theme song. Understanding what separates a widely loved, widely seen film from one that
+      vanishes without notice therefore matters to studios protecting billions of dollars, to
+      workers whose livelihoods depend on the industry, and to audiences hoping for stories that
+      reflect the breadth of the world's cultures and languages.
+    </p>
+
+    <figure class="intro-figure">
+      <img src="assets/img/intro/movie_success_factors.svg" alt="Diagram of factors that shape movie success: genre, budget and marketing, cast and crew, language and region, release timing, and audience reception">
+      <figcaption>Figure 1. Commonly cited factors behind a film's commercial and critical fortunes. These threads run throughout the questions and analysis that follow.</figcaption>
+    </figure>
+
+    <p>
+      A wide range of factors are believed to shape whether a film becomes a hit, though their
+      relative importance is still debated among industry professionals and cultural observers
+      alike. Genre plays an outsized role: certain genres, such as superhero action films or
+      family animation, have historically dominated global box-office charts, while others, such
+      as historical dramas or art-house cinema, tend to earn smaller but more devoted audiences
+      and greater critical praise. Marketing budgets, which can rival or exceed the cost of
+      actually making a film, determine how many people even become aware that a movie exists, and
+      a poorly marketed film can fail commercially regardless of its artistic quality. The
+      presence of well-known actors, directors, or source material, such as a beloved book or
+      existing franchise, has long been treated as a reliable, if imperfect, predictor of audience
+      turnout. Where and when a film is released also matters enormously: summer blockbuster
+      season and end-of-year holiday windows are crowded with major releases competing for the
+      same audience, while an unlucky release date can bury an otherwise strong film. Language and
+      region add another layer of complexity, since the rise of international streaming platforms
+      has allowed non-English-language films and shows to reach audiences that previously had
+      little access to them, changing what "success" even looks like across different markets.
+      Critics and journalists have written extensively about the growing gap between films that
+      are highly praised by critics and those that draw the largest crowds, suggesting that
+      popularity and quality, while related, are not the same thing. Industry reports from
+      box-office tracking firms and film associations have documented decades of ticket sales,
+      genre trends, and audience demographics, offering a rich public record of how tastes have
+      shifted over time. Academic and journalistic investigations have explored topics ranging
+      from the economics of movie sequels to the underrepresentation of certain languages,
+      regions, and voices in globally popular cinema. Streaming services have further complicated
+      the picture by shifting attention away from opening-weekend ticket sales toward more private
+      measures of viewership, changing incentives for what gets made and who it is made for. Taken
+      together, this body of work suggests that a film's fortunes emerge from a tangled mix of
+      creative choices, business decisions, timing, and cultural context, making it a rich and
+      still-open area for further exploration.
+    </p>
+  </section>
+
+  <section class="block">
+    <h3>Questions to Explore</h3>
+    <ol class="questions-list">
+      <li>How does a movie's genre relate to its overall popularity and average audience rating?</li>
+      <li>Is there a meaningful relationship between a film's production budget and the revenue it earns at the box office?</li>
+      <li>Does the original language of a film affect how popular it becomes with global audiences?</li>
+      <li>Are certain production regions or countries associated with consistently higher- or lower-rated films?</li>
+      <li>How has average audience rating changed across decades of film history?</li>
+      <li>Do films released during particular months or seasons tend to draw more attention than others?</li>
+      <li>Is there a noticeable gap between how many people vote on a film and how highly they rate it, and what characterizes films with a large gap?</li>
+      <li>Do movies naturally fall into distinct groups based on shared traits such as genre, running time, and audience reception, and what do those groups reveal about the industry?</li>
+      <li>Which combination of factors, such as genre, budget, running time, and language, is most closely associated with a film becoming a major commercial and critical success?</li>
+      <li>How has the diversity of genres, languages, and production regions among widely popular films changed over recent decades?</li>
+    </ol>
+  </section>
+</main>
+
+<footer class="site-footer">
+  CSCI 5612 &middot; Individual Course Project &middot; Movie data sourced from TMDB
+</footer>
+
+</body>
+</html>
