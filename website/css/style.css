@@ -1,48 +1,79 @@
 :root {
-  --bg: #f7f7f4;
-  --surface: #ffffff;
-  --ink: #1f2421;
-  --ink-soft: #52584f;
-  --accent: #1f6f5c;
-  --accent-soft: #e4f0ec;
-  --border: #e2e2dc;
-  --max-width: 980px;
+  --bg: #0c0c0e;
+  --surface: #17171a;
+  --surface-raised: #1f1f23;
+  --ink: #f4f2ee;
+  --ink-soft: #a8a6a2;
+  --accent: #e10600;
+  --accent-2: #ff8c00;
+  --accent-soft: rgba(225, 6, 0, 0.14);
+  --chrome: #cfcfcf;
+  --border: #2b2b30;
+  --max-width: 1000px;
 }
 
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "Rajdhani", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   background: var(--bg);
   color: var(--ink);
   line-height: 1.65;
+  font-size: 17px;
+}
+
+h1, h2, h3 {
+  font-family: "Bebas Neue", "Rajdhani", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* checkered-flag strip: purely decorative, generic racing motif */
+.flag-strip {
+  height: 8px;
+  width: 100%;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #000 0, #000 16px, #fff 16px, #fff 32px
+  );
+  background-size: 32px 8px;
 }
 
 header.site-header {
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, #141416 0%, var(--surface) 100%);
+  border-bottom: 2px solid var(--accent);
   position: sticky;
   top: 0;
   z-index: 10;
+  box-shadow: 0 2px 18px rgba(225, 6, 0, 0.15);
 }
 
 .brand-bar {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1.1rem 1.25rem 0.4rem;
+  padding: 1.2rem 1.25rem 0.5rem;
+  position: relative;
 }
 
 .brand-bar h1 {
   margin: 0;
-  font-size: 1.35rem;
-  letter-spacing: -0.01em;
+  font-size: 2.1rem;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-shadow: 0 0 14px rgba(225, 6, 0, 0.55);
+}
+
+.brand-bar h1 span {
+  color: var(--accent);
 }
 
 .brand-bar p {
-  margin: 0.2rem 0 0;
+  margin: 0.15rem 0 0;
   color: var(--ink-soft);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 nav.tabs {
@@ -51,17 +82,19 @@ nav.tabs {
   display: flex;
   flex-wrap: wrap;
   gap: 0.15rem;
-  padding: 0.6rem 1.25rem 0;
+  padding: 0.7rem 1.25rem 0;
 }
 
 nav.tabs a {
   text-decoration: none;
   color: var(--ink-soft);
-  font-size: 0.88rem;
-  font-weight: 600;
-  padding: 0.55rem 0.8rem;
-  border-radius: 6px 6px 0 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  padding: 0.55rem 0.9rem;
+  border-radius: 4px 4px 0 0;
   border-bottom: 3px solid transparent;
+  transition: color 0.15s ease, background 0.15s ease;
 }
 
 nav.tabs a:hover {
@@ -70,19 +103,22 @@ nav.tabs a:hover {
 }
 
 nav.tabs a.active {
-  color: var(--accent);
+  color: var(--accent-2);
   border-bottom: 3px solid var(--accent);
 }
 
 main {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 2rem 1.25rem 4rem;
+  padding: 2.2rem 1.25rem 4rem;
 }
 
 main h2.page-title {
   margin-top: 0;
-  font-size: 1.8rem;
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  border-left: 6px solid var(--accent);
+  padding-left: 0.6rem;
 }
 
 section.block {
@@ -90,10 +126,13 @@ section.block {
 }
 
 section.block h3 {
-  font-size: 1.2rem;
-  border-left: 4px solid var(--accent);
-  padding-left: 0.6rem;
+  font-size: 1.4rem;
+  color: var(--accent-2);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.4rem;
   margin-bottom: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 p { margin: 0 0 1rem; }
@@ -103,15 +142,17 @@ p { margin: 0 0 1rem; }
   border: 1px solid var(--accent);
   color: var(--ink);
   padding: 0.9rem 1.1rem;
-  border-radius: 8px;
-  font-size: 0.92rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  border-left: 4px solid var(--accent-2);
 }
 
 .questions-list {
   padding-left: 1.3rem;
 }
 
-.questions-list li { margin-bottom: 0.5rem; }
+.questions-list li { margin-bottom: 0.6rem; }
+.questions-list li::marker { color: var(--accent-2); font-weight: 700; }
 
 figure.intro-figure, figure.fig {
   margin: 1.2rem 0;
@@ -120,8 +161,13 @@ figure.intro-figure, figure.fig {
 
 figure.intro-figure img {
   max-width: 100%;
-  border-radius: 8px;
+  border-radius: 6px;
   border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+figure figcaption {
+  color: var(--ink-soft);
 }
 
 .gallery {
@@ -133,28 +179,37 @@ figure.intro-figure img {
 .gallery figure {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 6px;
   padding: 0.7rem 0.7rem 0.9rem;
   margin: 0;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.gallery figure:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
 }
 
 .gallery figure img {
   width: 100%;
-  border-radius: 6px;
+  border-radius: 4px;
   display: block;
+  background: #fff;
 }
 
 .gallery figcaption {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: var(--ink-soft);
   margin-top: 0.5rem;
 }
 
 .gallery figcaption strong {
   display: block;
-  color: var(--ink);
-  font-size: 0.88rem;
+  color: var(--accent-2);
+  font-size: 0.9rem;
   margin-bottom: 0.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 .data-links {
@@ -165,21 +220,23 @@ figure.intro-figure img {
 }
 
 .data-links a {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  color: var(--accent);
-  padding: 0.45rem 0.85rem;
+  background: var(--surface-raised);
+  border: 1px solid var(--accent);
+  color: var(--ink);
+  padding: 0.45rem 0.9rem;
   border-radius: 999px;
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 600;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
-.data-links a:hover { background: var(--accent-soft); }
+.data-links a:hover { background: var(--accent); color: #fff; }
 
 code, pre {
-  background: #f0f0eb;
-  border-radius: 6px;
+  background: var(--surface-raised);
+  color: var(--chrome);
+  border-radius: 4px;
   font-size: 0.85rem;
 }
 
@@ -188,6 +245,10 @@ pre {
   overflow-x: auto;
   border: 1px solid var(--border);
 }
+
+ul, ol { color: var(--ink); }
+
+a { color: var(--accent-2); }
 
 table.preview-table {
   border-collapse: collapse;
@@ -198,10 +259,12 @@ footer.site-footer {
   text-align: center;
   color: var(--ink-soft);
   font-size: 0.8rem;
-  padding: 2rem 1rem;
+  padding: 1.4rem 1rem 2rem;
+  letter-spacing: 0.03em;
 }
 
 @media (max-width: 600px) {
   nav.tabs { overflow-x: auto; flex-wrap: nowrap; }
-  main h2.page-title { font-size: 1.4rem; }
+  main h2.page-title { font-size: 1.9rem; }
+  .brand-bar h1 { font-size: 1.5rem; }
 }

@@ -26,8 +26,10 @@ PREP_IMG_DIR = ROOT / "website" / "assets" / "img" / "dataprep"
 EDA_IMG_DIR.mkdir(parents=True, exist_ok=True)
 PREP_IMG_DIR.mkdir(parents=True, exist_ok=True)
 
-sns.set_theme(style="whitegrid", palette="viridis")
-PALETTE = "viridis"
+sns.set_theme(style="whitegrid", palette="YlOrRd")
+PALETTE = "YlOrRd"
+HEATMAP_CMAP = "RdGy_r"
+ACCENT_RED = "#e10600"
 FIGSIZE = (8, 5)
 
 
@@ -49,6 +51,12 @@ def save_table_image(df, path, title, max_rows=8, max_cols=8):
     table.auto_set_font_size(False)
     table.set_fontsize(8)
     table.scale(1, 1.4)
+    for (row, _col), cell in table.get_celld().items():
+        if row == 0:
+            cell.set_facecolor("#e10600")
+            cell.set_text_props(color="white", weight="bold")
+        else:
+            cell.set_facecolor("#fdf2e9" if row % 2 == 0 else "#ffffff")
     plt.tight_layout()
     plt.savefig(path, dpi=150, bbox_inches="tight")
     plt.close()
@@ -75,7 +83,7 @@ def main():
 
     # 1. Histogram of release years
     plt.figure(figsize=FIGSIZE)
-    sns.histplot(df["release_year"], bins=30, color=sns.color_palette(PALETTE, 1)[0])
+    sns.histplot(df["release_year"], bins=30, color=ACCENT_RED)
     plt.title("Distribution of Movies by Release Year")
     plt.xlabel("Release Year")
     plt.ylabel("Number of Movies")
@@ -118,7 +126,7 @@ def main():
     by_decade = df.groupby("decade")["vote_average"].mean().reset_index()
     plt.figure(figsize=FIGSIZE)
     sns.lineplot(data=by_decade, x="decade", y="vote_average", marker="o",
-                 color=sns.color_palette(PALETTE, 1)[0])
+                 color=ACCENT_RED)
     plt.title("Average Audience Rating by Decade")
     plt.xlabel("Decade")
     plt.ylabel("Average Vote (0-10)")
@@ -137,13 +145,13 @@ def main():
     num_cols = [c for c in ["popularity", "vote_average", "vote_count", "budget",
                              "revenue", "runtime", "profit", "roi"] if c in df.columns]
     plt.figure(figsize=(7, 6))
-    sns.heatmap(df[num_cols].corr(), annot=True, fmt=".2f", cmap=PALETTE, center=0)
+    sns.heatmap(df[num_cols].corr(), annot=True, fmt=".2f", cmap=HEATMAP_CMAP, center=0)
     plt.title("Correlation Between Numeric Movie Attributes")
     savefig("heatmap_correlation.png")
 
     # 8. Histogram: vote_average distribution
     plt.figure(figsize=FIGSIZE)
-    sns.histplot(df["vote_average"], bins=25, kde=True, color=sns.color_palette(PALETTE, 1)[0])
+    sns.histplot(df["vote_average"], bins=25, kde=True, color=ACCENT_RED)
     plt.title("Distribution of Audience Vote Average")
     plt.xlabel("Vote Average (0-10)")
     plt.ylabel("Number of Movies")
@@ -176,7 +184,7 @@ def main():
     per_year = df.groupby("release_year").size().reset_index(name="count")
     plt.figure(figsize=FIGSIZE)
     sns.lineplot(data=per_year, x="release_year", y="count",
-                 color=sns.color_palette(PALETTE, 1)[0])
+                 color=ACCENT_RED)
     plt.title("Number of Movies Released per Year")
     plt.xlabel("Release Year")
     plt.ylabel("Number of Movies")
@@ -193,7 +201,7 @@ def main():
         if len(gdp) > 3:
             plt.figure(figsize=FIGSIZE)
             sns.scatterplot(data=gdp, x="gdp_per_capita_usd", y="avg_popularity",
-                             size="n", legend=False, color=sns.color_palette(PALETTE, 1)[0])
+                             size="n", legend=False, color=ACCENT_RED)
             plt.title("Production-Country GDP per Capita vs. Average Movie Popularity")
             plt.xlabel("GDP per Capita (USD)")
             plt.ylabel("Average Popularity Score")

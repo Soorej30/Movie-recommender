@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
-  <rect width="800" height="520" fill="#ffffff"/>
+  <rect width="800" height="520" fill="#0c0c0e"/>
 
   <!-- connecting lines -->
-  <g stroke="#c9dcd5" stroke-width="2">
+  <g stroke="#4a2020" stroke-width="2">
     <line x1="400" y1="260" x2="150" y2="90"/>
     <line x1="400" y1="260" x2="650" y2="90"/>
     <line x1="400" y1="260" x2="120" y2="300"/>
@@ -13,8 +13,8 @@
 
   <!-- clapperboard (center) -->
   <g transform="translate(340,205)">
-    <rect x="0" y="30" width="120" height="85" rx="6" fill="#1f6f5c"/>
-    <rect x="0" y="0" width="120" height="26" rx="4" fill="#16473b"/>
+    <rect x="0" y="30" width="120" height="85" rx="6" fill="#e10600"/>
+    <rect x="0" y="0" width="120" height="26" rx="4" fill="#8a0000"/>
     <g fill="#ffffff">
       <rect x="4" y="0" width="14" height="26" transform="skewX(-20)"/>
       <rect x="30" y="0" width="14" height="26" transform="skewX(-20)"/>
@@ -23,49 +23,49 @@
       <rect x="108" y="0" width="14" height="26" transform="skewX(-20)"/>
     </g>
     <circle cx="60" cy="75" r="18" fill="#ffffff" opacity="0.9"/>
-    <circle cx="60" cy="75" r="7" fill="#1f6f5c"/>
+    <circle cx="60" cy="75" r="7" fill="#e10600"/>
   </g>
 
   <!-- factor nodes -->
   <g font-family="Helvetica, Arial, sans-serif" text-anchor="middle">
     <g transform="translate(150,90)">
-      <circle r="60" fill="#e4f0ec" stroke="#1f6f5c" stroke-width="2"/>
-      <text y="-4" font-size="15" font-weight="700" fill="#1f2421">Genre</text>
-      <text y="16" font-size="11" fill="#52584f">Action, Drama,</text>
-      <text y="30" font-size="11" fill="#52584f">Comedy...</text>
+      <circle r="60" fill="#1a1a1d" stroke="#ff8c00" stroke-width="2"/>
+      <text y="-4" font-size="15" font-weight="700" fill="#f4f2ee">Genre</text>
+      <text y="16" font-size="11" fill="#a8a6a2">Action, Drama,</text>
+      <text y="30" font-size="11" fill="#a8a6a2">Comedy...</text>
     </g>
 
     <g transform="translate(650,90)">
-      <circle r="60" fill="#e4f0ec" stroke="#1f6f5c" stroke-width="2"/>
-      <text y="-10" font-size="15" font-weight="700" fill="#1f2421">Budget &amp;</text>
-      <text y="8" font-size="15" font-weight="700" fill="#1f2421">Marketing</text>
-      <text y="26" font-size="11" fill="#52584f">production spend</text>
+      <circle r="60" fill="#1a1a1d" stroke="#ff8c00" stroke-width="2"/>
+      <text y="-10" font-size="15" font-weight="700" fill="#f4f2ee">Budget &amp;</text>
+      <text y="8" font-size="15" font-weight="700" fill="#f4f2ee">Marketing</text>
+      <text y="26" font-size="11" fill="#a8a6a2">production spend</text>
     </g>
 
     <g transform="translate(120,300)">
-      <circle r="60" fill="#e4f0ec" stroke="#1f6f5c" stroke-width="2"/>
-      <text y="-4" font-size="15" font-weight="700" fill="#1f2421">Cast &amp;</text>
-      <text y="14" font-size="15" font-weight="700" fill="#1f2421">Crew</text>
+      <circle r="60" fill="#1a1a1d" stroke="#ff8c00" stroke-width="2"/>
+      <text y="-4" font-size="15" font-weight="700" fill="#f4f2ee">Cast &amp;</text>
+      <text y="14" font-size="15" font-weight="700" fill="#f4f2ee">Crew</text>
     </g>
 
     <g transform="translate(680,300)">
-      <circle r="60" fill="#e4f0ec" stroke="#1f6f5c" stroke-width="2"/>
-      <text y="-10" font-size="15" font-weight="700" fill="#1f2421">Language &amp;</text>
-      <text y="8" font-size="15" font-weight="700" fill="#1f2421">Region</text>
-      <text y="26" font-size="11" fill="#52584f">audience reach</text>
+      <circle r="60" fill="#1a1a1d" stroke="#ff8c00" stroke-width="2"/>
+      <text y="-10" font-size="15" font-weight="700" fill="#f4f2ee">Language &amp;</text>
+      <text y="8" font-size="15" font-weight="700" fill="#f4f2ee">Region</text>
+      <text y="26" font-size="11" fill="#a8a6a2">audience reach</text>
     </g>
 
     <g transform="translate(220,460)">
-      <circle r="55" fill="#e4f0ec" stroke="#1f6f5c" stroke-width="2"/>
-      <text y="-4" font-size="15" font-weight="700" fill="#1f2421">Release</text>
-      <text y="14" font-size="15" font-weight="700" fill="#1f2421">Timing</text>
+      <circle r="55" fill="#1a1a1d" stroke="#ff8c00" stroke-width="2"/>
+      <text y="-4" font-size="15" font-weight="700" fill="#f4f2ee">Release</text>
+      <text y="14" font-size="15" font-weight="700" fill="#f4f2ee">Timing</text>
     </g>
 
     <g transform="translate(580,460)">
-      <circle r="55" fill="#e4f0ec" stroke="#1f6f5c" stroke-width="2"/>
-      <text y="-10" font-size="14" font-weight="700" fill="#1f2421">Audience</text>
-      <text y="8" font-size="14" font-weight="700" fill="#1f2421">Reception</text>
-      <text y="26" font-size="10" fill="#52584f">ratings vs. buzz</text>
+      <circle r="55" fill="#1a1a1d" stroke="#ff8c00" stroke-width="2"/>
+      <text y="-10" font-size="14" font-weight="700" fill="#f4f2ee">Audience</text>
+      <text y="8" font-size="14" font-weight="700" fill="#f4f2ee">Reception</text>
+      <text y="26" font-size="10" fill="#a8a6a2">ratings vs. buzz</text>
     </g>
   </g>
 </svg>
