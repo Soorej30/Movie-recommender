@@ -16,6 +16,7 @@ import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.colors import LinearSegmentedColormap
 import seaborn as sns
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -26,10 +27,20 @@ PREP_IMG_DIR = ROOT / "website" / "assets" / "img" / "dataprep"
 EDA_IMG_DIR.mkdir(parents=True, exist_ok=True)
 PREP_IMG_DIR.mkdir(parents=True, exist_ok=True)
 
-sns.set_theme(style="whitegrid", palette="YlOrRd")
-PALETTE = "YlOrRd"
-HEATMAP_CMAP = "RdGy_r"
-ACCENT_RED = "#e10600"
+# gold/maroon "old magic" palette -- registered as a named colormap so
+# seaborn interpolates it smoothly regardless of how many categories a plot needs
+matplotlib.colormaps.register(
+    LinearSegmentedColormap.from_list("hp_sequential", ["#5c1010", "#8a1c1c", "#ae8625", "#c9a227", "#e9cf7a"]),
+    name="hp_sequential", force=True,
+)
+matplotlib.colormaps.register(
+    LinearSegmentedColormap.from_list("hp_diverging", ["#8a1c1c", "#241f38", "#c9a227"]),
+    name="hp_diverging", force=True,
+)
+PALETTE = "hp_sequential"
+HEATMAP_CMAP = "hp_diverging"
+ACCENT_GOLD = "#ae8625"
+sns.set_theme(style="whitegrid")
 FIGSIZE = (8, 5)
 
 
@@ -53,10 +64,10 @@ def save_table_image(df, path, title, max_rows=8, max_cols=8):
     table.scale(1, 1.4)
     for (row, _col), cell in table.get_celld().items():
         if row == 0:
-            cell.set_facecolor("#e10600")
-            cell.set_text_props(color="white", weight="bold")
+            cell.set_facecolor("#8a1c1c")
+            cell.set_text_props(color="#f0e6c8", weight="bold")
         else:
-            cell.set_facecolor("#fdf2e9" if row % 2 == 0 else "#ffffff")
+            cell.set_facecolor("#f5ecd6" if row % 2 == 0 else "#ffffff")
     plt.tight_layout()
     plt.savefig(path, dpi=150, bbox_inches="tight")
     plt.close()
@@ -83,7 +94,7 @@ def main():
 
     # 1. Histogram of release years
     plt.figure(figsize=FIGSIZE)
-    sns.histplot(df["release_year"], bins=30, color=ACCENT_RED)
+    sns.histplot(df["release_year"], bins=30, color=ACCENT_GOLD)
     plt.title("Distribution of Movies by Release Year")
     plt.xlabel("Release Year")
     plt.ylabel("Number of Movies")
@@ -126,7 +137,7 @@ def main():
     by_decade = df.groupby("decade")["vote_average"].mean().reset_index()
     plt.figure(figsize=FIGSIZE)
     sns.lineplot(data=by_decade, x="decade", y="vote_average", marker="o",
-                 color=ACCENT_RED)
+                 color=ACCENT_GOLD)
     plt.title("Average Audience Rating by Decade")
     plt.xlabel("Decade")
     plt.ylabel("Average Vote (0-10)")
@@ -151,7 +162,7 @@ def main():
 
     # 8. Histogram: vote_average distribution
     plt.figure(figsize=FIGSIZE)
-    sns.histplot(df["vote_average"], bins=25, kde=True, color=ACCENT_RED)
+    sns.histplot(df["vote_average"], bins=25, kde=True, color=ACCENT_GOLD)
     plt.title("Distribution of Audience Vote Average")
     plt.xlabel("Vote Average (0-10)")
     plt.ylabel("Number of Movies")
@@ -184,7 +195,7 @@ def main():
     per_year = df.groupby("release_year").size().reset_index(name="count")
     plt.figure(figsize=FIGSIZE)
     sns.lineplot(data=per_year, x="release_year", y="count",
-                 color=ACCENT_RED)
+                 color=ACCENT_GOLD)
     plt.title("Number of Movies Released per Year")
     plt.xlabel("Release Year")
     plt.ylabel("Number of Movies")
@@ -201,7 +212,7 @@ def main():
         if len(gdp) > 3:
             plt.figure(figsize=FIGSIZE)
             sns.scatterplot(data=gdp, x="gdp_per_capita_usd", y="avg_popularity",
-                             size="n", legend=False, color=ACCENT_RED)
+                             size="n", legend=False, color=ACCENT_GOLD)
             plt.title("Production-Country GDP per Capita vs. Average Movie Popularity")
             plt.xlabel("GDP per Capita (USD)")
             plt.ylabel("Average Popularity Score")

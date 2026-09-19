@@ -1,14 +1,14 @@
 :root {
-  --bg: #0c0c0e;
-  --surface: #17171a;
-  --surface-raised: #1f1f23;
-  --ink: #f4f2ee;
-  --ink-soft: #a8a6a2;
-  --accent: #e10600;
-  --accent-2: #ff8c00;
-  --accent-soft: rgba(225, 6, 0, 0.14);
-  --chrome: #cfcfcf;
-  --border: #2b2b30;
+  --bg: #0b0a12;
+  --surface: #17141f;
+  --surface-raised: #1f1b2b;
+  --ink: #ece3cf;
+  --ink-soft: #b8ac93;
+  --accent: #c9a227;
+  --accent-2: #8a1c1c;
+  --accent-soft: rgba(201, 162, 39, 0.14);
+  --parchment: #f0e6c8;
+  --border: #332d44;
   --max-width: 1000px;
 }
 
@@ -16,51 +16,50 @@
 
 body {
   margin: 0;
-  font-family: "Rajdhani", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "EB Garamond", Georgia, "Times New Roman", serif;
   background: var(--bg);
   color: var(--ink);
-  line-height: 1.65;
-  font-size: 17px;
+  line-height: 1.7;
+  font-size: 18px;
 }
 
 h1, h2, h3 {
-  font-family: "Bebas Neue", "Rajdhani", sans-serif;
+  font-family: "Cinzel Decorative", "Cinzel", Georgia, serif;
   letter-spacing: 0.02em;
 }
 
-/* checkered-flag strip: purely decorative, generic racing motif */
+/* thin gilded rule: a generic ornamental divider, not any franchise mark */
 .flag-strip {
-  height: 8px;
+  height: 4px;
   width: 100%;
-  background-image: repeating-linear-gradient(
+  background-image: linear-gradient(
     90deg,
-    #000 0, #000 16px, #fff 16px, #fff 32px
+    transparent 0%, var(--accent) 20%, #e9cf7a 50%, var(--accent) 80%, transparent 100%
   );
-  background-size: 32px 8px;
+  opacity: 0.85;
 }
 
 header.site-header {
-  background: linear-gradient(180deg, #141416 0%, var(--surface) 100%);
-  border-bottom: 2px solid var(--accent);
+  background: linear-gradient(180deg, #14111d 0%, var(--surface) 100%);
+  border-bottom: 1px solid var(--accent);
   position: sticky;
   top: 0;
   z-index: 10;
-  box-shadow: 0 2px 18px rgba(225, 6, 0, 0.15);
+  box-shadow: 0 2px 20px rgba(201, 162, 39, 0.12);
 }
 
 .brand-bar {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1.2rem 1.25rem 0.5rem;
+  padding: 1.3rem 1.25rem 0.5rem;
   position: relative;
 }
 
 .brand-bar h1 {
   margin: 0;
-  font-size: 2.1rem;
-  text-transform: uppercase;
+  font-size: 2rem;
   color: var(--ink);
-  text-shadow: 0 0 14px rgba(225, 6, 0, 0.55);
+  text-shadow: 0 0 18px rgba(201, 162, 39, 0.35);
 }
 
 .brand-bar h1 span {
@@ -68,12 +67,11 @@ header.site-header {
 }
 
 .brand-bar p {
-  margin: 0.15rem 0 0;
+  margin: 0.25rem 0 0;
   color: var(--ink-soft);
-  font-size: 0.95rem;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  font-size: 1rem;
+  font-style: italic;
+  letter-spacing: 0.02em;
 }
 
 nav.tabs {
@@ -82,15 +80,15 @@ nav.tabs {
   display: flex;
   flex-wrap: wrap;
   gap: 0.15rem;
-  padding: 0.7rem 1.25rem 0;
+  padding: 0.8rem 1.25rem 0;
 }
 
 nav.tabs a {
   text-decoration: none;
   color: var(--ink-soft);
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 1rem;
-  letter-spacing: 0.04em;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
   padding: 0.55rem 0.9rem;
   border-radius: 4px 4px 0 0;
   border-bottom: 3px solid transparent;
@@ -103,36 +101,37 @@ nav.tabs a:hover {
 }
 
 nav.tabs a.active {
-  color: var(--accent-2);
-  border-bottom: 3px solid var(--accent);
+  color: var(--accent);
+  border-bottom: 3px solid var(--accent-2);
 }
 
 main {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 2.2rem 1.25rem 4rem;
+  padding: 2.4rem 1.25rem 4rem;
+  position: relative;
 }
 
 main h2.page-title {
   margin-top: 0;
-  font-size: 2.6rem;
-  text-transform: uppercase;
-  border-left: 6px solid var(--accent);
-  padding-left: 0.6rem;
+  font-size: 2.3rem;
+  border-left: 5px solid var(--accent);
+  padding-left: 0.7rem;
+  color: var(--ink);
 }
 
 section.block {
   margin-bottom: 2.5rem;
+  position: relative;
 }
 
 section.block h3 {
-  font-size: 1.4rem;
-  color: var(--accent-2);
-  border-bottom: 2px solid var(--border);
+  font-size: 1.3rem;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
   padding-bottom: 0.4rem;
   margin-bottom: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
 }
 
 p { margin: 0 0 1rem; }
@@ -152,7 +151,7 @@ p { margin: 0 0 1rem; }
 }
 
 .questions-list li { margin-bottom: 0.6rem; }
-.questions-list li::marker { color: var(--accent-2); font-weight: 700; }
+.questions-list li::marker { color: var(--accent); font-weight: 700; }
 
 figure.intro-figure, figure.fig {
   margin: 1.2rem 0;
@@ -205,10 +204,9 @@ figure figcaption {
 
 .gallery figcaption strong {
   display: block;
-  color: var(--accent-2);
+  color: var(--accent);
   font-size: 0.9rem;
   margin-bottom: 0.15rem;
-  text-transform: uppercase;
   letter-spacing: 0.02em;
 }
 
@@ -228,16 +226,18 @@ figure figcaption {
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 600;
+  font-family: "EB Garamond", serif;
   transition: background 0.15s ease, color 0.15s ease;
 }
 
-.data-links a:hover { background: var(--accent); color: #fff; }
+.data-links a:hover { background: var(--accent); color: #14111d; }
 
 code, pre {
   background: var(--surface-raised);
-  color: var(--chrome);
+  color: var(--parchment);
   border-radius: 4px;
   font-size: 0.85rem;
+  font-family: "Courier New", monospace;
 }
 
 pre {
@@ -248,7 +248,7 @@ pre {
 
 ul, ol { color: var(--ink); }
 
-a { color: var(--accent-2); }
+a { color: var(--accent); }
 
 table.preview-table {
   border-collapse: collapse;
@@ -261,10 +261,32 @@ footer.site-footer {
   font-size: 0.8rem;
   padding: 1.4rem 1rem 2rem;
   letter-spacing: 0.03em;
+  font-style: italic;
 }
+
+/* very translucent castle watermark, home page only */
+.hero-backdrop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-backdrop img {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1400px, 160%);
+  max-width: none;
+  opacity: 0.13;
+}
+
+main > * { position: relative; z-index: 1; }
 
 @media (max-width: 600px) {
   nav.tabs { overflow-x: auto; flex-wrap: nowrap; }
-  main h2.page-title { font-size: 1.9rem; }
-  .brand-bar h1 { font-size: 1.5rem; }
+  main h2.page-title { font-size: 1.7rem; }
+  .brand-bar h1 { font-size: 1.4rem; }
 }

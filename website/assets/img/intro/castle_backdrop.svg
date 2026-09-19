@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800">
+  <defs>
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f0e6c8" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#f0e6c8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#f0e6c8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- transparent background: this sits as a low-opacity gilded watermark
+       directly over the page's own dark background -->
+
+  <!-- stars -->
+  <g fill="#f0e6c8">
+    <circle cx="120" cy="90" r="3"/>
+    <circle cx="260" cy="150" r="2"/>
+    <circle cx="340" cy="60" r="3"/>
+    <circle cx="480" cy="120" r="2"/>
+    <circle cx="90" cy="220" r="2"/>
+    <circle cx="1500" cy="100" r="3"/>
+    <circle cx="1400" cy="180" r="2"/>
+    <circle cx="1300" cy="70" r="3"/>
+    <circle cx="1200" cy="140" r="2"/>
+    <circle cx="1520" cy="230" r="2"/>
+    <circle cx="700" cy="50" r="2"/>
+    <circle cx="820" cy="100" r="3"/>
+    <circle cx="950" cy="60" r="2"/>
+    <circle cx="1050" cy="130" r="2"/>
+  </g>
+
+  <!-- moon with glow and crescent shading -->
+  <circle cx="1260" cy="150" r="150" fill="url(#moonGlow)"/>
+  <circle cx="1260" cy="150" r="72" fill="#f0e6c8"/>
+  <circle cx="1288" cy="122" r="72" fill="#0b0a12"/>
+
+  <!-- distant hills -->
+  <path d="M0,560 Q200,500 400,545 T800,530 T1200,555 T1600,520 L1600,800 L0,800 Z" fill="#c9a227" opacity="0.55"/>
+
+  <!-- castle silhouette (original design: generic multi-tower cliffside fortress) -->
+  <g fill="#e9cf7a">
+    <!-- cliff base -->
+    <path d="M250,650 L300,500 L360,560 L420,470 L500,540 L560,430 L640,520 L700,460 L760,540 L820,470 L900,560 L960,500 L1020,650 L250,650 Z"/>
+
+    <!-- left tower cluster -->
+    <rect x="330" y="360" width="50" height="180"/>
+    <polygon points="330,360 355,300 380,360"/>
+    <rect x="345" y="400" width="10" height="16" fill="#0b0a12" opacity="0.7"/>
+
+    <!-- central keep -->
+    <rect x="560" y="260" width="110" height="290"/>
+    <rect x="590" y="200" width="50" height="70"/>
+    <polygon points="588,200 615,150 642,200"/>
+    <rect x="605" y="320" width="14" height="20" fill="#0b0a12" opacity="0.7"/>
+    <rect x="605" y="380" width="14" height="20" fill="#0b0a12" opacity="0.7"/>
+    <rect x="575" y="440" width="14" height="20" fill="#0b0a12" opacity="0.6"/>
+    <rect x="640" y="440" width="14" height="20" fill="#0b0a12" opacity="0.6"/>
+
+    <!-- right tall spire -->
+    <rect x="760" y="220" width="46" height="330"/>
+    <polygon points="758,220 783,140 808,220"/>
+    <rect x="776" y="290" width="12" height="18" fill="#0b0a12" opacity="0.7"/>
+    <rect x="776" y="350" width="12" height="18" fill="#0b0a12" opacity="0.7"/>
+
+    <!-- far right round tower -->
+    <rect x="880" y="380" width="60" height="170"/>
+    <polygon points="878,380 910,320 942,380"/>
+    <rect x="900" y="420" width="12" height="18" fill="#0b0a12" opacity="0.6"/>
+
+    <!-- connecting wall -->
+    <rect x="380" y="500" width="180" height="50"/>
+    <rect x="670" y="480" width="90" height="70"/>
+    <rect x="806" y="460" width="74" height="90"/>
+  </g>
+</svg>
