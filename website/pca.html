@@ -34,31 +34,223 @@
 <main>
   <h2 class="page-title">Principal Component Analysis (PCA)</h2>
 
+  <!-- ============================================================ OVERVIEW -->
   <section class="block">
     <h3>Overview</h3>
     <p>
-      PCA reduces a large set of correlated numeric movie attributes, such as budget, revenue,
-      runtime, popularity, vote average, and vote count, down to a small number of new combined
-      dimensions that capture most of the variation in the data. It will be used to check which
-      attributes move together, to visualize the movie dataset in two or three dimensions, and to
-      simplify the feature set feeding into later clustering and modeling steps.
+      <strong>Principal Component Analysis</strong> is an unsupervised technique that re-describes
+      a dataset with a new set of axes called <em>principal components</em>. Each component is a
+      weighted combination of the original variables. The components are chosen so that the first
+      one points in the direction along which the data varies the most. The second captures the
+      most remaining variation while being perpendicular (uncorrelated) to the first, and so on.
+      Because real variables are often correlated (budget, revenue, and popularity tend to rise
+      together), a few components can usually hold most of the information that was spread across
+      many original columns.
     </p>
-    <p class="status-note">Full analysis arrives in Module 2.</p>
+    <p><strong>Eigenvalues and eigenvectors: the heart of PCA.</strong></p>
+    <p>
+      For standardized data, PCA starts from the <em>correlation (covariance) matrix</em>
+      <code>C</code>, which records how every pair of variables moves together. An
+      <strong>eigenvector</strong> <code>v</code> of <code>C</code> is a direction that
+      <code>C</code> only stretches and does not rotate: <code>C v = &lambda; v</code>. The stretch
+      factor <code>&lambda;</code> is its <strong>eigenvalue</strong>. In PCA:
+    </p>
+    <ul>
+      <li><strong>Eigenvectors are the principal components.</strong> Each one is a direction in the original feature space. Its entries (the <em>loadings</em>) say how much each original variable contributes to that component.</li>
+      <li><strong>Eigenvalues are the variance captured.</strong> The eigenvalue of a component equals the variance of the data projected onto it. Sorting eigenvalues from largest to smallest ranks the components by importance. Dividing each eigenvalue by their sum gives the proportion of variance explained.</li>
+      <li>Because <code>C</code> is symmetric, its eigenvectors are mutually perpendicular. That is why principal components are uncorrelated with each other.</li>
+    </ul>
+    <p><strong>Dimensionality reduction and why it matters.</strong></p>
+    <p>
+      <em>Dimensionality reduction</em> means representing data with fewer variables while keeping
+      as much of its structure as possible. With PCA, this is done by keeping only the first few
+      components and dropping those with small eigenvalues. High-dimensional data creates several
+      problems:
+    </p>
+    <ul>
+      <li><strong>It cannot be seen.</strong> Humans can look at two or three axes at once. A 10-column dataset has 45 pairwise scatter plots and no single picture of the whole.</li>
+      <li><strong>The curse of dimensionality.</strong> As dimensions are added, data becomes sparse, and distances between points become more alike. That weakens distance-based methods such as clustering and k-nearest neighbors.</li>
+      <li><strong>Redundancy and multicollinearity.</strong> Correlated columns repeat the same information, which can make models unstable and coefficients hard to interpret.</li>
+      <li><strong>Noise and overfitting.</strong> More features give a model more ways to fit noise, especially when there are not many more rows than columns.</li>
+      <li><strong>Cost.</strong> More dimensions mean more memory and computation.</li>
+    </ul>
+    <p>
+      PCA addresses these by combining correlated variables into a few uncorrelated components. The
+      low-variance components that mostly carry noise are dropped, and the data can then be plotted
+      in two or three dimensions. The trade-off is interpretability: each component is a mix of
+      original variables, so its meaning must be read from its loadings.
+    </p>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/pca/concept_eigenvectors.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/pca/concept_eigenvectors.png" alt="Eigenvectors drawn on a 2D point cloud and the 1D projection onto PC1"></a>
+        <figcaption><strong>Eigenvectors and eigenvalues.</strong> Left: the two eigenvectors of a correlated 2-D cloud. PC1 points along the long axis with a large eigenvalue; PC2 is perpendicular with a small one. Right: keeping only PC1 reduces the data to 1-D while preserving most of its variance.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/pca/concept_projection_3d_to_2d.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/pca/concept_projection_3d_to_2d.png" alt="3D data projected down to 2 principal components"></a>
+        <figcaption><strong>Dimensionality reduction, 3-D to 2-D.</strong> Points that really lie near a flat surface in 3-D can be described by two principal components with almost no loss; the third component carries mostly noise and is dropped.</figcaption>
+      </figure>
+    </div>
   </section>
 
+  <!-- ============================================================ DATA PREP -->
   <section class="block">
-    <h3>Data</h3>
-    <p class="status-note">Prepared dataset preview and links to raw/clean data arrive in Module 2.</p>
+    <h3>Data Prep</h3>
+    <p>
+      PCA needs <strong>numeric, continuous, complete data on a common scale</strong>:
+    </p>
+    <ul>
+      <li><strong>Numeric only, no labels.</strong> PCA computes variances and correlations, which are undefined for text or categories. Title, genre, and rating tier are removed (rating tier is used afterwards only to color plots).</li>
+      <li><strong>No missing values.</strong> Movies missing budget or revenue were dropped, leaving <strong>1,785 movies</strong>.</li>
+      <li><strong>Reduced skew.</strong> PCA looks for directions of maximum variance, so a few extreme blockbusters would otherwise define the components by themselves. <code>log(1 + x)</code> was applied to budget, revenue, popularity, and vote count.</li>
+      <li><strong>Standardized.</strong> PCA is scale-sensitive. Unscaled, budget (variance in the quadrillions of dollars&sup2;) would become PC1 by itself. Each column is converted to mean 0 and standard deviation 1, which means PCA operates on the correlation matrix and every variable starts with equal weight.</li>
+    </ul>
+    <p>
+      Ten numeric attributes were used: <code>budget</code>, <code>revenue</code>,
+      <code>popularity</code>, <code>vote_count</code>, <code>vote_average</code>,
+      <code>runtime</code>, <code>release_year</code>, <code>num_genres</code>,
+      <code>num_spoken_languages</code>, and <code>overview_length</code>. This is a wider set than
+      the clustering tab uses, so that PCA has more correlated structure to compress.
+    </p>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/pca/data_before.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/pca/data_before.png" alt="Sample of cleaned data with labels and raw values"></a>
+        <figcaption><strong>Before.</strong> Cleaned movie records with text labels and raw numeric columns on very different scales.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/pca/data_after.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/pca/data_after.png" alt="Sample of standardized numeric data fed to PCA"></a>
+        <figcaption><strong>After: the PCA input.</strong> Ten unlabeled numeric columns, log-transformed where skewed and standardized to z-scores.</figcaption>
+      </figure>
+    </div>
+    <div class="data-links">
+      <a href="../data/prepared/pca_input.csv">PCA input sample (CSV)</a>
+      <a href="../data/prepared/pca_components.csv">Movies projected onto PC1-PC3 (CSV)</a>
+      <a href="../data/clean/tmdb_movies_clean.csv">Full cleaned dataset (CSV)</a>
+    </div>
   </section>
 
+  <!-- ============================================================ CODE -->
   <section class="block">
     <h3>Code</h3>
-    <p class="status-note">Link to PCA code, language, and core packages arrives in Module 2.</p>
+    <p>
+      PCA is implemented in Python with <code>scikit-learn</code> (<code>StandardScaler</code>,
+      <code>PCA</code>), <code>pandas</code>, <code>numpy</code>, and
+      <code>matplotlib</code>/<code>seaborn</code>. The script prepares the data, fits PCA,
+      prints the eigenvalues and loadings, and generates every figure on this page.
+    </p>
+    <div class="data-links">
+      <a href="../scripts/pca_analysis.py">pca_analysis.py (full code)</a>
+    </div>
+<pre><code>X = df[FEATURES].astype(float)
+X[LOG_FEATURES] = np.log1p(X[LOG_FEATURES])          # tame skew
+X_scaled = StandardScaler().fit_transform(X)          # mean 0, sd 1
+
+pca = PCA().fit(X_scaled)
+eigenvalues = pca.explained_variance_                  # variance per component
+loadings    = pca.components_.T                         # eigenvectors (columns)
+scores      = pca.transform(X_scaled)                   # movies in PC space
+cumulative  = np.cumsum(pca.explained_variance_ratio_)</code></pre>
   </section>
 
+  <!-- ============================================================ RESULTS -->
   <section class="block">
     <h3>Results</h3>
-    <p class="status-note">Results, variance explained, and visualizations arrive in Module 2.</p>
+
+    <p><strong>1. How much variance each component captures.</strong></p>
+    <div class="table-wrap">
+      <table class="results-table">
+        <tr><th>Component</th><th>Eigenvalue</th><th>Variance explained</th><th>Cumulative</th></tr>
+        <tr><td>PC1</td><td>2.71</td><td>27.1%</td><td>27.1%</td></tr>
+        <tr><td>PC2</td><td>1.55</td><td>15.5%</td><td>42.6%</td></tr>
+        <tr><td>PC3</td><td>1.12</td><td>11.2%</td><td>53.8%</td></tr>
+        <tr><td>PC4</td><td>1.07</td><td>10.7%</td><td>64.5%</td></tr>
+        <tr><td>PC5</td><td>0.92</td><td>9.2%</td><td>73.7%</td></tr>
+        <tr><td>PC6</td><td>0.88</td><td>8.8%</td><td>82.5%</td></tr>
+        <tr><td>PC7</td><td>0.73</td><td>7.3%</td><td>89.7%</td></tr>
+        <tr><td>PC8</td><td>0.44</td><td>4.4%</td><td>94.1%</td></tr>
+        <tr><td>PC9</td><td>0.32</td><td>3.2%</td><td>97.3%</td></tr>
+        <tr><td>PC10</td><td>0.27</td><td>2.7%</td><td>100%</td></tr>
+      </table>
+    </div>
+    <p>
+      The first component alone captures 27% of the variance, nearly three times what any single
+      original variable carries (each standardized variable has variance 1, or 10% of the total).
+      The first two components capture 42.6% and the first three capture 53.8%. Four
+      components have eigenvalues above 1 (the Kaiser rule for "worth keeping"), together covering
+      64.5%. Reaching <strong>80% requires 6 components</strong>, and <strong>95% requires 9</strong>.
+      The variance is spread fairly evenly after PC1. Release year, spoken languages, and synopsis
+      length are mostly unrelated to the success measures, so each needs a component of its own.
+      The real compression happens in PC1 and PC2, where the correlated success variables collapse
+      into two components.
+    </p>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/pca/pca_scree.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/pca/pca_scree.png" alt="Scree plot with cumulative explained variance"></a>
+        <figcaption><strong>Scree plot.</strong> Bars show variance per component; the red line is the cumulative total. It crosses 80% at PC6 and 95% at PC9.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/pca/pca_eigenvalues.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/pca/pca_eigenvalues.png" alt="Eigenvalues of the correlation matrix with Kaiser line"></a>
+        <figcaption><strong>Eigenvalues.</strong> Four components have eigenvalues above 1, meaning each captures more variance than a single original variable would.</figcaption>
+      </figure>
+    </div>
+
+    <p><strong>2. Relationship between variables and principal components.</strong></p>
+    <p>
+      The link between the original variables and the components can be shown in three ways.
+      The <em>loadings heatmap</em> lists the eigenvector weights directly. The <em>correlation
+      circle</em> draws each variable as an arrow whose coordinates are its correlations with PC1
+      and PC2. Arrows that are long and close to the circle are well represented by these two
+      components. Arrows pointing the same way are positively correlated, arrows at right angles
+      are roughly uncorrelated, and opposite arrows are negatively correlated. The
+      <em>biplot</em> overlays those arrows on the movies themselves, so a movie lying in the
+      direction of an arrow is high on that variable.
+    </p>
+    <ul>
+      <li><strong>PC1 = overall scale and success (27.1%).</strong> Every major success variable loads positively: vote count (0.49), revenue (0.46), popularity (0.45), budget (0.40), runtime (0.29), rating (0.25). A high PC1 score means "big on everything." The highest-scoring movies are <em>Avengers: Endgame</em>, <em>Avatar</em>, <em>Avengers: Infinity War</em>, <em>Titanic</em>, and <em>Interstellar</em>. The lowest are small, little-seen films such as <em>Terrifier</em> and <em>Winnie-the-Pooh: Blood and Honey 2</em>.</li>
+      <li><strong>PC2 = acclaim vs. commercial formula (15.5%).</strong> Rating (+0.55) and runtime (+0.31) pull one way. Budget (&minus;0.46), number of genres (&minus;0.43), and revenue (&minus;0.28) pull the other. Movies at the top are critically loved, lower-budget art films (<em>Chungking Express</em>, <em>Drive My Car</em>, <em>Farewell My Concubine</em>). Movies at the bottom are expensive, multi-genre family franchises with weak reviews (<em>The Smurfs</em>, <em>Alvin and the Chipmunks</em>, <em>The Last Airbender</em>).</li>
+      <li><strong>PC3 = newer, international, longer (11.2%).</strong> It is dominated by release year (0.65), spoken languages (0.52), and runtime (0.32), largely independent of commercial success.</li>
+    </ul>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/pca/pca_loadings_heatmap.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/pca/pca_loadings_heatmap.png" alt="Heatmap of PCA loadings for the first six components"></a>
+        <figcaption><strong>Loadings (eigenvectors).</strong> Weights of each original variable in the first six components. PC1 is a broad average of the success variables; PC2 contrasts rating with budget and genre count.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/pca/pca_correlation_circle.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/pca/pca_correlation_circle.png" alt="Correlation circle of variables against PC1 and PC2"></a>
+        <figcaption><strong>Correlation circle.</strong> Vote count, popularity, and revenue point almost straight along PC1. Rating points mostly along PC2 and sits nearly perpendicular to budget: their actual correlation is only &minus;0.15.</figcaption>
+      </figure>
+    </div>
+    <div class="gallery wide">
+      <figure>
+        <a class="zoom" href="assets/img/pca/pca_biplot.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/pca/pca_biplot.png" alt="PCA biplot of movies and variable arrows colored by rating tier"></a>
+        <figcaption><strong>Biplot (PC1 vs. PC2).</strong> Each dot is a movie, colored by rating tier (added after PCA, not used to fit it). "Excellent" films gather in the upper right, high on both scale and acclaim; "Mixed" films sit lower left. Budget and number of genres point toward the lower right, away from the highly rated films.</figcaption>
+      </figure>
+    </div>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/pca/pca_3d.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/pca/pca_3d.png" alt="3D scatter of movies on PC1, PC2 and PC3"></a>
+        <figcaption><strong>Three components (53.8% of variance).</strong> Adding PC3 (release year and internationality) spreads the cloud vertically but does not separate the rating tiers further; most of that separation already happens in PC1 and PC2.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================================================ CONCLUSIONS -->
+  <section class="block">
+    <h3>Conclusions</h3>
+    <p>
+      PCA shows that movie success in this dataset is not one thing but two largely independent
+      dimensions:
+    </p>
+    <ul>
+      <li><strong>Scale (PC1).</strong> Budget, revenue, popularity, and the number of people who vote all rise and fall together. A single "how big is this movie" axis captures more than a quarter of all the variation across ten attributes. Knowing a film's budget says a lot about its eventual audience size and box office.</li>
+      <li><strong>Acclaim (PC2).</strong> Audience rating sits on a separate, nearly perpendicular axis. Bigger budgets do not buy higher ratings: budget and rating are slightly <em>negatively</em> correlated (&minus;0.15). Films that pile on genres to appeal to everyone tend to land on the low-acclaim side.</li>
+      <li><strong>The best-rated films are big <em>and</em> acclaimed.</strong> In the biplot, the "Excellent" tier sits in the corner where both axes are high. Prestige blockbusters such as <em>Interstellar</em> and <em>The Dark Knight</em> do well on both dimensions at once, which is rare.</li>
+      <li><strong>Timing and internationality are a separate story.</strong> Release year, number of spoken languages, and synopsis length barely touch the first two components. In this sample, they are not strongly tied to how successful a film is.</li>
+    </ul>
+    <p>
+      These two dimensions match the clustering results: the clusters found there are largely
+      regions of this scale &times; acclaim plane. For later modeling, PC1 and PC2 offer a compact,
+      uncorrelated two-number summary of a movie's commercial size and critical reception.
+    </p>
   </section>
 </main>
 

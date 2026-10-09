@@ -315,3 +315,33 @@ main > * { position: relative; z-index: 1; }
   main h2.page-title { font-size: 1.7rem; }
   .brand-bar h1 { font-size: 1.4rem; }
 }
+
+/* compact numeric tables used on the analysis tabs */
+.table-wrap { overflow-x: auto; margin: 0.8rem 0 1.2rem; }
+
+table.results-table {
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  width: 100%;
+  background: var(--surface);
+}
+
+table.results-table th,
+table.results-table td {
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+}
+
+table.results-table th {
+  background: var(--accent);
+  color: #f2e8cf;
+  font-family: "Cinzel", Georgia, serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
+
+table.results-table tr:nth-child(even) td { background: #f5ecd6; }
+
+.gallery.wide { grid-template-columns: 1fr; }

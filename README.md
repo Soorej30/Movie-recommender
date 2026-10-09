@@ -34,6 +34,8 @@ python scripts/fetch_tmdb_details.py  # adds budget, revenue, runtime, productio
 python scripts/fetch_worldbank.py     # pulls GDP-per-capita / population by country (no key needed)
 python scripts/clean_data.py          # cleans + merges everything into data/clean/tmdb_movies_clean.csv
 python scripts/eda_visualize.py       # generates all figures into website/assets/img/
+python scripts/clustering.py          # k-means + hierarchical (cosine) clustering -> img/clustering/, data/prepared/
+python scripts/pca_analysis.py        # PCA -> img/pca/, data/prepared/
 ```
 
 Edit the `CONFIG` dictionary at the top of `scripts/fetch_tmdb.py` to change
