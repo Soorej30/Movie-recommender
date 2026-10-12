@@ -38,73 +38,71 @@
   <section class="block">
     <h3>Overview</h3>
     <p>
-      Clustering is an <em>unsupervised</em> learning method: it groups observations so that items
-      in the same group are more similar to each other than to items in other groups, without being
-      told what the "right" groups are. No label such as "hit" or "flop" is used. The algorithm only
-      sees numbers, and any structure it finds comes from the data itself. That makes clustering a
-      tool for <em>discovery</em>. It can reveal natural families of movies that nobody defined in
-      advance.
+      Clustering is an <em>unsupervised</em> method. It puts similar things into groups without
+      being told what the groups should be. Nobody hands it a "hit" or "flop" label. It only sees
+      numbers, so any pattern it finds comes straight from the data. That is what makes it useful
+      for discovery. It can turn up families of movies that I never defined myself.
     </p>
-    <p>
-      There are two broad families of clustering:
-    </p>
+    <p>There are two main types of clustering:</p>
     <ul>
       <li>
-        <strong>Partitional clustering</strong> (for example <strong>k-means</strong>) splits the
-        data into exactly <em>k</em> non-overlapping groups in one flat layer. K-means starts with
-        <em>k</em> centroids, assigns each point to its nearest centroid, moves each centroid to the
-        mean of its points, and repeats until assignments stop changing. It is fast and scales to
-        large datasets. However, <em>k</em> must be chosen beforehand, and it favors round,
-        similarly sized clusters.
+        <strong>Partitional clustering</strong>, like <strong>KMeans</strong>, cuts the data into
+        exactly <em>k</em> groups that don't overlap. KMeans drops <em>k</em> centroids into the
+        data and assigns every point to the closest one. It then moves each centroid to the
+        middle of its points and repeats until nothing changes. It's fast and handles big
+        datasets well. The downside is that you have to pick <em>k</em> yourself, and it likes
+        round clusters of similar size.
       </li>
       <li>
-        <strong>Hierarchical clustering</strong> builds a tree of nested groupings. The
-        <em>agglomerative</em> (bottom-up) version used here starts with every movie as its own
-        cluster and repeatedly merges the two closest clusters until only one remains. The full
-        history of merges is drawn as a <strong>dendrogram</strong>. Cutting the tree at any height
-        gives a clustering, so <em>k</em> does not have to be fixed in advance. The tree also shows
-        <em>how</em> groups relate to each other.
+        <strong>Hierarchical clustering</strong> builds a tree of groups inside groups. I used
+        the <em>agglomerative</em> version, which works from the bottom up. Every movie starts as
+        its own cluster, and the two closest clusters keep getting merged until only one is left.
+        You can draw the whole merge history as a <strong>dendrogram</strong>. Cutting the tree at
+        a certain height gives you clusters, so you don't have to choose <em>k</em> up front. You
+        also get to see how the groups are related to each other.
       </li>
     </ul>
     <p>
-      Both methods depend on a <strong>distance metric</strong> that defines "similar":
+      Both methods need a <strong>distance metric</strong> to decide what "similar" means.
+      Here are the ones that matter for this project:
     </p>
     <ul>
       <li>
-        <strong>Euclidean distance</strong>, <code>d(a,b) = &radic;&Sigma;(a<sub>i</sub> &minus; b<sub>i</sub>)&sup2;</code>,
-        is the straight-line distance between two points. K-means minimizes squared Euclidean
-        distance to the centroid, so it is the metric used for k-means here.
+        <strong>Euclidean distance</strong> is the straight line distance between two points. You
+        take the differences on every feature, square them, add them up and take the square root.
+        KMeans tries to keep points close to their centroid in this sense, so I used Euclidean
+        distance for KMeans.
       </li>
       <li>
         <strong>Cosine similarity</strong>, <code>cos(a,b) = a&middot;b / (&Vert;a&Vert; &Vert;b&Vert;)</code>,
-        measures the <em>angle</em> between two vectors and ignores their length. Cosine distance is
-        <code>1 &minus; cos(a,b)</code>. It is used for the hierarchical clustering. On standardized
-        data, two movies are cosine-similar when they are above or below average on the
-        <em>same</em> attributes in the same proportions (a similar "profile"), even if one is far
-        more extreme than the other.
+        looks at the <em>angle</em> between two vectors and ignores how long they are. Cosine
+        distance is just one minus the cosine similarity. I used it for the hierarchical
+        clustering. On standardized data, two movies come out as cosine similar when they are
+        above or below average on the <em>same</em> features in the same proportions. One movie
+        can be way more extreme than the other and still count as similar, as long as the overall
+        shape matches.
       </li>
       <li>
-        Other common metrics include Manhattan (city-block) distance and Minkowski distance, the
-        general form of which Euclidean and Manhattan are special cases.
+        Other common choices are Manhattan distance, which adds up the absolute differences, and
+        Minkowski distance, a general formula that covers both Euclidean and Manhattan.
       </li>
     </ul>
     <p>
-      <strong>How clustering is used for discovery in this project:</strong> each movie is described
-      by its budget, revenue, popularity, number of votes, average rating, and runtime. The
-      questions are whether movies fall into natural "success profiles" (for example, big-budget
-      crowd-pleasers, cheap acclaimed films, or expensive disappointments) and whether those groups
-      match intuitive categories such as franchises, prestige dramas, or indie genre films.
-      Genre and title are hidden from the algorithms and only brought back afterwards to interpret
-      what each cluster means.
+      <strong>How I'm using clustering here.</strong> I describe each movie by six numbers: budget,
+      revenue, popularity, vote count, average rating and runtime. Then I check whether movies fall
+      into natural "success profiles". For example, do big budget crowd pleasers, cheap films that
+      critics love and expensive flops show up as their own groups? Do those groups line up with
+      things like franchises, prestige dramas or indie genre films? The algorithms never see
+      genre or title. I only bring those back at the end to make sense of each cluster.
     </p>
     <div class="gallery">
       <figure>
         <a class="zoom" href="assets/img/clustering/concept_partitional_vs_hierarchical.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/clustering/concept_partitional_vs_hierarchical.png" alt="Partitional k-means clustering next to a hierarchical dendrogram on the same toy data"></a>
-        <figcaption><strong>Partitional vs. hierarchical.</strong> On the same toy data, k-means produces one flat split into k = 3 groups with centroids (X). Agglomerative clustering produces a full tree of merges that can be cut at any height; the dashed cut gives the same three groups.</figcaption>
+        <figcaption><strong>Partitional vs. hierarchical.</strong> Same toy data, two approaches. KMeans gives one flat split into k = 3 groups, with each centroid marked by an X. The agglomerative method gives a full tree of merges that you can cut anywhere. The dashed cut here gives the same three groups.</figcaption>
       </figure>
       <figure>
         <a class="zoom" href="assets/img/clustering/concept_distance_metrics.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/clustering/concept_distance_metrics.png" alt="Vectors A, B and C illustrating Euclidean versus cosine distance"></a>
-        <figcaption><strong>Euclidean vs. cosine distance.</strong> A is closer to C in straight-line (Euclidean) terms, but A and B point in exactly the same direction, so their cosine distance is 0. The choice of metric changes what "similar" means.</figcaption>
+        <figcaption><strong>Euclidean vs. cosine distance.</strong> By straight line distance, A is closer to C. But A and B point in exactly the same direction, so their cosine distance is 0. Which metric you pick really changes what counts as similar.</figcaption>
       </figure>
     </div>
   </section>
@@ -113,34 +111,33 @@
   <section class="block">
     <h3>Data Prep</h3>
     <p>
-      Clustering methods need <strong>unlabeled, numeric data only</strong>. Distances such as
-      Euclidean and cosine are computed with arithmetic on the feature values. Text columns (title,
-      genre, language) cannot enter that arithmetic. Label columns (such as the rating tier) must
-      also be removed: the point of unsupervised learning is to see what structure appears
-      <em>without</em> being told the answer. Labels are kept aside and used only afterwards to
-      interpret the clusters.
+      Clustering only works on <strong>numeric data with no labels</strong>. Distances like
+      Euclidean and cosine are pure arithmetic on feature values, and you can't do arithmetic on a
+      title or a genre. Labels such as rating tier also have to go. The whole idea of unsupervised
+      learning is to see what shows up <em>without</em> being given the answer. I kept the labels
+      to the side and only used them afterwards to explain the clusters.
     </p>
-    <p>Starting from the cleaned TMDB dataset (2,000 movies), the following steps were applied:</p>
+    <p>I started from the cleaned TMDB dataset of 2,000 movies and did the following:</p>
     <ul>
-      <li><strong>Feature selection.</strong> Six numeric "success" attributes were kept: <code>budget</code>, <code>revenue</code>, <code>popularity</code>, <code>vote_count</code>, <code>vote_average</code>, and <code>runtime</code>.</li>
-      <li><strong>Missing values.</strong> 215 movies with unknown budget or revenue were dropped (distances cannot be computed with blanks), leaving <strong>1,785 movies</strong>.</li>
-      <li><strong>Log transform.</strong> Budget, revenue, popularity, and vote count are extremely right-skewed (a few blockbusters are 100&times; the median). <code>log(1 + x)</code> was applied so that those few films do not dominate every distance.</li>
-      <li><strong>Standardization.</strong> Every column was converted to a z-score (mean 0, standard deviation 1). Without this, budget (in the hundreds of millions) would swamp rating (0 to 10). This step also centers the data, which is what makes cosine similarity meaningful here: it compares each movie's pattern of above- and below-average values.</li>
-      <li><strong>Labels removed.</strong> Title, genre, and rating tier are not in the clustering input.</li>
+      <li><strong>Picked the features.</strong> I kept six numeric "success" columns: <code>budget</code>, <code>revenue</code>, <code>popularity</code>, <code>vote_count</code>, <code>vote_average</code> and <code>runtime</code>.</li>
+      <li><strong>Dealt with missing values.</strong> 215 movies had no budget or revenue, and you can't measure distance with blanks. Dropping them left <strong>1,785 movies</strong>.</li>
+      <li><strong>Log transform.</strong> Budget, revenue, popularity and vote count are heavily skewed. A few blockbusters are 100 times the median. I applied <code>log(1 + x)</code> so those few films don't dominate every distance.</li>
+      <li><strong>Standardized.</strong> I turned every column into a z score with mean 0 and standard deviation 1. Otherwise budget, which runs into hundreds of millions, would drown out a rating that only goes from 0 to 10. This step also centers the data. That's what makes cosine similarity meaningful here, since it ends up comparing each movie's pattern of above and below average values.</li>
+      <li><strong>Removed labels.</strong> Title, genre and rating tier are not part of the clustering input.</li>
     </ul>
     <div class="gallery">
       <figure>
         <a class="zoom" href="assets/img/clustering/data_before.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/clustering/data_before.png" alt="Sample of cleaned movie data with labels and raw values"></a>
-        <figcaption><strong>Before.</strong> Cleaned movie records still contain text labels (title, genre, rating tier) and raw values on wildly different scales.</figcaption>
+        <figcaption><strong>Before.</strong> The cleaned data still has text labels like title, genre and rating tier, and the raw numbers are on wildly different scales.</figcaption>
       </figure>
       <figure>
         <a class="zoom" href="assets/img/clustering/data_after.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/clustering/data_after.png" alt="Sample of unlabeled standardized numeric data used for clustering"></a>
-        <figcaption><strong>After: the clustering input.</strong> Six unlabeled numeric columns, log-transformed where needed and standardized, so every feature contributes on the same scale.</figcaption>
+        <figcaption><strong>After.</strong> This is the clustering input. Six numeric columns with no labels, log transformed where needed and standardized so each feature counts the same.</figcaption>
       </figure>
     </div>
     <div class="data-links">
       <a href="../data/prepared/clustering_input.csv">Clustering input sample (CSV, unlabeled)</a>
-      <a href="../data/prepared/clustering_input_labeled.csv">Same rows with titles + cluster labels (for interpretation)</a>
+      <a href="../data/prepared/clustering_input_labeled.csv">Same rows with titles and cluster labels (for interpretation)</a>
       <a href="../data/clean/tmdb_movies_clean.csv">Full cleaned dataset (CSV)</a>
     </div>
   </section>
@@ -149,31 +146,32 @@
   <section class="block">
     <h3>Code</h3>
     <p>
-      All clustering is done in Python with <code>pandas</code>, <code>scikit-learn</code>
-      (<code>KMeans</code>, <code>silhouette_score</code>, <code>adjusted_rand_score</code>,
-      <code>StandardScaler</code>), <code>scipy</code> (<code>linkage</code>,
-      <code>dendrogram</code>, <code>fcluster</code>, <code>pdist</code>), and
-      <code>matplotlib</code>/<code>seaborn</code> for the figures. A single script prepares the
-      data, runs k-means and hierarchical clustering, and writes every figure on this page:
+      Everything is written in Python. I used <code>pandas</code>, sklearn for
+      <code>KMeans</code>, <code>silhouette_score</code>, <code>adjusted_rand_score</code> and
+      <code>StandardScaler</code>, scipy for <code>linkage</code>, <code>dendrogram</code>,
+      <code>fcluster</code> and <code>pdist</code>, and <code>matplotlib</code> with
+      <code>seaborn</code> for the charts. One script preps the data, runs both kinds of
+      clustering and saves every figure on this page.
     </p>
     <div class="data-links">
       <a href="../scripts/clustering.py">clustering.py (full code)</a>
     </div>
-    <p>The core of each method:</p>
-<pre><code># k-means (Euclidean) for k = 2..10, scored with the silhouette method
+    <p>The main parts of each method:</p>
+<pre><code># KMeans (Euclidean) for k = 2..10, scored with the silhouette method
 for k in range(2, 11):
     km = KMeans(n_clusters=k, n_init=20, random_state=42).fit(X)
     wcss.append(km.inertia_)
     sils.append(silhouette_score(X, km.labels_))
 
-# hierarchical clustering with COSINE distance (1 - cosine similarity)
+# hierarchical clustering with COSINE distance (one minus cosine similarity)
 dist = pdist(X.values, metric="cosine")
 Z = linkage(dist, method="average")          # agglomerative, average linkage
 labels = fcluster(Z, t=k, criterion="maxclust")
 dendrogram(Z, truncate_mode="lastp", p=40)</code></pre>
     <p>
-      Average linkage was chosen for the hierarchical clustering because Ward linkage is only
-      defined for Euclidean distance. Average linkage works with any distance, including cosine.
+      For the hierarchical clustering I went with average linkage. Ward linkage is a popular
+      choice, but it only works with Euclidean distance. Average linkage works with any distance,
+      cosine included.
     </p>
   </section>
 
@@ -181,134 +179,155 @@ dendrogram(Z, truncate_mode="lastp", p=40)</code></pre>
   <section class="block">
     <h3>Results</h3>
 
-    <p><strong>1. Choosing k for k-means: elbow and silhouette.</strong></p>
+    <p><strong>1. Picking k for KMeans with the elbow and silhouette methods</strong></p>
     <p>
-      K-means was run for every k from 2 to 10. The <em>elbow</em> plot (within-cluster sum of
-      squares) falls smoothly, with no sharp elbow, only a gentle bend around k = 3 to 4. That is a
-      first sign that the movies form a continuum more than well-separated islands. The
-      <em>silhouette</em> score compares each movie's distance to its own cluster against its
-      distance to the nearest other cluster (from &minus;1 to +1, higher is better). It is highest
-      at <strong>k = 2 (0.249)</strong> and declines steadily: 0.213 at k = 3, 0.196 at k = 4, and
-      0.179 at k = 5. By the silhouette method, the "best" k is therefore <strong>2</strong>.
-      However, all scores are modest (below 0.25), so the clusters are real but overlapping.
+      I ran KMeans for every k from 2 to 10. The <em>elbow</em> plot, which tracks the within
+      cluster sum of squares, drops smoothly. There's no sharp elbow, just a soft bend around k = 3
+      or 4. That was my first hint that the movies form more of a continuous spread than separate
+      islands.
+    </p>
+    <p>
+      The <em>silhouette</em> score compares how close each movie is to its own cluster with how
+      close it is to the next nearest one. It runs from negative 1 to 1, and higher is better. It
+      peaks at <strong>k = 2 with 0.249</strong> and then keeps dropping: 0.213 at k = 3, 0.196 at
+      k = 4 and 0.179 at k = 5. So by the silhouette method, the best k is <strong>2</strong>. All
+      the scores are under 0.25 though, which means the clusters are real but they overlap quite a
+      bit.
     </p>
     <div class="gallery wide">
       <figure>
         <a class="zoom" href="assets/img/clustering/kmeans_elbow_silhouette.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/clustering/kmeans_elbow_silhouette.png" alt="Elbow plot and silhouette scores for k from 2 to 10"></a>
-        <figcaption><strong>Elbow and silhouette results.</strong> Left: WCSS drops gradually with no sharp elbow. Right: the average silhouette peaks at k = 2 and generally declines as k grows; the scores for the three compared values (k = 3, 4, 5) are labeled.</figcaption>
+        <figcaption><strong>Elbow and silhouette results.</strong> On the left, WCSS falls gradually with no clear elbow. On the right, the silhouette score is highest at k = 2 and mostly drops as k goes up. The scores for k = 3, 4 and 5 are labeled.</figcaption>
       </figure>
     </div>
 
-    <p><strong>2. Comparing three values of k (3, 4, 5).</strong></p>
+    <p><strong>2. Comparing k = 3, 4 and 5</strong></p>
     <p>
-      To see what the extra clusters add, k-means was compared at k = 3, 4, and 5. Each panel below
-      projects the six-dimensional data onto its first two principal components purely for display
-      (the clustering itself used all six features). Median values per cluster for k = 4 show the
-      most interpretable split:
+      To see what extra clusters actually add, I compared KMeans at k = 3, 4 and 5. The panels
+      below squash the six features down to two principal components just so they can be plotted.
+      The clustering itself used all six. The k = 4 version was the easiest to make sense of, so
+      here are its median values per cluster:
     </p>
     <div class="table-wrap">
       <table class="results-table">
         <tr><th>k = 4 cluster</th><th>Movies</th><th>Median budget</th><th>Median revenue</th><th>Median rating</th><th>Runtime</th><th>Typical members</th></tr>
-        <tr><td>0 &ndash; Small indie / cult</td><td>274</td><td>$10M</td><td>$19M</td><td>6.9</td><td>104 min</td><td>Reservoir Dogs, Donnie Darko, Requiem for a Dream, The Purge</td></tr>
-        <tr><td>1 &ndash; Blockbuster hits</td><td>358</td><td>$140M</td><td>$527M</td><td>7.4</td><td>129 min</td><td>Interstellar, Inception, The Avengers, The Dark Knight, Avatar</td></tr>
-        <tr><td>2 &ndash; Mainstream, weaker reception</td><td>687</td><td>$65M</td><td>$170M</td><td>6.4</td><td>107 min</td><td>Lucy, Oblivion, The Hangover Part II, Night at the Museum</td></tr>
-        <tr><td>3 &ndash; Acclaimed mid-budget</td><td>466</td><td>$34.5M</td><td>$125M</td><td>7.4</td><td>122 min</td><td>John Wick, Get Out, Whiplash, Baby Driver, Memento</td></tr>
+        <tr><td>0: Small indie and cult</td><td>274</td><td>$10M</td><td>$19M</td><td>6.9</td><td>104 min</td><td>Reservoir Dogs, Donnie Darko, Requiem for a Dream, The Purge</td></tr>
+        <tr><td>1: Blockbuster hits</td><td>358</td><td>$140M</td><td>$527M</td><td>7.4</td><td>129 min</td><td>Interstellar, Inception, The Avengers, The Dark Knight, Avatar</td></tr>
+        <tr><td>2: Mainstream with weaker reviews</td><td>687</td><td>$65M</td><td>$170M</td><td>6.4</td><td>107 min</td><td>Lucy, Oblivion, The Hangover Part II, Night at the Museum</td></tr>
+        <tr><td>3: Mid budget and well reviewed</td><td>466</td><td>$34.5M</td><td>$125M</td><td>7.4</td><td>122 min</td><td>John Wick, Get Out, Whiplash, Baby Driver, Memento</td></tr>
       </table>
     </div>
     <p>
-      At <strong>k = 3</strong>, the clusters are blockbusters (550 movies, median $94M budget and
-      $384M revenue, rating 7.4), lower-rated mainstream films (780, rating 6.4), and cheaper
-      higher-rated dramas (455, $15M budget, rating 7.2). Going to <strong>k = 4</strong> splits the
-      cheap group into true micro-budget indies and well-reviewed mid-budget films. At
-      <strong>k = 5</strong>, the blockbusters split again into "mega-hits" (244 movies, $544M median
-      revenue, rating 7.6) and "expensive but middling" films (431 movies, $110M budget, rating
-      6.6). Each step adds a meaningful distinction, but the silhouette score falls each time,
-      because the new boundaries cut through dense regions rather than gaps.
+      With <strong>k = 3</strong> I got three groups. There were blockbusters (550 movies, $94M
+      median budget, $384M revenue, 7.4 rating), mainstream films that rated lower (780 movies,
+      6.4 rating), and cheaper dramas that rated higher (455 movies, $15M budget, 7.2 rating).
+    </p>
+    <p>
+      Moving to <strong>k = 4</strong> breaks that cheap group in two: real micro budget indies on
+      one side and well reviewed mid budget films on the other. At <strong>k = 5</strong> the
+      blockbusters split as well. One part is the mega hits (244 movies, $544M median revenue,
+      7.6 rating). The other is films that were expensive but just okay (431 movies, $110M budget,
+      6.6 rating).
+    </p>
+    <p>
+      Every step adds a split that makes sense, but the silhouette score still goes down each time.
+      The new boundaries are cutting through crowded areas instead of real gaps.
     </p>
     <div class="gallery wide">
       <figure>
         <a class="zoom" href="assets/img/clustering/kmeans_k_comparison.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/clustering/kmeans_k_comparison.png" alt="K-means clusters for k = 3, 4 and 5 on a PCA projection"></a>
-        <figcaption><strong>K-means at k = 3, 4, 5.</strong> Points are movies, colored by cluster; black X's are centroids. The clusters tile one continuous cloud, which is why the silhouette scores are modest.</figcaption>
+        <figcaption><strong>KMeans at k = 3, 4 and 5.</strong> Every point is a movie, colored by cluster, and the black X's are the centroids. The clusters divide up one continuous cloud, which explains the modest silhouette scores.</figcaption>
       </figure>
     </div>
     <div class="gallery">
       <figure>
         <a class="zoom" href="assets/img/clustering/kmeans_centroids_k4.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/clustering/kmeans_centroids_k4.png" alt="Heatmap of k-means centroids for k = 4"></a>
-        <figcaption><strong>Centroids, k = 4.</strong> Each row is a cluster's center in z-scores. Cluster 1 is high on everything; cluster 2 is funded like a hit but rated 0.8 SD below average; cluster 3 is the reverse: modest money, high rating.</figcaption>
+        <figcaption><strong>Centroids for k = 4.</strong> Each row is the center of a cluster in z scores. Cluster 1 is high on everything. Cluster 2 has hit level money but rates 0.8 standard deviations below average. Cluster 3 is the opposite, with modest money and high ratings.</figcaption>
       </figure>
       <figure>
         <a class="zoom" href="assets/img/clustering/kmeans_budget_rating_k4.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/clustering/kmeans_budget_rating_k4.png" alt="Budget versus rating colored by k = 4 cluster"></a>
-        <figcaption><strong>Clusters in original units (k = 4).</strong> Budget (log scale) against rating. Budget separates the indie cluster from the rest, while rating separates the well-reviewed clusters from the mainstream underperformers.</figcaption>
+        <figcaption><strong>Clusters in real units (k = 4).</strong> Budget on a log scale against rating. Budget is what pulls the indie cluster away from the rest. Rating is what separates the well reviewed clusters from the mainstream ones that underperformed.</figcaption>
       </figure>
       <figure>
         <a class="zoom" href="assets/img/clustering/kmeans_centroids_k2.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/clustering/kmeans_centroids_k2.png" alt="Heatmap of k-means centroids for k = 2"></a>
-        <figcaption><strong>Centroids, k = 2 (silhouette-best).</strong> The best-separated split is simply "big" (686 movies, median $98.5M budget and $362M revenue) vs. "everything else" (1,099 movies, $35M and $96M).</figcaption>
+        <figcaption><strong>Centroids for k = 2, the silhouette winner.</strong> The cleanest split is simply "big" against "everything else". The big group has 686 movies with a median $98.5M budget and $362M revenue. The other has 1,099 movies at $35M and $96M.</figcaption>
       </figure>
       <figure>
         <a class="zoom" href="assets/img/clustering/kmeans_budget_rating_k2.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/clustering/kmeans_budget_rating_k2.png" alt="Budget versus rating colored by k = 2 cluster"></a>
-        <figcaption><strong>Clusters in original units (k = 2).</strong> The two-way split is driven mostly by scale (budget, revenue, attention), with the "big" cluster also rated higher on average (7.3 vs. 6.7).</figcaption>
+        <figcaption><strong>Clusters in real units (k = 2).</strong> This split comes mostly from scale: budget, revenue and attention. The big group also rates a bit higher on average, 7.3 against 6.7.</figcaption>
       </figure>
     </div>
 
-    <p><strong>3. Hierarchical clustering with cosine similarity.</strong></p>
+    <p><strong>3. Hierarchical clustering with cosine similarity</strong></p>
     <p>
-      Agglomerative clustering with cosine distance and average linkage was run on the same 1,785
-      movies. The full dendrogram below is truncated to its top 40 branches so it stays readable.
-      The last merge, at a cosine distance of about 1.21, joins two large branches that each
-      formed well below it (at about 0.97 and 1.06). That makes <strong>two</strong> branches the
-      most natural place to cut the tree. Cutting the tree at k = 2 to 10 and computing the cosine silhouette confirms this.
-      <strong>Hierarchical clustering suggests k = 2</strong> (silhouette 0.325), followed by k = 3
-      (0.284). At k = 4 it splits off only a tiny group of 28 films (mostly family and animation,
-      such as <em>Ponyo</em>, <em>Paddington</em>, and <em>Wonka</em>) rather than a substantive
-      new cluster.
+      I ran agglomerative clustering with cosine distance and average linkage on the same 1,785
+      movies. The full dendrogram below only shows the top 40 branches, otherwise it's
+      impossible to read.
+    </p>
+    <p>
+      The very last merge happens at a cosine distance of about 1.21. It joins two big branches
+      that each came together much lower, at roughly 0.97 and 1.06. So the most natural place to
+      cut the tree is into <strong>two</strong> branches. I double checked this by cutting the
+      tree at every k from 2 to 10 and computing the cosine silhouette each time.
+      <strong>Hierarchical clustering also points to k = 2</strong> (silhouette 0.325), with
+      k = 3 next (0.284). Cutting at k = 4 doesn't create a meaningful new group. It just splits
+      off 28 films, mostly family and animation titles like <em>Ponyo</em>, <em>Paddington</em>
+      and <em>Wonka</em>.
     </p>
     <div class="gallery wide">
       <figure>
         <a class="zoom" href="assets/img/clustering/hclust_dendrogram_full.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/clustering/hclust_dendrogram_full.png" alt="Truncated dendrogram of all 1785 movies using cosine distance"></a>
-        <figcaption><strong>Dendrogram of all 1,785 movies (cosine, average linkage).</strong> Numbers in parentheses are how many movies sit under each leaf. The dashed line at the final merge splits the tree into the two main branches.</figcaption>
+        <figcaption><strong>Dendrogram of all 1,785 movies (cosine distance, average linkage).</strong> The numbers in brackets show how many movies are under each leaf. The dashed line at the final merge cuts the tree into its two main branches.</figcaption>
       </figure>
     </div>
     <div class="gallery">
       <figure>
         <a class="zoom" href="assets/img/clustering/hclust_dendrogram_sample.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/clustering/hclust_dendrogram_sample.png" alt="Labeled dendrogram of the 60 most-voted movies"></a>
-        <figcaption><strong>Labeled dendrogram: the 60 most-voted movies.</strong> Familiar titles make the tree readable. Pixar films (Up, Inside Out, Coco) merge together; the MCU and Harry Potter films form one tight blockbuster family; prestige films (Lord of the Rings, Gladiator, Django Unchained, Inglourious Basterds) form another; Parasite, Pulp Fiction and The Shawshank Redemption pair up as acclaimed lower-budget classics; John Wick and Suicide Squad are outliers.</figcaption>
+        <figcaption><strong>Dendrogram of the 60 most voted movies.</strong> Using titles people know makes the tree easy to follow. The Pixar films (Up, Inside Out, Coco) merge together. Marvel and Harry Potter form one tight blockbuster family. Prestige films like Lord of the Rings, Gladiator, Django Unchained and Inglourious Basterds form another. Parasite, Pulp Fiction and The Shawshank Redemption pair up as acclaimed classics that didn't cost much to make. John Wick and Suicide Squad are outliers.</figcaption>
       </figure>
       <figure>
         <a class="zoom" href="assets/img/clustering/hclust_silhouette.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/clustering/hclust_silhouette.png" alt="Silhouette score by number of clusters for hierarchical clustering"></a>
-        <figcaption><strong>Where to cut the tree.</strong> Cosine silhouette for each cut of the dendrogram. It is highest at k = 2 (0.325) and drops sharply after k = 3, matching the k-means silhouette result.</figcaption>
+        <figcaption><strong>Where to cut the tree.</strong> The cosine silhouette for each cut of the dendrogram. It's highest at k = 2 (0.325) and drops fast after k = 3, which matches what KMeans showed.</figcaption>
       </figure>
     </div>
 
-    <p><strong>4. How hierarchical clustering compares with k-means.</strong></p>
+    <p><strong>4. How hierarchical clustering compares to KMeans</strong></p>
     <p>
-      Both methods agree that <strong>k = 2</strong> is the best-separated solution, and both
-      split the movies by commercial scale. The hierarchical "big" branch (985 movies, median $75M
-      budget, $256M revenue, rating 7.2, 124 min) closely matches the k-means "big" cluster (686
-      movies, $98.5M, $362M, rating 7.3, 125 min). The cross-tabulation shows strong overlap:
-      788 movies are in the "smaller" group under both methods, and 674 in the "big" group under
-      both. Almost all disagreement is one-way. 311 movies that k-means calls "smaller" are
-      grouped by cosine with the big films, because cosine looks only at the <em>shape</em> of a
-      profile. A moderately budgeted, long, well-rated film points in the same direction as a
-      blockbuster even if it is less extreme. The adjusted Rand index (1 = identical, 0 = chance)
-      is <strong>0.41 at k = 2</strong> and <strong>0.23 at k = 4</strong>. The methods agree on
-      the main divide but draw the finer boundaries differently.
+      Both methods agree that <strong>k = 2</strong> gives the cleanest split, and both divide the
+      movies by how commercially big they are. The hierarchical "big" branch has 985 movies with a
+      median $75M budget, $256M revenue, 7.2 rating and 124 minute runtime. That lines up well with
+      the KMeans "big" cluster: 686 movies, $98.5M, $362M, 7.3 rating and 125 minutes.
+    </p>
+    <p>
+      The cross table shows a lot of overlap. 788 movies land in the "smaller" group under both
+      methods, and 674 land in the "big" group under both. Almost all the disagreement goes one
+      way. There are 311 movies that KMeans calls "smaller" but cosine puts with the big films.
+      That happens because cosine only cares about the <em>shape</em> of a profile. A film with a
+      decent budget, a long runtime and good ratings points the same direction as a blockbuster,
+      even if it's less extreme.
+    </p>
+    <p>
+      The adjusted Rand index measures how much two clusterings agree, where 1 is identical and 0
+      is no better than chance. It comes out to <strong>0.41 at k = 2</strong> and
+      <strong>0.23 at k = 4</strong>. The two methods agree on the main divide but draw the finer
+      lines differently.
     </p>
     <div class="gallery">
       <figure>
         <a class="zoom" href="assets/img/clustering/compare_kmeans_hclust_k2.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/clustering/compare_kmeans_hclust_k2.png" alt="Crosstab of k-means vs hierarchical clusters at k = 2"></a>
-        <figcaption><strong>Agreement at k = 2.</strong> Rows are k-means clusters, columns are hierarchical clusters. Most movies land on the diagonal; the off-diagonal 311 are mid-sized films that cosine groups with blockbusters.</figcaption>
+        <figcaption><strong>Agreement at k = 2.</strong> Rows are KMeans clusters and columns are hierarchical clusters. Most movies fall on the diagonal. The 311 off the diagonal are mid sized films that cosine groups with the blockbusters.</figcaption>
       </figure>
       <figure>
         <a class="zoom" href="assets/img/clustering/compare_pca_scatter_k2.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/clustering/compare_pca_scatter_k2.png" alt="Side by side scatter of k-means and hierarchical clusters at k = 2"></a>
-        <figcaption><strong>Side by side, k = 2.</strong> K-means draws a clean straight boundary through the cloud. The cosine-based split overlaps more in this 2-D view, because it groups movies by the direction of their profile rather than by position, and it pulls more mid-sized films into the "big" (gold) group.</figcaption>
+        <figcaption><strong>Side by side at k = 2.</strong> KMeans draws a clean straight line through the cloud. The cosine split looks messier in this 2D view because it groups movies by the direction of their profile instead of where they sit. It also pulls more mid sized films into the gold "big" group.</figcaption>
       </figure>
       <figure>
         <a class="zoom" href="assets/img/clustering/compare_kmeans_hclust_k4.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/clustering/compare_kmeans_hclust_k4.png" alt="Crosstab of k-means vs hierarchical clusters at k = 4"></a>
-        <figcaption><strong>Agreement at k = 4.</strong> The k-means blockbuster cluster maps almost entirely (326 of 358) to one hierarchical branch, and the indie cluster maps to another (253 of 274), but the two mid-range k-means clusters are spread across branches.</figcaption>
+        <figcaption><strong>Agreement at k = 4.</strong> The KMeans blockbuster cluster maps almost completely onto one hierarchical branch (326 of 358). The indie cluster maps onto another (253 of 274). The two middle KMeans clusters get spread across several branches.</figcaption>
       </figure>
       <figure>
         <a class="zoom" href="assets/img/clustering/compare_pca_scatter_k4.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/clustering/compare_pca_scatter_k4.png" alt="Side by side scatter of k-means and hierarchical clusters at k = 4"></a>
-        <figcaption><strong>Side by side, k = 4.</strong> The hierarchical solution at this level is dominated by three large branches plus a 28-movie family/animation group, while k-means makes four more balanced groups.</figcaption>
+        <figcaption><strong>Side by side at k = 4.</strong> At this level the hierarchical result is three large branches plus a small group of 28 family and animation films. KMeans makes four groups that are much more even in size.</figcaption>
       </figure>
     </div>
   </section>
@@ -317,26 +336,23 @@ dendrogram(Z, truncate_mode="lastp", p=40)</code></pre>
   <section class="block">
     <h3>Conclusions</h3>
     <p>
-      Grouping movies purely on their numbers, with no genre or title information, shows that the
-      clearest dividing line is <strong>scale</strong>. There is a family of big-budget,
-      high-revenue, heavily watched films, and a larger family of everything else. Two very
-      different algorithms, k-means with Euclidean distance and hierarchical clustering with cosine
-      similarity, both chose this two-way split as the best-separated structure. That agreement
-      makes it a trustworthy finding.
+      When I grouped movies using only their numbers, with no genre or title, the clearest line
+      was <strong>scale</strong>. On one side are the big budget, high revenue films that everyone
+      watches. On the other is a bigger group with everything else. KMeans with Euclidean distance
+      and hierarchical clustering with cosine similarity work very differently, yet both picked
+      this two way split as the best one. That gives me a lot more confidence in it.
     </p>
-    <p>
-      Looking at more clusters reveals the more interesting story behind "movie success":
-    </p>
+    <p>With more clusters, a more interesting picture of movie success shows up:</p>
     <ul>
-      <li><strong>Money buys attention, not acclaim.</strong> One cluster (687 movies at k = 4) is funded and marketed like mainstream hits ($65M median budget) yet has the lowest ratings of any group (6.4). Another (466 movies) has half that budget and some of the highest ratings (7.4). Spending reliably predicts revenue and popularity, but not quality.</li>
-      <li><strong>The real winners combine both.</strong> The blockbuster cluster (<em>Inception</em>, <em>The Dark Knight</em>, <em>Avengers</em>) is high on every success measure at once: budget, revenue, attention, rating, and runtime. These films are long, expensive, and well reviewed.</li>
-      <li><strong>Small films can succeed on reception alone.</strong> The micro-budget cluster (<em>Reservoir Dogs</em>, <em>Donnie Darko</em>) earns little but rates about average (6.9), and the labeled dendrogram puts low-budget classics such as <em>Parasite</em> and <em>Pulp Fiction</em> in their own acclaimed branch.</li>
-      <li><strong>Franchises cluster tightly.</strong> MCU, Harry Potter, and Lord of the Rings entries merge at very small cosine distances. Within a franchise, the "success profile" is remarkably consistent from film to film.</li>
-      <li><strong>Success is a continuum.</strong> Silhouette scores stay below 0.33 for every method and k. Movies do not fall into sharply separated types; they spread across a smooth landscape, and the clusters are useful summaries of regions of that landscape rather than hard categories.</li>
+      <li><strong>Money buys attention, not good reviews.</strong> At k = 4, one cluster of 687 movies gets the budget and marketing of a mainstream hit (median $65M), but it has the lowest ratings of any group at 6.4. Another cluster of 466 movies spends about half as much and gets some of the best ratings, at 7.4. Spending is a good predictor of revenue and popularity. It is not a good predictor of quality.</li>
+      <li><strong>The real winners get both.</strong> The blockbuster cluster, with films like <em>Inception</em>, <em>The Dark Knight</em> and <em>Avengers</em>, is high on every measure at once. These movies are long, expensive and well reviewed.</li>
+      <li><strong>Small films can win on reviews alone.</strong> The micro budget cluster, with <em>Reservoir Dogs</em> and <em>Donnie Darko</em>, doesn't earn much but still rates around average (6.9). The labeled dendrogram even gives cheap classics like <em>Parasite</em> and <em>Pulp Fiction</em> their own acclaimed branch.</li>
+      <li><strong>Franchises stick together.</strong> Marvel, Harry Potter and Lord of the Rings films merge at very small cosine distances. Inside a franchise, the success profile barely changes from one film to the next.</li>
+      <li><strong>Success is a spectrum.</strong> No method and no k got a silhouette above 0.33. Movies don't fall into sharply separate types. They spread out smoothly, and the clusters are handy summaries of different regions rather than strict categories.</li>
     </ul>
     <p>
-      For a studio or a recommender, this suggests describing a movie's commercial scale and its
-      critical reception as two separate dimensions. The PCA tab explores those dimensions directly.
+      If I were a studio or building a recommender, I would treat commercial size and critical
+      reception as two separate things. The PCA tab looks at those two dimensions directly.
     </p>
   </section>
 </main>
