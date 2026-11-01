@@ -34,31 +34,359 @@
 <main>
   <h2 class="page-title">Decision Trees</h2>
 
+  <!-- ============================================================ OVERVIEW -->
   <section class="block">
     <h3>Overview</h3>
     <p>
-      A decision tree predicts a movie's reception category by learning a sequence of simple,
-      readable yes/no splits on its attributes, such as budget above or below a threshold, or
-      genre equal to a specific value. It will be trained on the same labeled movie data used for
-      Naive Bayes so the two methods' accuracy, and the shape of the decision rules the tree
-      learns, can be compared directly.
+      A decision tree is a supervised learning model that makes predictions by asking a chain of
+      simple yes or no questions. Think of a flowchart. It starts at the top, called the
+      <strong>root node</strong>, with a question like "Is the runtime 130 minutes or less?" Each
+      answer sends you down a <strong>branch</strong> to another question, and you keep going
+      until you hit a <strong>leaf node</strong> at the bottom. The leaf gives the final answer,
+      which is usually the most common class among the training examples that ended up there.
     </p>
-    <p class="status-note">Full analysis arrives in Module 3.</p>
+    <p>
+      Trees can do <em>classification</em> (predicting a category, like Low, Medium or High
+      rating) and <em>regression</em> (predicting a number, like revenue). People use them for
+      credit approval, medical diagnosis, customer churn prediction and fraud detection. A big
+      reason is that you can actually read them. You can trace any prediction back through the
+      exact questions that produced it, which is not true of most models. Trees also handle a mix
+      of feature types without needing any scaling, and they're the building block for stronger
+      models like random forests and gradient boosting.
+    </p>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/decision_trees/concept_tree_and_regions.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/decision_trees/concept_tree_and_regions.png" alt="A small decision tree next to the rectangular regions it creates in feature space"></a>
+        <figcaption><strong>What a tree looks like and what it does.</strong> On the left is a small tree trained on made up data. The root asks about runtime, and the next level asks about budget. On the right is the same tree drawn as regions. Every split is a straight cut along one feature, so a tree always chops the data into boxes. Here, long movies or very expensive ones end up in the High box.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/decision_trees/concept_impurity.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/decision_trees/concept_impurity.png" alt="Gini impurity and entropy curves"></a>
+        <figcaption><strong>Measuring how mixed a node is.</strong> Gini and entropy both equal 0 when a node is pure (every example in it has the same class). Both peak when the classes are split 50/50. A good split creates children that sit closer to the edges of this curve than the parent did.</figcaption>
+      </figure>
+    </div>
+
+    <p><strong>How a tree picks its questions: Gini, Entropy and Information Gain</strong></p>
+    <p>
+      At every node, the tree has to choose which feature to split on and where to put the cutoff.
+      It tries the options and picks the one that best separates the classes. To do that it needs
+      a way to score how "mixed up" a group is. That's what impurity measures are for.
+    </p>
+    <ul>
+      <li>
+        <strong>Gini impurity</strong> is 1 minus the sum of each class's share squared. Picture
+        picking two movies at random from a node. Gini is the chance they'd belong to different
+        classes. A pure node scores 0. For two classes, the worst score is 0.5.
+      </li>
+      <li>
+        <strong>Entropy</strong> comes from information theory. It's the negative sum of each
+        class's share times log base 2 of that share. It measures how uncertain you are about the
+        class of a random example in the node. A pure node is 0. For two classes, a 50/50 split
+        scores 1.
+      </li>
+      <li>
+        <strong>Information Gain</strong> measures how much a split helps. It's the impurity of the
+        parent minus the weighted average impurity of the children, where each child is weighted
+        by how many examples it gets. The tree chooses the split with the biggest gain. The term
+        usually goes with entropy, but the same idea works with Gini.
+      </li>
+    </ul>
+    <p>
+      Gini and entropy almost always pick the same splits. Gini is a bit faster to compute since it
+      has no logarithm, which is why it's the default in sklearn.
+    </p>
+
+    <p><strong>A small example</strong></p>
+    <p>
+      Say we have 10 movies: 5 High and 5 Low. The parent node is as mixed as it gets, so its
+      entropy is <strong>1.0</strong> and its Gini is <strong>0.5</strong>. Let's compare two
+      possible splits.
+    </p>
+    <div class="table-wrap">
+      <table class="results-table">
+        <tr><th>Split</th><th>Left child</th><th>Right child</th><th>Weighted entropy</th><th>Information Gain</th><th>Weighted Gini</th><th>Gini decrease</th></tr>
+        <tr><td>A: budget over $50M?</td><td>6 movies: 4 High, 2 Low<br>entropy 0.918, Gini 0.444</td><td>4 movies: 1 High, 3 Low<br>entropy 0.811, Gini 0.375</td><td>0.875</td><td><strong>0.125</strong></td><td>0.417</td><td>0.083</td></tr>
+        <tr><td>B: runtime over 120 min?</td><td>5 movies: 4 High, 1 Low<br>entropy 0.722, Gini 0.320</td><td>5 movies: 1 High, 4 Low<br>entropy 0.722, Gini 0.320</td><td>0.722</td><td><strong>0.278</strong></td><td>0.320</td><td>0.180</td></tr>
+      </table>
+    </div>
+    <p>Here's the math for split A, step by step:</p>
+    <ul>
+      <li>Left child (4 High out of 6): entropy = negative of (4/6 &times; log<sub>2</sub> 4/6 + 2/6 &times; log<sub>2</sub> 2/6) = <strong>0.918</strong></li>
+      <li>Right child (1 High out of 4): entropy = negative of (1/4 &times; log<sub>2</sub> 1/4 + 3/4 &times; log<sub>2</sub> 3/4) = <strong>0.811</strong></li>
+      <li>Weighted average: 6/10 &times; 0.918 + 4/10 &times; 0.811 = <strong>0.875</strong></li>
+      <li>Information Gain = 1.0 minus 0.875 = <strong>0.125</strong></li>
+    </ul>
+    <p>
+      Split B makes two children that are each 80% one class, so it gains <strong>0.278</strong>,
+      more than twice as much as split A. Gini agrees: B drops it by 0.180 and A only by 0.083.
+      So the tree would pick the runtime split. Then it repeats the same process inside each child
+      until it hits a stopping rule.
+    </p>
+
+    <p><strong>Why there are basically infinitely many possible trees</strong></p>
+    <p>
+      For any real dataset you can build a huge number of different trees, and in practice that
+      number is endless. Here's why:
+    </p>
+    <ul>
+      <li>Every numeric feature has a cutoff that could go anywhere. "Budget over $50M" and "budget over $50.1M" are technically different questions, and there's no limit to how finely you can slice a continuous value.</li>
+      <li>Every node can use any feature, and the choices stack up. The number of possible trees grows exponentially as the tree gets deeper.</li>
+      <li>You can change the settings: Gini or entropy, how deep the tree can go, the minimum number of examples in a leaf, and so on. Each change gives a different tree.</li>
+      <li>Leaving out one feature, or training on a slightly different sample of the data, can change the very first split, and everything below it changes too. Tree 3 below shows exactly that.</li>
+    </ul>
+    <p>
+      Finding the single best tree out of all of them is computationally impossible. That's why
+      algorithms like CART build trees <em>greedily</em>. They pick the best split right now
+      without looking ahead, which is fast and works well enough, but isn't guaranteed to find
+      the best overall tree.
+    </p>
   </section>
 
+  <!-- ============================================================ DATA PREP -->
   <section class="block">
-    <h3>Data</h3>
-    <p class="status-note">Prepared (labeled, train/test split) dataset preview and links arrive in Module 3.</p>
+    <h3>Data Prep</h3>
+    <p>
+      Decision trees are supervised, so they need <strong>labeled data</strong>. Every movie
+      needs a known answer that the tree can learn from and that we can check its guesses
+      against. I used the same label as the Naive Bayes tab, <code>reception_class</code>, based
+      on the average TMDB rating: <strong>Low</strong> for 6.5 or below, <strong>Medium</strong>
+      for above 6.5 up to 7.2, and <strong>High</strong> for above 7.2. Same as before, I only
+      used things a studio knows <em>before</em> release, so vote count, popularity and revenue
+      stay out to avoid data leakage.
+    </p>
+    <p>
+      sklearn's trees only accept numbers, so every column has to be numeric. Unlike Naive Bayes,
+      trees don't need counts or bands. They just split on thresholds, so I could leave budget (in
+      millions of dollars), runtime, release year, release month, number of genres and number of
+      spoken languages as raw numbers. Scaling isn't needed either, because a split like "runtime
+      under 118.5" works the same no matter what units runtime is in. Text fields became 0/1
+      columns: one column per genre, plus <code>is_english</code> for the original language and
+      <code>is_us</code> for the production country. After dropping the 172 movies with no budget,
+      that's <strong>1,828 labeled movies with 26 numeric features</strong>.
+    </p>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/naive_bayes/data_before.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/naive_bayes/data_before.png" alt="Cleaned movie data with the reception class label"></a>
+        <figcaption><strong>Before.</strong> The cleaned movies with raw genre text, dates and the new reception_class label. This is the same starting point as the Naive Bayes tab.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/decision_trees/data_labeled.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/decision_trees/data_labeled.png" alt="Labeled numeric data used for decision trees"></a>
+        <figcaption><strong>After.</strong> The labeled, all numeric data that the trees use. Only some of the 26 feature columns fit in the picture.</figcaption>
+      </figure>
+    </div>
+
+    <p><strong>Training set and testing set</strong></p>
+    <p>
+      I split the labeled data into a <strong>training set</strong> that the tree is built from
+      and a <strong>testing set</strong> that's kept away until the end to measure accuracy on
+      unseen movies. The split is 75/25, so 1,371 movies are for training and 457 for testing. It's
+      stratified, so both parts have the same mix of Low, Medium and High, and it's the
+      <em>exact same split</em> used on the Naive Bayes tab. That way both models are graded on the
+      same 457 movies and the comparison is fair.
+    </p>
+    <p>
+      The two sets <strong>have to be disjoint</strong>. Trees are especially good at memorizing.
+      A deep enough tree can get every training movie right just by giving each one its own leaf.
+      If testing movies also appeared in training, the tree would just look up answers it already
+      memorized, and the accuracy would mean nothing. Keeping the sets separate is the only way to
+      find out if the rules it learned actually work on new movies. My code checks this and the
+      overlap is zero.
+    </p>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/decision_trees/train_sample.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/decision_trees/train_sample.png" alt="Sample rows from the training set"></a>
+        <figcaption><strong>Training set sample.</strong> A few of the 1,371 movies the trees are built from.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/decision_trees/test_sample.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/decision_trees/test_sample.png" alt="Sample rows from the testing set"></a>
+        <figcaption><strong>Testing set sample.</strong> A few of the 457 held out movies. No id shows up in both sets.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/decision_trees/train_test_split.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/decision_trees/train_test_split.png" alt="Bar chart of class counts in training and testing sets"></a>
+        <figcaption><strong>The split.</strong> Same class balance on both sides, and the same movies as the Naive Bayes split.</figcaption>
+      </figure>
+    </div>
+    <div class="data-links">
+      <a href="../data/prepared/dt_labeled.csv">Labeled data sample (CSV)</a>
+      <a href="../data/prepared/dt_train.csv">Training set (CSV)</a>
+      <a href="../data/prepared/dt_test.csv">Testing set (CSV)</a>
+    </div>
   </section>
 
+  <!-- ============================================================ CODE -->
   <section class="block">
     <h3>Code</h3>
-    <p class="status-note">Link to decision tree code, language, and core packages arrives in Module 3.</p>
+    <p>
+      I wrote this in Python using sklearn's <code>DecisionTreeClassifier</code>,
+      <code>plot_tree</code> and metrics, along with <code>pandas</code> and
+      <code>matplotlib</code>. The label and the split come from the same shared file the Naive
+      Bayes code uses.
+    </p>
+    <div class="data-links">
+      <a href="../scripts/decision_tree.py">decision_tree.py (full code)</a>
+      <a href="../scripts/supervised_prep.py">supervised_prep.py (label and split)</a>
+    </div>
+    <p>The three trees:</p>
+<pre><code>t1 = DecisionTreeClassifier(criterion="gini", max_depth=3, random_state=42)
+t2 = DecisionTreeClassifier(criterion="entropy", max_depth=4,
+                            min_samples_leaf=15, random_state=42)
+t3 = DecisionTreeClassifier(criterion="gini", max_depth=3, random_state=42)  # trained without genre_drama
+
+t1.fit(X_train, y_train)
+pred = t1.predict(X_test)
+print(accuracy_score(y_test, pred))
+print(confusion_matrix(y_test, pred, labels=["Low", "Medium", "High"]))
+plot_tree(t1, feature_names=X.columns, class_names=t1.classes_, filled=True)</code></pre>
   </section>
 
+  <!-- ============================================================ RESULTS -->
   <section class="block">
     <h3>Results</h3>
-    <p class="status-note">Results, confusion matrices, tree visualizations arrive in Module 3.</p>
+    <p>
+      I built three different trees on the same training data and tested each one on the same 457
+      movies:
+    </p>
+    <div class="table-wrap">
+      <table class="results-table">
+        <tr><th>Tree</th><th>Settings</th><th>Root split</th><th>Leaves</th><th>Train accuracy</th><th>Test accuracy</th></tr>
+        <tr><td>Tree 1</td><td>Gini, max depth 3</td><td>genre_drama</td><td>8</td><td>52.1%</td><td><strong>48.8%</strong></td></tr>
+        <tr><td>Tree 2</td><td>Entropy, max depth 4, at least 15 movies per leaf</td><td>genre_drama</td><td>14</td><td>53.4%</td><td><strong>50.1%</strong></td></tr>
+        <tr><td>Tree 3</td><td>Gini, max depth 3, genre_drama removed</td><td>runtime</td><td>8</td><td>50.3%</td><td><strong>48.1%</strong></td></tr>
+        <tr><td>Baseline</td><td>Always guess the biggest class</td><td></td><td></td><td></td><td>35.2%</td></tr>
+      </table>
+    </div>
+    <p>
+      All three trees beat the baseline by 13 to 15 points. The deeper entropy tree did the best at
+      <strong>50.1%</strong>. One note for reading the tree pictures: sklearn lists classes in
+      alphabetical order, so every "value = [a, b, c]" in a box means [High, Low, Medium]. Boxes
+      are colored by the class they predict (red for High, gold for Medium, dark for Low), and
+      darker shading means the box is more pure.
+    </p>
+
+    <p><strong>Tree 1: Gini, depth 3</strong></p>
+    <p>
+      The very first question is whether the movie is a drama, and that tells you a lot. The two
+      clearest rules in the tree are:
+    </p>
+    <ul>
+      <li><strong>Drama, budget of $38.6M or less, released before 2018 → High.</strong> This leaf has 185 training movies and 132 of them (71%) are High. That's the cheap, serious drama.</li>
+      <li><strong>Not a drama, 118.5 minutes or shorter, not animated → Low.</strong> This is the biggest leaf, with 478 movies. Most of them are Low or Medium, and very few are High (only 54).</li>
+    </ul>
+    <p>
+      The longest movies (over roughly 140 to 150 minutes) end up High on both sides of the tree.
+      Animation also flips short non drama movies from Low to High.
+    </p>
+    <div class="gallery wide">
+      <figure>
+        <a class="zoom" href="assets/img/decision_trees/tree1_gini_depth3.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/decision_trees/tree1_gini_depth3.png" alt="Tree 1, Gini criterion, depth 3"></a>
+        <figcaption><strong>Tree 1 (Gini, max depth 3, 48.8% test accuracy).</strong> The root splits on drama. The left side (not drama) then splits on runtime and animation. The right side (drama) splits on budget, then on release year and runtime.</figcaption>
+      </figure>
+    </div>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/decision_trees/cm_tree1.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/decision_trees/cm_tree1.png" alt="Confusion matrix for tree 1"></a>
+        <figcaption><strong>Tree 1 confusion matrix.</strong> It finds 61% of Low movies and 56% of High movies, but only 32% of Medium ones.</figcaption>
+      </figure>
+    </div>
+
+    <p><strong>Tree 2: Entropy, depth 4, at least 15 movies per leaf</strong></p>
+    <p>
+      Switching to entropy and allowing one more level gives the same top half as Tree 1, plus
+      some sharper leaves. Dramas over 133.5 minutes with a budget under $115M are High 64% of the
+      time. Non drama animated films released after 2017 are High in 26 of 44 cases. Short non
+      drama movies under 96.5 minutes that aren't animated are almost all Low or Medium, with only
+      5 High out of 125.
+    </p>
+    <p>
+      This tree leans hard toward calling things High. It catches 72% of the High movies, the best
+      of any model on either tab, but it only gets 19% of the Medium ones. The minimum leaf size of
+      15 also keeps it from making tiny leaves based on just a few movies.
+    </p>
+    <div class="gallery wide">
+      <figure>
+        <a class="zoom" href="assets/img/decision_trees/tree2_entropy_depth4.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/decision_trees/tree2_entropy_depth4.png" alt="Tree 2, entropy criterion, depth 4"></a>
+        <figcaption><strong>Tree 2 (Entropy, max depth 4, 50.1% test accuracy).</strong> 14 leaves. The extra level adds splits on horror, romance, a second runtime cut and a second budget cut.</figcaption>
+      </figure>
+    </div>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/decision_trees/cm_tree2.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/decision_trees/cm_tree2.png" alt="Confusion matrix for tree 2"></a>
+        <figcaption><strong>Tree 2 confusion matrix.</strong> 116 of 161 High movies were found (72%), but most Medium movies got pushed into High or Low.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/decision_trees/tree2_importance.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/decision_trees/tree2_importance.png" alt="Feature importance for tree 2"></a>
+        <figcaption><strong>Tree 2 feature importance.</strong> Drama (0.31), runtime (0.26), animation (0.19) and budget (0.13) do almost all the work. Release year, horror and romance add a little. The other 19 features were never used.</figcaption>
+      </figure>
+    </div>
+
+    <p><strong>Tree 3: Gini, depth 3, without the drama column</strong></p>
+    <p>
+      For the third tree I took out <code>genre_drama</code>, the root of the first two trees,
+      just to see what would happen. The result is a completely different tree. Now the root
+      splits on <strong>runtime at 118.5 minutes</strong>. Long movies with a budget under $44.75M
+      released before 2018 become the strongest High leaf (104 of 141, or 74%). Short movies over
+      $20.5M that aren't animated become the main Low leaf.
+    </p>
+    <p>
+      The accuracy barely moved (48.1% vs. 48.8%). Runtime and budget are basically stepping in for
+      drama, since dramas tend to be longer and cheaper. This is the "infinitely many trees" point
+      in action: taking out one column changed every split, but the model ended up just as good.
+    </p>
+    <div class="gallery wide">
+      <figure>
+        <a class="zoom" href="assets/img/decision_trees/tree3_gini_no_root.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/decision_trees/tree3_gini_no_root.png" alt="Tree 3, Gini criterion, depth 3, without genre_drama"></a>
+        <figcaption><strong>Tree 3 (Gini, max depth 3, no genre_drama, 48.1% test accuracy).</strong> With drama gone, runtime becomes the root and budget moves up to the second level.</figcaption>
+      </figure>
+    </div>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/decision_trees/cm_tree3.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/decision_trees/cm_tree3.png" alt="Confusion matrix for tree 3"></a>
+        <figcaption><strong>Tree 3 confusion matrix.</strong> More balanced than Tree 2. It finds 39% of Medium movies, the most of the three trees.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/decision_trees/tree_accuracy.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/decision_trees/tree_accuracy.png" alt="Accuracy of the three trees compared to baseline"></a>
+        <figcaption><strong>All three trees vs. baseline.</strong> They land within 2 points of each other, all well above the 35.2% baseline.</figcaption>
+      </figure>
+    </div>
+
+    <p><strong>How deep should a tree go?</strong></p>
+    <p>
+      I also trained Gini trees at every depth from 1 to 15. Training accuracy keeps climbing,
+      from 44% all the way to 96%. Testing accuracy peaks at about 53% around depth 8 and then
+      slowly drops. With no depth limit at all, the tree grows to depth 20 with 486 leaves. It
+      gets 100% of the training movies right but only 50.5% of the testing ones. That's
+      overfitting in its purest form. The tree memorizes the training movies and stops learning
+      anything general. It's also why the testing set matters so much: training accuracy alone
+      would make the deep tree look perfect.
+    </p>
+    <div class="gallery wide">
+      <figure>
+        <a class="zoom" href="assets/img/decision_trees/depth_sweep.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/decision_trees/depth_sweep.png" alt="Training and testing accuracy by maximum tree depth"></a>
+        <figcaption><strong>Training vs. testing accuracy by depth.</strong> The gap between the two lines keeps getting bigger after depth 4 or 5. Past that point the tree is mostly learning noise.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================================================ CONCLUSIONS -->
+  <section class="block">
+    <h3>Conclusions</h3>
+    <p>
+      The trees gave me a set of plain rules for predicting how audiences will react to a movie,
+      using only what's known before release. Those rules line up well with what Naive Bayes found.
+    </p>
+    <ul>
+      <li><strong>Drama, runtime and animation matter most.</strong> Every tree used them at the top. Dramas, long films and animated films lean High. Short, non animated, non drama movies, which is a lot of the action, comedy and horror crowd, lean Low.</li>
+      <li><strong>Spending more doesn't buy better ratings.</strong> Inside the drama branch, the <em>cheaper</em> films (under about $39M) rated higher. Tree 3 found the same thing for long movies. This matches what I saw in clustering and PCA, where budget and rating were nearly unrelated.</li>
+      <li><strong>Newer films are a bit harder to rate highly.</strong> Several trees split on release year around 2017 or 2018, with older films more likely to be High. Some of that is probably survivorship. Older movies that are still popular enough to be in my sample tend to be the ones people remember fondly.</li>
+      <li><strong>The middle is still hard.</strong> Like Naive Bayes, the trees struggle with Medium movies. The features say which direction a movie leans but can't pin down "pretty good" vs. "just okay".</li>
+    </ul>
+    <p>
+      Comparing the two tabs, Naive Bayes (57.8%) beat the best tree (50.1%) on the exact same
+      testing movies. That makes sense for this data. Most of my features are small yes or no
+      signals, like a dozen genres, the language and the season. Naive Bayes adds up all of them at
+      once, while a shallow tree can only ask a few questions before it has to stop. The trees win
+      on being easy to explain though. A rule like "a drama under $39M made before 2018 is probably
+      rated High" is something anyone in a studio could read and act on.
+    </p>
   </section>
 </main>
 

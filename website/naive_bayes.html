@@ -34,32 +34,271 @@
 <main>
   <h2 class="page-title">Naive Bayes</h2>
 
+  <!-- ============================================================ OVERVIEW -->
   <section class="block">
     <h3>Overview</h3>
     <p>
-      Naive Bayes is a supervised classification method that predicts a category, such as whether
-      a movie's rating tier is "Good" or "Poor," by combining the probability of each observed
-      attribute independently. It will be trained on labeled movie records (using rating or
-      popularity tier as the target class) to test how well genre, language, release timing, and
-      other attributes predict a film's reception category, using a held-out test set and
-      confusion matrices to evaluate accuracy.
+      Naive Bayes is a supervised learning method for classification. You give it examples that
+      already have a label, it learns from them, and then it guesses the label for new examples it
+      has never seen. It's built on Bayes' theorem, which flips a probability around. Instead of
+      asking "how likely are these features if the movie is highly rated", it lets you ask the
+      question you actually care about: "how likely is this movie to be highly rated, given its
+      features?"
     </p>
-    <p class="status-note">Full analysis arrives in Module 3.</p>
+    <p>
+      In symbols, the model scores each class C like this:
+      <code>P(C | x<sub>1</sub>, ..., x<sub>n</sub>) &prop; P(C) &times; P(x<sub>1</sub> | C) &times; ... &times; P(x<sub>n</sub> | C)</code>.
+      <code>P(C)</code> is the <strong>prior</strong>, which is just how common that class is in
+      the training data. Each <code>P(x<sub>i</sub> | C)</code> is a <strong>likelihood</strong>,
+      meaning how often that feature shows up inside that class. Multiply them together, compare
+      the classes, and the biggest one wins. That final number is the <strong>posterior</strong>.
+    </p>
+    <p>
+      The "naive" part is a big shortcut. The model assumes every feature is independent of the
+      others once you know the class. That's almost never true in real life. A war movie is
+      obviously more likely to also be a history movie. But the shortcut makes the math very
+      cheap, and in practice Naive Bayes still works surprisingly well. It trains in one pass over
+      the data and needs very little tuning.
+    </p>
+    <p>
+      One more detail matters. If a feature never appears with a class in the training data, its
+      probability would be zero, and that one zero would wipe out the whole product. To stop that,
+      we use <strong>Laplace smoothing</strong>, which adds a small count (here, 1) to everything so
+      no probability is ever exactly zero.
+    </p>
+    <p><strong>What it's used for</strong></p>
+    <p>
+      Naive Bayes is a classic for text. Spam filters, sentiment analysis, sorting news articles
+      by topic and tagging support tickets all use it. It's also handy as a quick baseline model
+      for any classification problem, medical screening, and recommendation systems, since it's
+      fast and easy to explain. In this project I use it to predict how well audiences will rate a
+      movie from things a studio already knows before release.
+    </p>
+    <p><strong>Two common versions</strong></p>
+    <ul>
+      <li>
+        <strong>Multinomial Naive Bayes</strong> is the standard one we covered in class. It
+        expects <em>counts</em>, like how many times each word shows up in a document. The
+        likelihood of a feature is based on how often it occurs in that class compared to all
+        features in that class. The inputs have to be non negative numbers, so text gets turned
+        into word counts and categories get turned into 0/1 indicator columns.
+      </li>
+      <li>
+        <strong>Bernoulli Naive Bayes</strong> only cares whether each feature is <em>present or
+        absent</em>, so every input is treated as yes or no. The big difference is that Bernoulli
+        also learns from what's <em>missing</em>. If "horror" is absent, that counts as evidence
+        too, while Multinomial simply ignores features with a zero. Bernoulli tends to suit short
+        documents or any data that's naturally binary.
+      </li>
+    </ul>
+    <p>
+      There's also <strong>Gaussian Naive Bayes</strong>, which assumes each numeric feature
+      follows a bell curve inside each class. I didn't need it here because all my features are
+      0/1 indicators. Since my data is binary, I ran Bernoulli alongside Multinomial to compare
+      the two.
+    </p>
+    <div class="gallery wide">
+      <figure>
+        <a class="zoom" href="assets/img/naive_bayes/concept_nb_scoring.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/naive_bayes/concept_nb_scoring.png" alt="Prior, likelihood and posterior for one test movie scored by Multinomial Naive Bayes"></a>
+        <figcaption><strong>How Naive Bayes scores a real movie.</strong> The Shawshank Redemption from my testing set. Step 1 is the prior for each class. Step 2 adds up the log likelihoods of its features (crime, drama, 140+ minutes, 1990s, fall release and so on). The likelihood bars are all below zero because they're logs of small probabilities, so the bar closest to zero is the most likely. That's High here. Step 3 combines both into the posterior. The model gives High a 78% chance, and that's the right answer.</figcaption>
+      </figure>
+    </div>
   </section>
 
+  <!-- ============================================================ DATA PREP -->
   <section class="block">
-    <h3>Data</h3>
-    <p class="status-note">Prepared (labeled, train/test split) dataset preview and links arrive in Module 3.</p>
+    <h3>Data Prep</h3>
+    <p>
+      Naive Bayes is supervised, so the first thing it needs is <strong>labeled data</strong>.
+      Every movie needs a known answer for the model to learn from. Unlabeled data, like what I
+      used for clustering, can't be used here because there's nothing to check the guesses
+      against.
+    </p>
+    <p><strong>Making the label</strong></p>
+    <p>
+      I created a label called <code>reception_class</code> from each movie's average TMDB rating:
+    </p>
+    <ul>
+      <li><strong>Low:</strong> rating of 6.5 or below (539 movies)</li>
+      <li><strong>Medium:</strong> above 6.5 and up to 7.2 (643 movies)</li>
+      <li><strong>High:</strong> above 7.2 (646 movies)</li>
+    </ul>
+    <p>
+      I picked these cut points because they split the data into three groups of similar size. I
+      didn't use the older <code>rating_tier</code> column because its "Poor" group only has 13
+      movies, which is way too few to learn from.
+    </p>
+    <p><strong>Choosing features without cheating</strong></p>
+    <p>
+      I only used things a studio knows <em>before</em> a movie comes out: genres, budget,
+      runtime, release era, release season, original language, production country and how many
+      genres it has. I left out vote count, popularity and revenue on purpose. Those are measured
+      after release, and they'd sneak information about the answer into the model. That's called
+      data leakage, and it makes a model look far better than it really is.
+    </p>
+    <p><strong>Turning everything into counts</strong></p>
+    <p>
+      I used sklearn's <code>MultinomialNB</code>, which only accepts non negative numbers. So
+      every feature became a 0/1 indicator column. Genres were already lists, so each genre got its
+      own column, and a movie can have several 1s there. Numeric fields like budget and runtime
+      were sorted into bands (for example, budget under $20M, $20 to 60M, $60 to 120M, over
+      $120M), and each band became a column. I used fixed cut points instead of percentiles of the
+      full dataset so that nothing about the testing set leaked into how I coded the training set.
+      I also dropped 172 movies with no budget listed. That left <strong>1,828 labeled movies with
+      43 indicator columns</strong>.
+    </p>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/naive_bayes/data_before.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/naive_bayes/data_before.png" alt="Cleaned movie data with the reception class label"></a>
+        <figcaption><strong>Before.</strong> The cleaned movies with raw genres, budget, runtime and dates, plus the new reception_class label on the right.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/naive_bayes/data_after.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/naive_bayes/data_after.png" alt="Labeled indicator data used for Naive Bayes"></a>
+        <figcaption><strong>After.</strong> A sample of the labeled 0/1 data that Naive Bayes actually trains on. Only some of the 43 feature columns fit in the picture.</figcaption>
+      </figure>
+    </div>
+
+    <p><strong>Training set and testing set</strong></p>
+    <p>
+      Next I split the labeled data into two parts. The <strong>training set</strong> is what the
+      model learns from. The <strong>testing set</strong> is held back and only used at the end to
+      see how well the model does on movies it has never seen. I used sklearn's
+      <code>train_test_split</code> to put 75% of the movies (1,371) in training and 25% (457) in
+      testing. I made it <em>stratified</em>, so each side has the same mix of Low, Medium and High,
+      and I fixed the random seed so the split is the same every time. The Decision Trees tab uses
+      this exact same split, so the two models are tested on the exact same movies.
+    </p>
+    <p>
+      The two sets <strong>must be disjoint</strong>, meaning no movie can be in both. If a movie
+      was in the training set and also showed up in testing, the model would basically be taking a
+      test it already saw the answers to. The accuracy would look great but it wouldn't tell you
+      anything about how the model handles new movies, which is the whole point. I checked this in
+      the code and the overlap is zero.
+    </p>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/naive_bayes/train_sample.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/naive_bayes/train_sample.png" alt="Sample rows from the training set"></a>
+        <figcaption><strong>Training set sample.</strong> A few of the 1,371 movies the model learns from.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/naive_bayes/test_sample.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/naive_bayes/test_sample.png" alt="Sample rows from the testing set"></a>
+        <figcaption><strong>Testing set sample.</strong> A few of the 457 held out movies. None of these ids appear in the training set.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/naive_bayes/train_test_split.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/naive_bayes/train_test_split.png" alt="Bar chart of class counts in training and testing sets"></a>
+        <figcaption><strong>The split.</strong> Because the split is stratified, both sets have the same balance of Low, Medium and High.</figcaption>
+      </figure>
+    </div>
+    <div class="data-links">
+      <a href="../data/prepared/nb_labeled.csv">Labeled data sample (CSV)</a>
+      <a href="../data/prepared/nb_train.csv">Training set (CSV)</a>
+      <a href="../data/prepared/nb_test.csv">Testing set (CSV)</a>
+    </div>
   </section>
 
+  <!-- ============================================================ CODE -->
   <section class="block">
     <h3>Code</h3>
-    <p class="status-note">Link to Naive Bayes code, language, and core packages arrives in Module 3.</p>
+    <p>
+      Everything is in Python using sklearn (<code>MultinomialNB</code>, <code>BernoulliNB</code>,
+      <code>train_test_split</code> and the metrics module), <code>pandas</code> and
+      <code>matplotlib</code>. The label and the train/test split live in a small shared file so
+      the Naive Bayes and Decision Tree code use exactly the same movies.
+    </p>
+    <div class="data-links">
+      <a href="../scripts/naive_bayes.py">naive_bayes.py (full code)</a>
+      <a href="../scripts/supervised_prep.py">supervised_prep.py (label and split)</a>
+    </div>
+    <p>The core of it:</p>
+<pre><code>train_ids, test_ids = train_test_split(df["id"], test_size=0.25,
+                                       stratify=df["reception_class"], random_state=42)
+assert set(train_ids).isdisjoint(test_ids)
+
+model = MultinomialNB(alpha=1.0)        # alpha = Laplace smoothing
+model.fit(X_train, y_train)
+pred = model.predict(X_test)
+print(accuracy_score(y_test, pred))
+print(confusion_matrix(y_test, pred, labels=["Low", "Medium", "High"]))</code></pre>
   </section>
 
+  <!-- ============================================================ RESULTS -->
   <section class="block">
     <h3>Results</h3>
-    <p class="status-note">Results, confusion matrices, and visualizations arrive in Module 3.</p>
+    <p>
+      <strong>Multinomial Naive Bayes got 57.8% accuracy</strong> on the 457 testing movies.
+      Bernoulli was right behind at 57.1%. To know if that's any good, you need something to
+      compare it to. If you just guessed the most common class every time, you'd be right 35.2% of
+      the time. So the model is clearly picking up real patterns, and it's doing it with nothing
+      but genre, budget, runtime, timing and language.
+    </p>
+    <p>
+      Training accuracy was 55.1%, which is actually a little lower than the testing score. That
+      tells me the model isn't overfitting. It's a simple model and it isn't memorizing anything.
+    </p>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/naive_bayes/cm_multinomial.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/naive_bayes/cm_multinomial.png" alt="Confusion matrix for Multinomial Naive Bayes"></a>
+        <figcaption><strong>Confusion matrix, Multinomial NB (57.8%).</strong> Rows are the real class and columns are what the model guessed. The diagonal (88, 77, 99) is the correct guesses.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/naive_bayes/cm_bernoulli.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/naive_bayes/cm_bernoulli.png" alt="Confusion matrix for Bernoulli Naive Bayes"></a>
+        <figcaption><strong>Confusion matrix, Bernoulli NB (57.1%).</strong> Almost the same pattern. It catches a few more Low movies (92) but misses a few more High ones.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/naive_bayes/nb_accuracy.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/naive_bayes/nb_accuracy.png" alt="Accuracy of both Naive Bayes models compared to baseline"></a>
+        <figcaption><strong>Accuracy vs. baseline.</strong> Both versions beat blind guessing by more than 20 percentage points.</figcaption>
+      </figure>
+    </div>
+    <p><strong>Reading the confusion matrix</strong></p>
+    <p>
+      The model is best at the two ends. It found 65% of the Low movies and 62% of the High ones.
+      Medium is the hard part, with only 48% found. That makes sense, since a 6.9 movie looks a lot
+      like a 6.4 or a 7.3 on paper. The good news is that the model rarely makes a big mistake.
+      Only 12 Low movies were called High, and only 20 High movies were called Low. That's 32 out
+      of 457, or about 7%. Most of its errors are off by one step, like calling a Medium movie Low.
+    </p>
+    <p><strong>What the model learned</strong></p>
+    <p>
+      Because Naive Bayes stores a probability for every feature in every class, you can open it
+      up and see what it thinks. The chart below compares how likely each feature is among High
+      movies against Low movies.
+    </p>
+    <div class="gallery wide">
+      <figure>
+        <a class="zoom" href="assets/img/naive_bayes/nb_top_features.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/naive_bayes/nb_top_features.png" alt="Features most associated with High and Low rated movies"></a>
+        <figcaption><strong>Features that push toward High or Low.</strong> Red bars are features much more common among High rated movies. Dark bars are more common among Low rated ones. A Japanese original language is the single strongest signal for High, and horror is the strongest signal for Low.</figcaption>
+      </figure>
+    </div>
+    <ul>
+      <li><strong>Pointing to High:</strong> a Japanese or other non English original language, a runtime over 140 minutes, and the history, drama, war, animation, romance and music genres.</li>
+      <li><strong>Pointing to Low:</strong> horror by a wide margin, then runtimes under 100 minutes, action, comedy, a spring or summer release, and a mid level budget of $60 to 120M.</li>
+    </ul>
+  </section>
+
+  <!-- ============================================================ CONCLUSIONS -->
+  <section class="block">
+    <h3>Conclusions</h3>
+    <p>
+      The main takeaway is that you can make a decent guess about how audiences will rate a movie
+      before it's even released. With just genre, length, budget, timing and language, the model
+      was right almost 58% of the time across three classes, where random guessing gets about a
+      third. It almost never mistook a well loved movie for a poorly rated one.
+    </p>
+    <p>
+      The patterns it found are pretty interesting. Long movies, dramas, history and war films do
+      better with audiences, while short horror films, action films and comedies tend to score
+      lower. Foreign language films, especially Japanese ones, rate very highly in this data. Part
+      of that is probably selection, since only the best foreign films get enough English speaking
+      votes on TMDB to make it into my sample in the first place. Summer and spring releases lean
+      Low, which fits the idea that those seasons are packed with crowd pleasers made for big
+      openings instead of reviews. Fall releases are where you'd expect the award contenders.
+    </p>
+    <p>
+      There's also a clear limit. The model struggles with the middle. Being "okay" doesn't seem to
+      have a recipe, and a lot of what makes a movie good just isn't in this kind of data: the
+      script, the acting, the direction. So these features can tell you which way a movie is
+      likely leaning, but they won't tell you if it's going to be a classic.
+    </p>
   </section>
 </main>
 
