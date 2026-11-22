@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AdaBoost | What Drives Movie Success</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand-bar">
+    <h1>What Drives <span>Movie Success?</span></h1>
+    <p>A data science exploration of the global film industry, built on The Movie Database (TMDB)</p>
+  </div>
+  <nav class="tabs">
+    <a href="index.html">Introduction</a>
+    <a href="dataprep_eda.html">DataPrep / EDA</a>
+    <a href="clustering.html">Clustering</a>
+    <a href="pca.html">PCA</a>
+    <a href="naive_bayes.html">Naive Bayes</a>
+    <a href="decision_trees.html">Decision Trees</a>
+    <a href="regression.html">Regression</a>
+    <a href="adaboost.html" class="active">AdaBoost</a>
+    <a href="gradient_boosting.html">GradientBoosting</a>
+    <a href="xgboost.html">XGBoost</a>
+    <a href="conclusions.html">Conclusions</a>
+    <a href="about.html">About Me</a>
+  </nav>
+  <div class="flag-strip"></div>
+</header>
+
+<main>
+  <h2 class="page-title">AdaBoost</h2>
+
+  <!-- ============================================================ OVERVIEW -->
+  <section class="block">
+    <h3>Overview</h3>
+    <p>
+      <strong>Boosting</strong> is an ensemble method. It combines many weak models into one strong
+      one. A weak model is one that's only a little better than guessing. The key word is
+      <em>sequence</em>. Boosting builds its models one after another, and each new model focuses
+      on the examples the earlier ones got wrong. <strong>AdaBoost</strong> (Adaptive Boosting),
+      introduced by Freund and Schapire in 1997, was the first practical boosting algorithm.
+    </p>
+    <p><strong>Boosting vs. bagging</strong></p>
+    <p>
+      <strong>Bagging</strong> (bootstrap aggregating, the idea behind random forests) also
+      combines many trees, but it builds them <em>independently and in parallel</em>. Each tree gets
+      its own random resample of the rows, grows deep, and then every tree gets an equal vote. The
+      trees never learn from each other, and averaging them mainly reduces <em>variance</em>, the
+      jumpiness of a single deep tree. Boosting is the opposite. Its trees are <em>shallow</em>, built
+      <em>one after another</em>, and each one is trained on a reweighted version of the data that
+      puts the earlier mistakes front and center. The final vote is <em>weighted</em>, so better
+      trees count for more. That mainly reduces <em>bias</em>, meaning it turns a model that's too
+      simple into one that can capture more.
+    </p>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/adaboost/concept_bagging_vs_boosting.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/adaboost/concept_bagging_vs_boosting.png" alt="Diagram contrasting bagging (parallel trees) with boosting (sequential stumps)"></a>
+        <figcaption><strong>Bagging vs. boosting.</strong> Left: bagging trains full trees side by side on bootstrap samples and gives them an equal vote. Right: boosting trains stumps one after another. After each stump, the rows it got wrong get more weight, and each stump's vote is scaled by its own alpha.</figcaption>
+      </figure>
+    </div>
+
+    <p><strong>Decision stumps</strong></p>
+    <p>
+      AdaBoost's usual weak learner is a <strong>decision stump</strong>, which is a decision tree
+      with just one split. It asks a single question, like "Is runtime 118.5 minutes or less?", and
+      predicts one class for "yes" and another for "no". On its own a stump is a poor model (one
+      stump gets 42.9% on my data, against a 35.2% baseline). But it's fast, hard to overfit, and
+      just better than chance, and that's all boosting needs.
+    </p>
+
+    <p><strong>How AdaBoost works, round by round</strong></p>
+    <ol>
+      <li><strong>Start with equal weights.</strong> Each of the <em>N</em> training rows gets weight <em>w<sub>i</sub></em> = 1/<em>N</em>.</li>
+      <li><strong>Fit a stump on the weighted data.</strong> The stump picks the split that does best on the <em>weighted</em> rows, so heavy rows matter more.</li>
+      <li><strong>Measure its weighted error.</strong> <em>err</em> = the total weight of the rows it got wrong.</li>
+      <li><strong>Give the stump a say, alpha.</strong> For two classes, <em>&alpha;</em> = &frac12; ln((1 &minus; <em>err</em>) / <em>err</em>). With <em>K</em> classes, scikit-learn uses the SAMME version, <em>&alpha;</em> = ln((1 &minus; <em>err</em>) / <em>err</em>) + ln(<em>K</em> &minus; 1), multiplied by the learning rate. A stump with low error gets a big alpha. A stump that does no better than random guessing (err = 0.5 for two classes, 2/3 for three) gets alpha = 0, so it has no say.</li>
+      <li><strong>Reweight the rows.</strong> Every row the stump got wrong has its weight multiplied by e<sup>&alpha;</sup>. Then all the weights are rescaled to add up to 1, so the rows it got right lose weight. The next stump is pulled toward the hard cases.</li>
+      <li><strong>Repeat</strong> for <em>M</em> rounds (<code>n_estimators</code>).</li>
+      <li><strong>Final weighted vote.</strong> To classify a new movie, each stump votes for a class, and its vote counts &alpha;<sub><em>m</em></sub>. The class with the most total alpha wins. For two classes, that's just the sign of &Sigma; &alpha;<sub><em>m</em></sub> h<sub><em>m</em></sub>(x).</li>
+    </ol>
+    <p>
+      The <strong>learning rate</strong> shrinks every alpha. That slows the learning down, so more
+      rounds are needed, but it often generalizes better. Learning rate and number of rounds trade
+      off against each other, which is why I tune them together below.
+    </p>
+    <div class="gallery wide">
+      <figure>
+        <a class="zoom" href="assets/img/adaboost/concept_rounds.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/adaboost/concept_rounds.png" alt="Three rounds of AdaBoost on toy data with point sizes showing weights, and the final combined boundary"></a>
+        <figcaption><strong>AdaBoost on toy data, one round at a time.</strong> Round 1's vertical stump misclassifies the red points in the top left (gold rings). In round 2 those points have grown, because their weight went up, so the next stump makes a horizontal cut that gets them right. Round 3 goes back to fixing the points round 2 missed. No single stump can draw an "L" shape, but their alpha-weighted vote (right) does, and gets 97% correct.</figcaption>
+      </figure>
+    </div>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/adaboost/concept_alpha.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/adaboost/concept_alpha.png" alt="Alpha as a function of weighted error"></a>
+        <figcaption><strong>What alpha means.</strong> Alpha is a stump's say in the final vote. It's large when the weighted error is small, falls to 0 when the stump is no better than chance, and would turn negative (flip the vote) if the stump were worse than chance. With three classes, chance is 2/3 error, so a stump can still get a positive alpha with 50% error.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================================================ DATA PREP -->
+  <section class="block">
+    <h3>Data Prep</h3>
+    <p>
+      AdaBoost is supervised, so it needs labeled data. I kept the same task as the Naive Bayes and
+      Decision Trees tabs so the results can be compared. The label is
+      <code>reception_class</code>: <strong>Low</strong> (rating 6.5 or below),
+      <strong>Medium</strong> (above 6.5 up to 7.2) or <strong>High</strong> (above 7.2), predicted
+      only from things known before release.
+    </p>
+    <p>
+      <strong>Getting everything into numbers.</strong> scikit-learn's
+      <code>AdaBoostClassifier</code> only accepts numeric input. Six columns are already numeric:
+      budget in $M, runtime, release year, release month, number of genres and number of spoken
+      languages. Stumps split on thresholds, so these need no scaling. The 18 genres are already
+      one 0/1 column each. That leaves three <strong>categorical text columns</strong>, which I
+      turned into numbers with <strong>one-hot encoding</strong>:
+    </p>
+    <ul>
+      <li><code>original_language</code>: "en", "ja", "fr", "ko" and so on</li>
+      <li><code>primary_country</code>: "US", "GB", "FR", "CA" and so on</li>
+      <li><code>release_season</code>: winter, spring, summer or fall, built from the release month</li>
+    </ul>
+    <p>
+      One-hot encoding replaces a column with <em>k</em> possible values by <em>k</em> 0/1
+      columns. Exactly one of them is 1 for each movie. For example, a US production becomes
+      <code>primary_country_US = 1</code> with every other country column 0. You can't just number
+      the categories (US = 1, GB = 2, FR = 3, &hellip;), because a stump would then treat "France is
+      greater than Britain" as meaningful and split on it. I used scikit-learn's
+      <code>OneHotEncoder</code> and <strong>fit it on the training rows only</strong>. Any value
+      that appears in fewer than 20 training movies is pooled into an <code>_other</code> column, so
+      there aren't dozens of nearly empty columns. That leaves English vs. other for language
+      (English is 1,299 of the 1,371 training movies), nine country columns (US, GB, FR, CA, DE,
+      CN, JP, AU and other), and the four seasons. That's <strong>15 one-hot columns</strong>,
+      for <strong>39 features</strong> in total.
+    </p>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/adaboost/data_before.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/adaboost/data_before.png" alt="Data before encoding, with categorical text columns"></a>
+        <figcaption><strong>Before.</strong> Language, country and season are text, and genres is a "|"-separated list. AdaBoost can't use any of these as they are.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/adaboost/data_onehot.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/adaboost/data_onehot.png" alt="One-hot encoded language, country and season columns"></a>
+        <figcaption><strong>The one-hot step.</strong> Each category value becomes its own 0/1 column. The Dark Knight Rises and Interstellar are UK-led productions, so they get <code>primary_country_GB = 1</code>.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/adaboost/data_after.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/adaboost/data_after.png" alt="All-numeric data used for AdaBoost"></a>
+        <figcaption><strong>After.</strong> The all-numeric, labeled data AdaBoost is trained on. Only some of the 39 feature columns fit in the picture.</figcaption>
+      </figure>
+    </div>
+
+    <p><strong>Training set and testing set</strong></p>
+    <p>
+      I used the same stratified 75/25 split as every other supervised tab: 1,371 training movies
+      and 457 testing movies, with the same movie ids. All tuning happens <em>inside</em> the
+      training set using 5-fold cross-validation, so the testing set is used only once, for the
+      final score.
+    </p>
+    <p>
+      The sets <strong>must be disjoint</strong>. That matters even more for boosting than for a
+      single tree. AdaBoost keeps adding stumps aimed at whichever training rows it still gets
+      wrong, so with enough rounds it will chase down individual hard training movies. A score on
+      movies it trained on would show that memorization, not real skill. Only movies it never saw,
+      in training or in tuning, can tell you how it will do on the next release. The code checks
+      that the train and test ids don't overlap.
+    </p>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/adaboost/train_sample.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/adaboost/train_sample.png" alt="Sample of the training set"></a>
+        <figcaption><strong>Training set sample</strong> (1,371 movies).</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/adaboost/test_sample.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/adaboost/test_sample.png" alt="Sample of the testing set"></a>
+        <figcaption><strong>Testing set sample</strong> (457 movies). No overlap with training.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/adaboost/train_test_split.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/adaboost/train_test_split.png" alt="Class balance in training and testing sets"></a>
+        <figcaption><strong>The split.</strong> Same class mix on both sides, and the same movies as the Decision Trees tab.</figcaption>
+      </figure>
+    </div>
+    <div class="data-links">
+      <a href="../data/prepared/ada_before.csv">Data before encoding (CSV)</a>
+      <a href="../data/prepared/ada_labeled.csv">Encoded labeled data (CSV)</a>
+      <a href="../data/prepared/ada_train.csv">Training set (CSV)</a>
+      <a href="../data/prepared/ada_test.csv">Testing set (CSV)</a>
+    </div>
+  </section>
+
+  <!-- ============================================================ CODE -->
+  <section class="block">
+    <h3>Code</h3>
+    <p>
+      Everything is in Python, using scikit-learn's <code>AdaBoostClassifier</code>,
+      <code>DecisionTreeClassifier</code> (as the stump), <code>OneHotEncoder</code> and
+      <code>StratifiedKFold</code>, along with <code>pandas</code> and <code>matplotlib</code>.
+    </p>
+    <div class="data-links">
+      <a href="../scripts/adaboost.py">adaboost.py (full code)</a>
+      <a href="../scripts/supervised_prep.py">supervised_prep.py (label and split)</a>
+    </div>
+<pre><code># one-hot encode the categorical columns (fit on training rows only)
+enc = OneHotEncoder(min_frequency=20, handle_unknown="infrequent_if_exist", sparse_output=False)
+enc.fit(raw.loc[train, ["original_language", "primary_country", "release_season"]])
+
+# tune: 5-fold CV inside the training set; staged_score gives accuracy after every round
+for lr in [0.05, 0.1, 0.25, 0.5, 1.0]:
+    m = AdaBoostClassifier(estimator=DecisionTreeClassifier(max_depth=1),
+                           n_estimators=500, learning_rate=lr)
+    m.fit(X_fold_train, y_fold_train)
+    curve = list(m.staged_score(X_fold_val, y_fold_val))
+
+# final model, refit on all training movies, scored once on the testing set
+ada = AdaBoostClassifier(estimator=DecisionTreeClassifier(max_depth=1),
+                         n_estimators=426, learning_rate=1.0, random_state=42)
+ada.fit(X_train, y_train)
+print(accuracy_score(y_test, ada.predict(X_test)))
+print(ada.estimator_weights_[:12])   # the alphas</code></pre>
+  </section>
+
+  <!-- ============================================================ RESULTS -->
+  <section class="block">
+    <h3>Results</h3>
+
+    <p><strong>Tuning the number of rounds and the learning rate</strong></p>
+    <p>
+      I tried five learning rates (0.05, 0.1, 0.25, 0.5, 1.0) and every number of rounds from 1 to
+      500, using 5-fold cross-validation on the 1,371 training movies. <code>staged_score</code>
+      gives the validation accuracy after each added stump, so one fit per fold covers the whole
+      curve.
+    </p>
+    <div class="gallery wide">
+      <figure>
+        <a class="zoom" href="assets/img/adaboost/tuning_rounds_curve.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/adaboost/tuning_rounds_curve.png" alt="Validation accuracy versus boosting rounds for five learning rates"></a>
+        <figcaption><strong>Validation accuracy as rounds are added.</strong> With learning rate 1.0 (dark) or 0.5 (red), accuracy climbs fast, passes 50% within about 50 to 100 rounds, then levels off around 51 to 52%. Smaller learning rates climb much more slowly. At 0.05, even 500 rounds only reach 47%. The best point overall is learning rate 1.0 with 426 rounds (52.7%).</figcaption>
+      </figure>
+    </div>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/adaboost/tuning_grid_heatmap.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/adaboost/tuning_grid_heatmap.png" alt="Heatmap of validation accuracy over learning rate and number of rounds"></a>
+        <figcaption><strong>The tuning grid.</strong> Moving down a row (a bigger learning rate) has the same effect as moving right (more rounds). Small learning rates just need far more rounds to reach the same place.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/adaboost/tuning_train_vs_val.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/adaboost/tuning_train_vs_val.png" alt="Training versus validation accuracy across rounds at learning rate 1.0"></a>
+        <figcaption><strong>Training vs. validation at learning rate 1.0.</strong> Training accuracy keeps rising as stumps are added, but validation accuracy flattens after about 100 rounds. Stumps overfit slowly, so the extra rounds don't hurt much, but they don't help much either.</figcaption>
+      </figure>
+    </div>
+    <p>
+      The validation curve is nearly flat from about 100 to 500 rounds at learning rate 1.0.
+      That's why the default model (50 rounds, learning rate 1.0) and the tuned one (426 rounds)
+      happen to land on the <em>same</em> test accuracy. Tuning confirmed that a high learning rate
+      is the right choice for this data, and that past roughly 100 rounds the exact number barely
+      matters.
+    </p>
+
+    <p><strong>The tuned model on the testing set</strong></p>
+    <p>
+      Refit on all 1,371 training movies with 426 stumps and learning rate 1.0, AdaBoost gets
+      <strong>54.9% accuracy</strong> on the 457 testing movies (training: 60.1%). The baseline of
+      always guessing the largest class gets 35.2%.
+    </p>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/adaboost/cm_adaboost.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/adaboost/cm_adaboost.png" alt="Confusion matrix for tuned AdaBoost"></a>
+        <figcaption><strong>Confusion matrix (54.9%).</strong> The diagonal (72, 81, 98) is the correct calls. Only 32 movies are off by two steps (Low called High or High called Low). Most errors are next-door mix-ups with Medium.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/adaboost/first_stumps_alpha.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/adaboost/first_stumps_alpha.png" alt="The first 12 stumps, their questions and alpha weights"></a>
+        <figcaption><strong>The first 12 stumps and their alphas.</strong> Stump 1 asks the same root question as the decision trees (drama?) and gets the biggest say (&alpha; = 0.44). Stump 2 asks about runtime. Stump 3 asks the <em>same</em> runtime question again, but because the weights have changed, it now separates Low from Medium. Later stumps go after animation, language, horror and budget.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/adaboost/feature_importance.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/adaboost/feature_importance.png" alt="AdaBoost feature importance"></a>
+        <figcaption><strong>Feature importance.</strong> Over all 426 stumps, runtime carries the most weight (0.36), followed by animation, release year and budget. Japan as producing country (0.08) shows up, which the single trees never used. That's the one-hot encoding paying off.</figcaption>
+      </figure>
+    </div>
+    <p>
+      The first few stumps get the biggest alphas (0.18 to 0.44). After that they shrink fast. The
+      median over all 426 stumps is only 0.03, and the smallest is 0.005. That's because, with three
+      classes, random guessing gets 2/3 of the (weighted) rows wrong, and once the easy patterns are
+      used up, each new stump is only a little better than that. That's what "weak learner" means.
+      No single stump is much good, but 426 of them voting together beat a carefully grown tree.
+    </p>
+
+    <p><strong>AdaBoost vs. the decision tree from Part 3</strong></p>
+    <div class="table-wrap">
+      <table class="results-table">
+        <tr><th>Model (same 457 test movies)</th><th>Accuracy</th><th>Recall: Low</th><th>Recall: Medium</th><th>Recall: High</th></tr>
+        <tr><td>Baseline (always the largest class)</td><td>35.2%</td><td></td><td></td><td></td></tr>
+        <tr><td>One stump on its own</td><td>42.9%</td><td></td><td></td><td></td></tr>
+        <tr><td>Decision Tree 2 (entropy, depth 4), best tree from Part 3</td><td>50.1%</td><td>60.7%</td><td>19.3%</td><td><strong>72.0%</strong></td></tr>
+        <tr><td><strong>AdaBoost (426 stumps, learning rate 1.0)</strong></td><td><strong>54.9%</strong></td><td>53.3%</td><td><strong>50.3%</strong></td><td>60.9%</td></tr>
+      </table>
+    </div>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/adaboost/ada_vs_tree.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/adaboost/ada_vs_tree.png" alt="Accuracy of AdaBoost compared with the decision tree, a single stump and the baseline"></a>
+        <figcaption><strong>Head to head on the same testing movies.</strong> AdaBoost is 4.8 points ahead of the best decision tree, and 12 points ahead of the single stump it's built from.</figcaption>
+      </figure>
+    </div>
+    <p>
+      <strong>AdaBoost did best, by 4.8 percentage points</strong> (54.9% vs. 50.1%). That's 22
+      more of the 457 testing movies classified correctly, and a 10% relative improvement over
+      the tree. The more interesting difference is <em>where</em> it wins. Decision Tree 2 got its
+      score by leaning hard on High and nearly giving up on Medium (19% recall). AdaBoost is far more
+      balanced. It finds half of the Medium movies (50%), and it gives up some High recall to do
+      that. Boosting kept reweighting the hard-to-classify middle films until stumps were built
+      specifically to catch them, which a single greedy tree never does.
+    </p>
+    <p>
+      For context, Multinomial Naive Bayes (57.8%) is still the best three-class model on the same
+      split. So boosting closed most of the gap between trees and Naive Bayes, but didn't overtake
+      it.
+    </p>
+  </section>
+
+  <!-- ============================================================ CONCLUSIONS -->
+  <section class="block">
+    <h3>Conclusions</h3>
+    <ul>
+      <li><strong>Many small questions beat one big tree.</strong> No single pre-release fact decides how audiences will rate a film. Even the best stump only gets 43%. Adding up hundreds of small, weighted hints (a bit of runtime, a bit of genre, a bit of budget, a bit of country) predicts Low, Medium or High correctly 55% of the time. That's up from 50% for the best single tree and 35% for guessing.</li>
+      <li><strong>Runtime is the strongest single signal.</strong> Across all 426 stumps, runtime carries over a third of the total importance. Longer films lean High and short films lean Low. That agrees with the decision trees and the logistic regression.</li>
+      <li><strong>The "pretty good" movies can be found.</strong> The Medium class was the weak spot of every earlier model. AdaBoost finds 50% of Medium films, against 19% for the best tree, because boosting keeps refocusing on exactly the borderline movies earlier stumps got wrong. For a studio, that means the model can say more than "hit or miss". It can also flag the films likely to land in the middle.</li>
+      <li><strong>The ceiling is the data, not the model.</strong> Tuning moved validation accuracy only from about 51% to 53%, and the default and tuned models scored the same on test. Every model on the site now lands between 50% and 58% on the three-class task. To do much better I'd need information these pre-release features don't have, like cast, director track record or early reviews.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  CSCI 5612 &middot; Individual Course Project &middot; Movie data sourced from TMDB
+</footer>
+
+</body>
+</html>

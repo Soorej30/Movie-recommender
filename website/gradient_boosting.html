@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GradientBoosting | What Drives Movie Success</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand-bar">
+    <h1>What Drives <span>Movie Success?</span></h1>
+    <p>A data science exploration of the global film industry, built on The Movie Database (TMDB)</p>
+  </div>
+  <nav class="tabs">
+    <a href="index.html">Introduction</a>
+    <a href="dataprep_eda.html">DataPrep / EDA</a>
+    <a href="clustering.html">Clustering</a>
+    <a href="pca.html">PCA</a>
+    <a href="naive_bayes.html">Naive Bayes</a>
+    <a href="decision_trees.html">Decision Trees</a>
+    <a href="regression.html">Regression</a>
+    <a href="adaboost.html">AdaBoost</a>
+    <a href="gradient_boosting.html" class="active">GradientBoosting</a>
+    <a href="xgboost.html">XGBoost</a>
+    <a href="conclusions.html">Conclusions</a>
+    <a href="about.html">About Me</a>
+  </nav>
+  <div class="flag-strip"></div>
+</header>
+
+<main>
+  <h2 class="page-title">GradientBoosting</h2>
+
+  <section class="block">
+    <h3>Overview</h3>
+    <p>
+      Gradient boosting also builds trees one after another, but each new tree is fit to the <em>residual errors</em> (the gradient of the loss) of the ensemble so far, not to reweighted rows. It will be applied to the same reception-class task used on the Naive Bayes, Decision Trees and AdaBoost tabs so the results can be compared directly.
+    </p>
+    <p class="status-note">Full analysis arrives in a later module.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  CSCI 5612 &middot; Individual Course Project &middot; Movie data sourced from TMDB
+</footer>
+
+</body>
+</html>

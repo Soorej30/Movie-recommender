@@ -38,6 +38,8 @@ python scripts/clustering.py          # k-means + hierarchical (cosine) clusteri
 python scripts/pca_analysis.py        # PCA -> img/pca/, data/prepared/
 python scripts/naive_bayes.py         # Multinomial + Bernoulli NB -> img/naive_bayes/, data/prepared/nb_*.csv
 python scripts/decision_tree.py       # three decision trees -> img/decision_trees/, data/prepared/dt_*.csv
+python scripts/regression.py          # linear (revenue) + logistic (High rating) regression -> img/regression/, data/prepared/reg_*.csv
+python scripts/adaboost.py            # one-hot encoding + tuned AdaBoost vs decision tree -> img/adaboost/, data/prepared/ada_*.csv
 ```
 
 Edit the `CONFIG` dictionary at the top of `scripts/fetch_tmdb.py` to change

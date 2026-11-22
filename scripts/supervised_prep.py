@@ -1,6 +1,6 @@
 """
-Shared data prep for the supervised tabs (Naive Bayes and Decision Trees).
-Imported by naive_bayes.py and decision_tree.py, not run on its own.
+Shared data prep for the supervised tabs (Naive Bayes, Decision Trees,
+Regression, AdaBoost). Imported by those scripts, not run on its own.
 
 Label: reception_class, built from TMDB vote_average
     Low     vote_average <= 6.5
@@ -14,7 +14,7 @@ genres, language, release timing, production country). Vote count,
 popularity and revenue are left out on purpose -- they are measured after
 release and would leak the answer into the model.
 
-Both models use the SAME stratified 75/25 train/test split (same movie ids
+All supervised models use the SAME stratified 75/25 train/test split (same movie ids
 on each side), so their accuracies can be compared directly.
 """
 
@@ -92,40 +92,41 @@ def save_table_image(df, path, title, max_rows=8, max_cols=10, float_fmt="{:.2f}
     print(f"  saved {path.name}")
 
 
-def save_split_image(y_train, y_test, path, title):
+def save_split_image(y_train, y_test, path, title, classes=CLASSES, colors=None, legend_title="Reception class"):
     """Small bar chart showing train/test sizes and class balance."""
+    colors = colors or CLASS_COLORS
     counts = pd.DataFrame({
         f"Training set (n={len(y_train)})": y_train.value_counts(),
         f"Testing set (n={len(y_test)})": y_test.value_counts(),
-    }).reindex(CLASSES)
+    }).reindex(classes)
     ax = counts.T.plot(kind="barh", stacked=True, figsize=(8, 2.8),
-                       color=[CLASS_COLORS[c] for c in CLASSES])
+                       color=[colors[c] for c in classes])
     for i, col in enumerate(counts.columns):
         left = 0
-        for c in CLASSES:
+        for c in classes:
             v = counts.loc[c, col]
             ax.text(left + v / 2, i, str(v), ha="center", va="center", color="white", fontsize=9)
             left += v
     ax.set_title(title)
     ax.set_xlabel("Number of movies")
-    ax.legend(title="Reception class", bbox_to_anchor=(1.01, 1), loc="upper left")
+    ax.legend(title=legend_title, bbox_to_anchor=(1.01, 1), loc="upper left")
     plt.tight_layout()
     plt.savefig(path, dpi=150, bbox_inches="tight")
     plt.close()
     print(f"  saved {path.name}")
 
 
-def plot_confusion(cm, path, title):
+def plot_confusion(cm, path, title, labels=CLASSES):
     fig, ax = plt.subplots(figsize=(5.6, 4.8))
     im = ax.imshow(cm, cmap=CM_CMAP)
     for i in range(cm.shape[0]):
         for j in range(cm.shape[1]):
             ax.text(j, i, cm[i, j], ha="center", va="center", fontsize=13,
                     color="white" if cm[i, j] > cm.max() * 0.55 else "#2b1d10")
-    ax.set_xticks(range(len(CLASSES)))
-    ax.set_yticks(range(len(CLASSES)))
-    ax.set_xticklabels(CLASSES)
-    ax.set_yticklabels(CLASSES)
+    ax.set_xticks(range(len(labels)))
+    ax.set_yticks(range(len(labels)))
+    ax.set_xticklabels(labels)
+    ax.set_yticklabels(labels)
     ax.set_xlabel("Predicted class")
     ax.set_ylabel("Actual class")
     ax.set_title(title)

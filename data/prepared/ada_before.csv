@@ -1,0 +1,1829 @@
+id,title,budget_musd,runtime,release_year,release_month,num_genres,num_spoken_languages,original_language,primary_country,release_season,genres,reception_class
+19995,Avatar,237.0,162.0,2009,12,3,2,en,US,winter,Science Fiction|Action|Adventure,High
+6435,Practical Magic,75.0,104.0,1998,10,3,1,en,US,fall,Romance|Fantasy|Comedy,Medium
+278,The Shawshank Redemption,25.0,142.0,1994,9,2,1,en,US,fall,Drama|Crime,High
+299534,Avengers: Endgame,356.0,181.0,2019,4,3,3,en,US,spring,Adventure|Science Fiction|Action,High
+299536,Avengers: Infinity War,300.0,149.0,2018,4,3,2,en,US,spring,Adventure|Action|Science Fiction,High
+49026,The Dark Knight Rises,250.0,165.0,2012,7,4,1,en,GB,summer,Action|Crime|Drama|Thriller,High
+634649,Spider-Man: No Way Home,200.0,148.0,2021,12,3,2,en,US,winter,Action|Adventure|Science Fiction,High
+157336,Interstellar,165.0,169.0,2014,11,3,1,en,GB,fall,Adventure|Drama|Science Fiction,High
+76341,Mad Max: Fury Road,150.0,121.0,2015,5,3,1,en,AU,spring,Action|Adventure|Science Fiction,High
+24428,The Avengers,220.0,143.0,2012,4,3,3,en,US,spring,Science Fiction|Action|Adventure,High
+155,The Dark Knight,185.0,152.0,2008,7,3,2,en,GB,summer,Action|Thriller|Crime,High
+671,Harry Potter and the Philosopher's Stone,125.0,152.0,2001,11,2,1,en,GB,fall,Adventure|Fantasy,High
+27205,Inception,160.0,148.0,2010,7,3,4,en,GB,summer,Action|Science Fiction|Adventure,High
+603,The Matrix,63.0,136.0,1999,3,2,1,en,US,spring,Action|Science Fiction,High
+533535,Deadpool & Wolverine,200.0,128.0,2024,7,3,1,en,US,summer,Action|Comedy|Science Fiction,High
+872585,Oppenheimer,100.0,181.0,2023,7,2,2,en,GB,summer,Drama|History,High
+315635,Spider-Man: Homecoming,175.0,133.0,2017,7,3,1,en,US,summer,Action|Adventure|Science Fiction,High
+569094,Spider-Man: Across the Spider-Verse,100.0,140.0,2023,5,4,4,en,US,spring,Animation|Action|Adventure|Science Fiction,High
+49494,The Eagle,25.0,114.0,2011,2,2,1,en,US,winter,Adventure|Drama,Low
+324857,Spider-Man: Into the Spider-Verse,90.0,117.0,2018,12,4,3,en,US,winter,Animation|Action|Adventure|Science Fiction,High
+1184918,The Wild Robot,78.0,102.0,2024,9,4,1,en,US,fall,Family|Animation|Science Fiction|Adventure,High
+557,Spider-Man,139.0,121.0,2002,5,2,1,en,US,spring,Action|Science Fiction,High
+693134,Dune: Part Two,190.0,167.0,2024,2,2,1,en,US,winter,Science Fiction|Adventure,High
+129,Spirited Away,19.0,125.0,2001,7,3,1,ja,JP,summer,Animation|Family|Fantasy,High
+550,Fight Club,63.0,139.0,1999,10,2,1,en,DE,fall,Drama|Thriller,High
+496243,Parasite,11.363,133.0,2019,5,3,3,ko,KR,spring,Comedy|Thriller|Drama,High
+414906,The Batman,185.0,177.0,2022,3,3,1,en,US,spring,Crime|Mystery|Thriller,High
+122,The Lord of the Rings: The Return of the King,94.0,201.0,2003,12,3,1,en,NZ,winter,Adventure|Fantasy|Action,High
+1726,Iron Man,140.0,126.0,2008,4,3,4,en,US,spring,Action|Science Fiction|Adventure,High
+680,Pulp Fiction,8.0,154.0,1994,9,3,3,en,US,fall,Thriller|Crime|Comedy,High
+597,Titanic,200.0,194.0,1997,12,2,6,en,US,winter,Drama|Romance,High
+120,The Lord of the Rings: The Fellowship of the Ring,93.0,179.0,2001,12,3,1,en,NZ,winter,Adventure|Fantasy|Action,High
+674,Harry Potter and the Goblet of Fire,150.0,157.0,2005,11,2,2,en,GB,fall,Adventure|Fantasy,High
+673,Harry Potter and the Prisoner of Azkaban,130.0,141.0,2004,5,2,1,en,GB,spring,Adventure|Fantasy,High
+58,Pirates of the Caribbean: Dead Man's Chest,200.0,151.0,2006,7,3,4,en,US,summer,Adventure|Fantasy|Action,High
+912649,Venom: The Last Dance,120.0,109.0,2024,10,3,2,en,US,fall,Science Fiction|Action|Adventure,Medium
+10138,Iron Man 2,200.0,124.0,2010,4,3,3,en,US,spring,Adventure|Action|Science Fiction,Medium
+8587,The Lion King,45.0,89.0,1994,6,3,1,en,US,summer,Animation|Family|Drama,High
+198663,The Maze Runner,34.0,113.0,2014,9,4,1,en,US,fall,Action|Mystery|Science Fiction|Thriller,Medium
+672,Harry Potter and the Chamber of Secrets,100.0,161.0,2002,11,2,1,en,GB,fall,Adventure|Fantasy,High
+862,Toy Story,30.0,81.0,1995,11,4,1,en,US,fall,Family|Comedy|Animation|Adventure,High
+361743,Top Gun: Maverick,170.0,131.0,2022,5,2,1,en,US,spring,Action|Drama,High
+109418,Grown Ups 2,80.0,101.0,2013,7,1,1,en,US,summer,Comedy,Low
+933260,The Substance,17.5,141.0,2024,9,2,1,en,FR,fall,Horror|Science Fiction,Medium
+14836,Coraline,60.0,100.0,2009,2,3,1,en,US,winter,Animation|Family|Fantasy,High
+13,Forrest Gump,55.0,142.0,1994,6,3,1,en,US,summer,Comedy|Drama|Romance,High
+438631,Dune,165.0,155.0,2021,9,2,1,en,US,fall,Science Fiction|Adventure,High
+12445,Harry Potter and the Deathly Hallows: Part 2,125.0,130.0,2011,7,2,1,en,GB,summer,Adventure|Fantasy,High
+76600,Avatar: The Way of Water,460.0,192.0,2022,12,3,1,en,US,winter,Action|Adventure|Science Fiction,High
+354912,Coco,175.0,105.0,2017,10,4,2,en,US,fall,Family|Animation|Music|Adventure,High
+335984,Blade Runner 2049,150.0,164.0,2017,10,2,7,en,CA,fall,Science Fiction|Drama,High
+585,"Monsters, Inc.",115.0,92.0,2001,11,4,1,en,US,fall,Animation|Comedy|Family|Fantasy,High
+138843,The Conjuring,13.0,112.0,2013,7,2,1,en,US,summer,Horror|Thriller,High
+447365,Guardians of the Galaxy Vol. 3,250.0,150.0,2023,5,3,1,en,US,spring,Science Fiction|Adventure|Action,High
+150540,Inside Out,175.0,95.0,2015,6,5,1,en,US,summer,Animation|Family|Adventure|Drama|Comedy,High
+807,Se7en,33.0,127.0,1995,9,3,1,en,US,fall,Crime|Mystery|Thriller,High
+1241982,Moana 2,150.0,100.0,2024,11,5,1,en,CA,fall,Adventure|Animation|Comedy|Family|Fantasy,Medium
+68718,Django Unchained,100.0,165.0,2012,12,2,3,en,US,winter,Drama|Western,High
+497,The Green Mile,60.0,189.0,1999,12,3,2,en,US,winter,Fantasy|Drama|Crime,High
+808,Shrek,60.0,90.0,2001,5,5,1,en,US,spring,Animation|Comedy|Fantasy|Adventure|Family,High
+98,Gladiator,103.0,155.0,2000,5,3,1,en,GB,spring,Action|Drama|Adventure,High
+12444,Harry Potter and the Deathly Hallows: Part 1,250.0,146.0,2010,11,2,1,en,GB,fall,Adventure|Fantasy,High
+863,Toy Story 2,90.0,92.0,1999,10,3,1,en,US,fall,Animation|Comedy|Family,High
+1930,The Amazing Spider-Man,215.0,136.0,2012,6,3,1,en,US,summer,Action|Adventure|Science Fiction,Medium
+511987,Crawl,13.5,87.0,2019,7,2,1,en,RS,summer,Horror|Thriller,Low
+271110,Captain America: Civil War,250.0,147.0,2016,4,3,4,en,US,spring,Adventure|Action|Science Fiction,High
+1022789,Inside Out 2,200.0,97.0,2024,6,4,1,en,US,summer,Animation|Adventure|Comedy|Family,High
+4935,Howl's Moving Castle,24.0,119.0,2004,9,3,1,ja,JP,fall,Fantasy|Animation|Adventure,High
+475557,Joker,55.0,122.0,2019,10,3,1,en,CA,fall,Crime|Thriller|Drama,High
+549509,The Brutalist,9.6,215.0,2024,12,1,6,en,GB,winter,Drama,Medium
+99861,Avengers: Age of Ultron,235.0,141.0,2015,4,3,1,en,US,spring,Action|Adventure|Science Fiction,High
+424,Schindler's List,22.0,195.0,1993,12,3,4,en,US,winter,Drama|History|War,High
+177572,Big Hero 6,165.0,102.0,2014,10,5,1,en,US,fall,Adventure|Family|Animation|Action|Comedy,High
+559,Spider-Man 3,258.0,139.0,2007,5,3,2,en,US,spring,Action|Adventure|Science Fiction,Low
+16869,Inglourious Basterds,70.0,153.0,2009,8,3,4,en,DE,summer,Drama|Thriller|War,High
+121,The Lord of the Rings: The Two Towers,79.0,179.0,2002,12,3,1,en,NZ,winter,Adventure|Fantasy|Action,High
+270303,It Follows,2.3,101.0,2015,2,2,1,en,US,winter,Horror|Mystery,Medium
+522627,The Gentlemen,22.0,113.0,2020,1,3,1,en,GB,winter,Action|Comedy|Crime,High
+20352,Despicable Me,69.0,95.0,2010,7,5,1,en,US,summer,Animation|Comedy|Crime|Science Fiction|Family,High
+12,Finding Nemo,94.0,100.0,2003,5,3,1,en,US,spring,Animation|Family|Adventure,High
+985939,Fall,3.0,107.0,2022,8,1,1,en,US,summer,Thriller,Medium
+652,Troy,175.0,163.0,2004,5,2,1,en,GB,spring,Action|Adventure,Medium
+767,Harry Potter and the Half-Blood Prince,250.0,153.0,2009,7,2,1,en,GB,summer,Adventure|Fantasy,High
+280,Terminator 2: Judgment Day,102.0,137.0,1991,7,3,2,en,FR,summer,Action|Thriller|Science Fiction,High
+637649,Wrath of Man,40.0,119.0,2021,4,3,1,en,GB,spring,Thriller|Crime|Drama,High
+22,Pirates of the Caribbean: The Curse of the Black Pearl,140.0,143.0,2003,7,3,1,en,US,summer,Adventure|Fantasy|Action,High
+10681,WALL·E,180.0,98.0,2008,6,3,1,en,US,summer,Animation|Family|Science Fiction,High
+156022,The Equalizer,55.0,132.0,2014,9,3,1,en,US,fall,Thriller|Action|Crime,High
+385687,Fast X,340.0,142.0,2023,5,3,2,en,US,spring,Action|Crime|Thriller,Medium
+10193,Toy Story 3,200.0,103.0,2010,6,3,2,en,US,summer,Animation|Family|Comedy,High
+10684,Courage Under Fire,46.0,116.0,1996,7,4,1,en,US,summer,Drama|Thriller|Mystery|War,Medium
+675,Harry Potter and the Order of the Phoenix,150.0,138.0,2007,7,2,1,en,GB,summer,Adventure|Fantasy,High
+429617,Spider-Man: Far From Home,160.0,129.0,2019,6,3,5,en,US,summer,Action|Adventure|Science Fiction,High
+945961,Alien: Romulus,80.0,119.0,2024,8,2,3,en,US,summer,Horror|Science Fiction,Medium
+1724,The Incredible Hulk,150.0,114.0,2008,6,3,3,en,US,summer,Science Fiction|Action|Adventure,Low
+350,The Devil Wears Prada,35.0,109.0,2006,6,2,2,en,US,summer,Drama|Comedy,High
+920,Cars,120.0,117.0,2006,6,4,4,en,US,summer,Animation|Adventure|Comedy|Family,Medium
+49013,Cars 2,200.0,106.0,2011,6,4,5,en,US,summer,Animation|Family|Adventure|Comedy,Low
+106646,The Wolf of Wall Street,100.0,180.0,2013,12,3,2,en,US,winter,Crime|Drama|Comedy,High
+244786,Whiplash,3.3,107.0,2014,10,3,1,en,US,fall,Drama|Music|Thriller,High
+466272,Once Upon a Time... in Hollywood,95.0,162.0,2019,7,3,3,en,CN,summer,Comedy|Drama|Thriller,High
+330457,Frozen II,150.0,103.0,2019,11,5,1,en,US,fall,Family|Animation|Adventure|Comedy|Fantasy,High
+122917,The Hobbit: The Battle of the Five Armies,250.0,144.0,2014,12,3,1,en,NZ,winter,Action|Adventure|Fantasy,High
+453395,Doctor Strange in the Multiverse of Madness,295.4,126.0,2022,5,3,3,en,US,spring,Fantasy|Action|Adventure,High
+358962,Queen of Spades: The Dark Rite,1.0,94.0,2015,9,1,1,ru,RU,fall,Horror,Low
+131631,The Hunger Games: Mockingjay - Part 1,125.0,123.0,2014,11,3,1,en,US,fall,Science Fiction|Adventure|Thriller,Medium
+105864,The Good Dinosaur,175.0,93.0,2015,11,3,1,en,US,fall,Adventure|Animation|Family,Medium
+49018,Insidious,1.5,102.0,2011,3,2,1,en,CA,spring,Horror|Thriller,Medium
+228150,Fury,68.0,135.0,2014,10,3,3,en,US,fall,War|Drama|Action,High
+346698,Barbie,145.0,114.0,2023,7,3,1,en,GB,summer,Comedy|Adventure|Fantasy,Medium
+11324,Shutter Island,80.0,138.0,2010,2,3,2,en,US,winter,Drama|Thriller|Mystery,High
+505642,Black Panther: Wakanda Forever,250.0,162.0,2022,11,3,5,en,US,fall,Action|Adventure|Science Fiction,Medium
+102382,The Amazing Spider-Man 2,200.0,141.0,2014,4,3,1,en,US,spring,Action|Adventure|Science Fiction,Medium
+500006,Utøya: July 22,22.0,92.0,2018,3,2,1,no,NO,spring,History|Drama,Medium
+2062,Ratatouille,150.0,111.0,2007,6,4,2,en,US,summer,Animation|Comedy|Family|Fantasy,High
+128,Princess Mononoke,23.5,134.0,1997,7,3,1,ja,JP,summer,Adventure|Fantasy|Animation,High
+14160,Up,175.0,96.0,2009,5,4,1,en,US,spring,Animation|Comedy|Family|Adventure,High
+127585,X-Men: Days of Future Past,250.0,132.0,2014,5,3,4,en,US,spring,Action|Adventure|Science Fiction,High
+285,Pirates of the Caribbean: At World's End,300.0,169.0,2007,5,3,1,en,US,spring,Adventure|Fantasy|Action,High
+4517,Elizabeth: The Golden Age,55.0,114.0,2007,9,3,3,en,FR,fall,Drama|History|Romance,Medium
+539972,Kraven the Hunter,130.0,127.0,2024,12,3,3,en,US,winter,Action|Adventure|Thriller,Low
+324786,Hacksaw Ridge,40.0,139.0,2016,10,3,2,en,AU,fall,Drama|History|War,High
+9806,The Incredibles,92.0,115.0,2004,10,4,2,en,US,fall,Action|Adventure|Animation|Family,High
+857,Saving Private Ryan,70.0,169.0,1998,7,3,4,en,US,summer,War|Drama|History,High
+205596,The Imitation Game,14.0,113.0,2014,11,4,1,en,US,fall,History|Drama|Thriller|War,High
+10588,The Cat in the Hat,109.0,82.0,2003,11,4,1,en,US,fall,Fantasy|Adventure|Family|Comedy,Low
+210577,Gone Girl,61.0,149.0,2014,10,3,1,en,US,fall,Mystery|Thriller|Drama,High
+315162,Puss in Boots: The Last Wish,90.0,103.0,2022,12,5,2,en,US,winter,Animation|Adventure|Fantasy|Comedy|Family,High
+39254,Real Steel,110.0,127.0,2011,9,3,1,en,US,fall,Action|Science Fiction|Drama,Medium
+284054,Black Panther,200.0,135.0,2018,2,3,4,en,US,winter,Action|Adventure|Science Fiction,High
+293660,Deadpool,58.0,108.0,2016,2,3,1,en,US,winter,Action|Adventure|Comedy,High
+101,Léon: The Professional,16.0,111.0,1994,9,3,3,fr,FR,fall,Crime|Drama|Action,High
+284053,Thor: Ragnarok,180.0,131.0,2017,10,4,1,en,US,fall,Action|Science Fiction|Comedy|Adventure,High
+939243,Sonic the Hedgehog 3,122.0,110.0,2024,12,4,4,en,US,winter,Action|Science Fiction|Comedy|Family,High
+419430,Get Out,4.5,104.0,2017,2,3,1,en,US,winter,Mystery|Thriller|Horror,High
+396535,Train to Busan,8.5,118.0,2016,7,4,1,ko,KR,summer,Action|Horror|Thriller|Adventure,High
+372058,Your Name.,7.5,106.0,2016,7,3,1,ja,JP,summer,Animation|Romance|Drama,High
+866398,The Beekeeper,35.0,106.0,2024,1,3,1,en,GB,winter,Action|Crime|Thriller,High
+68721,Iron Man 3,200.0,130.0,2013,4,3,1,en,US,spring,Action|Adventure|Science Fiction,Medium
+260514,Cars 3,175.0,102.0,2017,6,4,1,en,US,summer,Animation|Drama|Family|Adventure,Medium
+284052,Doctor Strange,180.0,115.0,2016,10,3,1,en,US,fall,Fantasy|Adventure|Action,High
+1422,The Departed,90.0,151.0,2006,10,3,2,en,HK,fall,Drama|Thriller|Crime,High
+564,The Mummy,80.0,124.0,1999,4,3,2,en,US,spring,Adventure|Action|Fantasy,Medium
+359410,Road House,85.0,121.0,2024,3,3,1,en,US,spring,Action|Thriller|Drama,Medium
+466420,Killers of the Flower Moon,200.0,206.0,2023,10,3,3,en,US,fall,Crime|History|Drama,High
+214756,Ted 2,68.0,115.0,2015,6,2,1,en,US,summer,Comedy|Fantasy,Low
+11036,The Notebook,29.0,123.0,2004,6,2,1,en,US,summer,Romance|Drama,High
+383498,Deadpool 2,110.0,120.0,2018,5,3,4,en,US,spring,Action|Comedy|Adventure,High
+272,Batman Begins,150.0,140.0,2005,6,3,3,en,GB,summer,Drama|Crime|Action,High
+283995,Guardians of the Galaxy Vol. 2,200.0,137.0,2017,4,3,1,en,US,spring,Science Fiction|Adventure|Action,High
+286217,The Martian,108.0,141.0,2015,9,3,2,en,US,fall,Science Fiction|Drama|Adventure,High
+769,GoodFellas,25.0,145.0,1990,9,2,2,en,US,fall,Drama|Crime,High
+259693,The Conjuring 2,40.0,134.0,2016,6,1,1,en,US,summer,Horror,High
+745,The Sixth Sense,40.0,107.0,1999,8,3,3,en,US,summer,Mystery|Thriller|Drama,High
+321612,Beauty and the Beast,160.0,129.0,2017,3,3,2,en,US,spring,Family|Fantasy|Romance,Medium
+502356,The Super Mario Bros. Movie,100.0,93.0,2023,4,5,1,en,JP,spring,Family|Comedy|Adventure|Fantasy|Animation,High
+572802,Aquaman and the Lost Kingdom,205.0,124.0,2023,12,3,3,en,US,winter,Action|Adventure|Fantasy,Medium
+425,Ice Age,59.0,81.0,2002,3,4,1,en,US,spring,Animation|Comedy|Family|Adventure,High
+209112,Batman v Superman: Dawn of Justice,250.0,152.0,2016,3,3,1,en,US,spring,Action|Adventure|Fantasy,Low
+845781,Red One,250.0,124.0,2024,10,4,1,en,US,fall,Action|Adventure|Comedy|Fantasy,Medium
+1495,Kingdom of Heaven,130.0,144.0,2005,5,5,4,en,US,spring,Drama|Action|Adventure|History|War,Medium
+269149,Zootopia,150.0,109.0,2016,2,4,1,en,US,winter,Animation|Adventure|Family|Comedy,High
+10195,Thor,150.0,115.0,2011,4,3,1,en,US,spring,Adventure|Fantasy|Action,Medium
+18240,The Proposal,40.0,108.0,2009,6,3,1,en,US,summer,Comedy|Romance|Drama,Medium
+490132,Green Book,23.0,130.0,2018,11,3,3,en,US,fall,Drama|Comedy|History,High
+263115,Logan,97.0,137.0,2017,2,3,2,en,US,winter,Action|Drama|Science Fiction,High
+49051,The Hobbit: An Unexpected Journey,250.0,169.0,2012,12,3,1,en,NZ,winter,Adventure|Fantasy|Action,High
+616,The Last Samurai,140.0,154.0,2003,12,3,2,en,US,winter,Drama|Action|War,High
+1865,Pirates of the Caribbean: On Stranger Tides,379.0,136.0,2011,5,3,2,en,GB,spring,Adventure|Action|Fantasy,Medium
+953,Madagascar,75.0,86.0,2005,5,4,5,en,US,spring,Adventure|Animation|Comedy|Family,Medium
+4552,A Tale of Two Sisters,15.1,115.0,2003,6,3,1,ko,KR,summer,Drama|Horror|Mystery,Medium
+77338,The Intouchables,13.0,113.0,2011,11,2,2,fr,FR,fall,Drama|Comedy,High
+7518,Over the Hedge,80.0,83.0,2006,5,4,1,en,US,spring,Adventure|Animation|Comedy|Family,Medium
+545611,Everything Everywhere All at Once,25.0,140.0,2022,3,3,3,en,US,spring,Action|Adventure|Science Fiction,High
+402431,Wicked,150.0,162.0,2024,10,3,1,en,US,fall,Drama|Romance|Fantasy,Medium
+3933,Corpse Bride,40.0,77.0,2005,9,3,1,en,GB,fall,Romance|Fantasy|Animation,High
+411,"The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",180.0,143.0,2005,12,3,2,en,GB,winter,Adventure|Family|Fantasy,Medium
+109445,Frozen,150.0,102.0,2013,11,4,1,en,US,fall,Animation|Family|Adventure|Fantasy,High
+934433,Scream VI,33.0,123.0,2023,3,3,1,en,US,spring,Horror|Thriller|Crime,Medium
+38365,Grown Ups,80.0,102.0,2010,6,1,1,en,US,summer,Comedy,Low
+24,Kill Bill: Vol. 1,30.0,111.0,2003,10,2,3,en,US,fall,Action|Crime,High
+614479,Insidious: The Red Door,16.0,107.0,2023,7,2,1,en,US,summer,Horror|Thriller,Medium
+301528,Toy Story 4,175.0,100.0,2019,6,4,1,en,US,summer,Family|Comedy|Animation|Adventure,High
+9502,Kung Fu Panda,130.0,90.0,2008,6,4,1,en,US,summer,Action|Animation|Comedy|Family,High
+640,Catch Me If You Can,52.0,141.0,2002,12,2,2,en,US,winter,Drama|Crime,High
+181808,Star Wars: The Last Jedi,300.0,152.0,2017,12,3,1,en,US,winter,Adventure|Action|Science Fiction,Medium
+497698,Black Widow,200.0,134.0,2021,7,3,2,en,US,summer,Action|Adventure|Science Fiction,Medium
+290098,The Handmaiden,8.575,145.0,2016,6,3,2,ko,KR,summer,Thriller|Drama|Romance,High
+558449,Gladiator II,310.0,148.0,2024,11,3,1,en,US,fall,Action|Adventure|Drama,Medium
+603692,John Wick: Chapter 4,100.0,170.0,2023,3,3,9,en,DE,spring,Action|Thriller|Crime,High
+161,Ocean's Eleven,85.0,116.0,2001,12,2,3,en,US,winter,Thriller|Crime,High
+577922,Tenet,205.0,150.0,2020,8,3,4,en,GB,summer,Action|Thriller|Science Fiction,Medium
+436969,The Suicide Squad,185.0,132.0,2021,7,3,3,en,US,summer,Action|Comedy|Adventure,High
+57800,Ice Age: Continental Drift,95.0,88.0,2012,6,4,1,en,US,summer,Animation|Comedy|Adventure|Family,Low
+406563,Insidious: The Last Key,10.0,103.0,2018,1,2,1,en,US,winter,Horror|Thriller,Low
+313369,La La Land,30.0,129.0,2016,12,3,1,en,US,winter,Comedy|Drama|Romance,High
+566525,Shang-Chi and the Legend of the Ten Rings,150.0,132.0,2021,9,3,2,en,US,fall,Action|Adventure|Fantasy,High
+329865,Arrival,47.0,116.0,2016,11,3,3,en,US,fall,Drama|Science Fiction|Mystery,High
+216015,Fifty Shades of Grey,40.0,125.0,2015,2,3,1,en,US,winter,Drama|Romance|Thriller,Low
+786892,Furiosa: A Mad Max Saga,168.0,149.0,2024,5,3,1,en,AU,spring,Action|Science Fiction|Adventure,High
+940551,Migration,72.0,83.0,2023,12,4,1,en,US,winter,Family|Comedy|Adventure|Animation,High
+101299,The Hunger Games: Catching Fire,130.0,146.0,2013,11,3,1,en,US,fall,Adventure|Action|Science Fiction,High
+508947,Turning Red,175.0,100.0,2022,3,4,5,en,US,spring,Animation|Family|Comedy|Fantasy,High
+37165,The Truman Show,60.0,103.0,1998,6,2,4,en,US,summer,Comedy|Drama,High
+616037,Thor: Love and Thunder,250.0,119.0,2022,7,3,1,en,US,summer,Fantasy|Action|Comedy,Low
+12153,White Chicks,37.0,109.0,2004,6,2,1,en,US,summer,Comedy|Crime,Medium
+38757,Tangled,260.0,100.0,2010,11,3,1,en,US,fall,Animation|Family|Adventure,High
+4348,Pride & Prejudice,28.0,128.0,2005,9,2,1,en,FR,fall,Drama|Romance,High
+8874,My Best Friend's Wedding,38.0,105.0,1997,6,2,3,en,US,summer,Comedy|Romance,Medium
+1124,The Prestige,40.0,130.0,2006,10,3,1,en,GB,fall,Drama|Mystery|Science Fiction,High
+194,Amélie,10.0,122.0,2001,4,2,2,fr,FR,spring,Comedy|Romance,High
+926393,The Equalizer 3,70.0,109.0,2023,8,3,3,en,IT,summer,Action|Thriller|Crime,High
+118,Charlie and the Chocolate Factory,150.0,115.0,2005,7,4,1,en,GB,summer,Adventure|Comedy|Family|Fantasy,Medium
+489,Good Will Hunting,10.0,127.0,1997,12,1,1,en,US,winter,Drama,High
+791373,Zack Snyder's Justice League,70.0,242.0,2021,3,3,1,en,US,spring,Action|Adventure|Fantasy,High
+550988,Free Guy,110.0,115.0,2021,8,3,1,en,US,summer,Comedy|Adventure|Science Fiction,High
+519182,Despicable Me 4,100.0,94.0,2024,6,5,1,en,US,summer,Animation|Comedy|Action|Science Fiction|Family,Medium
+365620,Ferrari,95.0,131.0,2023,12,2,1,en,US,winter,History|Drama,Low
+11544,Lilo & Stitch,80.0,85.0,2002,6,4,1,en,US,summer,Animation|Family|Comedy|Science Fiction,High
+280092,Insidious: Chapter 3,10.0,97.0,2015,5,2,1,en,CA,spring,Horror|Thriller,Low
+120467,The Grand Budapest Hotel,30.0,100.0,2014,2,2,2,en,US,winter,Comedy|Drama,High
+949,Heat,60.0,170.0,1995,12,3,2,en,US,winter,Crime|Drama|Action,High
+207703,Kingsman: The Secret Service,81.0,129.0,2015,1,3,3,en,GB,winter,Crime|Comedy|Action,High
+9479,The Nightmare Before Christmas,18.0,76.0,1993,10,3,1,en,US,fall,Fantasy|Animation|Family,High
+10625,Mean Girls,17.0,97.0,2004,4,2,4,en,US,spring,Drama|Comedy,High
+18785,The Hangover,35.0,100.0,2009,6,1,1,en,US,summer,Comedy,High
+772,Home Alone 2: Lost in New York,18.0,120.0,1992,11,3,2,en,US,fall,Comedy|Family|Adventure,Medium
+370172,No Time to Die,250.0,163.0,2021,9,3,5,en,GB,fall,Action|Thriller|Adventure,High
+546554,Knives Out,40.0,131.0,2019,11,3,2,en,US,fall,Comedy|Crime|Mystery,High
+8966,Twilight,37.0,122.0,2008,11,3,1,en,GB,fall,Fantasy|Drama|Romance,Low
+667538,Transformers: Rise of the Beasts,195.0,127.0,2023,6,3,3,en,US,summer,Science Fiction|Adventure|Action,Medium
+345,Eyes Wide Shut,65.0,159.0,1999,7,3,1,en,GB,summer,Drama|Thriller|Mystery,High
+637,Life Is Beautiful,20.0,116.0,1997,12,2,0,it,IT,winter,Comedy|Drama,High
+653346,Kingdom of the Planet of the Apes,160.0,145.0,2024,5,3,1,en,US,spring,Science Fiction|Adventure|Action,Medium
+940721,Godzilla Minus One,15.0,125.0,2023,11,3,2,ja,JP,fall,Science Fiction|Horror|Action,High
+38,Eternal Sunshine of the Spotless Mind,20.0,108.0,2004,3,3,1,en,US,spring,Science Fiction|Drama|Romance,High
+752,V for Vendetta,54.0,132.0,2006,2,3,1,en,DE,winter,Action|Thriller|Science Fiction,High
+598,City of God,3.3,129.0,2002,8,2,1,pt,BR,summer,Drama|Crime,High
+298618,The Flash,220.0,144.0,2023,6,3,3,en,US,summer,Action|Science Fiction|Adventure,Medium
+75656,Now You See Me,75.0,116.0,2013,5,2,2,en,US,spring,Thriller|Crime,High
+823464,Godzilla x Kong: The New Empire,150.0,115.0,2024,3,3,0,en,US,spring,Action|Adventure|Science Fiction,Medium
+246655,X-Men: Apocalypse,178.0,144.0,2016,5,3,6,en,US,spring,Science Fiction|Fantasy|Action,Medium
+278154,Ice Age: Collision Course,105.0,95.0,2016,6,5,1,en,US,summer,Adventure|Animation|Family|Comedy|Science Fiction,Low
+893723,PAW Patrol: The Mighty Movie,30.0,88.0,2023,9,5,1,en,CA,fall,Adventure|Animation|Comedy|Family|Science Fiction,Medium
+12219,12 Angry Men,1.75,117.0,1997,8,2,1,en,US,summer,Drama|TV Movie,High
+141052,Justice League,300.0,120.0,2017,11,3,1,en,US,fall,Action|Adventure|Science Fiction,Low
+508442,Soul,150.0,101.0,2020,12,5,1,en,US,winter,Animation|Family|Drama|Music|Fantasy,High
+76338,Thor: The Dark World,170.0,112.0,2013,10,3,1,en,US,fall,Action|Adventure|Fantasy,Medium
+746036,The Fall Guy,125.0,127.0,2024,4,3,1,en,US,spring,Action|Comedy|Romance,Medium
+18,The Fifth Element,90.0,126.0,1997,5,3,3,fr,FR,spring,Science Fiction|Action|Adventure,High
+57158,The Hobbit: The Desolation of Smaug,250.0,161.0,2013,12,3,1,en,NZ,winter,Fantasy|Adventure|Action,High
+337167,Fifty Shades Freed,55.0,105.0,2018,1,2,1,en,US,winter,Drama|Romance,Medium
+629,The Usual Suspects,6.0,106.0,1995,7,3,4,en,US,summer,Drama|Crime|Thriller,High
+324552,John Wick: Chapter 2,40.0,122.0,2017,2,3,4,en,US,winter,Action|Thriller|Crime,High
+19384,Dark Angel,7.0,91.0,1990,1,3,1,en,US,winter,Action|Thriller|Science Fiction,Low
+259316,Fantastic Beasts and Where to Find Them,180.0,133.0,2016,11,2,1,en,GB,fall,Fantasy|Adventure,High
+423108,The Conjuring: The Devil Made Me Do It,39.0,111.0,2021,5,3,2,en,US,spring,Horror|Mystery|Thriller,High
+176,Saw,1.2,103.0,2004,10,3,1,en,US,fall,Horror|Mystery|Crime,High
+1100782,Smile 2,28.0,127.0,2024,10,2,1,en,US,fall,Horror|Mystery,Medium
+102899,Ant-Man,130.0,117.0,2015,7,3,1,en,US,summer,Science Fiction|Adventure|Action,Medium
+82690,Wreck-It Ralph,165.0,101.0,2012,11,4,1,en,US,fall,Family|Animation|Comedy|Adventure,High
+184315,Hercules,100.0,98.0,2014,7,2,1,en,US,summer,Action|Adventure,Low
+62177,Brave,185.0,93.0,2012,6,4,1,en,US,summer,Adventure|Animation|Family|Fantasy,Medium
+359724,Ford v Ferrari,97.6,153.0,2019,11,3,4,en,US,fall,Drama|History|Action,High
+72190,World War Z,200.0,116.0,2013,6,3,1,en,US,summer,Action|Horror|Science Fiction,Medium
+49521,Man of Steel,225.0,143.0,2013,6,3,1,en,GB,summer,Action|Adventure|Science Fiction,Medium
+76492,Hotel Transylvania,85.0,91.0,2012,9,4,1,en,US,fall,Animation|Comedy|Family|Fantasy,Medium
+810,Shrek the Third,160.0,93.0,2007,5,5,1,en,US,spring,Fantasy|Adventure|Animation|Comedy|Family,Low
+49519,The Croods,135.0,99.0,2013,3,4,1,en,US,spring,Animation|Adventure|Family|Comedy,Medium
+698687,Transformers One,75.0,104.0,2024,9,4,1,en,US,fall,Animation|Science Fiction|Adventure|Family,High
+438695,Sing 2,85.0,110.0,2021,12,4,1,en,US,winter,Animation|Comedy|Family|Music,High
+855,Black Hawk Down,92.0,145.0,2001,12,3,2,en,GB,winter,Action|War|History,High
+299537,Captain Marvel,152.0,124.0,2019,3,3,1,en,US,spring,Action|Adventure|Science Fiction,Medium
+260513,Incredibles 2,200.0,118.0,2018,6,4,1,en,US,summer,Action|Adventure|Animation|Family,High
+1011985,Kung Fu Panda 4,80.0,94.0,2024,3,5,1,en,US,spring,Animation|Comedy|Adventure|Action|Family,Medium
+181812,Star Wars: The Rise of Skywalker,489.9,142.0,2019,12,3,1,en,US,winter,Adventure|Action|Science Fiction,Low
+2109,Rush Hour,33.0,97.0,1998,9,3,3,en,US,fall,Action|Comedy|Crime,Medium
+87101,Terminator Genisys,155.0,126.0,2015,6,3,1,en,US,summer,Science Fiction|Action|Thriller,Low
+73723,The Lorax,70.0,86.0,2012,3,2,1,en,US,spring,Animation|Family,Medium
+500,Reservoir Dogs,1.2,99.0,1992,9,2,1,en,US,fall,Crime|Thriller,High
+22881,The Blind Side,29.0,129.0,2009,11,1,1,en,US,fall,Drama,High
+398818,Call Me by Your Name,3.5,132.0,2017,10,2,3,en,BR,fall,Romance|Drama,High
+718930,Bullet Train,90.0,126.0,2022,8,3,4,en,US,summer,Action|Comedy|Thriller,High
+792307,Poor Things,35.0,141.0,2023,12,3,3,en,IE,winter,Science Fiction|Romance|Comedy,High
+140607,Star Wars: The Force Awakens,245.0,136.0,2015,12,3,1,en,US,winter,Adventure|Action|Science Fiction,High
+373571,Godzilla: King of the Monsters,170.0,132.0,2019,5,2,3,en,CN,spring,Science Fiction|Action,Medium
+10997,Farewell My Concubine,4.0,171.0,1993,1,1,1,zh,CN,winter,Drama,High
+1359,American Psycho,7.0,102.0,2000,4,3,3,en,CA,spring,Thriller|Drama|Crime,High
+273248,The Hateful Eight,44.0,188.0,2015,12,3,2,en,US,winter,Drama|Mystery|Western,High
+414419,Kill Bill: The Whole Bloody Affair,60.0,254.0,2011,3,4,5,en,US,spring,Action|Crime|Drama|Thriller,High
+135397,Jurassic World,150.0,124.0,2015,6,4,1,en,US,summer,Adventure|Science Fiction|Thriller|Action,Medium
+1791,The Piano Teacher,6.2,131.0,2001,9,2,2,fr,FR,fall,Drama|Romance,High
+49444,Kung Fu Panda 2,150.0,91.0,2011,5,4,1,en,US,spring,Animation|Family|Comedy|Action,Medium
+91586,Insidious: Chapter 2,5.0,106.0,2013,9,2,1,en,US,fall,Horror|Thriller,Medium
+615,The Passion of the Christ,30.0,127.0,2004,2,1,2,en,US,winter,Drama,High
+809,Shrek 2,150.0,92.0,2004,5,5,1,en,US,spring,Animation|Comedy|Family|Fantasy|Romance,High
+2251,Unfaithful,50.0,124.0,2002,5,3,2,en,US,spring,Thriller|Drama|Romance,Medium
+320288,Dark Phoenix,200.0,114.0,2019,6,3,3,en,US,summer,Science Fiction|Action|Adventure,Low
+6977,No Country for Old Men,25.0,122.0,2007,11,3,2,en,US,fall,Crime|Thriller|Western,High
+170,28 Days Later,8.0,113.0,2002,10,3,2,en,GB,fall,Horror|Thriller|Science Fiction,High
+744275,After We Fell,14.0,99.0,2021,9,2,3,en,FR,fall,Drama|Romance,Medium
+36557,Casino Royale,150.0,144.0,2006,11,3,2,en,GB,fall,Adventure|Action|Thriller,High
+812,Aladdin,28.0,91.0,1992,11,5,1,en,US,fall,Animation|Family|Adventure|Fantasy|Romance,High
+27,9 Songs,1.0,70.0,2004,7,3,1,en,GB,summer,Drama|Music|Romance,Low
+10494,Perfect Blue,0.830442,81.0,1998,2,2,1,ja,JP,winter,Animation|Thriller,High
+381284,Hidden Figures,25.0,127.0,2016,12,2,1,en,US,winter,Drama|History,High
+11770,Shaolin Soccer,10.000005,113.0,2001,7,2,2,cn,HK,summer,Action|Comedy,High
+61791,Rise of the Planet of the Apes,93.0,105.0,2011,8,4,1,en,GB,summer,Thriller|Action|Drama|Science Fiction,High
+713704,Evil Dead Rise,15.0,96.0,2023,4,2,1,en,NZ,spring,Horror|Thriller,Medium
+333339,Ready Player One,175.0,140.0,2018,3,3,1,en,US,spring,Adventure|Action|Science Fiction,High
+615453,Ne Zha,22.0,110.0,2019,7,3,1,zh,CN,summer,Animation|Fantasy|Adventure,High
+447332,A Quiet Place,17.0,91.0,2018,4,3,1,en,US,spring,Horror|Drama|Science Fiction,High
+629542,The Bad Guys,80.0,100.0,2022,3,6,1,en,US,spring,Action|Adventure|Animation|Comedy|Crime|Family,High
+281957,The Revenant,135.0,157.0,2015,12,3,2,en,CA,winter,Western|Drama|Adventure,High
+1417,Pan's Labyrinth,19.0,118.0,2006,10,3,1,es,MX,fall,Fantasy|Drama|War,High
+68726,Pacific Rim,180.0,131.0,2013,7,3,4,en,US,summer,Action|Science Fiction|Adventure,Medium
+417859,Puss in Boots,130.0,90.0,2011,10,5,2,en,US,fall,Action|Adventure|Animation|Comedy|Family,Medium
+384018,Fast & Furious Presents: Hobbs & Shaw,200.0,137.0,2019,7,3,3,en,US,summer,Action|Adventure|Comedy,Medium
+119450,Dawn of the Planet of the Apes,170.0,130.0,2014,7,4,1,en,GB,summer,Science Fiction|Action|Drama|Thriller,High
+10674,Mulan,90.0,88.0,1998,6,3,2,en,US,summer,Animation|Family|Adventure,High
+661539,A Complete Unknown,65.0,141.0,2024,12,2,1,en,US,winter,Drama|Music,Medium
+8681,Taken,25.0,94.0,2008,2,2,4,en,FR,winter,Action|Thriller,High
+458156,John Wick: Chapter 3 - Parabellum,55.0,131.0,2019,5,3,8,en,US,spring,Action|Thriller|Crime,High
+568124,Encanto,150.0,102.0,2021,10,4,2,en,US,fall,Animation|Comedy|Family|Fantasy,High
+950,Ice Age: The Meltdown,80.0,91.0,2006,3,4,1,en,US,spring,Animation|Family|Comedy|Adventure,Medium
+426063,Nosferatu,50.0,133.0,2024,12,2,5,en,US,winter,Horror|Fantasy,Medium
+762509,Mufasa: The Lion King,200.0,118.0,2024,12,3,1,en,US,winter,Adventure|Family|Animation,High
+8355,Ice Age: Dawn of the Dinosaurs,90.0,94.0,2009,6,4,1,en,US,summer,Animation|Comedy|Family|Adventure,Medium
+177677,Mission: Impossible - Rogue Nation,150.0,131.0,2015,7,2,3,en,US,summer,Action|Adventure,High
+591,The Da Vinci Code,125.0,149.0,2006,5,2,4,en,US,spring,Thriller|Mystery,Medium
+670,Oldboy,3.0,120.0,2003,11,2,1,ko,KR,fall,Thriller|Mystery,High
+351286,Jurassic World: Fallen Kingdom,170.0,129.0,2018,6,4,2,en,US,summer,Adventure|Science Fiction|Thriller|Action,Medium
+12155,Alice in Wonderland,200.0,108.0,2010,3,3,1,en,US,spring,Family|Fantasy|Adventure,Medium
+436270,Black Adam,200.0,125.0,2022,10,3,1,en,US,fall,Action|Adventure|Science Fiction,Medium
+530385,Midsommar,9.0,147.0,2019,7,3,2,en,SE,summer,Horror|Drama|Mystery,Medium
+2048,"I, Robot",120.0,115.0,2004,7,2,1,en,US,summer,Action|Science Fiction,Medium
+609681,The Marvels,274.8,105.0,2023,11,3,2,en,US,fall,Science Fiction|Adventure|Action,Low
+11688,The Emperor's New Groove,100.0,78.0,2000,12,5,1,en,US,winter,Adventure|Animation|Comedy|Family|Fantasy,High
+75780,Jack Reacher,60.0,130.0,2012,12,4,1,en,US,winter,Crime|Drama|Thriller|Action,Medium
+82023,Hotel Desire,0.230758,38.0,2011,12,2,1,de,DE,winter,Drama|Romance,Low
+854,The Mask,23.0,101.0,1994,7,4,2,en,US,summer,Comedy|Fantasy|Crime|Romance,Medium
+74,War of the Worlds,132.0,117.0,2005,6,3,1,en,US,summer,Adventure|Thriller|Science Fiction,Medium
+166426,Pirates of the Caribbean: Dead Men Tell No Tales,230.0,129.0,2017,5,3,1,en,US,spring,Adventure|Action|Fantasy,Medium
+9820,The Parent Trap,15.0,128.0,1998,7,3,2,en,US,summer,Comedy|Family|Romance,High
+297762,Wonder Woman,149.0,141.0,2017,5,3,2,en,US,spring,Action|Adventure|Fantasy,High
+1771,Captain America: The First Avenger,140.0,124.0,2011,7,3,3,en,US,summer,Action|Adventure|Science Fiction,Medium
+137113,Edge of Tomorrow,178.0,114.0,2014,5,2,1,en,US,spring,Action|Science Fiction,High
+460458,Resident Evil: Welcome to Raccoon City,25.0,107.0,2021,11,3,1,en,DE,fall,Action|Horror|Science Fiction,Low
+335983,Venom,116.0,112.0,2018,9,2,3,en,CN,fall,Science Fiction|Action,Medium
+1402,The Pursuit of Happyness,55.0,117.0,2006,12,1,2,en,US,winter,Drama,High
+615457,Nobody,16.0,91.0,2021,3,2,3,en,US,spring,Action|Thriller,High
+524434,Eternals,200.0,156.0,2021,11,3,5,en,US,fall,Science Fiction|Action|Adventure,Medium
+131634,The Hunger Games: Mockingjay - Part 2,160.0,137.0,2015,11,3,1,en,DE,fall,Action|Adventure|Science Fiction,Medium
+439079,The Nun,22.0,96.0,2018,9,1,5,en,US,fall,Horror,Low
+296096,Me Before You,20.0,110.0,2016,6,2,1,en,US,summer,Drama|Romance,High
+91314,Transformers: Age of Extinction,210.0,165.0,2014,6,3,2,en,US,summer,Science Fiction|Action|Adventure,Low
+107,Snatch,100.0,103.0,2000,9,2,2,en,GB,fall,Crime|Comedy,High
+4247,Scary Movie,19.0,88.0,2000,7,1,1,en,US,summer,Comedy,Low
+512200,Jumanji: The Next Level,125.0,123.0,2019,12,3,1,en,US,winter,Adventure|Comedy|Fantasy,Medium
+6479,I Am Legend,150.0,101.0,2007,12,3,1,en,US,winter,Drama|Science Fiction|Thriller,High
+80321,Madagascar 3: Europe's Most Wanted,145.0,93.0,2012,6,4,1,en,US,summer,Animation|Family|Comedy|Adventure,Medium
+9487,A Bug's Life,80.0,95.0,1998,11,4,1,en,US,fall,Adventure|Animation|Comedy|Family,Medium
+345887,The Equalizer 2,62.0,121.0,2018,7,3,6,en,US,summer,Action|Thriller|Crime,Medium
+493922,Hereditary,10.0,128.0,2018,6,3,1,en,US,summer,Horror|Mystery|Thriller,High
+604,The Matrix Reloaded,150.0,138.0,2003,5,4,2,en,US,spring,Adventure|Action|Thriller|Science Fiction,Medium
+508883,The Boy and the Heron,50.0,124.0,2023,7,3,1,ja,JP,summer,Animation|Fantasy|Drama,High
+580489,Venom: Let There Be Carnage,110.0,97.0,2021,9,3,2,en,US,fall,Science Fiction|Action|Adventure,Medium
+345940,The Meg,150.0,113.0,2018,8,3,4,en,CN,summer,Action|Science Fiction|Horror,Low
+575264,Mission: Impossible - Dead Reckoning Part One,220.0,164.0,2023,7,3,4,en,US,summer,Action|Adventure|Thriller,High
+1064028,Subservience,4.4,105.0,2024,8,3,1,en,US,summer,Horror|Science Fiction|Thriller,Medium
+1250,Ghost Rider,110.0,114.0,2007,1,3,1,en,US,winter,Thriller|Action|Fantasy,Low
+10020,Beauty and the Beast,25.0,84.0,1991,10,4,2,en,US,fall,Romance|Family|Animation|Fantasy,High
+4232,Scream,14.0,112.0,1996,12,3,1,en,US,winter,Crime|Horror|Mystery,High
+260346,Taken 3,48.0,109.0,2014,12,2,1,en,FR,winter,Thriller|Action,Low
+10192,Shrek Forever After,165.0,93.0,2010,5,5,1,en,US,spring,Comedy|Adventure|Fantasy|Animation|Family,Low
+640146,Ant-Man and the Wasp: Quantumania,200.0,125.0,2023,2,3,1,en,US,winter,Action|Adventure|Science Fiction,Low
+242,The Godfather Part III,54.0,162.0,1990,12,3,4,en,US,winter,Crime|Drama|Thriller,High
+882569,Guy Ritchie's The Covenant,55.0,123.0,2023,4,3,3,en,GB,spring,War|Action|Thriller,High
+507086,Jurassic World Dominion,658.8,147.0,2022,6,4,1,en,US,summer,Adventure|Science Fiction|Thriller|Action,Medium
+14161,2012,200.0,158.0,2009,10,3,11,en,US,fall,Action|Adventure|Science Fiction,Low
+747,Shaun of the Dead,6.0,99.0,2004,4,2,1,en,GB,spring,Horror|Comedy,High
+423,The Pianist,35.0,150.0,2002,9,2,4,en,FR,fall,Drama|War,High
+454626,Sonic the Hedgehog,85.0,99.0,2020,2,4,1,en,JP,winter,Action|Science Fiction|Comedy|Family,High
+318846,The Big Short,28.0,131.0,2015,12,2,1,en,US,winter,Comedy|Drama,High
+823219,Flow,3.7,85.0,2024,8,4,1,lv,LV,summer,Adventure|Animation|Family|Fantasy,High
+420818,The Lion King,260.0,118.0,2019,7,4,1,en,US,summer,Adventure|Drama|Family|Animation,Medium
+73,American History X,20.0,119.0,1998,7,1,1,en,US,summer,Drama,High
+476669,The King's Man,100.0,131.0,2021,12,3,1,en,GB,winter,Action|Adventure|Thriller,Medium
+310131,The Witch,4.0,92.0,2016,2,5,1,en,BR,winter,Horror|Drama|Mystery|Fantasy|Thriller,Medium
+607,Men in Black,90.0,98.0,1997,7,4,2,en,US,summer,Action|Adventure|Comedy|Science Fiction,High
+364,Batman Returns,80.0,126.0,1992,6,2,1,en,US,summer,Action|Fantasy,Medium
+1734,The Mummy Returns,98.0,130.0,2001,5,3,2,en,US,spring,Adventure|Action|Fantasy,Low
+1064213,Anora,6.0,139.0,2024,10,3,3,en,US,fall,Drama|Comedy|Romance,Medium
+8358,Cast Away,90.0,143.0,2000,12,2,2,en,US,winter,Adventure|Drama,High
+290859,Terminator: Dark Fate,185.0,128.0,2019,10,4,2,en,US,fall,Science Fiction|Action|Adventure|Thriller,Low
+10198,The Princess and the Frog,105.0,98.0,2009,12,4,2,en,US,winter,Animation|Romance|Fantasy|Family,High
+1265,Bridge to Terabithia,60.0,95.0,2007,2,3,1,en,US,winter,Adventure|Drama|Family,High
+447277,The Little Mermaid,297.0,135.0,2023,5,4,1,en,US,spring,Adventure|Family|Fantasy|Romance,Low
+146233,Prisoners,46.0,153.0,2013,9,3,1,en,US,fall,Drama|Thriller|Crime,High
+291805,Now You See Me 2,120.0,129.0,2016,6,2,3,en,HK,summer,Crime|Thriller,Medium
+72105,Ted,50.0,107.0,2012,6,2,1,en,US,summer,Comedy|Fantasy,Low
+425909,Ghostbusters: Afterlife,75.0,124.0,2021,11,3,1,en,CA,fall,Fantasy|Comedy|Adventure,High
+788,Mrs. Doubtfire,25.0,125.0,1993,11,3,1,en,US,fall,Comedy|Drama|Family,Medium
+11836,The SpongeBob SquarePants Movie,30.0,87.0,2004,11,5,1,en,US,fall,Adventure|Animation|Comedy|Family|Fantasy,Medium
+47971,xXx: Return of Xander Cage,85.0,107.0,2017,1,3,1,en,CA,winter,Action|Adventure|Crime,Low
+937287,Challengers,55.0,132.0,2024,4,2,2,en,IT,spring,Drama|Romance,Medium
+11970,Hercules,85.0,93.0,1997,6,6,3,en,US,summer,Animation|Family|Fantasy|Adventure|Comedy|Romance,High
+1949,Zodiac,65.0,157.0,2007,3,3,1,en,US,spring,Crime|Mystery|Thriller,High
+197,Braveheart,72.0,178.0,1995,5,4,4,en,US,spring,Action|Drama|History|War,High
+11423,Memories of Murder,2.8,131.0,2003,4,3,2,ko,KR,spring,Crime|Drama|Thriller,High
+624860,The Matrix Resurrections,190.0,148.0,2021,12,3,1,en,US,winter,Science Fiction|Action|Adventure,Low
+639933,The Northman,70.0,137.0,2022,4,3,2,en,US,spring,Action|Adventure|Fantasy,Medium
+14574,The Boy in the Striped Pyjamas,12.5,94.0,2008,5,3,2,en,GB,spring,Drama|War|History,High
+917496,Beetlejuice Beetlejuice,99.0,105.0,2024,9,2,1,en,US,fall,Comedy|Fantasy,Medium
+4248,Scary Movie 2,45.0,82.0,2001,7,1,1,en,US,summer,Comedy,Low
+115,The Big Lebowski,15.0,117.0,1998,3,2,4,en,GB,spring,Comedy|Crime,High
+8467,Dumb and Dumber,16.0,107.0,1994,12,1,1,en,US,winter,Comedy,Medium
+1034541,Terrifier 3,2.0,125.0,2024,10,1,1,en,US,fall,Horror,Medium
+93456,Despicable Me 2,76.0,98.0,2013,6,4,2,en,US,summer,Animation|Comedy|Family|Science Fiction,Medium
+297802,Aquaman,160.0,143.0,2018,12,3,1,en,US,winter,Action|Adventure|Fantasy,Medium
+843,In the Mood for Love,3.0,99.0,2000,9,2,3,cn,HK,fall,Drama|Romance,High
+760104,X,1.0,106.0,2022,3,1,1,en,US,spring,Horror,Medium
+343668,Kingsman: The Golden Circle,104.0,141.0,2017,9,3,3,en,GB,fall,Crime|Comedy|Action,Medium
+45612,Source Code,32.0,93.0,2011,3,3,1,en,US,spring,Thriller|Science Fiction|Mystery,High
+45243,The Hangover Part II,80.0,102.0,2011,5,1,2,en,US,spring,Comedy,Medium
+162,Edward Scissorhands,20.0,105.0,1990,12,3,1,en,US,winter,Fantasy|Drama|Romance,High
+337404,Cruella,200.0,134.0,2021,5,3,2,en,US,spring,Comedy|Crime|Family,High
+675353,Sonic the Hedgehog 2,110.0,123.0,2022,3,4,1,en,JP,spring,Action|Adventure|Family|Comedy,High
+695721,The Hunger Games: The Ballad of Songbirds & Snakes,100.0,157.0,2023,11,2,1,en,DE,fall,Science Fiction|Action,Medium
+100402,Captain America: The Winter Soldier,170.0,136.0,2014,3,3,1,en,US,spring,Action|Adventure|Science Fiction,High
+7131,Van Helsing,160.0,132.0,2004,5,3,2,en,CZ,spring,Horror|Adventure|Action,Low
+493529,Dungeons & Dragons: Honor Among Thieves,151.0,134.0,2023,3,3,1,en,CA,spring,Adventure|Fantasy|Comedy,High
+77,Memento,9.0,113.0,2000,10,2,1,en,US,fall,Mystery|Thriller,High
+1579,Apocalypto,40.0,138.0,2006,12,3,0,en,GB,winter,Action|Drama|History,High
+615777,Babylon,78.0,189.0,2022,12,2,5,en,US,winter,Drama|Comedy,High
+242582,Nightcrawler,8.5,118.0,2014,10,3,1,en,US,fall,Crime|Drama|Thriller,High
+929590,Civil War,50.0,109.0,2024,4,3,1,en,FI,spring,War|Action|Drama,Medium
+270946,Penguins of Madagascar,132.0,92.0,2014,11,4,1,en,US,fall,Family|Animation|Adventure|Comedy,Medium
+363088,Ant-Man and the Wasp,140.0,119.0,2018,7,3,1,en,US,summer,Action|Adventure|Science Fiction,Medium
+308266,War Dogs,50.0,114.0,2016,8,3,4,en,US,summer,Comedy|Crime|Drama,Medium
+460465,Mortal Kombat,20.0,110.0,2021,4,3,3,en,US,spring,Action|Fantasy|Adventure,Medium
+38055,Megamind,130.0,96.0,2010,10,5,1,en,US,fall,Animation|Action|Comedy|Family|Science Fiction,Medium
+9738,Fantastic Four,100.0,106.0,2005,6,3,1,en,DE,summer,Action|Fantasy|Science Fiction,Low
+44214,Black Swan,13.0,108.0,2010,12,3,3,en,US,winter,Drama|Thriller|Horror,High
+4951,10 Things I Hate About You,16.0,97.0,1999,3,3,2,en,US,spring,Comedy|Romance|Drama,High
+9470,Kung Fu Hustle,20.0,99.0,2004,2,4,1,cn,CN,winter,Action|Comedy|Crime|Fantasy,High
+976573,Elemental,200.0,102.0,2023,6,4,1,en,US,summer,Animation|Comedy|Family|Romance,High
+14,American Beauty,15.0,122.0,1999,9,1,1,en,US,fall,Drama,High
+9297,Monster House,75.0,91.0,2006,6,5,1,en,US,summer,Animation|Comedy|Family|Fantasy|Horror,Medium
+10775,Infernal Affairs,6.4,101.0,2002,12,5,3,cn,HK,winter,Drama|Action|Thriller|Crime|Mystery,High
+7485,Shooter,61.0,124.0,2007,3,3,1,en,US,spring,Drama|Action|Thriller,Medium
+275,Fargo,7.0,98.0,1996,3,3,1,en,GB,spring,Crime|Drama|Thriller,High
+19994,Jennifer's Body,16.0,107.0,2009,9,2,2,en,US,fall,Horror|Comedy,Low
+915935,Anatomy of a Fall,6.6,151.0,2023,8,3,2,fr,FR,summer,Thriller|Mystery|Crime,High
+2105,American Pie,11.0,95.0,1999,7,2,1,en,US,summer,Comedy|Romance,Medium
+9769,Lolita,62.0,137.0,1997,9,1,1,en,FR,fall,Drama,Medium
+670292,The Creator,80.0,134.0,2023,9,3,4,en,CA,fall,Science Fiction|Action|Adventure,Medium
+567609,Ready or Not,6.0,96.0,2019,8,2,1,en,US,summer,Horror|Comedy,Medium
+2501,The Bourne Identity,60.0,119.0,2002,6,3,5,en,US,summer,Action|Mystery|Thriller,High
+646385,Scream,24.0,114.0,2022,1,2,1,en,US,winter,Horror|Mystery,Medium
+310,Bruce Almighty,80.0,101.0,2003,5,2,1,en,US,spring,Fantasy|Comedy,Medium
+766507,Prey,65.0,100.0,2022,8,3,2,en,US,summer,Thriller|Action|Science Fiction,High
+137,Groundhog Day,14.6,101.0,1993,2,3,3,en,US,winter,Romance|Fantasy|Comedy,High
+1008042,Talk to Me,4.5,95.0,2023,7,1,3,en,AU,summer,Horror,Medium
+281338,War for the Planet of the Apes,150.0,140.0,2017,7,3,1,en,US,summer,Drama|Science Fiction|War,High
+339403,Baby Driver,34.0,113.0,2017,6,2,1,en,GB,summer,Action|Crime,High
+402,Basic Instinct,49.0,128.0,1992,3,2,1,en,US,spring,Thriller|Mystery,Medium
+335988,Transformers: The Last Knight,217.0,154.0,2017,6,3,1,en,US,summer,Action|Adventure|Science Fiction,Low
+4982,American Gangster,100.0,157.0,2007,11,2,1,en,US,fall,Drama|Crime,High
+294254,Maze Runner: The Scorch Trials,61.0,131.0,2015,9,4,1,en,US,fall,Science Fiction|Action|Thriller|Adventure,Medium
+399055,The Shape of Water,19.5,123.0,2017,12,3,2,en,US,winter,Drama|Fantasy|Romance,High
+374720,Dunkirk,150.0,107.0,2017,7,3,3,en,GB,summer,War|Action|Drama,High
+10191,How to Train Your Dragon,165.0,98.0,2010,3,4,1,en,US,spring,Fantasy|Adventure|Animation|Family,High
+9016,Treasure Planet,140.0,96.0,2002,11,5,1,en,US,fall,Science Fiction|Adventure|Animation|Family|Fantasy,High
+1111873,Abigail,28.0,109.0,2024,4,3,1,en,US,spring,Horror|Thriller|Comedy,Medium
+122906,About Time,12.0,123.0,2013,9,3,1,en,GB,fall,Drama|Romance|Fantasy,High
+290250,The Nice Guys,50.0,116.0,2016,5,3,1,en,US,spring,Comedy|Crime|Action,Medium
+36647,Blade,45.0,121.0,1998,8,2,2,en,US,summer,Horror|Action,Medium
+1562,28 Weeks Later,15.0,99.0,2007,4,3,1,en,GB,spring,Horror|Thriller|Science Fiction,Medium
+392044,Murder on the Orient Express,55.0,114.0,2017,11,3,5,en,US,fall,Mystery|Drama|Crime,Medium
+615656,Meg 2: The Trench,129.0,116.0,2023,8,3,1,en,CN,summer,Action|Science Fiction|Horror,Low
+4588,"Lust, Caution",15.0,158.0,2007,9,4,4,zh,CN,fall,Action|Drama|Romance|Thriller,High
+41630,No Strings Attached,25.0,107.0,2011,1,2,1,en,US,winter,Comedy|Romance,Low
+438148,Minions: The Rise of Gru,85.0,87.0,2022,6,5,1,en,US,summer,Animation|Comedy|Science Fiction|Crime|Family,High
+254128,San Andreas,110.0,114.0,2015,5,3,1,en,CA,spring,Action|Drama|Thriller,Low
+335787,Uncharted,120.0,116.0,2022,2,3,2,en,US,winter,Action|Adventure|Mystery,Medium
+38575,The Karate Kid,40.0,140.0,2010,6,4,2,en,CN,summer,Action|Adventure|Drama|Family,Medium
+150689,Cinderella,95.0,105.0,2015,3,4,1,en,GB,spring,Romance|Fantasy|Family|Drama,Medium
+251,Ghost,22.0,127.0,1990,7,3,1,en,US,summer,Fantasy|Romance|Thriller,High
+70981,Prometheus,130.0,124.0,2012,5,3,2,en,US,spring,Science Fiction|Mystery|Horror,Medium
+245891,John Wick,20.0,101.0,2014,10,2,3,en,US,fall,Action|Thriller,High
+50014,The Help,25.0,146.0,2011,8,1,1,en,US,summer,Drama,High
+420809,Maleficent: Mistress of Evil,185.0,119.0,2019,10,3,1,en,US,fall,Family|Fantasy|Adventure,High
+2123,"Me, Myself & Irene",51.0,117.0,2000,6,1,2,en,US,summer,Comedy,Medium
+1933,The Others,17.0,101.0,2001,8,3,1,en,ES,summer,Horror|Mystery|Thriller,High
+464052,Wonder Woman 1984,200.0,151.0,2020,12,3,1,en,US,winter,Action|Adventure|Fantasy,Low
+296,Terminator 3: Rise of the Machines,200.0,109.0,2003,7,3,1,en,DE,summer,Action|Thriller|Science Fiction,Low
+412117,The Secret Life of Pets 2,80.0,86.0,2019,5,4,1,en,US,spring,Animation|Comedy|Family|Adventure,Medium
+561,Constantine,100.0,121.0,2005,2,3,4,en,DE,winter,Fantasy|Action|Horror,High
+2668,Sleepy Hollow,100.0,105.0,1999,11,4,1,en,US,fall,Fantasy|Thriller|Mystery|Horror,Medium
+302946,The Accountant,44.0,128.0,2016,10,3,1,en,US,fall,Crime|Thriller|Drama,Medium
+459151,The Boss Baby: Family Business,82.0,107.0,2021,7,4,1,en,US,summer,Animation|Comedy|Adventure|Family,High
+697843,Extraction 2,65.0,122.0,2023,6,3,4,en,US,summer,Action|Thriller|Crime,High
+102651,Maleficent,180.0,97.0,2014,5,5,1,en,US,spring,Fantasy|Adventure|Action|Family|Romance,Medium
+526896,Morbius,75.0,105.0,2022,3,3,4,en,US,spring,Action|Science Fiction|Fantasy,Low
+19404,Dilwale Dulhania Le Jayenge,13.2,190.0,1995,10,3,1,hi,IN,fall,Comedy|Drama|Romance,High
+335977,Indiana Jones and the Dial of Destiny,294.7,155.0,2023,6,2,5,en,US,summer,Adventure|Action,Low
+27578,The Expendables,80.0,103.0,2010,8,3,2,en,US,summer,Thriller|Adventure|Action,Low
+976893,Perfect Days,14.0,124.0,2023,11,1,2,ja,DE,fall,Drama,High
+168259,Furious 7,190.0,138.0,2015,4,3,4,en,US,spring,Action|Crime|Thriller,High
+98566,Teenage Mutant Ninja Turtles,125.0,101.0,2014,8,4,2,en,US,summer,Science Fiction|Action|Adventure|Comedy,Low
+8835,Legally Blonde,18.0,96.0,2001,7,1,2,en,US,summer,Comedy,Medium
+157350,Divergent,85.0,140.0,2014,3,3,1,en,US,spring,Action|Adventure|Science Fiction,Medium
+63,Twelve Monkeys,29.0,129.0,1995,12,3,2,en,US,winter,Science Fiction|Thriller|Mystery,High
+87827,Life of Pi,120.0,127.0,2012,11,2,5,en,US,fall,Adventure|Drama,High
+399579,Alita: Battle Angel,170.0,122.0,2019,1,3,2,en,US,winter,Action|Science Fiction|Adventure,High
+15512,Monsters vs Aliens,175.0,94.0,2009,3,4,1,en,US,spring,Animation|Family|Adventure|Science Fiction,Low
+152601,Her,23.0,126.0,2013,12,3,1,en,US,winter,Romance|Science Fiction|Drama,High
+35,The Simpsons Movie,75.0,87.0,2007,7,3,1,en,US,summer,Animation|Comedy|Family,Medium
+646380,Don't Look Up,75.0,138.0,2021,12,3,1,en,US,winter,Comedy|Science Fiction|Drama,Medium
+10830,Matilda,36.0,98.0,1996,8,3,1,en,US,summer,Comedy|Family|Fantasy,Medium
+968051,The Nun II,38.5,110.0,2023,9,1,5,en,US,fall,Horror,Medium
+1018,Mulholland Drive,15.0,147.0,2001,6,3,2,en,FR,summer,Thriller|Drama|Mystery,High
+752623,The Lost City,74.0,112.0,2022,3,3,5,en,US,spring,Action|Adventure|Comedy,Low
+297,Meet Joe Black,90.0,178.0,1998,11,3,2,en,US,fall,Fantasy|Drama|Romance,High
+635302,Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train,15.7,117.0,2020,10,3,1,ja,JP,fall,Animation|Action|Fantasy,High
+82702,How to Train Your Dragon 2,145.0,102.0,2014,6,5,1,en,US,summer,Fantasy|Action|Adventure|Animation|Family,High
+6477,Alvin and the Chipmunks,60.0,92.0,2007,12,4,4,en,US,winter,Comedy|Family|Fantasy|Animation,Low
+338953,Fantastic Beasts: The Secrets of Dumbledore,200.0,142.0,2022,4,2,1,en,GB,spring,Fantasy|Adventure,Medium
+330459,Rogue One: A Star Wars Story,200.0,133.0,2016,12,3,1,en,US,winter,Action|Adventure|Science Fiction,High
+332562,A Star Is Born,36.0,136.0,2018,10,3,1,en,US,fall,Music|Drama|Romance,High
+346364,It,35.0,135.0,2017,9,3,1,en,US,fall,Horror|Thriller|Drama,Medium
+9737,Bad Boys,19.0,119.0,1995,4,4,1,en,US,spring,Action|Thriller|Crime|Comedy,Medium
+353081,Mission: Impossible - Fallout,178.0,147.0,2018,7,2,2,en,US,summer,Action|Adventure,High
+608,Men in Black II,140.0,88.0,2002,7,3,1,en,US,summer,Action|Comedy|Science Fiction,Low
+954,Mission: Impossible,80.0,111.0,1996,5,3,3,en,US,spring,Adventure|Action|Thriller,Medium
+297761,Suicide Squad,175.0,122.0,2016,8,3,3,en,US,summer,Action|Adventure|Fantasy,Low
+10527,Madagascar: Escape 2 Africa,150.0,89.0,2008,10,4,1,en,US,fall,Adventure|Animation|Comedy|Family,Low
+501929,The Mitchells vs. the Machines,75.0,110.0,2021,4,3,1,en,HK,spring,Animation|Adventure|Comedy,High
+37799,The Social Network,40.0,121.0,2010,10,1,1,en,US,fall,Drama,High
+748783,The Garfield Movie,60.0,101.0,2024,4,4,1,en,HK,spring,Adventure|Animation|Comedy|Family,Medium
+4256,Scary Movie 3,45.0,84.0,2003,10,1,1,en,US,fall,Comedy,Low
+116745,The Secret Life of Walter Mitty,90.0,114.0,2013,12,4,3,en,GB,winter,Adventure|Comedy|Drama|Fantasy,High
+18239,The Twilight Saga: New Moon,50.0,131.0,2009,11,4,2,en,US,fall,Adventure|Fantasy|Drama|Romance,Low
+404368,Ralph Breaks the Internet,175.0,112.0,2018,11,6,1,en,US,fall,Action|Adventure|Animation|Comedy|Family|Science Fiction,Medium
+1271,300,65.0,117.0,2007,3,3,1,en,US,spring,Action|Adventure|War,High
+293167,Kong: Skull Island,185.0,118.0,2017,3,3,2,en,CN,spring,Action|Adventure|Fantasy,Medium
+785084,The Whale,3.0,117.0,2022,12,1,1,en,US,winter,Drama,High
+787699,Wonka,125.0,117.0,2023,12,3,1,en,GB,winter,Comedy|Family|Fantasy,Medium
+5559,Bee Movie,150.0,91.0,2007,10,4,1,en,US,fall,Family|Animation|Adventure|Comedy,Low
+329,Jurassic Park,63.0,127.0,1993,6,2,2,en,US,summer,Adventure|Science Fiction,High
+13448,Angels & Demons,150.0,139.0,2009,4,2,6,en,IT,spring,Thriller|Mystery,Medium
+399566,Godzilla vs. Kong,200.0,114.0,2021,3,3,1,en,US,spring,Action|Science Fiction|Adventure,High
+376867,Moonlight,4.0,112.0,2016,10,1,1,en,US,fall,Drama,High
+240832,Lucy,40.0,89.0,2014,7,2,5,en,FR,summer,Action|Science Fiction,Low
+393,Kill Bill: Vol. 2,30.0,136.0,2004,4,3,4,en,US,spring,Action|Crime|Thriller,High
+573435,Bad Boys: Ride or Die,100.0,116.0,2024,6,3,2,en,US,summer,Action|Comedy|Crime,High
+1278,The Dreamers,15.0,115.0,2003,10,2,2,en,FR,fall,Drama|Romance,Medium
+96721,Rush,38.0,123.0,2013,9,2,4,en,GB,fall,Drama|Action,High
+140300,Kung Fu Panda 3,145.0,95.0,2016,1,5,1,en,CN,winter,Animation|Action|Adventure|Comedy|Family,Medium
+889737,Joker: Folie à Deux,190.0,138.0,2024,10,3,1,en,US,fall,Drama|Crime|Thriller,Low
+1592,Primal Fear,30.0,130.0,1996,4,3,2,en,US,spring,Crime|Drama|Thriller,High
+507089,Five Nights at Freddy's,20.0,110.0,2023,10,2,1,en,US,fall,Horror|Thriller,High
+262500,Insurgent,110.0,119.0,2015,3,3,1,en,US,spring,Action|Science Fiction|Thriller,Low
+282035,The Mummy,125.0,110.0,2017,6,5,2,en,US,summer,Fantasy|Thriller|Action|Adventure|Horror,Low
+558,Spider-Man 2,200.0,127.0,2004,6,3,3,en,US,summer,Action|Adventure|Science Fiction,High
+8363,Superbad,20.0,113.0,2007,8,1,1,en,US,summer,Comedy,High
+225886,Sex Tape,40.0,94.0,2014,7,1,1,en,US,summer,Comedy,Low
+1893,Star Wars: Episode I - The Phantom Menace,115.0,136.0,1999,5,3,1,en,US,spring,Adventure|Action|Science Fiction,Medium
+37724,Skyfall,200.0,143.0,2012,10,3,1,en,GB,fall,Action|Adventure|Thriller,High
+537915,After,14.0,106.0,2019,4,2,1,en,US,spring,Drama|Romance,Medium
+644,A.I. Artificial Intelligence,100.0,146.0,2001,6,3,1,en,GB,summer,Drama|Science Fiction|Adventure,Medium
+137106,The Lego Movie,60.0,100.0,2014,2,5,1,en,US,winter,Animation|Family|Adventure|Comedy|Fantasy,High
+9509,Man on Fire,70.0,146.0,2004,4,3,2,en,CH,spring,Action|Drama|Thriller,High
+666277,Past Lives,12.0,106.0,2023,6,2,2,en,US,summer,Drama|Romance,High
+787,Mr. & Mrs. Smith,110.0,120.0,2005,6,4,2,en,US,summer,Action|Comedy|Drama|Thriller,Medium
+37169,The Human Centipede (First Sequence),2.0,92.0,2009,10,1,3,en,NL,fall,Horror,Low
+11619,Flushed Away,149.0,85.0,2006,10,4,1,en,GB,fall,Adventure|Animation|Comedy|Family,Low
+353486,Jumanji: Welcome to the Jungle,90.0,119.0,2017,12,3,1,en,US,winter,Adventure|Comedy|Fantasy,Medium
+1637,Speed,30.0,116.0,1994,6,2,1,en,US,summer,Action|Thriller,Medium
+211672,Minions,74.0,91.0,2015,6,4,1,en,US,summer,Family|Animation|Adventure|Comedy,Low
+273481,Sicario,30.0,122.0,2015,9,3,2,en,US,fall,Action|Crime|Thriller,High
+10009,Brother Bear,128.0,85.0,2003,10,3,3,en,US,fall,Adventure|Animation|Family,High
+126889,Alien: Covenant,97.0,122.0,2017,5,2,2,en,US,spring,Horror|Science Fiction,Low
+44912,Green Lantern,200.0,114.0,2011,6,3,1,en,US,summer,Adventure|Action|Science Fiction,Low
+293670,The Wailing,10.951,156.0,2016,5,2,2,ko,KR,spring,Horror|Mystery,High
+474350,It Chapter Two,79.0,169.0,2019,9,3,1,en,US,fall,Horror|Thriller|Drama,Medium
+64690,Drive,15.0,100.0,2011,9,3,1,en,US,fall,Drama|Thriller|Crime,High
+505026,Death on the Nile,90.0,127.0,2022,2,3,3,en,US,winter,Mystery|Crime|Thriller,Low
+4327,Charlie's Angels,92.0,98.0,2000,11,3,5,en,US,fall,Action|Comedy|Adventure,Low
+756999,The Black Phone,16.0,103.0,2022,6,2,3,en,US,summer,Horror|Thriller,High
+142,Brokeback Mountain,14.0,134.0,2005,10,2,1,en,CA,fall,Drama|Romance,High
+9829,United 93,15.0,111.0,2006,4,3,3,en,FR,spring,Drama|History|Thriller,Medium
+76493,The Dictator,65.0,83.0,2012,5,1,2,en,US,spring,Comedy,Low
+451048,Jungle Cruise,200.0,127.0,2021,7,3,1,en,US,summer,Fantasy|Comedy|Adventure,High
+257211,The Intern,35.0,121.0,2015,9,1,1,en,US,fall,Comedy,High
+661374,Glass Onion: A Knives Out Mystery,40.0,140.0,2022,11,3,1,en,US,fall,Comedy|Crime|Mystery,Medium
+7451,xXx,70.0,124.0,2002,8,5,5,en,US,summer,Action|Adventure|Thriller|Crime|Drama,Low
+916224,Suzume,13.0,122.0,2022,11,4,1,ja,JP,fall,Animation|Drama|Adventure|Fantasy,High
+5876,The Mist,18.0,126.0,2007,11,3,1,en,US,fall,Horror|Science Fiction|Thriller,Medium
+1372,Blood Diamond,100.0,143.0,2006,12,3,2,en,DE,winter,Drama|Thriller|Action,High
+10330,Freaky Friday,26.0,97.0,2003,8,3,2,en,US,summer,Comedy|Family|Fantasy,Medium
+76,Before Sunrise,2.5,101.0,1995,1,2,3,en,AT,winter,Drama|Romance,High
+515001,Jojo Rabbit,14.0,108.0,2019,10,3,2,en,NZ,fall,Comedy|War|Drama,High
+980489,Gran Turismo,60.0,135.0,2023,8,3,2,en,US,summer,Adventure|Drama|Action,High
+1852,World Trade Center,65.0,129.0,2006,8,3,1,en,US,summer,Drama|History|Thriller,Low
+254,King Kong,207.0,188.0,2005,12,3,1,en,US,winter,Adventure|Drama|Action,Medium
+381288,Split,9.0,117.0,2017,1,2,1,en,US,winter,Horror|Thriller,High
+127380,Finding Dory,200.0,97.0,2016,6,3,1,en,US,summer,Adventure|Animation|Family,Medium
+51876,Limitless,27.0,106.0,2011,3,3,5,en,US,spring,Thriller|Mystery|Science Fiction,High
+336843,Maze Runner: The Death Cure,62.0,143.0,2018,1,4,1,en,US,winter,Science Fiction|Action|Adventure|Thriller,Medium
+930094,"Red, White & Royal Blue",20.0,118.0,2023,7,2,2,en,US,summer,Comedy|Romance,High
+335797,Sing,75.0,108.0,2016,11,4,1,en,US,fall,Animation|Comedy|Family|Music,Medium
+840705,Blink Twice,20.0,103.0,2024,8,3,1,en,US,summer,Horror|Mystery|Thriller,Medium
+602,Independence Day,75.0,145.0,1996,7,3,1,en,US,summer,Action|Adventure|Science Fiction,Medium
+402900,Ocean's Eight,70.0,111.0,2018,6,3,2,en,US,summer,Crime|Comedy|Action,Medium
+9837,The Prince of Egypt,70.0,99.0,1998,12,4,2,en,US,winter,Adventure|Animation|Drama|Family,High
+4108,The Transporter,21.0,92.0,2002,10,3,3,en,US,fall,Action|Crime|Thriller,Medium
+118340,Guardians of the Galaxy,170.0,121.0,2014,7,3,1,en,US,summer,Action|Science Fiction|Adventure,High
+44833,Battleship,209.0,131.0,2012,4,4,2,en,JP,spring,Thriller|Action|Adventure|Science Fiction,Low
+46195,Rio,90.0,96.0,2011,4,4,2,en,US,spring,Animation|Adventure|Comedy|Family,Medium
+163,Ocean's Twelve,110.0,125.0,2004,12,2,5,en,US,winter,Thriller|Crime,Medium
+37135,Tarzan,130.0,88.0,1999,6,3,1,en,US,summer,Animation|Family|Adventure,High
+64682,The Great Gatsby,105.0,143.0,2013,5,2,1,en,US,spring,Drama|Romance,High
+76757,Jupiter Ascending,176.0,127.0,2015,2,3,2,en,US,winter,Science Fiction|Fantasy|Action,Low
+109428,Evil Dead,17.0,91.0,2013,4,1,2,en,US,spring,Horror,Medium
+776503,CODA,10.0,112.0,2021,8,3,2,en,FR,summer,Drama|Music|Romance,High
+311324,The Great Wall,150.0,103.0,2016,12,3,3,en,CN,winter,Action|Adventure|Fantasy,Low
+411088,The Invisible Guest,4.0,107.0,2017,1,3,1,es,ES,winter,Drama|Mystery|Thriller,High
+2907,The Addams Family,30.0,100.0,1991,11,2,1,en,US,fall,Comedy|Fantasy,Medium
+264660,Ex Machina,15.0,108.0,2015,1,2,1,en,GB,winter,Drama|Science Fiction,High
+194662,Birdman or (The Unexpected Virtue of Ignorance),18.0,120.0,2014,10,2,1,en,US,fall,Drama|Comedy,High
+9532,Final Destination,23.0,98.0,2000,3,1,2,en,US,spring,Horror,Medium
+453,A Beautiful Mind,58.0,135.0,2001,12,2,1,en,US,winter,Drama|Romance,High
+937278,A Man Called Otto,50.0,126.0,2022,12,2,3,en,SE,winter,Comedy|Drama,High
+81188,Rise of the Guardians,145.0,97.0,2012,11,5,2,en,US,fall,Action|Adventure|Animation|Family|Fantasy,High
+503919,The Lighthouse,11.0,109.0,2019,10,3,1,en,BR,fall,Drama|Fantasy|Thriller,High
+8961,Bad Boys II,130.0,146.0,2003,7,3,2,en,US,summer,Action|Crime|Comedy,Medium
+114,Pretty Woman,14.0,120.0,1990,3,2,1,en,US,spring,Romance|Comedy,High
+581,Dances with Wolves,22.0,181.0,1990,11,3,1,en,GB,fall,Adventure|Drama|Western,High
+840430,The Holdovers,13.0,133.0,2023,10,2,1,en,US,fall,Drama|Comedy,High
+9323,Ghost in the Shell,3.0,83.0,1995,11,3,1,ja,JP,fall,Action|Animation|Science Fiction,High
+401981,Red Sparrow,69.0,140.0,2018,2,2,1,en,US,winter,Thriller|Mystery,Medium
+32657,Percy Jackson & the Olympians: The Lightning Thief,95.0,118.0,2010,2,3,1,en,US,winter,Adventure|Fantasy|Family,Low
+447404,Pokémon Detective Pikachu,150.0,105.0,2019,5,3,1,en,JP,spring,Action|Adventure|Fantasy,Medium
+257344,Pixels,88.0,106.0,2015,7,5,1,en,CN,summer,Action|Comedy|Science Fiction|Adventure|Fantasy,Low
+343611,Jack Reacher: Never Go Back,60.0,118.0,2016,10,3,1,en,CN,fall,Action|Thriller|Crime,Low
+9358,Final Destination 2,26.0,90.0,2003,1,2,1,en,US,winter,Horror|Mystery,Low
+215,Saw II,4.0,93.0,2005,10,1,1,en,US,fall,Horror,Medium
+588228,The Tomorrow War,200.0,138.0,2021,9,3,1,en,US,fall,Action|Science Fiction|Adventure,High
+6114,Bram Stoker's Dracula,40.0,128.0,1992,11,2,5,en,US,fall,Romance|Horror,High
+228967,The Interview,44.0,112.0,2014,12,2,2,en,US,winter,Action|Comedy,Low
+124905,Godzilla,160.0,123.0,2014,5,3,3,en,US,spring,Action|Drama|Science Fiction,Low
+4922,The Curious Case of Benjamin Button,150.0,166.0,2008,12,3,1,en,US,winter,Drama|Fantasy|Romance,High
+49047,Gravity,105.0,91.0,2013,10,3,1,en,GB,fall,Science Fiction|Thriller|Drama,Medium
+508943,Luca,200.0,95.0,2021,6,5,2,en,US,summer,Animation|Family|Fantasy|Drama|Comedy,High
+979,Irreversible,3.5,97.0,2002,5,3,4,fr,FR,spring,Drama|Thriller|Crime,Medium
+14324,Virgin Territory,38.0,93.0,2007,12,4,2,en,LU,winter,Adventure|Action|Comedy|Romance,Low
+799583,The Ministry of Ungentlemanly Warfare,60.0,120.0,2024,4,4,5,en,GB,spring,Action|Comedy|War|Adventure,Medium
+296098,Bridge of Spies,40.0,141.0,2015,10,2,3,en,US,fall,Thriller|Drama,High
+56292,Mission: Impossible - Ghost Protocol,145.0,133.0,2011,12,3,5,en,US,winter,Action|Thriller|Adventure,Medium
+190859,American Sniper,58.8,133.0,2014,12,2,1,en,US,winter,War|Action,High
+278927,The Jungle Book,175.0,106.0,2016,4,3,1,en,US,spring,Adventure|Family|Fantasy,Medium
+532408,The Boogeyman,35.0,99.0,2023,5,1,1,en,US,spring,Horror,Low
+11104,Chungking Express,0.16,103.0,1994,7,3,7,cn,HK,summer,Drama|Comedy|Romance,High
+1607,A Bronx Tale,22.0,121.0,1993,10,2,2,en,US,fall,Drama|Crime,High
+266856,The Theory of Everything,15.0,123.0,2014,11,2,4,en,GB,fall,Drama|Romance,High
+50646,"Crazy, Stupid, Love.",50.0,118.0,2011,7,3,1,en,US,summer,Comedy|Drama|Romance,High
+2034,Training Day,45.0,122.0,2001,10,3,4,en,US,fall,Action|Crime|Drama,High
+861,Total Recall,65.0,113.0,1990,6,3,1,en,US,summer,Action|Adventure|Science Fiction,High
+1824,50 First Dates,75.0,99.0,2004,2,2,1,en,US,winter,Comedy|Romance,Medium
+331482,Little Women,40.0,135.0,2019,12,2,2,en,US,winter,Drama|Romance,High
+43347,Love & Other Drugs,30.0,112.0,2010,11,3,1,en,US,fall,Drama|Comedy|Romance,Medium
+10545,The Hunchback of Notre Dame,100.0,91.0,1996,6,3,2,en,US,summer,Drama|Animation|Family,Medium
+315011,Shin Godzilla,15.0,120.0,2016,7,3,4,ja,JP,summer,Action|Science Fiction|Horror,High
+36955,True Lies,115.0,141.0,1994,7,2,4,en,US,summer,Action|Thriller,Medium
+324849,The Lego Batman Movie,80.0,104.0,2017,2,4,1,en,US,winter,Animation|Action|Comedy|Family,High
+10549,Hamlet,18.0,242.0,1996,12,1,1,en,US,winter,Drama,High
+508,Love Actually,40.0,135.0,2003,9,3,3,en,FR,fall,Comedy|Romance|Drama,Medium
+605,The Matrix Revolutions,150.0,129.0,2003,11,4,2,en,US,fall,Adventure|Action|Thriller|Science Fiction,Medium
+496450,"Miraculous: Ladybug & Cat Noir, The Movie",86.0,105.0,2023,7,5,2,fr,CN,summer,Animation|Fantasy|Action|Romance|Family,High
+10386,The Iron Giant,50.0,86.0,1999,8,5,1,en,US,summer,Animation|Drama|Family|Science Fiction|Adventure,High
+7555,Rambo,50.0,92.0,2008,1,3,3,en,US,winter,Action|Thriller|War,Medium
+36669,Die Another Day,142.0,133.0,2002,11,3,7,en,GB,fall,Adventure|Action|Thriller,Low
+524047,Greenland,34.0,120.0,2020,7,3,3,en,GB,summer,Thriller|Action|Science Fiction,Medium
+44896,Rango,135.0,107.0,2011,3,5,1,en,US,spring,Animation|Comedy|Family|Western|Adventure,Medium
+181533,Night at the Museum: Secret of the Tomb,127.0,98.0,2014,12,4,1,en,GB,winter,Adventure|Comedy|Fantasy|Family,Low
+257874,Beneath,8.9e-05,89.0,2013,10,1,1,en,US,fall,Horror,Low
+9475,Scent of a Woman,31.0,156.0,1992,12,1,1,en,US,winter,Drama,High
+593643,The Menu,35.0,107.0,2022,11,2,2,en,US,fall,Comedy|Horror,Medium
+924,Dawn of the Dead,26.0,101.0,2004,3,3,1,en,US,spring,Horror|Science Fiction|Action,Medium
+395834,Wind River,11.0,107.0,2017,8,3,1,en,FR,summer,Crime|Mystery|Thriller,High
+524,Casino,50.0,179.0,1995,11,2,1,en,FR,fall,Crime|Drama,High
+49046,All Quiet on the Western Front,20.0,147.0,2022,10,2,3,de,DE,fall,War|Drama,High
+1138194,Heretic,10.0,111.0,2024,10,2,1,en,US,fall,Thriller|Horror,Medium
+2024,The Patriot,110.0,165.0,2000,6,4,1,en,DE,summer,Drama|History|War|Action,Medium
+585083,Hotel Transylvania: Transformania,75.0,92.0,2022,1,5,1,en,US,winter,Animation|Comedy|Family|Adventure|Fantasy,Medium
+84892,The Perks of Being a Wallflower,13.0,103.0,2012,9,1,1,en,US,fall,Drama,High
+8871,How the Grinch Stole Christmas,123.0,105.0,2000,11,3,1,en,US,fall,Family|Comedy|Fantasy,Medium
+13053,Bolt,150.0,98.0,2008,11,4,1,en,US,fall,Animation|Family|Adventure|Comedy,Medium
+9693,Children of Men,76.0,109.0,2006,9,3,1,en,GB,fall,Science Fiction|Thriller|Action,High
+5503,The Fugitive,44.0,131.0,1993,8,3,1,en,US,summer,Action|Thriller|Drama,High
+299054,Expend4bles,100.0,103.0,2023,9,3,6,en,BG,fall,Action|Adventure|Thriller,Low
+146,"Crouching Tiger, Hidden Dragon",17.0,120.0,2000,7,5,1,zh,HK,summer,Adventure|Drama|Action|Romance|Fantasy,High
+913290,Barbarian,4.5,103.0,2022,9,3,2,en,US,fall,Horror|Mystery|Thriller,Medium
+166428,How to Train Your Dragon: The Hidden World,129.0,104.0,2019,1,3,1,en,US,winter,Animation|Family|Adventure,High
+420817,Aladdin,183.0,127.0,2019,5,4,1,en,US,spring,Adventure|Fantasy|Romance|Family,Medium
+628,Interview with the Vampire,60.0,123.0,1994,11,3,2,en,US,fall,Horror|Drama|Fantasy,High
+619979,Deep Water,49.0,116.0,2022,3,3,1,en,US,spring,Drama|Mystery|Thriller,Low
+754,Face/Off,80.0,139.0,1997,6,3,2,en,US,summer,Action|Crime|Science Fiction,Medium
+1079091,It Ends with Us,55.0,131.0,2024,8,2,1,en,US,summer,Drama|Romance,Medium
+508439,Onward,200.0,102.0,2020,2,5,1,en,US,winter,Adventure|Animation|Comedy|Family|Fantasy,High
+7443,Chicken Run,45.0,84.0,2000,6,3,1,en,FR,summer,Animation|Comedy|Family,Medium
+627,Trainspotting,4.0,94.0,1996,2,2,1,en,GB,winter,Drama|Crime,High
+337401,Mulan,200.0,115.0,2020,9,3,1,en,US,fall,Adventure|Fantasy|Action,Medium
+141,Donnie Darko,4.5,114.0,2001,1,3,1,en,US,winter,Fantasy|Drama|Mystery,High
+534,Terminator Salvation,200.0,115.0,2009,5,3,2,en,US,spring,Action|Science Fiction|Thriller,Low
+379149,The Foreigner,35.0,114.0,2017,9,3,2,en,CN,fall,Action|Thriller|Crime,Medium
+337170,American Made,50.0,115.0,2017,8,3,3,en,US,summer,Comedy|Crime|Drama,Medium
+18491,Neon Genesis Evangelion: The End of Evangelion,7.5,87.0,1997,7,5,1,ja,JP,summer,Animation|Science Fiction|Drama|Fantasy|Action,High
+399402,Hunter Killer,40.0,121.0,2018,10,2,2,en,US,fall,Action|Thriller,Medium
+10528,Sherlock Holmes,90.0,129.0,2009,12,3,2,en,US,winter,Action|Adventure|Mystery,High
+1268,Mr. Bean's Holiday,25.0,90.0,2007,3,2,3,en,GB,spring,Family|Comedy,Low
+446893,Trolls World Tour,90.0,91.0,2020,3,6,1,en,US,spring,Family|Animation|Comedy|Fantasy|Adventure|Music,High
+109439,The Hangover Part III,103.0,100.0,2013,5,1,1,en,US,spring,Comedy,Low
+70160,The Hunger Games,75.0,142.0,2012,3,4,1,en,US,spring,Science Fiction|Adventure|Action|Thriller,Medium
+7446,Tropic Thunder,92.0,107.0,2008,8,3,2,en,US,summer,Action|Comedy|War,Medium
+755,From Dusk Till Dawn,19.0,108.0,1996,1,3,2,en,US,winter,Horror|Action|Crime,Medium
+9919,How to Lose a Guy in 10 Days,50.0,116.0,2003,2,2,1,en,US,winter,Comedy|Romance,Medium
+956,Mission: Impossible III,150.0,126.0,2006,4,3,6,en,US,spring,Adventure|Action|Thriller,Medium
+9489,You've Got Mail,65.0,119.0,1998,12,2,1,en,US,winter,Comedy|Romance,Medium
+531428,Portrait of a Lady on Fire,5.74,121.0,2019,9,2,2,fr,FR,fall,Drama|Romance,High
+1927,Hulk,137.0,138.0,2003,6,4,2,en,US,summer,Science Fiction|Adventure|Action|Drama,Low
+1427,Perfume: The Story of a Murderer,63.7,147.0,2006,9,3,1,en,DE,fall,Crime|Fantasy|Drama,High
+81005,Jack the Giant Slayer,195.0,114.0,2013,2,3,1,en,US,winter,Fantasy|Action|Adventure,Low
+59967,Looper,30.0,118.0,2012,9,3,1,en,US,fall,Action|Thriller|Science Fiction,Medium
+19913,(500) Days of Summer,7.5,95.0,2009,7,3,3,en,US,summer,Comedy|Drama|Romance,High
+6637,National Treasure: Book of Secrets,130.0,124.0,2007,12,3,3,en,US,winter,Action|Adventure|Mystery,Low
+274855,Geostorm,120.0,109.0,2017,10,3,1,en,HK,fall,Action|Science Fiction|Thriller,Low
+1701,Con Air,75.0,116.0,1997,6,3,1,en,US,summer,Action|Thriller|Crime,Medium
+312221,Creed,37.0,133.0,2015,11,1,2,en,US,fall,Drama,High
+333484,The Magnificent Seven,90.0,132.0,2016,9,3,2,en,US,fall,Adventure|Action|Western,Low
+300671,13 Hours: The Secret Soldiers of Benghazi,50.0,144.0,2016,1,3,2,en,US,winter,War|History|Drama,High
+9739,Demolition Man,57.0,115.0,1993,10,3,1,en,US,fall,Crime|Action|Science Fiction,Medium
+83542,Cloud Atlas,102.0,172.0,2012,10,2,1,en,DE,fall,Drama|Science Fiction,Medium
+20526,TRON: Legacy,170.0,126.0,2010,12,3,1,en,US,winter,Adventure|Action|Science Fiction,Medium
+10591,The Girl Next Door,21.0,110.0,2004,4,2,1,en,CH,spring,Comedy|Romance,Medium
+324852,Despicable Me 3,80.0,90.0,2017,6,5,1,en,US,summer,Action|Animation|Comedy|Family|Adventure,Low
+340102,The New Mutants,67.0,94.0,2020,8,2,3,en,US,summer,Science Fiction|Horror,Low
+578701,Those Who Wish Me Dead,20.0,100.0,2021,5,2,1,en,CA,spring,Thriller|Action,Medium
+299687,The 5th Wave,38.0,112.0,2016,1,3,1,en,US,winter,Science Fiction|Adventure|Action,Low
+10439,Hocus Pocus,28.0,96.0,1993,7,3,2,en,US,summer,Fantasy|Comedy|Family,Medium
+7220,The Punisher,33.0,124.0,2004,4,3,1,en,DE,spring,Action|Crime|Drama,Low
+563,Starship Troopers,105.0,129.0,1997,11,4,1,en,US,fall,Adventure|Action|Thriller|Science Fiction,Medium
+9654,The Italian Job,60.0,110.0,2003,5,2,3,en,FR,spring,Action|Crime,Medium
+673593,Mean Girls,36.0,113.0,2024,1,1,1,en,US,winter,Comedy,Low
+1072790,Anyone but You,25.0,103.0,2023,12,2,1,en,US,winter,Romance|Comedy,Medium
+65754,The Girl with the Dragon Tattoo,90.0,158.0,2011,12,3,2,en,SE,winter,Thriller|Crime|Mystery,High
+50619,The Twilight Saga: Breaking Dawn - Part 1,110.0,117.0,2011,11,3,2,en,US,fall,Adventure|Fantasy|Romance,Low
+23168,The Town,37.0,125.0,2010,9,3,1,en,US,fall,Crime|Drama|Thriller,High
+22832,Ninja Assassin,40.0,99.0,2009,9,3,1,en,US,fall,Action|Adventure|Thriller,Medium
+193756,Lone Survivor,40.0,121.0,2013,12,3,2,en,US,winter,War|Action|Drama,High
+381719,Peter Rabbit,50.0,93.0,2018,2,3,1,en,AU,winter,Animation|Adventure|Family,Medium
+14097,9th Company,9.5,139.0,2005,9,3,1,ru,FI,fall,War|Drama|History,Medium
+762441,A Quiet Place: Day One,67.0,100.0,2024,6,3,1,en,US,summer,Horror|Science Fiction|Thriller,Medium
+49849,Cowboys & Aliens,163.0,119.0,2011,7,4,1,en,US,summer,Action|Science Fiction|Thriller|Western,Low
+339846,Baywatch,69.0,116.0,2017,5,3,1,en,US,spring,Comedy|Action|Crime,Low
+8413,Event Horizon,60.0,96.0,1997,8,3,2,en,GB,summer,Horror|Science Fiction|Mystery,Medium
+594,The Terminal,60.0,128.0,2004,6,2,5,en,US,summer,Comedy|Drama,High
+60304,Hansel & Gretel: Witch Hunters,50.0,88.0,2013,1,3,1,en,US,winter,Fantasy|Horror|Action,Low
+41154,Men in Black 3,225.0,106.0,2012,5,3,1,en,AE,spring,Action|Comedy|Science Fiction,Medium
+27582,The Mechanic,40.0,93.0,2011,1,3,1,en,US,winter,Action|Thriller|Crime,Medium
+80278,The Impossible,45.0,113.0,2012,9,3,3,en,ES,fall,Drama|Thriller|History,High
+300668,Annihilation,40.0,115.0,2018,2,2,1,en,GB,winter,Science Fiction|Horror,Low
+49530,In Time,40.0,109.0,2011,10,3,1,en,US,fall,Action|Thriller|Science Fiction,Medium
+70,Million Dollar Baby,30.0,132.0,2004,12,1,2,en,US,winter,Drama,High
+17654,District 9,30.0,112.0,2009,8,1,6,en,NZ,summer,Science Fiction,High
+62211,Monsters University,200.0,104.0,2013,6,4,1,en,US,summer,Animation|Family|Comedy|Fantasy,Medium
+565770,Blue Beetle,104.0,128.0,2023,8,3,3,en,US,summer,Action|Science Fiction|Adventure,Medium
+686,Contact,90.0,150.0,1997,7,3,3,en,US,summer,Drama|Science Fiction|Mystery,High
+7345,There Will Be Blood,25.0,158.0,2007,12,1,1,en,US,winter,Drama,High
+82507,Sinister,3.0,110.0,2012,10,3,4,en,CA,fall,Horror|Thriller|Mystery,Medium
+1086747,The Watchers,30.0,102.0,2024,6,3,1,en,US,summer,Fantasy|Horror|Mystery,Low
+9802,The Rock,75.0,137.0,1996,6,3,1,en,US,summer,Action|Adventure|Thriller,Medium
+388399,Patriots Day,45.0,133.0,2016,12,5,3,en,HK,winter,Action|Crime|Drama|History|Thriller,Medium
+341013,Atomic Blonde,30.0,115.0,2017,7,2,4,en,DE,summer,Action|Thriller,Low
+229297,Magic in the Moonlight,16.8,98.0,2014,7,3,1,en,GB,summer,Comedy|Drama|Romance,Low
+1593,Night at the Museum,110.0,108.0,2006,12,3,3,en,US,winter,Fantasy|Family|Comedy,Medium
+262504,Allegiant,110.0,120.0,2016,3,4,1,en,US,spring,Adventure|Science Fiction|Action|Mystery,Low
+1573,Die Hard 2,70.0,124.0,1990,7,2,2,en,US,summer,Action|Thriller,Medium
+424694,Bohemian Rhapsody,52.0,135.0,2018,10,2,1,en,US,fall,Music|Drama,High
+522938,Rambo: Last Blood,50.0,89.0,2019,9,3,2,en,CN,fall,Action|Thriller|Drama,Medium
+1830,Lord of War,50.0,122.0,2005,9,3,8,en,FR,fall,Crime|Drama|Thriller,High
+23483,Kick-Ass,28.0,118.0,2010,3,2,1,en,GB,spring,Action|Crime,Medium
+188927,Star Trek Beyond,185.0,122.0,2016,7,3,1,en,US,summer,Action|Adventure|Science Fiction,Medium
+64688,21 Jump Street,42.0,109.0,2012,3,3,1,en,US,spring,Action|Comedy|Crime,Medium
+955,Mission: Impossible II,125.0,123.0,2000,5,3,1,en,US,spring,Adventure|Action|Thriller,Low
+310307,The Founder,15.0,115.0,2016,11,2,1,en,GR,fall,Drama|History,Medium
+710,GoldenEye,60.0,130.0,1995,11,3,3,en,GB,fall,Adventure|Action|Thriller,Medium
+5175,Rush Hour 2,90.0,90.0,2001,8,3,3,en,US,summer,Action|Comedy|Crime,Medium
+50546,Just Go with It,80.0,117.0,2011,2,2,1,en,US,winter,Comedy|Romance,Medium
+881,A Few Good Men,40.0,138.0,1992,12,1,2,en,US,winter,Drama,High
+138832,We're the Millers,37.0,110.0,2013,8,2,1,en,GB,summer,Comedy|Crime,Medium
+49529,John Carter,263.7,132.0,2012,3,3,1,en,US,spring,Action|Adventure|Science Fiction,Low
+530915,1917,100.0,119.0,2019,12,3,3,en,US,winter,War|Drama|History,High
+398978,The Irishman,159.0,209.0,2019,11,3,4,en,US,fall,Crime|Drama|History,High
+338970,Tomb Raider,94.0,118.0,2018,3,3,1,en,JP,spring,Action|Adventure|Fantasy,Low
+520763,A Quiet Place Part II,55.0,97.0,2021,5,3,1,en,US,spring,Science Fiction|Thriller|Horror,High
+27581,The Other Guys,100.0,107.0,2010,8,3,1,en,US,summer,Comedy|Action|Crime,Low
+64635,Total Recall,125.0,118.0,2012,8,3,1,en,CA,summer,Action|Science Fiction|Thriller,Low
+110415,Snowpiercer,39.2,127.0,2013,8,3,4,ko,KR,summer,Action|Science Fiction|Drama,Medium
+180,Minority Report,102.0,145.0,2002,6,3,2,en,US,summer,Science Fiction|Action|Thriller,High
+663712,Terrifier 2,0.25,138.0,2022,10,1,1,en,US,fall,Horror,Medium
+1114513,Speak No Evil,15.0,110.0,2024,9,2,1,en,US,fall,Horror|Thriller,Medium
+12106,The Quick and the Dead,35.0,107.0,1995,2,4,2,en,US,winter,Western|Action|Drama|Thriller,Medium
+423204,Angel Has Fallen,40.0,122.0,2019,8,2,1,en,US,summer,Action|Thriller,Medium
+944,Lethal Weapon 4,140.0,127.0,1998,7,3,3,en,US,summer,Action|Crime|Thriller,Medium
+82675,Taken 2,45.0,91.0,2012,9,3,3,en,FR,fall,Action|Crime|Thriller,Low
+159824,Hotel Transylvania 2,80.0,89.0,2015,9,4,1,en,US,fall,Animation|Comedy|Family|Fantasy,Medium
+274857,King Arthur: Legend of the Sword,175.0,126.0,2017,5,3,1,en,US,spring,Action|Drama|Fantasy,Medium
+2502,The Bourne Supremacy,75.0,108.0,2004,7,3,4,en,US,summer,Action|Drama|Thriller,High
+400535,Sicario: Day of the Soldado,35.0,122.0,2018,6,3,2,en,MX,summer,Action|Crime|Thriller,Medium
+217,Indiana Jones and the Kingdom of the Crystal Skull,185.0,122.0,2008,5,2,3,en,US,spring,Adventure|Action,Low
+22794,Cloudy with a Chance of Meatballs,100.0,90.0,2009,9,3,1,en,US,fall,Animation|Comedy|Family,Medium
+26850,Under Suspicion,6.0,99.0,1991,9,2,1,en,GB,fall,Crime|Thriller,Low
+307081,Southpaw,30.0,123.0,2015,7,2,1,en,US,summer,Action|Drama,High
+427641,Rampage,120.0,107.0,2018,4,3,2,en,US,spring,Action|Adventure|Science Fiction,Low
+8909,Wanted,75.0,110.0,2008,6,3,1,en,US,summer,Action|Thriller|Crime,Medium
+360920,The Grinch,75.0,85.0,2018,11,4,1,en,US,fall,Animation|Comedy|Family|Fantasy,Medium
+37958,Immortals,75.0,110.0,2011,11,3,2,en,US,fall,Fantasy|Action|Drama,Low
+198184,Chappie,49.0,120.0,2015,3,3,1,en,US,spring,Crime|Action|Science Fiction,Medium
+974635,Hit Man,8.8,116.0,2024,5,3,1,en,US,spring,Comedy|Romance|Crime,Medium
+10483,Death Race,45.0,105.0,2008,8,3,1,en,GB,summer,Action|Thriller|Science Fiction,Low
+79,Hero,31.0,99.0,2002,12,4,1,zh,HK,winter,Drama|Adventure|Action|History,High
+138103,The Expendables 3,95.0,126.0,2014,8,3,1,en,US,summer,Action|Adventure|Thriller,Low
+254470,Pitch Perfect 2,29.0,115.0,2015,5,2,1,en,US,spring,Comedy|Music,Medium
+9702,Bound by Honor,35.0,190.0,1993,2,3,2,en,US,winter,Crime|Drama|Thriller,High
+415,Batman & Robin,125.0,125.0,1997,6,3,1,en,US,summer,Action|Science Fiction|Adventure,Low
+107846,Escape Plan,50.0,115.0,2013,10,2,4,en,GB,fall,Action|Thriller,Medium
+11674,101 Dalmatians,54.0,103.0,1996,11,2,1,en,GB,fall,Family|Comedy,Low
+8741,The Thin Red Line,52.0,171.0,1998,12,3,3,en,US,winter,Drama|History|War,High
+391713,Lady Bird,10.0,94.0,2017,9,2,1,en,US,fall,Drama|Comedy,High
+9880,The Princess Diaries,37.0,115.0,2001,8,3,1,en,US,summer,Comedy|Family|Romance,Medium
+169,Predator 2,35.0,108.0,1990,11,3,1,en,US,fall,Science Fiction|Action|Thriller,Low
+763215,Damsel,60.0,107.0,2024,3,3,1,en,ES,spring,Fantasy|Action|Adventure,Medium
+450465,Glass,20.0,129.0,2019,1,3,2,en,US,winter,Thriller|Drama|Science Fiction,Medium
+35688,Why Did I Get Married Too?,20.0,121.0,2010,4,2,1,en,US,spring,Comedy|Romance,Medium
+576845,Last Night in Soho,43.0,117.0,2021,10,3,1,en,GB,fall,Horror|Mystery|Thriller,High
+1813,The Devil's Advocate,57.0,144.0,1997,10,3,6,en,DE,fall,Horror|Drama|Mystery,High
+8656,Deep Impact,75.0,122.0,1998,5,3,1,en,US,spring,Action|Drama|Science Fiction,Low
+565,The Ring,48.0,115.0,2002,10,2,1,en,US,fall,Horror|Mystery,Medium
+8247,Jumper,85.0,88.0,2008,2,3,2,en,US,winter,Action|Adventure|Science Fiction,Low
+1029955,Kinds of Kindness,15.0,164.0,2024,5,2,1,en,IE,spring,Comedy|Drama,Low
+529203,The Croods: A New Age,65.0,95.0,2020,11,5,1,en,US,fall,Animation|Family|Adventure|Fantasy|Comedy,High
+109091,The Counselor,25.0,117.0,2013,10,3,2,en,US,fall,Thriller|Crime|Drama,Low
+33,Unforgiven,14.4,130.0,1992,8,1,1,en,US,summer,Western,High
+346910,The Predator,88.0,107.0,2018,9,3,1,en,US,fall,Science Fiction|Action|Thriller,Low
+9902,Wrong Turn,12.6,84.0,2003,5,2,1,en,DE,spring,Horror|Thriller,Low
+322,Mystic River,25.0,138.0,2003,10,4,1,en,US,fall,Thriller|Drama|Mystery|Crime,High
+50620,The Twilight Saga: Breaking Dawn - Part 2,120.0,115.0,2012,11,3,1,en,US,fall,Fantasy|Drama|Romance,Low
+739405,Operation Fortune: Ruse de Guerre,50.0,114.0,2023,1,4,1,en,GB,winter,Action|Comedy|Thriller|Adventure,Low
+189,Sin City: A Dame to Kill For,65.0,102.0,2014,8,3,1,en,US,summer,Action|Crime|Thriller,Low
+4476,Legends of the Fall,30.0,133.0,1994,12,4,2,en,US,winter,Drama|Western|Romance|War,High
+12244,9,30.0,79.0,2009,8,5,1,en,CA,summer,Action|Adventure|Animation|Science Fiction|Thriller,Medium
+1040148,"Ruby Gillman, Teenage Kraken",70.0,92.0,2023,6,4,1,en,US,summer,Animation|Family|Fantasy|Comedy,Medium
+206647,Spectre,245.0,148.0,2015,10,3,5,en,GB,fall,Action|Adventure|Thriller,Medium
+1538,Collateral,65.0,120.0,2004,8,3,2,en,US,summer,Drama|Crime|Thriller,High
+8457,Drillbit Taylor,40.0,110.0,2008,2,1,1,en,US,winter,Comedy,Low
+13387,Transporter 3,30.0,104.0,2008,11,3,5,en,FR,fall,Action|Thriller|Crime,Low
+2649,The Game,50.0,129.0,1997,9,3,3,en,US,fall,Drama|Thriller|Mystery,High
+2118,L.A. Confidential,35.0,138.0,1997,9,3,1,en,US,fall,Crime|Mystery|Thriller,High
+13475,Star Trek,150.0,127.0,2009,5,3,1,en,US,spring,Science Fiction|Action|Adventure,High
+762504,Nope,68.0,130.0,2022,7,3,1,en,US,summer,Horror|Science Fiction|Thriller,Medium
+19908,Zombieland,23.6,88.0,2009,10,2,1,en,US,fall,Comedy|Horror,High
+1954,The Butterfly Effect,13.0,113.0,2004,1,2,1,en,CA,winter,Science Fiction|Thriller,High
+429351,12 Strong,35.0,130.0,2018,1,3,1,en,US,winter,War|Action|History,Low
+37094,Falling Down,25.0,113.0,1993,2,3,3,en,US,winter,Crime|Drama|Thriller,High
+24021,The Twilight Saga: Eclipse,68.0,124.0,2010,6,4,1,en,US,summer,Adventure|Fantasy|Drama|Romance,Low
+1032823,Trap,30.0,105.0,2024,7,3,1,en,US,summer,Crime|Horror|Thriller,Low
+929,Godzilla,130.0,138.0,1998,5,3,5,en,US,spring,Science Fiction|Action|Thriller,Low
+114150,Pitch Perfect,17.0,112.0,2012,9,3,1,en,US,fall,Comedy|Music|Romance,High
+300669,Don't Breathe,9.9,89.0,2016,6,3,1,en,US,summer,Horror|Thriller|Crime,Medium
+2832,Identity,28.0,90.0,2003,4,2,1,en,US,spring,Mystery|Thriller,Medium
+153,Lost in Translation,4.0,102.0,2003,9,3,2,en,GB,fall,Drama|Comedy|Romance,High
+2059,National Treasure,100.0,131.0,2004,11,3,3,en,US,fall,Adventure|Action|Mystery,Medium
+1735,The Mummy: Tomb of the Dragon Emperor,145.0,112.0,2008,7,3,3,en,US,summer,Adventure|Action|Fantasy,Low
+298,Ocean's Thirteen,85.0,122.0,2007,6,2,3,en,US,summer,Crime|Thriller,Medium
+22538,Scott Pilgrim vs. the World,73.0,113.0,2010,8,3,1,en,JP,summer,Action|Comedy|Romance,High
+634492,Madame Web,80.0,117.0,2024,2,2,1,en,US,winter,Action|Fantasy,Low
+10764,Quantum of Solace,200.0,106.0,2008,10,3,5,en,GB,fall,Adventure|Action|Thriller,Low
+4824,The Jackal,60.0,124.0,1997,11,3,2,en,US,fall,Action|Crime|Thriller,Low
+359940,"Three Billboards Outside Ebbing, Missouri",15.0,115.0,2017,12,2,1,en,GB,winter,Crime|Drama,High
+414,Batman Forever,100.0,121.0,1995,6,3,1,en,US,summer,Action|Crime|Fantasy,Low
+882598,Smile,17.0,115.0,2022,9,2,1,en,US,fall,Horror|Mystery,Medium
+36586,Blade II,54.0,117.0,2002,3,4,3,en,US,spring,Fantasy|Horror|Action|Thriller,Medium
+1895,Star Wars: Episode III - Revenge of the Sith,113.0,140.0,2005,5,3,1,en,US,spring,Adventure|Action|Science Fiction,High
+499701,Dora and the Lost City of Gold,49.0,102.0,2019,8,3,2,en,US,summer,Family|Comedy|Adventure,Medium
+819,Sleepers,44.0,147.0,1996,10,3,1,en,US,fall,Crime|Drama|Thriller,High
+4523,Enchanted,85.0,107.0,2007,11,4,1,en,US,fall,Comedy|Family|Fantasy|Romance,Medium
+2567,The Aviator,110.0,170.0,2004,12,1,1,en,DE,winter,Drama,High
+696806,The Adam Project,116.0,106.0,2022,3,3,1,en,US,spring,Adventure|Science Fiction|Comedy,Medium
+22803,Law Abiding Citizen,53.0,109.0,2009,10,3,1,en,GB,fall,Drama|Crime|Thriller,High
+4233,Scream 2,24.0,120.0,1997,12,2,1,en,US,winter,Horror|Mystery,Low
+26466,Triangle,12.0,99.0,2009,10,1,1,en,AU,fall,Horror,Medium
+5915,Into the Wild,15.0,148.0,2007,9,2,2,en,US,fall,Adventure|Drama,High
+5174,Rush Hour 3,140.0,90.0,2007,8,3,5,en,US,summer,Action|Comedy|Crime,Low
+9072,Little Man,64.0,98.0,2006,8,2,1,en,US,summer,Comedy|Crime,Low
+951491,Saw X,13.0,118.0,2023,9,2,2,en,US,fall,Horror|Mystery,Medium
+363676,Sully,60.0,96.0,2016,9,2,1,en,US,fall,Drama|History,High
+9804,Waterworld,175.0,135.0,1995,7,3,1,en,US,summer,Adventure|Action|Science Fiction,Low
+204082,Homefront,22.0,100.0,2013,11,2,1,en,US,fall,Action|Thriller,Medium
+348350,Solo: A Star Wars Story,250.0,135.0,2018,5,3,1,en,US,spring,Science Fiction|Adventure|Action,Medium
+46738,Incendies,6.8,131.0,2010,9,3,3,fr,CA,fall,Drama|War|Mystery,High
+395991,Only the Brave,38.0,133.0,2017,9,2,1,en,US,fall,Drama|History,High
+804150,Cocaine Bear,32.5,95.0,2023,2,3,2,en,US,winter,Thriller|Comedy|Crime,Low
+700391,65,45.0,92.0,2023,3,3,1,en,CA,spring,Action|Adventure|Science Fiction,Low
+519465,Queen of Hearts,19.0,127.0,2019,3,1,2,da,DK,spring,Drama,Medium
+1089,Point Break,24.0,122.0,1991,7,3,1,en,US,summer,Action|Thriller|Crime,Medium
+967847,Ghostbusters: Frozen Empire,100.0,115.0,2024,3,3,1,en,US,spring,Fantasy|Adventure|Comedy,Low
+1581,The Holiday,85.0,136.0,2006,12,2,2,en,US,winter,Comedy|Romance,Medium
+7980,The Lovely Bones,65.0,136.0,2009,12,2,1,en,GB,winter,Fantasy|Drama,Medium
+319,True Romance,12.5,119.0,1993,9,3,2,en,US,fall,Action|Crime|Romance,High
+4258,Scary Movie 5,20.0,86.0,2013,4,1,1,en,US,spring,Comedy,Low
+1097549,Babygirl,20.0,115.0,2024,12,2,1,en,US,winter,Romance|Thriller,Low
+2503,The Bourne Ultimatum,70.0,115.0,2007,8,4,5,en,US,summer,Action|Drama|Mystery|Thriller,High
+587807,Tom & Jerry,50.0,101.0,2021,2,3,1,en,US,winter,Comedy|Family|Animation,Medium
+1894,Star Wars: Episode II - Attack of the Clones,120.0,142.0,2002,5,3,1,en,US,spring,Adventure|Action|Science Fiction,Medium
+588,Silent Hill,50.0,125.0,2006,4,2,1,en,CA,spring,Horror|Mystery,Medium
+332567,The Shallows,17.0,86.0,2016,6,3,2,en,AU,summer,Horror|Drama|Thriller,Low
+205584,Gods of Egypt,140.0,127.0,2016,2,3,1,en,AU,winter,Action|Adventure|Fantasy,Low
+2454,The Chronicles of Narnia: Prince Caspian,225.0,150.0,2008,5,3,1,en,US,spring,Adventure|Family|Fantasy,Medium
+205587,The Judge,40.0,141.0,2014,10,1,1,en,US,fall,Drama,High
+424139,Halloween,10.0,106.0,2018,10,2,1,en,US,fall,Horror|Thriller,Medium
+9342,The Mask of Zorro,95.0,138.0,1998,7,2,2,en,US,summer,Action|Adventure,Medium
+287947,Shazam!,80.0,132.0,2019,3,3,1,en,US,spring,Action|Comedy|Fantasy,Medium
+158852,Tomorrowland,190.0,130.0,2015,5,4,1,en,US,spring,Adventure|Family|Mystery|Science Fiction,Low
+2005,Sister Act,31.0,100.0,1992,5,2,1,en,US,spring,Music|Comedy,Medium
+153518,The Angry Birds Movie,73.0,97.0,2016,5,4,1,en,FI,spring,Animation|Adventure|Comedy|Family,Low
+11321,Seven Pounds,55.0,123.0,2008,12,1,2,en,US,winter,Drama,High
+95,Armageddon,140.0,151.0,1998,7,3,2,en,US,summer,Action|Science Fiction|Adventure,Medium
+241259,Alice Through the Looking Glass,170.0,113.0,2016,5,3,1,en,US,spring,Adventure|Family|Fantasy,Medium
+957452,The Crow,50.0,111.0,2024,8,3,1,en,FR,summer,Action|Fantasy|Horror,Low
+82695,Les Misérables,61.0,158.0,2012,12,2,1,en,GB,winter,History|Drama,High
+602269,The Little Things,30.0,128.0,2021,1,3,1,en,US,winter,Drama|Crime|Thriller,Low
+449443,Den of Thieves,30.0,140.0,2018,1,3,1,en,US,winter,Crime|Thriller|Action,Medium
+877269,Strange World,180.0,102.0,2022,11,5,1,en,US,fall,Animation|Family|Adventure|Fantasy|Science Fiction,Low
+268896,Pacific Rim: Uprising,150.0,111.0,2018,3,4,1,en,US,spring,Action|Fantasy|Science Fiction|Adventure,Low
+28178,Hachi: A Dog's Tale,16.0,93.0,2009,6,2,2,en,GB,summer,Drama|Family,High
+877817,Wolfs,80.0,108.0,2024,9,2,2,en,US,fall,Crime|Comedy,Low
+458723,Us,20.0,116.0,2019,3,2,1,en,US,spring,Horror|Mystery,Medium
+9567,Tears of the Sun,75.0,121.0,2003,3,3,1,en,US,spring,War|Action|Drama,Medium
+34544,The A-Team,110.0,117.0,2010,6,3,5,en,GB,summer,Action|Comedy|Crime,Low
+13183,Watchmen,130.0,163.0,2009,3,3,1,en,US,spring,Mystery|Action|Science Fiction,High
+9392,The Descent,3.5,100.0,2005,7,2,1,en,GB,summer,Adventure|Horror,Medium
+77877,The Lucky One,25.0,101.0,2012,4,2,1,en,US,spring,Drama|Romance,Medium
+238636,The Purge: Anarchy,9.0,103.0,2014,7,2,1,en,FR,summer,Horror|Thriller,Medium
+75612,Oblivion,120.0,124.0,2013,4,4,1,en,US,spring,Action|Science Fiction|Adventure|Mystery,Medium
+10096,13 Going on 30,37.0,98.0,2004,4,3,1,en,US,spring,Comedy|Fantasy|Romance,Medium
+7974,The Match Factory Girl,0.083038,69.0,1990,1,1,1,fi,FI,winter,Drama,High
+287424,Maggie,4.0,95.0,2015,5,3,1,en,CH,spring,Horror|Drama|Science Fiction,Low
+57214,Project X,12.0,88.0,2012,3,1,1,en,US,spring,Comedy,Medium
+37834,Knight and Day,117.0,109.0,2010,6,2,3,en,US,summer,Action|Comedy,Low
+5255,The Polar Express,165.0,100.0,2004,11,4,1,en,US,fall,Adventure|Animation|Family|Fantasy,Medium
+36648,Blade: Trinity,65.0,113.0,2004,12,3,2,en,US,winter,Action|Horror|Science Fiction,Low
+324668,Jason Bourne,120.0,123.0,2016,7,3,1,en,CN,summer,Action|Adventure|Thriller,Low
+53182,300: Rise of an Empire,110.0,102.0,2014,3,3,1,en,BG,spring,Action|Drama|War,Low
+437342,The First Omen,30.0,119.0,2024,4,1,2,en,US,spring,Horror,Medium
+901362,Trolls Band Together,95.0,91.0,2023,10,6,1,en,US,fall,Animation|Family|Music|Fantasy|Comedy|Adventure,High
+10315,Fantastic Mr. Fox,40.0,87.0,2009,10,4,3,en,US,fall,Adventure|Animation|Comedy|Family,High
+527774,Raya and the Last Dragon,100.0,107.0,2021,3,5,1,en,US,spring,Animation|Action|Adventure|Fantasy|Family,High
+9335,Transporter 2,32.0,88.0,2005,8,3,3,en,FR,summer,Action|Thriller|Crime,Low
+315837,Ghost in the Shell,110.0,107.0,2017,3,3,2,en,CN,spring,Science Fiction|Drama|Action,Low
+4257,Scary Movie 4,40.0,83.0,2006,4,1,1,en,US,spring,Comedy,Low
+766,Army of Darkness,11.0,81.0,1992,10,3,1,en,US,fall,Fantasy|Horror|Comedy,High
+484247,A Simple Favor,20.0,117.0,2018,9,3,1,en,CA,fall,Thriller|Comedy|Mystery,Medium
+509,Notting Hill,42.0,124.0,1999,5,2,1,en,GB,spring,Romance|Comedy,High
+12429,Ponyo,34.0,100.0,2008,7,3,1,ja,JP,summer,Animation|Fantasy|Family,High
+51739,Arrietty,23.0,95.0,2010,7,3,1,ja,FR,summer,Fantasy|Animation|Family,High
+445571,Game Night,37.0,100.0,2018,2,3,1,en,US,winter,Mystery|Comedy|Crime,Medium
+406997,Wonder,20.0,113.0,2017,11,2,1,en,US,fall,Family|Drama,High
+196,Back to the Future Part III,40.0,119.0,1990,5,3,1,en,US,spring,Adventure|Comedy|Science Fiction,High
+400155,Hotel Transylvania 3: Summer Vacation,80.0,97.0,2018,6,4,1,en,US,summer,Animation|Comedy|Family|Fantasy,Medium
+853,Enemy at the Gates,68.0,131.0,2001,2,2,3,en,US,winter,War|History,High
+796185,The Three Musketeers: D'Artagnan,27.5,121.0,2023,4,4,6,fr,BE,spring,Adventure|Action|Drama|History,Medium
+193893,Let's Be Cops,17.0,104.0,2014,8,1,1,en,US,summer,Comedy,Low
+316029,The Greatest Showman,84.0,105.0,2017,12,1,1,en,US,winter,Drama,High
+1084736,The Count of Monte Cristo,46.0,178.0,2024,6,3,5,fr,FR,summer,Adventure|Action|Drama,High
+334543,Lion,12.0,118.0,2016,11,1,3,en,AU,fall,Drama,High
+428078,Mortal Engines,100.0,128.0,2018,11,2,1,en,NZ,fall,Adventure|Science Fiction,Low
+804095,The Fabelmans,40.0,151.0,2022,11,1,3,en,US,fall,Drama,High
+388,Inside Man,45.0,129.0,2006,3,3,2,en,US,spring,Crime|Drama|Thriller,High
+12405,Slumdog Millionaire,15.0,121.0,2008,11,2,3,en,GB,fall,Drama|Romance,High
+945729,A Haunting in Venice,60.0,104.0,2023,9,3,5,en,GB,fall,Mystery|Thriller|Crime,Medium
+9390,Jerry Maguire,50.0,139.0,1996,12,3,1,en,US,winter,Comedy|Drama|Romance,Medium
+840326,Sisu,6.6,91.0,2022,9,3,2,fi,FI,fall,Action|War|Thriller,High
+639720,IF,110.0,104.0,2024,5,3,1,en,US,spring,Comedy|Fantasy|Family,Medium
+10555,Shark Tale,75.0,90.0,2004,9,4,1,en,US,fall,Animation|Action|Comedy|Family,Low
+631843,Old,18.0,108.0,2021,7,3,1,en,CN,summer,Thriller|Mystery|Horror,Low
+848538,Argylle,200.0,139.0,2024,1,3,1,en,GB,winter,Action|Adventure|Comedy,Low
+254320,The Lobster,4.0,119.0,2015,10,3,3,en,FR,fall,Comedy|Drama|Romance,Medium
+68735,Warcraft,160.0,123.0,2016,5,3,1,en,US,spring,Action|Adventure|Fantasy,Low
+280217,The Lego Movie 2: The Second Part,99.0,107.0,2019,2,5,1,en,CA,winter,Action|Adventure|Animation|Comedy|Family,Medium
+45269,The King's Speech,15.0,118.0,2010,11,2,1,en,GB,fall,Drama|History,High
+218043,Left Behind,16.0,110.0,2014,10,3,1,en,CA,fall,Thriller|Action|Science Fiction,Low
+68724,Elysium,115.0,109.0,2013,8,4,1,en,US,summer,Science Fiction|Action|Drama|Thriller,Medium
+9476,A Knight's Tale,65.0,133.0,2001,5,4,1,en,US,spring,Adventure|Drama|Romance|Action,Medium
+43947,I Spit on Your Grave,2.0,108.0,2010,6,3,1,en,US,summer,Thriller|Crime|Horror,Medium
+7863,Shine,5.5,105.0,1996,8,1,2,en,AU,summer,Drama,High
+44115,127 Hours,18.0,94.0,2010,11,3,1,en,FR,fall,Adventure|Drama|Thriller,Medium
+187,Sin City,40.0,124.0,2005,4,2,1,en,US,spring,Crime|Thriller,High
+10196,The Last Airbender,150.0,103.0,2010,6,3,1,en,US,summer,Action|Adventure|Fantasy,Low
+147441,Exodus: Gods and Kings,140.0,150.0,2014,12,3,1,en,ES,winter,Adventure|Drama|Action,Low
+206487,Predestination,5.5,98.0,2014,8,2,1,en,AU,summer,Science Fiction|Thriller,High
+335777,The Nut Job 2: Nutty by Nature,40.0,91.0,2017,8,4,1,en,CA,summer,Animation|Family|Adventure|Comedy,Low
+116711,Epic,100.0,102.0,2013,5,4,1,en,US,spring,Animation|Adventure|Family|Fantasy,Medium
+676,Pearl Harbor,140.0,183.0,2001,5,5,3,en,US,spring,War|History|Drama|Action|Romance,Medium
+34851,Predators,40.0,107.0,2010,7,3,3,en,US,summer,Science Fiction|Action|Thriller,Low
+54138,Star Trek Into Darkness,190.0,132.0,2013,5,3,1,en,US,spring,Action|Adventure|Science Fiction,High
+10200,The Day the Earth Stood Still,80.0,104.0,2008,12,3,2,en,CA,winter,Drama|Science Fiction|Thriller,Low
+249397,Nymphomaniac: Vol. II,2.35,124.0,2013,12,2,1,en,DK,winter,Drama|Mystery,Medium
+400928,Gifted,7.0,101.0,2017,4,2,1,en,GB,spring,Drama|Comedy,High
+1635,The Island,126.0,136.0,2005,7,3,1,en,US,summer,Action|Thriller|Science Fiction,Medium
+20453,3 Idiots,9.0,171.0,2009,12,2,2,hi,IN,winter,Drama|Comedy,High
+2322,Sneakers,23.0,125.0,1992,9,3,5,en,US,fall,Comedy|Crime|Drama,Medium
+514847,The Hunt,14.0,90.0,2020,3,3,3,en,US,spring,Action|Thriller|Horror,Medium
+480530,Creed II,50.0,130.0,2018,11,2,2,en,US,fall,Drama|Action,Medium
+9982,Chicken Little,150.0,81.0,2005,11,3,1,en,US,fall,Animation|Family|Comedy,Low
+3981,What Women Want,70.0,127.0,2000,12,2,2,en,US,winter,Comedy|Romance,Low
+512195,Red Notice,160.0,118.0,2021,11,3,5,en,US,fall,Action|Comedy|Crime,Medium
+1669,The Hunt for Red October,30.0,135.0,1990,3,2,2,en,US,spring,Action|Thriller,High
+274870,Passengers,110.0,116.0,2016,12,3,1,en,US,winter,Drama|Romance|Science Fiction,Medium
+263472,Knock Knock,2.5,99.0,2015,6,3,2,en,CL,summer,Horror|Thriller|Crime,Low
+157433,Pet Sematary,21.0,101.0,2019,4,1,1,en,US,spring,Horror,Low
+228161,Home,135.0,94.0,2015,3,5,1,en,US,spring,Fantasy|Comedy|Animation|Science Fiction|Family,Medium
+8922,Jeepers Creepers,10.0,90.0,2001,7,2,1,en,US,summer,Horror|Mystery,Low
+622,The Ninth Gate,38.0,133.0,1999,8,3,5,en,ES,summer,Mystery|Thriller|Horror,Low
+9352,EuroTrip,25.0,92.0,2004,2,1,5,en,US,winter,Comedy,Medium
+88751,Journey to the Center of the Earth,45.0,93.0,2008,7,5,3,en,US,summer,Action|Science Fiction|Adventure|Comedy|Family,Low
+1576,Resident Evil,33.0,100.0,2002,3,3,1,en,CA,spring,Horror|Action|Science Fiction,Medium
+22970,The Cabin in the Woods,30.0,95.0,2012,4,3,2,en,US,spring,Horror|Mystery|Comedy,Medium
+337339,The Fate of the Furious,250.0,136.0,2017,4,3,2,en,US,spring,Action|Crime|Thriller,Medium
+7512,Idiocracy,30.0,85.0,2006,9,4,1,en,US,fall,Comedy|Science Fiction|Adventure|Thriller,Low
+340666,Nocturnal Animals,22.5,116.0,2016,11,2,1,en,US,fall,Drama|Thriller,High
+395990,Death Wish,30.0,107.0,2018,3,4,1,en,US,spring,Action|Crime|Thriller|Drama,Low
+463272,Johnny English Strikes Again,25.0,88.0,2018,8,3,1,en,GB,summer,Action|Adventure|Comedy,Low
+309809,The Little Prince,64.0,106.0,2015,7,4,1,en,FR,summer,Adventure|Animation|Fantasy|Family,High
+136797,Need for Speed,66.0,132.0,2014,3,4,1,en,IN,spring,Action|Crime|Drama|Thriller,Low
+602223,The Forever Purge,18.0,103.0,2021,6,3,2,en,US,summer,Action|Horror|Thriller,Medium
+536554,M3GAN,12.0,102.0,2022,12,2,1,en,US,winter,Science Fiction|Horror,Medium
+9836,Happy Feet,100.0,108.0,2006,11,3,2,en,AU,fall,Animation|Comedy|Family,Low
+395992,Life,58.0,104.0,2017,3,3,3,en,US,spring,Horror|Science Fiction|Mystery,Low
+753342,Napoleon,165.0,158.0,2023,11,3,5,en,US,fall,History|War|Drama,Low
+424783,Bumblebee,135.0,114.0,2018,11,3,1,en,CN,fall,Action|Adventure|Science Fiction,Medium
+516486,Greyhound,50.3,92.0,2020,7,3,1,en,CA,summer,War|Action|Drama,High
+396371,Molly's Game,30.0,141.0,2017,12,2,1,en,US,winter,Drama|Crime,Medium
+16996,17 Again,20.0,102.0,2009,3,2,1,en,US,spring,Comedy|Fantasy,Low
+1022796,Wish,175.0,95.0,2023,11,4,1,en,US,fall,Animation|Family|Fantasy|Adventure,Low
+341174,Fifty Shades Darker,55.0,118.0,2017,2,2,1,en,US,winter,Drama|Romance,Low
+501170,Doctor Sleep,45.0,152.0,2019,10,2,1,en,US,fall,Horror|Fantasy,Medium
+2666,Dark City,27.0,101.0,1998,2,2,1,en,AU,winter,Mystery|Science Fiction,High
+72545,Journey 2: The Mysterious Island,79.0,94.0,2012,1,3,1,en,US,winter,Adventure|Action|Science Fiction,Low
+800158,The Killer,175.0,118.0,2023,10,2,3,en,US,fall,Crime|Thriller,Medium
+570670,The Invisible Man,7.0,124.0,2020,2,3,1,en,AU,winter,Thriller|Science Fiction|Horror,Medium
+1966,Alexander,155.0,176.0,2004,11,6,1,en,FR,fall,War|History|Action|Adventure|Drama|Romance,Low
+850165,The Iron Claw,15.9,133.0,2023,12,2,1,en,GB,winter,Drama|History,High
+8831,Timecop,28.0,98.0,1994,9,3,1,en,US,fall,Thriller|Science Fiction|Action,Low
+1246,Rocky Balboa,24.0,102.0,2006,12,2,1,en,US,winter,Drama|Action,Medium
+2770,American Pie 2,30.0,111.0,2001,8,2,1,en,US,summer,Comedy|Romance,Low
+1729,The Forbidden Kingdom,55.0,104.0,2008,4,3,3,en,CN,spring,Action|Adventure|Fantasy,Medium
+77950,Turbo,135.0,96.0,2013,7,2,1,en,US,summer,Animation|Family,Low
+714,Tomorrow Never Dies,110.0,119.0,1997,12,3,5,en,GB,winter,Adventure|Action|Thriller,Low
+725201,The Gray Man,200.0,128.0,2022,7,2,5,en,US,summer,Action|Thriller,Medium
+9339,Click,82.5,107.0,2006,6,3,3,en,US,summer,Comedy|Drama|Fantasy,Low
+298312,The Visit,5.0,94.0,2015,9,2,1,en,US,fall,Horror|Thriller,Low
+11013,Secretary,4.0,111.0,2002,9,3,1,en,US,fall,Romance|Drama|Comedy,Medium
+353491,The Dark Tower,60.0,95.0,2017,8,3,1,en,US,summer,Fantasy|Action|Science Fiction,Low
+62213,Dark Shadows,150.0,113.0,2012,5,2,1,en,US,spring,Comedy|Fantasy,Low
+10661,You Don't Mess with the Zohan,90.0,113.0,2008,6,2,2,en,US,summer,Comedy|Action,Low
+166424,Fantastic Four,120.0,100.0,2015,8,3,1,en,GB,summer,Action|Adventure|Science Fiction,Low
+581392,Peninsula,17.0,116.0,2020,7,4,2,ko,KR,summer,Horror|Action|Thriller|Adventure,Medium
+228165,The SpongeBob Movie: Sponge Out of Water,74.0,93.0,2015,1,5,1,en,US,winter,Adventure|Animation|Comedy|Family|Fantasy,Low
+479455,Men in Black: International,110.0,115.0,2019,6,4,2,en,CN,summer,Comedy|Science Fiction|Action|Adventure,Low
+1452,Superman Returns,223.0,154.0,2006,6,3,1,en,US,summer,Science Fiction|Action|Adventure,Low
+375588,Robin Hood,100.0,116.0,2018,11,4,1,en,US,fall,Adventure|Action|Thriller|Fantasy,Low
+495764,Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn),75.0,109.0,2020,2,2,1,en,US,winter,Action|Crime,Medium
+2675,Signs,72.0,106.0,2002,8,3,2,en,US,summer,Thriller|Science Fiction|Horror,Medium
+2300,Space Jam,80.0,87.0,1996,11,5,1,en,US,fall,Family|Animation|Science Fiction|Fantasy|Comedy,Medium
+265208,Wild Card,30.0,92.0,2015,1,3,1,en,US,winter,Thriller|Crime|Action,Low
+10771,The Tuxedo,60.0,99.0,2002,9,4,2,en,US,fall,Thriller|Action|Comedy|Science Fiction,Low
+77931,The Smurfs 2,105.0,105.0,2013,7,4,1,en,US,summer,Fantasy|Family|Comedy|Animation,Low
+201085,Crimson Peak,55.0,119.0,2015,10,5,1,en,US,fall,Horror|Mystery|Romance|Drama|Thriller,Medium
+594767,Shazam! Fury of the Gods,110.0,130.0,2023,3,3,2,en,US,spring,Comedy|Action|Fantasy,Low
+9522,Wedding Crashers,40.0,119.0,2005,7,2,1,en,US,summer,Comedy|Romance,Medium
+41513,The Smurfs,110.0,103.0,2011,7,5,1,en,US,summer,Animation|Family|Adventure|Comedy|Fantasy,Low
+17903,A Frozen Flower,10.0,133.0,2008,12,1,1,ko,KR,winter,Drama,Medium
+560016,Monkey Man,10.0,122.0,2024,4,3,2,en,CA,spring,Thriller|Crime|Action,Medium
+600354,The Father,6.0,97.0,2020,12,1,1,en,FR,winter,Drama,High
+9543,Prince of Persia: The Sands of Time,200.0,116.0,2010,5,3,1,en,US,spring,Adventure|Fantasy|Action,Low
+17979,A Christmas Carol,200.0,96.0,2009,11,4,1,en,US,fall,Animation|Drama|Family|Fantasy,Medium
+4478,Indecent Proposal,38.0,117.0,1993,4,2,1,en,US,spring,Romance|Drama,Low
+41446,Scream 4,40.0,111.0,2011,4,2,1,en,US,spring,Horror|Mystery,Low
+9603,Clueless,12.0,97.0,1995,7,2,2,en,US,summer,Comedy|Romance,High
+688,The Bridges of Madison County,24.0,135.0,1995,6,2,1,en,US,summer,Drama|Romance,High
+103663,The Hunt,3.8,116.0,2012,10,1,3,da,DK,fall,Drama,High
+1493,Miss Congeniality,45.0,110.0,2000,12,3,4,en,US,winter,Comedy|Crime|Action,Low
+49520,The Change-Up,52.0,112.0,2011,8,1,1,en,US,summer,Comedy,Low
+10054,Spy Kids,35.0,88.0,2001,3,5,2,en,US,spring,Family|Action|Comedy|Adventure|Science Fiction,Low
+547016,The Old Guard,70.0,125.0,2020,7,2,5,en,US,summer,Action|Fantasy,Medium
+3176,Battle Royale,4.5,113.0,2000,12,3,2,ja,JP,winter,Drama|Thriller|Action,High
+406759,Moonfall,146.0,131.0,2022,2,3,3,en,HK,winter,Science Fiction|Adventure|Action,Low
+1645,A Time to Kill,40.0,149.0,1996,7,3,1,en,US,summer,Crime|Drama|Thriller,High
+974576,Conclave,20.0,120.0,2024,10,2,4,en,GB,fall,Drama|Thriller,Medium
+9741,Unbreakable,75.0,106.0,2000,11,3,1,en,US,fall,Thriller|Drama|Mystery,Medium
+435,The Day After Tomorrow,125.0,124.0,2004,5,3,5,en,US,spring,Science Fiction|Thriller|Adventure,Medium
+9286,Final Destination 3,25.0,92.0,2006,2,2,2,en,US,winter,Horror|Mystery,Low
+399035,The Commuter,30.0,104.0,2018,1,3,1,en,US,winter,Action|Thriller|Mystery,Low
+581528,"The Gangster, the Cop, the Devil",6.5,110.0,2019,5,3,1,ko,KR,spring,Action|Crime|Thriller,High
+1991,Death Proof,25.0,113.0,2007,5,2,1,en,US,spring,Action|Thriller,Medium
+675445,PAW Patrol: The Movie,26.0,86.0,2021,8,5,1,en,CA,summer,Action|Adventure|Animation|Comedy|Family,High
+158015,The Purge,3.0,85.0,2013,5,3,1,en,FR,spring,Science Fiction|Horror|Thriller,Low
+500664,Upgrade,3.0,100.0,2018,5,3,1,en,AU,spring,Action|Thriller|Science Fiction,High
+57165,Wrath of the Titans,150.0,99.0,2012,3,3,1,en,US,spring,Fantasy|Adventure|Action,Low
+484641,Anna,34.0,119.0,2019,6,3,4,en,FR,summer,Action|Adventure|Thriller,Medium
+579974,RRR,69.0,187.0,2022,3,3,3,te,IN,spring,Action|History|Drama,High
+614930,Teenage Mutant Ninja Turtles: Mutant Mayhem,75.0,100.0,2023,7,4,2,en,CA,summer,Animation|Comedy|Action|Science Fiction,High
+969492,Land of Bad,18.0,113.0,2024,2,3,2,en,US,winter,Action|War|Thriller,High
+1584,The School of Rock,35.0,110.0,2003,10,3,1,en,US,fall,Comedy|Family|Music,Medium
+1267,Meet the Robinsons,150.0,95.0,2007,3,5,1,en,US,spring,Animation|Comedy|Family|Science Fiction|Adventure,Medium
+14411,Sinbad: Legend of the Seven Seas,60.0,86.0,2003,7,5,1,en,US,summer,Action|Adventure|Animation|Family|Fantasy,Medium
+97630,Zero Dark Thirty,40.0,157.0,2012,12,2,2,en,US,winter,Thriller|Drama,Medium
+545609,Extraction,65.0,116.0,2020,4,2,3,en,US,spring,Action|Thriller,High
+258489,The Legend of Tarzan,180.0,109.0,2016,6,3,1,en,CA,summer,Fantasy|Action|Adventure,Low
+169917,A Walk Among the Tombstones,28.0,114.0,2014,9,4,1,en,US,fall,Crime|Drama|Mystery|Thriller,Low
+454,Romeo + Juliet,14.5,120.0,1996,11,2,1,en,AU,fall,Drama|Romance,Medium
+71676,Ghost Rider: Spirit of Vengeance,57.0,96.0,2011,12,3,1,en,AE,winter,Action|Fantasy|Thriller,Low
+241554,Run All Night,50.0,114.0,2015,3,3,1,en,US,spring,Action|Crime|Thriller,Low
+10501,The Road to El Dorado,95.0,90.0,2000,3,5,1,en,US,spring,Family|Adventure|Animation|Comedy|Fantasy,High
+58574,Sherlock Holmes: A Game of Shadows,125.0,129.0,2011,11,3,1,en,US,fall,Action|Adventure|Mystery,Medium
+587792,Palm Springs,5.0,90.0,2020,7,3,2,en,US,summer,Comedy|Romance|Science Fiction,High
+136799,Trolls,125.0,92.0,2016,10,5,1,en,US,fall,Adventure|Animation|Comedy|Family|Fantasy,Medium
+8055,The Reader,32.0,124.0,2008,12,2,4,en,DE,winter,Drama|Romance,High
+11459,Sky High,35.0,100.0,2005,7,3,1,en,US,summer,Adventure|Comedy|Family,Low
+839369,May December,20.0,117.0,2023,11,1,1,en,US,fall,Drama,Medium
+1226578,Longlegs,10.0,101.0,2024,7,3,1,en,CA,summer,Crime|Horror|Mystery,Medium
+448119,Dolittle,175.0,101.0,2020,1,4,2,en,CN,winter,Family|Comedy|Fantasy|Adventure,Medium
+431693,Spies in Disguise,100.0,102.0,2019,12,5,1,en,US,winter,Animation|Action|Adventure|Comedy|Family,High
+6557,27 Dresses,30.0,111.0,2008,1,2,1,en,US,winter,Comedy|Romance,Low
+232672,Blended,40.0,117.0,2014,5,2,1,en,US,spring,Comedy|Romance,Medium
+14873,The Jungle Book 2,20.0,72.0,2003,2,3,1,en,US,winter,Family|Animation|Adventure,Low
+782,Gattaca,36.0,107.0,1997,7,2,2,en,US,summer,Science Fiction|Drama,High
+438799,Overlord,38.0,110.0,2018,11,3,4,en,US,fall,Horror|War|Science Fiction,Medium
+109414,This Is the End,32.0,106.0,2013,6,2,1,en,US,summer,Action|Comedy,Low
+11852,The Hot Chick,34.0,104.0,2002,12,2,1,en,US,winter,Comedy|Fantasy,Low
+869,Planet of the Apes,100.0,120.0,2001,7,4,1,en,US,summer,Thriller|Science Fiction|Action|Adventure,Low
+682507,Where the Crawdads Sing,24.0,126.0,2022,7,3,1,en,US,summer,Drama|Mystery|Romance,High
+136795,The Heat,43.0,117.0,2013,6,3,3,en,GB,summer,Action|Comedy|Crime,Medium
+1571,Live Free or Die Hard,110.0,128.0,2007,6,2,3,en,GB,summer,Action|Thriller,Medium
+51540,Horrible Bosses,35.0,98.0,2011,7,2,1,en,US,summer,Comedy|Crime,Medium
+49049,Dredd,50.0,96.0,2012,9,2,1,en,ZA,fall,Action|Science Fiction,Medium
+274862,The Lego Ninjago Movie,70.0,101.0,2017,9,5,1,en,AU,fall,Animation|Comedy|Adventure|Action|Family,Medium
+399174,Isle of Dogs,35.0,101.0,2018,3,3,2,en,US,spring,Adventure|Comedy|Animation,High
+64686,47 Ronin,175.0,119.0,2013,12,3,2,en,JP,winter,Drama|Action|Fantasy,Low
+6947,The Village,60.0,108.0,2004,7,3,1,en,US,summer,Drama|Mystery|Thriller,Low
+521029,Annabelle Comes Home,27.0,106.0,2019,6,1,1,en,US,summer,Horror,Low
+443791,Underwater,50.0,95.0,2020,1,4,1,en,US,winter,Horror|Science Fiction|Action|Adventure,Low
+522212,Just Mercy,25.0,137.0,2019,12,3,1,en,US,winter,Drama|Crime|History,High
+9360,Anaconda,45.0,90.0,1997,4,3,1,en,BR,spring,Adventure|Horror|Thriller,Low
+473033,Uncut Gems,19.0,136.0,2019,8,3,2,en,US,summer,Drama|Thriller|Crime,Medium
+10201,Yes Man,70.0,104.0,2008,12,2,3,en,GB,winter,Comedy|Romance,Medium
+664,Twister,92.0,113.0,1996,5,3,1,en,US,spring,Action|Adventure|Drama,Medium
+338766,Hell or High Water,12.0,102.0,2016,8,3,1,en,US,summer,Western|Crime|Drama,High
+278924,Mechanic: Resurrection,40.0,99.0,2016,8,4,2,en,US,summer,Action|Crime|Thriller|Adventure,Low
+4977,Paprika,2.6,90.0,2006,10,3,2,ja,JP,fall,Animation|Science Fiction|Thriller,High
+796,Cruel Intentions,10.5,97.0,1999,3,2,1,en,US,spring,Drama|Romance,Medium
+417384,Scary Stories to Tell in the Dark,25.0,108.0,2019,8,2,1,en,CA,summer,Horror|Mystery,Low
+527641,Five Feet Apart,7.0,116.0,2019,3,2,3,en,US,spring,Romance|Drama,High
+8619,Master and Commander: The Far Side of the World,150.0,138.0,2003,11,3,3,en,US,fall,Adventure|Drama|War,High
+11631,Mamma Mia!,52.0,108.0,2008,7,2,2,en,DE,summer,Comedy|Romance,Medium
+396422,Annabelle: Creation,15.0,110.0,2017,8,1,2,en,US,summer,Horror,Medium
+62835,Colombiana,40.0,108.0,2011,7,4,2,en,FR,summer,Action|Thriller|Crime|Drama,Medium
+7214,Coach Carter,30.0,136.0,2005,1,2,1,en,DE,winter,Drama|History,High
+39538,Contagion,60.0,106.0,2011,9,3,3,en,US,fall,Drama|Thriller|Science Fiction,Medium
+949423,Pearl,1.0,102.0,2022,9,1,2,en,US,fall,Horror,High
+9374,Death Becomes Her,55.0,104.0,1992,7,3,1,en,US,summer,Comedy|Fantasy|Horror,Medium
+9023,Spirit: Stallion of the Cimarron,80.0,83.0,2002,5,5,1,en,US,spring,Animation|Adventure|Family|Drama|Western,High
+879,Hook,70.0,142.0,1991,4,4,1,en,US,spring,Adventure|Fantasy|Comedy|Family,Medium
+1878,Fear and Loathing in Las Vegas,18.5,118.0,1998,5,3,1,en,US,spring,Adventure|Drama|Comedy,Medium
+1272,Sunshine,50.0,108.0,2007,4,2,1,en,GB,spring,Science Fiction|Thriller,Medium
+397243,The Autopsy of Jane Doe,4.0,86.0,2016,12,2,1,en,GB,winter,Horror|Mystery,Medium
+10715,Looney Tunes: Back in Action,80.0,92.0,2003,11,3,1,en,US,fall,Animation|Comedy|Family,Low
+8584,Shanghai Noon,55.0,110.0,2000,5,3,3,en,US,spring,Adventure|Comedy|Western,Low
+718789,Lightyear,200.0,105.0,2022,6,4,1,en,US,summer,Animation|Science Fiction|Family|Adventure,Medium
+763285,Ambulance,40.0,136.0,2022,3,4,3,en,US,spring,Thriller|Action|Drama|Crime,Medium
+15789,A Goofy Movie,18.0,78.0,1995,4,5,1,en,AU,spring,Adventure|Comedy|Romance|Animation|Family,Medium
+11212,Baby's Day Out,50.0,99.0,1994,7,4,2,en,US,summer,Comedy|Adventure|Family|Crime,Low
+568160,Weathering with You,11.1,112.0,2019,7,4,1,ja,JP,summer,Animation|Drama|Fantasy|Romance,High
+13027,Eagle Eye,80.0,118.0,2008,9,3,1,en,DE,fall,Mystery|Thriller|Action,Medium
+2164,Stargate,55.0,121.0,1994,10,3,3,en,US,fall,Action|Adventure|Science Fiction,Medium
+9208,Broken Arrow,50.0,108.0,1996,2,2,1,en,US,winter,Action|Thriller,Low
+8078,Alien Resurrection,70.0,109.0,1997,11,3,1,en,US,fall,Science Fiction|Horror|Action,Low
+1656,The Legend of Zorro,75.0,130.0,2005,10,3,2,en,US,fall,Action|Adventure|Western,Low
+365177,Borderlands,115.0,101.0,2024,8,3,1,en,US,summer,Action|Science Fiction|Comedy,Low
+9714,Home Alone 3,32.0,102.0,1997,12,2,2,en,US,winter,Comedy|Family,Low
+1005331,Carry-On,47.0,120.0,2024,12,2,1,en,US,winter,Thriller|Action,Medium
+13186,Wrong Turn 2: Dead End,4.0,97.0,2007,8,2,1,en,DE,summer,Horror|Thriller,Low
+747188,Asteroid City,25.0,105.0,2023,6,2,1,en,US,summer,Comedy|Drama,Low
+2057,Original Sin,42.0,116.0,2001,5,5,6,en,FR,spring,Thriller|Drama|Mystery|Romance|History,Low
+616820,Halloween Ends,33.0,111.0,2022,10,2,1,en,US,fall,Horror|Thriller,Low
+11247,A Cinderella Story,19.0,95.0,2004,7,3,3,en,US,summer,Comedy|Family|Romance,Medium
+11969,Tombstone,25.0,130.0,1993,12,2,1,en,US,winter,Western|Action,High
+11551,Small Soldiers,40.0,110.0,1998,7,5,1,en,US,summer,Comedy|Adventure|Fantasy|Science Fiction|Action,Medium
+10140,The Chronicles of Narnia: The Voyage of the Dawn Treader,155.0,113.0,2010,12,3,1,en,GB,winter,Adventure|Family|Fantasy,Low
+293863,The Age of Adaline,25.0,112.0,2015,4,3,1,en,US,spring,Romance|Fantasy|Drama,High
+1624,Liar Liar,45.0,86.0,1997,3,2,1,en,US,spring,Comedy|Fantasy,Medium
+678512,Sound of Freedom,14.5,131.0,2023,7,2,2,en,US,summer,Action|Drama,High
+320,Insomnia,46.0,118.0,2002,5,3,1,en,US,spring,Thriller|Crime|Drama,Medium
+497582,Enola Holmes,21.0,124.0,2020,9,3,1,en,US,fall,Adventure|Mystery|Crime,High
+23398,Alvin and the Chipmunks: The Squeakquel,75.0,89.0,2009,12,5,2,en,US,winter,Comedy|Family|Animation|Fantasy|Music,Low
+458897,Charlie's Angels,48.0,118.0,2019,11,3,5,en,US,fall,Action|Adventure|Comedy,Low
+18823,Clash of the Titans,125.0,106.0,2010,3,3,1,en,US,spring,Adventure|Fantasy|Action,Low
+9655,She's the Man,20.0,105.0,2006,3,2,1,en,US,spring,Comedy|Romance,Medium
+555604,Guillermo del Toro's Pinocchio,35.0,117.0,2022,11,4,1,en,US,fall,Animation|Fantasy|Adventure|Drama,High
+516729,Paddington in Peru,90.0,106.0,2024,11,3,2,en,GB,fall,Adventure|Comedy|Family,Medium
+273477,Scouts Guide to the Zombie Apocalypse,15.0,93.0,2015,10,2,1,en,US,fall,Comedy|Horror,Medium
+4584,Sense and Sensibility,16.0,136.0,1995,12,2,1,en,US,winter,Drama|Romance,High
+20662,Robin Hood,200.0,140.0,2010,5,4,3,en,US,spring,Action|Adventure|History|Drama,Low
+8914,Deep Blue Sea,60.0,105.0,1999,7,3,1,en,AU,summer,Action|Horror|Science Fiction,Low
+9778,Serendipity,28.0,90.0,2001,10,2,1,en,US,fall,Comedy|Romance,Medium
+1572,Die Hard: With a Vengeance,90.0,128.0,1995,5,2,3,en,US,spring,Action|Thriller,High
+489999,Searching,0.88,102.0,2018,8,3,1,en,US,summer,Drama|Mystery|Thriller,High
+188161,A Million Ways to Die in the West,40.0,116.0,2014,5,2,1,en,US,spring,Comedy|Western,Low
+187017,22 Jump Street,50.0,112.0,2014,6,3,1,en,US,summer,Crime|Comedy|Action,Medium
+378236,The Emoji Movie,50.0,86.0,2017,7,3,1,en,US,summer,Animation|Family|Comedy,Low
+149870,The Wind Rises,30.0,126.0,2013,7,4,4,ja,JP,summer,Animation|Drama|History|Romance,High
+8848,The Bank Job,20.0,112.0,2008,2,3,1,en,AU,winter,Thriller|Crime|Drama,Medium
+4513,30 Days of Night,30.0,113.0,2007,10,2,1,en,NZ,fall,Horror|Thriller,Low
+12437,Underworld: Rise of the Lycans,35.0,92.0,2009,1,3,1,en,US,winter,Fantasy|Action|Thriller,Medium
+16995,State of Play,60.0,127.0,2009,4,3,3,en,FR,spring,Thriller|Crime|Mystery,Medium
+9595,Hot Shots!,26.0,85.0,1991,7,3,1,en,US,summer,Action|Comedy|War,Medium
+6957,The 40 Year-Old Virgin,26.0,116.0,2005,8,2,2,en,US,summer,Comedy|Romance,Low
+839033,The Lord of the Rings: The War of the Rohirrim,30.0,134.0,2024,12,4,1,en,JP,winter,Animation|Fantasy|Adventure|Action,Medium
+619,The Bodyguard,25.0,129.0,1992,11,3,2,en,US,fall,Action|Drama|Romance,Medium
+117263,Olympus Has Fallen,70.0,120.0,2013,3,2,2,en,US,spring,Action|Thriller,Low
+13179,Tinker Bell,48.0,78.0,2008,9,4,1,en,IN,fall,Animation|Family|Adventure|Fantasy,Medium
+87516,Oldboy,30.0,104.0,2013,11,2,1,en,US,fall,Thriller|Mystery,Low
+379686,Space Jam: A New Legacy,150.0,115.0,2021,7,5,1,en,US,summer,Family|Comedy|Adventure|Animation|Science Fiction,Medium
+76640,The Last Stand,30.0,107.0,2013,1,3,1,en,US,winter,Action|Crime|Thriller,Low
+38700,Bad Boys for Life,90.0,124.0,2020,1,3,2,en,US,winter,Thriller|Action|Crime,Medium
+11362,The Count of Monte Cristo,35.0,131.0,2002,1,4,3,en,IE,winter,Adventure|Drama|History|Action,High
+412656,Chaos Walking,125.0,109.0,2021,2,3,1,en,US,winter,Fantasy|Science Fiction|Adventure,Low
+9495,The Crow,23.0,102.0,1994,5,3,1,en,US,spring,Fantasy|Action|Thriller,High
+68737,Seventh Son,95.0,102.0,2014,12,2,1,en,CN,winter,Adventure|Fantasy,Low
+943,Lethal Weapon 3,35.0,118.0,1992,5,3,1,en,US,spring,Action|Thriller|Crime,Medium
+8367,Robin Hood: Prince of Thieves,48.0,143.0,1991,6,3,2,en,US,summer,Action|Adventure|Drama,Medium
+9437,Kiss the Girls,27.0,115.0,1997,9,3,1,en,US,fall,Thriller|Crime|Mystery,Low
+522162,Midway,100.0,138.0,2019,11,3,3,en,CA,fall,War|History|Drama,Medium
+9362,Tremors,11.0,96.0,1990,1,3,1,en,US,winter,Comedy|Horror|Science Fiction,Medium
+11621,Porco Rosso,9.2,93.0,1992,7,3,1,ja,JP,summer,Animation|Adventure|Fantasy,High
+37233,The Firm,42.0,154.0,1993,6,3,1,en,US,summer,Drama|Mystery|Thriller,Medium
+241,Natural Born Killers,34.0,119.0,1994,8,3,3,en,US,summer,Crime|Thriller|Drama,Medium
+137094,Jack Ryan: Shadow Recruit,60.0,105.0,2014,1,3,2,en,RU,winter,Action|Drama|Thriller,Low
+80274,Ender's Game,110.0,114.0,2013,10,3,1,en,US,fall,Science Fiction|Action|Adventure,Medium
+49797,I Saw the Devil,6.0,144.0,2010,8,2,1,ko,KR,summer,Thriller|Horror,High
+462,Erin Brockovich,52.0,131.0,2000,3,1,1,en,US,spring,Drama,High
+2019,Hard Target,18.0,99.0,1993,4,3,1,en,US,spring,Action|Thriller|Crime,Low
+13811,Knowing,50.0,121.0,2009,3,2,1,en,GB,spring,Science Fiction|Thriller,Low
+856289,Creation of the Gods I: Kingdom of Storms,85.0,148.0,2023,7,3,1,zh,CN,summer,Action|Fantasy|War,Medium
+442062,Goosebumps 2: Haunted Halloween,35.0,90.0,2018,10,4,1,en,US,fall,Comedy|Fantasy|Horror|Family,Low
+884,Crash,9.0,100.0,1996,7,2,1,en,CA,summer,Thriller|Drama,Low
+277,Underworld,22.0,122.0,2003,9,3,1,en,US,fall,Fantasy|Action|Thriller,Medium
+522931,Hitman's Wife's Bodyguard,70.0,117.0,2021,6,4,4,en,BG,summer,Action|Comedy|Crime|Thriller,Medium
+296099,Vacation,31.0,99.0,2015,7,2,1,en,US,summer,Comedy|Adventure,Low
+267860,London Has Fallen,60.0,99.0,2016,3,3,1,en,US,spring,Action|Adventure|Thriller,Low
+602734,Spiral: From the Book of Saw,20.0,93.0,2021,5,2,1,en,US,spring,Horror|Mystery,Low
+10428,Hackers,20.0,105.0,1995,9,4,4,en,US,fall,Action|Crime|Thriller|Drama,Low
+154400,The Drop,12.6,106.0,2014,9,2,1,en,US,fall,Drama|Crime,Medium
+15092,Crank: High Voltage,20.0,96.0,2009,4,3,1,en,US,spring,Action|Thriller|Crime,Low
+786,Almost Famous,60.0,124.0,2000,9,2,1,en,US,fall,Drama|Music,High
+698508,Redeeming Love,30.0,134.0,2022,1,3,1,en,ZA,winter,Romance|Drama|Western,High
+438650,Cold Pursuit,60.0,119.0,2019,2,3,1,en,FR,winter,Crime|Action|Drama,Low
+16871,Drag Me to Hell,30.0,99.0,2009,5,2,4,en,US,spring,Horror|Thriller,Low
+72784,The Loft,14.0,103.0,2014,10,1,1,en,US,fall,Thriller,Low
+381283,mother!,30.0,121.0,2017,9,2,1,en,US,fall,Horror|Drama,Medium
+13207,Friday the 13th,19.0,97.0,2009,2,2,1,en,US,winter,Horror|Thriller,Low
+369972,First Man,70.0,141.0,2018,10,2,1,en,US,fall,History|Drama,Medium
+884605,No Hard Feelings,45.0,103.0,2023,6,2,3,en,US,summer,Comedy|Romance,Medium
+9100,The Craft,15.0,101.0,1996,5,3,2,en,US,spring,Horror|Drama|Fantasy,Medium
+1000837,I'm Still Here,8.0,138.0,2024,9,2,1,pt,BR,fall,Drama|History,High
+72331,Abraham Lincoln: Vampire Hunter,69.0,105.0,2012,6,3,1,en,RU,summer,Action|Fantasy|Horror,Low
+420634,Terrifier,0.035,84.0,2018,1,1,1,en,US,winter,Horror,Low
+83389,From Up on Poppy Hill,22.0,91.0,2011,7,2,1,ja,JP,summer,Animation|Drama,High
+38167,Eat Pray Love,60.0,133.0,2010,8,2,3,en,US,summer,Drama|Romance,Low
+76163,The Expendables 2,100.0,103.0,2012,8,3,1,en,US,summer,Action|Adventure|Thriller,Low
+503736,Army of the Dead,90.0,148.0,2021,5,3,3,en,US,spring,Crime|Action|Horror,Low
+132232,Mama,15.0,100.0,2013,1,1,1,en,CA,winter,Horror,Low
+8916,Antz,60.0,83.0,1998,10,3,2,en,US,fall,Animation|Comedy|Family,Low
+9276,The Faculty,15.0,104.0,1998,12,2,1,en,US,winter,Horror|Science Fiction,Medium
+1700,Misery,20.0,107.0,1990,11,2,1,en,US,fall,Drama|Thriller,High
+507241,The Killer's Game,30.0,106.0,2024,9,3,1,en,US,fall,Action|Comedy|Thriller,Low
+76203,12 Years a Slave,20.0,134.0,2013,10,2,1,en,GB,fall,Drama|History,High
+8963,Crimson Tide,53.0,116.0,1995,5,4,1,en,US,spring,Thriller|Action|Drama|War,Medium
+9772,Air Force One,85.0,124.0,1997,7,2,2,en,US,summer,Action|Thriller,Low
+842675,The Wandering Earth II,73.8,174.0,2023,1,3,7,zh,CN,winter,Science Fiction|Action|Adventure,High
+1266,Street Kings,20.0,109.0,2008,4,4,2,en,US,spring,Action|Crime|Drama|Thriller,Medium
+9331,Clear and Present Danger,62.0,141.0,1994,8,3,1,en,US,summer,Action|Drama|Thriller,Medium
+63311,The Skin I Live In,13.0,120.0,2011,8,4,2,es,ES,summer,Drama|Horror|Mystery|Thriller,High
+228326,The Book of Life,50.0,95.0,2014,10,3,1,en,US,fall,Animation|Family|Fantasy,High
+481084,The Addams Family,40.0,87.0,2019,10,4,1,en,CA,fall,Family|Animation|Comedy|Fantasy,Medium
+405774,Bird Box,19.8,124.0,2018,12,3,1,en,US,winter,Horror|Thriller|Drama,Medium
+305470,Power Rangers,105.0,124.0,2017,3,3,1,en,US,spring,Action|Adventure|Science Fiction,Low
+677179,Creed III,75.0,116.0,2023,3,2,2,en,US,spring,Drama|Action,Medium
+582,The Lives of Others,2.0,137.0,2006,3,2,1,de,DE,spring,Drama|Thriller,High
+646207,The Ice Road,40.0,108.0,2021,6,2,1,en,CA,summer,Action|Thriller,Medium
+974950,Emilia Pérez,26.0,132.0,2024,8,2,3,fr,BE,summer,Drama|Thriller,Low
+4347,Atonement,30.0,123.0,2007,2,2,2,en,FR,winter,Drama|Romance,High
+12133,Step Brothers,65.0,98.0,2008,7,1,2,en,US,summer,Comedy,Medium
+1182047,The Apprentice,16.0,122.0,2024,10,3,1,en,US,fall,History|Drama|Comedy,Medium
+1948,Crank,12.0,88.0,2006,8,3,3,en,US,summer,Action|Thriller|Crime,Medium
+399170,Logan Lucky,29.0,119.0,2017,8,4,1,en,US,summer,Comedy|Crime|Action|Drama,Medium
+4638,Hot Fuzz,12.0,121.0,2007,2,3,1,en,FR,winter,Crime|Action|Comedy,High
+46529,I Am Number Four,50.0,109.0,2011,2,4,2,en,IN,winter,Action|Thriller|Science Fiction|Adventure,Low
+8292,Four Brothers,45.0,109.0,2005,8,2,2,en,US,summer,Action|Crime,Medium
+227159,Horrible Bosses 2,42.0,108.0,2014,11,1,1,en,US,fall,Comedy,Low
+13223,Gran Torino,33.0,116.0,2008,12,1,1,en,US,winter,Drama,High
+617653,The Last Duel,100.0,153.0,2021,10,3,2,en,US,fall,Drama|History|Thriller,High
+2698,Evan Almighty,175.0,96.0,2007,6,3,1,en,US,summer,Fantasy|Comedy|Family,Low
+491418,Instant Family,48.0,118.0,2018,11,2,1,en,US,fall,Comedy|Drama,High
+116149,Paddington,55.0,95.0,2014,11,3,1,en,FR,fall,Comedy|Adventure|Family,Medium
+37735,Easy A,8.0,93.0,2010,9,1,1,en,US,fall,Comedy,Medium
+638,Lost Highway,15.0,134.0,1997,1,3,1,en,FR,winter,Drama|Thriller|Mystery,High
+133805,Carrie,30.0,101.0,2013,10,2,1,en,US,fall,Drama|Horror,Low
+1391,Y Tu Mamá También,5.0,106.0,2001,6,2,1,es,MX,summer,Drama|Romance,High
+12207,The Legend of Drunken Master,10.0,102.0,1994,2,2,1,cn,HK,winter,Action|Comedy,High
+8645,The Happening,60.0,90.0,2008,6,2,2,en,US,summer,Thriller|Science Fiction,Low
+552178,Dark Waters,20.0,127.0,2019,11,2,1,en,US,fall,Drama|Thriller,High
+55779,Final Destination 5,40.0,91.0,2011,8,2,2,en,US,summer,Horror|Mystery,Low
+516632,The Empty Man,16.0,137.0,2020,10,2,1,en,ZA,fall,Horror|Mystery,Low
+8845,Under Siege,35.0,102.0,1992,10,2,1,en,FR,fall,Action|Thriller,Low
+9383,Hollow Man,95.0,112.0,2000,8,3,1,en,DE,summer,Action|Science Fiction|Thriller,Low
+1597,Meet the Parents,55.0,108.0,2000,10,2,1,en,US,fall,Comedy|Romance,Medium
+9792,The Hills Have Eyes,15.0,107.0,2006,3,2,1,en,FR,spring,Horror|Thriller,Low
+449562,The Hustle,21.0,94.0,2019,5,2,5,en,ES,spring,Comedy|Crime,Low
+9482,Judge Dredd,90.0,96.0,1995,6,2,1,en,US,summer,Science Fiction|Action,Low
+65,8 Mile,41.0,111.0,2002,11,2,1,en,DE,fall,Drama|Music,Medium
+522681,Escape Room,9.0,99.0,2019,1,3,1,en,US,winter,Horror|Mystery|Thriller,Medium
+9631,The Negotiator,50.0,140.0,1998,7,4,1,en,DE,summer,Action|Crime|Drama|Thriller,Medium
+693,Meet the Fockers,80.0,115.0,2004,12,2,1,en,US,winter,Comedy|Romance,Low
+644495,House of Gucci,75.0,158.0,2021,11,3,6,en,CA,fall,Drama|Crime|History,Medium
+400157,Wonder Park,100.0,86.0,2019,3,5,1,en,ES,spring,Comedy|Animation|Adventure|Family|Fantasy,Medium
+453405,Gemini Man,140.0,117.0,2019,10,5,1,en,US,fall,Science Fiction|Action|Adventure|Thriller|Drama,Low
+1911,The 13th Warrior,120.0,103.0,1999,8,3,7,en,US,summer,Adventure|History|Action,Medium
+3131,Gangs of New York,100.0,168.0,2002,12,3,4,en,US,winter,Drama|History|Crime,High
+613,Downfall,16.0,155.0,2004,9,3,3,de,AT,fall,Drama|History|War,High
+9614,Happy Gilmore,12.0,92.0,1996,2,1,1,en,US,winter,Comedy,Medium
+9645,Ghost Ship,35.0,91.0,2002,10,3,3,en,US,fall,Horror|Mystery|Thriller,Low
+20504,The Book of Eli,80.0,118.0,2010,1,3,1,en,US,winter,Action|Thriller|Science Fiction,Medium
+10375,D-Tox,55.0,96.0,2002,1,3,1,en,DE,winter,Thriller|Horror|Crime,Low
+654974,Home Sweet Home Alone,15.0,93.0,2021,11,2,1,en,US,fall,Family|Comedy,Low
+1008409,The Bikeriders,40.0,116.0,2024,6,2,1,en,US,summer,Crime|Drama,Medium
+1164,Babel,25.0,143.0,2006,10,1,6,en,FR,fall,Drama,Medium
+100042,Dumb and Dumber To,40.0,110.0,2014,11,1,1,en,US,fall,Comedy,Low
+256274,"As Above, So Below",5.0,93.0,2014,8,2,1,en,US,summer,Horror|Thriller,Medium
+39514,RED,58.0,111.0,2010,10,5,2,en,US,fall,Action|Adventure|Comedy|Crime|Thriller,Medium
+346648,Paddington 2,40.0,104.0,2017,11,3,1,en,FR,fall,Adventure|Comedy|Family,High
+11130,The Princess Diaries 2: Royal Engagement,40.0,113.0,2004,8,4,1,en,US,summer,Comedy|Drama|Family|Romance,Medium
+201088,Blackhat,70.0,133.0,2015,1,3,7,en,US,winter,Crime|Thriller|Action,Low
+170687,The Boxtrolls,60.0,97.0,2014,9,4,1,en,US,fall,Animation|Comedy|Family|Fantasy,Medium
+409,The English Patient,27.0,162.0,1996,11,3,4,en,GB,fall,Drama|Romance|War,Medium
+43074,Ghostbusters,144.0,117.0,2016,7,3,1,en,US,summer,Action|Fantasy|Comedy,Low
+35019,Nanny McPhee and the Big Bang,35.0,109.0,2010,3,3,1,en,US,spring,Comedy|Fantasy|Family,Low
+345938,The Shack,20.0,132.0,2017,3,2,1,en,CA,spring,Drama|Family,High
+171274,Inherent Vice,20.0,149.0,2014,12,3,1,en,US,winter,Drama|Mystery|Comedy,Medium
+104,Run Lola Run,1.53,80.0,1998,8,3,3,de,DE,summer,Action|Drama|Thriller,High
+17578,The Adventures of Tintin,130.0,107.0,2011,10,3,1,en,NZ,fall,Adventure|Animation|Mystery,Medium
+112205,The Family,30.0,111.0,2013,9,3,2,en,FR,fall,Crime|Comedy|Action,Low
+316727,The Purge: Election Year,10.0,109.0,2016,6,3,1,en,FR,summer,Action|Horror|Thriller,Low
+49527,Man on a Ledge,42.0,102.0,2012,1,3,1,en,US,winter,Action|Thriller|Crime,Low
+10590,We Were Soldiers,75.0,138.0,2002,3,3,3,en,DE,spring,Action|History|War,Medium
+934632,Rebel Moon - Part Two: The Scargiver,83.0,121.0,2024,4,3,1,en,US,spring,Science Fiction|Action|Adventure,Low
+55,Amores Perros,2.0,154.0,2000,6,2,1,es,MX,summer,Drama|Thriller,High
+4858,The Invasion,80.0,99.0,2007,8,4,2,en,US,summer,Horror|Mystery|Science Fiction|Thriller,Low
+13510,Eden Lake,12.85099,91.0,2008,9,2,1,en,GB,fall,Horror|Thriller,Medium
+218836,Planes: Fire & Rescue,50.0,83.0,2014,7,4,1,en,US,summer,Animation|Comedy|Adventure|Family,Low
+11635,Old School,24.0,92.0,2003,2,1,1,en,US,winter,Comedy,Medium
+846,The X-Files,66.0,121.0,1998,6,3,1,en,US,summer,Mystery|Science Fiction|Thriller,Medium
+20766,The Road,32.0,111.0,2009,11,2,1,en,US,fall,Adventure|Drama,Medium
+1079485,Winnie-the-Pooh: Blood and Honey 2,0.415,93.0,2024,3,2,1,en,GB,spring,Horror|Thriller,Low
+792293,Dumb Money,30.0,105.0,2023,9,3,2,en,US,fall,History|Comedy|Drama,Medium
+9366,Donnie Brasco,35.0,127.0,1997,2,3,3,en,US,winter,Crime|Drama|Thriller,High
+276907,Legend,25.0,132.0,2015,9,2,1,en,FR,fall,Crime|Thriller,Medium
+238615,Self/less,26.0,117.0,2015,7,3,1,en,US,summer,Science Fiction|Action|Thriller,Low
+454640,The Angry Birds Movie 2,65.0,97.0,2019,8,5,1,en,FI,summer,Animation|Adventure|Comedy|Family|Action,Medium
+568,Apollo 13,52.0,140.0,1995,6,2,1,en,US,summer,Drama|History,High
+858,Sleepless in Seattle,21.0,105.0,1993,6,3,1,en,US,summer,Comedy|Drama|Romance,Medium
+10530,Pocahontas,55.0,81.0,1995,6,4,1,en,US,summer,Adventure|Animation|Family|Romance,Medium
+440472,The Upside,37.5,126.0,2019,1,2,1,en,US,winter,Comedy|Drama,Medium
+460019,Truth or Dare,3.5,101.0,2018,4,2,1,en,US,spring,Thriller|Horror,Low
+579047,Reminiscence,68.0,116.0,2021,8,3,1,en,US,summer,Mystery|Science Fiction|Thriller,Low
+9637,Scooby-Doo,84.0,87.0,2002,6,3,1,en,US,summer,Mystery|Adventure|Comedy,Low
+55721,Bridesmaids,32.5,125.0,2011,5,2,1,en,US,spring,Comedy|Romance,Low
+14001,Dead Silence,20.0,89.0,2007,3,1,1,en,US,spring,Horror,Low
+149871,The Tale of The Princess Kaguya,49.3,137.0,2013,11,3,1,ja,JP,fall,Animation|Drama|Fantasy,High
+612,Munich,70.0,164.0,2005,12,3,8,en,US,winter,Drama|History|Thriller,Medium
+238713,Spy,65.0,120.0,2015,5,3,4,en,US,spring,Action|Comedy|Crime,Medium
+261392,American Ultra,28.0,96.0,2015,8,2,1,en,CH,summer,Action|Comedy,Low
+9291,The Longest Yard,90.0,113.0,2005,5,3,1,en,US,spring,Drama|Comedy|Crime,Medium
+542178,"The French Dispatch of the Liberty, Kansas Evening Sun",25.0,108.0,2021,10,2,2,en,US,fall,Drama|Comedy,Medium
+1012201,HAIKYU!! The Dumpster Battle,5.0,84.0,2024,2,2,1,ja,JP,winter,Animation|Comedy,High
+482321,Ron's Gone Wrong,57.0,107.0,2021,10,4,1,en,GB,fall,Animation|Science Fiction|Family|Comedy,High
+7484,Open Season,85.0,86.0,2006,9,4,1,en,US,fall,Animation|Family|Adventure|Comedy,Low
+7350,The Bucket List,45.0,97.0,2007,12,2,1,en,US,winter,Drama|Comedy,Medium
+7551,Déjà Vu,75.0,126.0,2006,11,3,1,en,US,fall,Action|Thriller|Science Fiction,Medium
+20943,The Ugly Truth,38.0,96.0,2009,7,2,1,en,US,summer,Comedy|Romance,Medium
+168672,American Hustle,40.0,138.0,2013,12,2,1,en,US,winter,Drama|Crime,Medium
+2119,Days of Thunder,60.0,107.0,1990,6,3,1,en,US,summer,Adventure|Action|Drama,Low
+758323,The Pope's Exorcist,18.0,103.0,2023,4,2,7,en,US,spring,Horror|Thriller,Medium
+1013850,A Real Pain,3.0,90.0,2024,11,2,2,en,PL,fall,Comedy|Drama,Medium
+10950,I Am Sam,22.0,132.0,2001,12,1,1,en,US,winter,Drama,High
+3597,I Know What You Did Last Summer,17.0,102.0,1997,10,3,1,en,US,fall,Horror|Thriller|Mystery,Low
+17431,Moon,5.0,97.0,2009,6,2,2,en,GB,summer,Science Fiction|Drama,High
+795,City of Angels,55.0,114.0,1998,4,3,1,en,US,spring,Drama|Fantasy|Romance,Medium
+11918,Superhero Movie,35.0,82.0,2008,3,3,1,en,US,spring,Comedy|Action|Science Fiction,Low
+86834,Noah,125.0,138.0,2014,3,2,1,en,US,spring,Drama|Adventure,Low
+76726,Chronicle,15.0,84.0,2012,2,3,1,en,US,winter,Science Fiction|Drama|Thriller,Medium
+36593,Naked Gun 33⅓: The Final Insult,30.0,83.0,1994,3,2,1,en,US,spring,Comedy|Crime,Medium
+223702,Sausage Party,19.0,89.0,2016,7,4,1,en,US,summer,Adventure|Animation|Comedy|Fantasy,Low
+11249,Seed of Chucky,12.0,86.0,2004,11,2,2,en,US,fall,Horror|Comedy,Low
+222935,The Fault in Our Stars,14.0,126.0,2014,6,2,1,en,US,summer,Romance|Drama,High
+616747,Haunted Mansion,157.8,123.0,2023,7,3,1,en,US,summer,Comedy|Drama|Fantasy,Low
+446894,Smallfoot,80.0,96.0,2018,9,5,1,en,US,fall,Family|Comedy|Adventure|Animation|Fantasy,Medium
+6623,The Peacemaker,50.0,124.0,1997,9,2,5,en,US,fall,Action|Thriller,Low
+13374,Ice Princess,25.0,98.0,2005,3,3,1,en,US,spring,Family|Drama|Comedy,Low
+501841,A Journal for Jordan,25.0,131.0,2021,12,2,1,en,US,winter,Drama|Romance,Medium
+838240,Robot Dreams,5.3,102.0,2023,12,4,1,es,FR,winter,Animation|Drama|Comedy|Science Fiction,High
+1738,Next,70.0,96.0,2007,4,3,3,en,US,spring,Action|Science Fiction|Thriller,Low
+2667,The Blair Witch Project,0.06,81.0,1999,7,2,1,en,US,summer,Horror|Mystery,Low
+2671,Ring,1.2,96.0,1998,1,2,1,ja,JP,winter,Horror|Thriller,Medium
+1992,Planet Terror,23.0,105.0,2007,4,3,1,en,US,spring,Horror|Action|Thriller,Medium
+9593,Last Action Hero,85.0,131.0,1993,6,3,1,en,US,summer,Fantasy|Action|Comedy,Low
+440,Aliens vs Predator: Requiem,40.0,94.0,2007,12,4,1,en,US,winter,Action|Science Fiction|Thriller|Horror,Low
+1691,Hostel: Part II,10.2,93.0,2007,6,1,4,en,US,summer,Horror,Low
+791177,Bones and All,16.0,131.0,2022,11,3,1,en,IT,fall,Horror|Romance|Drama,Medium
+610253,Halloween Kills,20.0,105.0,2021,10,1,1,en,US,fall,Horror,Low
+9928,Robots,75.0,90.0,2005,3,4,1,en,US,spring,Animation|Comedy|Family|Science Fiction,Medium
+12162,The Hurt Locker,15.0,131.0,2008,10,3,3,en,US,fall,Drama|Thriller|War,High
+466081,The Informer,60.0,109.0,2019,8,3,3,en,GB,summer,Drama|Crime|Thriller,Medium
+12222,Horton Hears a Who!,85.0,86.0,2008,3,5,1,en,US,spring,Animation|Comedy|Family|Adventure|Fantasy,Low
+6282,Coyote Ugly,45.0,100.0,2000,7,4,1,en,US,summer,Comedy|Drama|Music|Romance,Low
+21208,Orphan,20.0,123.0,2009,7,2,2,en,US,summer,Horror|Thriller,Medium
+74465,We Bought a Zoo,50.0,124.0,2011,11,3,1,en,US,fall,Drama|Comedy|Family,Medium
+420814,Christopher Robin,75.0,104.0,2018,8,4,1,en,US,summer,Adventure|Comedy|Family|Fantasy,High
+10137,Stuart Little,133.0,84.0,1999,12,4,1,en,DE,winter,Family|Fantasy|Comedy|Adventure,Low
+858017,I Saw the TV Glow,10.0,100.0,2024,5,2,1,en,US,spring,Drama|Horror,Low
+9361,The Last of the Mohicans,40.0,112.0,1992,8,3,2,en,US,summer,History|War|Drama,High
+44264,True Grit,38.0,110.0,2010,12,3,1,en,US,winter,Drama|Adventure|Western,High
+980026,The Promised Land,8.5,127.0,2023,10,3,4,da,DK,fall,Action|Drama|History,High
+14139,Timecrimes,2.6,93.0,2007,11,2,1,es,ES,fall,Science Fiction|Thriller,Medium
+87428,That's My Boy,70.0,116.0,2012,6,1,1,en,US,summer,Comedy,Low
+664413,365 Days,5.0,114.0,2020,2,3,4,pl,PL,winter,Romance|Drama|Crime,Medium
+433808,The Ritual,1.0,94.0,2017,10,2,2,en,CA,fall,Horror|Mystery,Low
+47933,Independence Day: Resurgence,165.0,120.0,2016,6,3,1,en,US,summer,Action|Adventure|Science Fiction,Low
+9268,Eraser,100.0,115.0,1996,6,3,1,en,CA,summer,Action|Mystery|Thriller,Low
+9312,Mortal Kombat,18.0,101.0,1995,8,2,1,en,US,summer,Action|Fantasy,Low
+9506,Anger Management,75.0,106.0,2003,4,1,1,en,US,spring,Comedy,Low
+72387,Safe,30.0,94.0,2012,4,3,3,en,IN,spring,Action|Crime|Thriller,Low
+558582,First Cow,2.0,122.0,2020,3,2,1,en,US,spring,Drama|Western,Medium
+544,There's Something About Mary,23.0,120.0,1998,7,2,1,en,US,summer,Romance|Comedy,Medium
+41733,Due Date,65.0,95.0,2010,11,2,2,en,US,fall,Comedy|Drama,Low
+964980,Air,80.0,112.0,2023,4,2,1,en,US,spring,Drama|History,High
+340837,A Cure for Wellness,40.0,146.0,2017,2,3,2,en,US,winter,Horror|Mystery|Science Fiction,Low
+181283,Child 44,50.0,137.0,2015,3,2,1,en,US,spring,Crime|Thriller,Low
+75,Mars Attacks!,70.0,106.0,1996,12,3,2,en,US,winter,Comedy|Fantasy|Science Fiction,Low
+509967,6 Underground,150.0,128.0,2019,12,3,1,en,US,winter,Action|Comedy|Thriller,Low
+274167,Daddy's Home,50.0,96.0,2015,12,1,1,en,US,winter,Comedy,Low
+407451,A Wrinkle in Time,103.0,109.0,2018,3,4,1,en,US,spring,Adventure|Science Fiction|Family|Fantasy,Low
+798286,Beau Is Afraid,35.0,179.0,2023,4,3,1,en,US,spring,Comedy|Adventure|Fantasy,Medium
+718032,Licorice Pizza,40.0,133.0,2021,11,3,3,en,CA,fall,Drama|Comedy|Romance,Medium
+39451,Little Fockers,100.0,98.0,2010,12,2,1,en,US,winter,Comedy|Romance,Low
+308531,Teenage Mutant Ninja Turtles: Out of the Shadows,135.0,112.0,2016,5,5,1,en,US,spring,Action|Adventure|Comedy|Family|Science Fiction,Low
+718821,Twisters,155.0,123.0,2024,7,2,1,en,US,summer,Action|Thriller,Medium
+257088,Point Break,105.0,114.0,2015,12,4,1,en,DE,winter,Action|Adventure|Crime|Thriller,Low
+317442,The Last: Naruto the Movie,0.75,114.0,2014,12,3,1,ja,JP,winter,Action|Romance|Animation,High
+270487,"Hail, Caesar!",22.0,106.0,2016,2,2,1,en,GB,winter,Comedy|Mystery,Low
+23823,Wrong Turn 3: Left for Dead,3.0,91.0,2009,10,2,1,en,DE,fall,Horror|Thriller,Low
+7459,Speed Racer,120.0,135.0,2008,5,4,2,en,US,spring,Family|Action|Adventure|Comedy,Low
+8329,[REC],1.5,78.0,2007,11,2,2,es,ES,fall,Horror|Mystery,High
+8321,In Bruges,15.0,108.0,2008,2,3,1,en,GB,winter,Comedy|Drama|Crime,High
+899112,Violent Night,20.0,112.0,2022,11,3,3,en,CA,fall,Action|Comedy|Fantasy,High
+4553,The Machinist,5.0,102.0,2004,9,2,1,en,ES,fall,Thriller|Drama,High
+587,Big Fish,70.0,125.0,2003,12,3,1,en,US,winter,Adventure|Fantasy|Drama,High
+4964,Knocked Up,30.0,129.0,2007,6,3,1,en,US,summer,Comedy|Romance|Drama,Low
+8077,Alien³,50.0,114.0,1992,5,3,1,en,US,spring,Science Fiction|Action|Horror,Low
+10066,House of Wax,40.0,113.0,2005,5,3,1,en,US,spring,Horror|Thriller|Mystery,Low
+2758,Addams Family Values,47.0,94.0,1993,11,3,1,en,US,fall,Comedy|Family|Fantasy,Medium
+345911,Lights Out,4.9,81.0,2016,7,2,1,en,US,summer,Horror|Mystery,Low
+660120,The Worst Person in the World,5.0,128.0,2021,10,3,1,no,NO,fall,Drama|Romance|Comedy,High
+10731,The Client,45.0,119.0,1994,7,4,1,en,US,summer,Drama|Thriller|Crime|Mystery,Medium
+1995,Lara Croft: Tomb Raider,115.0,100.0,2001,6,3,1,en,GB,summer,Adventure|Action|Fantasy,Low
+9705,Swordfish,102.0,99.0,2001,6,3,2,en,US,summer,Action|Crime|Thriller,Low
+10865,Atlantis: The Lost Empire,120.0,95.0,2001,6,4,3,en,US,summer,Animation|Family|Adventure|Science Fiction,Medium
+9798,Enemy of the State,90.0,132.0,1998,11,3,1,en,GB,fall,Action|Drama|Thriller,Medium
+261023,Black Mass,53.0,123.0,2015,9,3,1,en,GB,fall,Drama|Crime|History,Medium
+49524,R.I.P.D.,130.0,96.0,2013,7,3,1,en,US,summer,Fantasy|Action|Comedy,Low
+619264,The Platform,1.203235,95.0,2019,11,3,1,es,ES,fall,Drama|Science Fiction|Thriller,Medium
+674324,The Banshees of Inisherin,20.0,114.0,2022,10,2,1,en,GB,fall,Drama|Comedy,High
+44826,Hugo,170.0,126.0,2011,11,3,1,en,US,fall,Adventure|Drama|Family,Medium
+930564,Saltburn,20.0,131.0,2023,11,3,1,en,GB,fall,Drama|Comedy|Thriller,Medium
+15070,Undisputed,20.0,96.0,2002,7,3,1,en,US,summer,Action|Drama|Crime,Medium
+613504,After We Collided,14.0,105.0,2020,9,2,1,en,US,fall,Drama|Romance,Medium
+760741,Beast,36.0,93.0,2022,8,5,1,en,IS,summer,Action|Adventure|Horror|Thriller|Drama,Medium
+619778,Malignant,40.0,111.0,2021,9,2,1,en,US,fall,Horror|Mystery,Medium
+956842,Fly Me to the Moon,100.0,132.0,2024,7,2,1,en,US,summer,Romance|Comedy,Medium
+9350,Cliffhanger,70.0,113.0,1993,5,3,1,en,FR,spring,Action|Adventure|Thriller,Low
+712,Four Weddings and a Funeral,4.4,117.0,1994,3,3,1,en,GB,spring,Comedy|Drama|Romance,Medium
+399057,The Killing of a Sacred Deer,3.0,121.0,2017,10,3,2,en,GB,fall,Drama|Thriller|Mystery,Medium
+7445,Brothers,26.0,105.0,2009,12,3,1,en,US,winter,Drama|Thriller|War,High
+514999,Murder Mystery,24.0,98.0,2019,5,3,1,en,US,spring,Comedy|Mystery|Crime,Low
+1023922,MaXXXine,10.0,103.0,2024,7,1,1,en,US,summer,Horror,Low
+14128,Cinderella II: Dreams Come True,5.0,74.0,2002,2,4,1,en,JP,winter,Family|Animation|Romance|Fantasy,Low
+9480,Daredevil,78.0,103.0,2003,2,2,3,en,CH,winter,Fantasy|Action,Low
+556694,Three Thousand Years of Longing,60.0,108.0,2022,8,3,4,en,AU,summer,Drama|Fantasy|Romance,Medium
+823482,Dream Scenario,10.0,102.0,2023,11,2,2,en,US,fall,Comedy|Fantasy,Medium
+826510,Harold and the Purple Crayon,40.0,90.0,2024,7,4,1,en,US,summer,Family|Comedy|Adventure|Fantasy,Medium
+18487,The Taking of Pelham 1 2 3,100.0,106.0,2009,6,3,1,en,GB,summer,Crime|Thriller|Action,Low
+342473,Ballerina,30.0,89.0,2016,12,4,1,en,CA,winter,Animation|Family|Comedy|Music,High
+619803,The Roundup,7.6,106.0,2022,5,3,2,ko,KR,spring,Action|Crime|Thriller,High
+50839,Margin Call,3.5,107.0,2011,9,2,1,en,US,fall,Thriller|Drama,Medium
+10982,Hoodwinked!,8.0,81.0,2005,12,5,1,en,US,winter,Animation|Comedy|Crime|Family|Mystery,Low
+184,Jackie Brown,12.0,154.0,1997,12,3,1,en,US,winter,Crime|Drama|Thriller,High
+10719,Elf,32.0,97.0,2003,11,3,1,en,US,fall,Comedy|Family|Fantasy,Medium
+2268,The Golden Compass,180.0,113.0,2007,12,2,4,en,GB,winter,Adventure|Fantasy,Low
+11665,Get Smart,80.0,110.0,2008,6,3,2,en,US,summer,Action|Comedy|Thriller,Low
+301365,The Neon Demon,7.0,118.0,2016,6,2,1,en,US,summer,Horror|Thriller,Low
+590,The Hours,25.0,114.0,2002,12,1,1,en,GB,winter,Drama,High
+2270,Stardust,70.0,127.0,2007,8,4,1,en,IS,summer,Adventure|Fantasy|Romance|Family,High
+292011,Richard Jewell,45.0,131.0,2019,12,3,1,en,US,winter,Drama|History|Crime,High
+9767,The Break-Up,52.0,106.0,2006,6,2,1,en,US,summer,Romance|Comedy,Low
+14869,G.I. Joe: The Rise of Cobra,175.0,118.0,2009,8,4,3,en,US,summer,Adventure|Action|Thriller|Science Fiction,Low
+10320,The Ring Two,50.0,109.0,2005,3,3,1,en,US,spring,Drama|Horror|Thriller,Low
+37137,The Naked Gun 2½: The Smell of Fear,23.0,85.0,1991,6,2,1,en,US,summer,Comedy|Crime,Medium
+11932,Bride of Chucky,25.0,89.0,1998,10,2,1,en,US,fall,Horror|Comedy,Low
+7978,The Wolfman,150.0,103.0,2010,2,1,2,en,US,winter,Horror,Low
+13700,Home on the Range,110.0,76.0,2004,4,2,2,en,US,spring,Animation|Family,Low
+5176,3:10 to Yuma,55.0,122.0,2007,9,1,1,en,US,fall,Western,Medium
+9007,Just Like Heaven,58.0,95.0,2005,9,3,1,en,US,fall,Comedy|Romance|Fantasy,Medium
+62764,Mirror Mirror,85.0,106.0,2012,3,4,1,en,US,spring,Adventure|Comedy|Family|Fantasy,Low
+580175,Another Round,5.15,117.0,2020,9,2,2,da,DK,fall,Comedy|Drama,High
+50544,Friends with Benefits,35.0,109.0,2011,7,2,1,en,US,summer,Romance|Comedy,Medium
+83666,Moonrise Kingdom,16.0,94.0,2012,5,3,1,en,US,spring,Comedy|Drama|Romance,High
+9341,The Core,60.0,136.0,2003,3,3,1,en,US,spring,Science Fiction|Adventure|Thriller,Low
+522924,The Art of Racing in the Rain,18.0,109.0,2019,8,2,4,en,US,summer,Drama|Romance,High
+8834,Conspiracy Theory,75.0,135.0,1997,8,4,1,en,US,summer,Action|Drama|Mystery|Thriller,Medium
+1010600,The Strangers: Chapter 1,8.5,91.0,2024,5,2,1,en,GB,spring,Horror|Thriller,Low
+390043,The Hitman's Bodyguard,30.0,118.0,2017,8,4,3,en,BG,summer,Action|Comedy|Crime|Thriller,Medium
+406,La Haine,2.6,98.0,1995,5,1,1,fr,FR,spring,Drama,High
+799766,Better Man,110.0,135.0,2024,12,2,1,en,AU,winter,Music|Drama,High
+69,Walk the Line,28.0,136.0,2005,9,3,1,en,DE,fall,Drama|Music|Romance,High
+26389,From Paris with Love,52.0,92.0,2010,2,3,4,en,GB,winter,Action|Crime|Thriller,Low
+4995,Boogie Nights,15.0,156.0,1997,10,2,1,en,US,fall,Drama|Comedy,High
+927107,The Bricklayer,23.9,110.0,2023,12,2,2,en,US,winter,Action|Thriller,Low
+1041613,Immaculate,9.0,89.0,2024,3,3,1,en,US,spring,Horror|Mystery|Thriller,Low
+619730,Don't Worry Darling,35.0,123.0,2022,9,3,1,en,US,fall,Thriller|Science Fiction|Mystery,Medium
+138697,Don Jon,3.0,90.0,2013,9,3,1,en,US,fall,Romance|Comedy|Drama,Low
+1979,Fantastic Four: Rise of the Silver Surfer,130.0,92.0,2007,6,3,4,en,DE,summer,Science Fiction|Adventure|Action,Low
+9349,Universal Soldier,23.0,103.0,1992,7,3,1,en,US,summer,Thriller|Action|Science Fiction,Low
+152532,Dallas Buyers Club,5.0,117.0,2013,11,2,2,en,US,fall,Drama|History,High
+1213,The Talented Mr. Ripley,40.0,140.0,1999,12,3,2,en,US,winter,Thriller|Crime|Drama,Medium
+7453,The Hitchhiker's Guide to the Galaxy,50.0,109.0,2005,4,3,1,en,GB,spring,Adventure|Comedy|Science Fiction,Medium
+11283,Nanny McPhee,25.0,97.0,2005,10,3,1,en,GB,fall,Fantasy|Comedy|Family,Medium
+1100099,We Live in Time,20.0,108.0,2024,10,2,1,en,GB,fall,Romance|Drama,Medium
+44943,Battle: Los Angeles,70.0,116.0,2011,3,2,2,en,US,spring,Science Fiction|Action,Low
+8204,The Spiderwick Chronicles,90.0,95.0,2008,2,4,1,en,US,winter,Family|Adventure|Fantasy|Drama,Medium
+597208,Nightmare Alley,60.0,151.0,2021,12,3,1,en,US,winter,Crime|Drama|Thriller,Medium
+72559,G.I. Joe: Retaliation,130.0,110.0,2013,3,4,1,en,CA,spring,Action|Science Fiction|Adventure|Thriller,Low
+196867,Annie,65.0,118.0,2014,12,3,1,en,US,winter,Comedy|Drama|Family,Low
+291870,Dirty Grandpa,11.5,102.0,2016,1,1,1,en,US,winter,Comedy,Low
+2133,The Perfect Storm,130.0,130.0,2000,6,4,1,en,US,summer,Drama|Adventure|Action|Thriller,Low
+314365,Spotlight,20.0,129.0,2015,11,2,1,en,US,fall,Drama|History,High
+2253,Valkyrie,75.0,121.0,2008,12,3,2,en,DE,winter,Drama|Thriller|War,Medium
+618588,Arthur the King,19.0,107.0,2024,2,2,1,en,CA,winter,Adventure|Drama,High
+296524,Deepwater Horizon,110.0,107.0,2016,9,2,1,en,US,fall,Drama|Action,Medium
+338967,Zombieland: Double Tap,42.0,99.0,2019,10,2,1,en,US,fall,Horror|Comedy,Medium
+9036,Eight Below,40.0,120.0,2006,2,3,1,en,DE,winter,Adventure|Drama|Family,Medium
+23169,Remember Me,16.0,113.0,2010,3,2,1,en,US,spring,Drama|Romance,Medium
+504172,The Mule,50.0,116.0,2018,12,3,2,en,CA,winter,Crime|Drama|Thriller,Medium
+31011,Mr. Nobody,47.0,141.0,2009,11,3,1,en,BE,fall,Science Fiction|Drama|Romance,High
+4771,Gone Baby Gone,19.0,113.0,2007,9,3,1,en,US,fall,Crime|Drama|Mystery,High
+136418,Hummingbird,20.0,100.0,2013,5,2,1,en,US,spring,Action|Thriller,Low
+58595,Snow White and the Huntsman,170.0,127.0,2012,5,3,1,en,US,spring,Adventure|Fantasy|Drama,Low
+14306,Marley & Me,60.0,115.0,2008,12,2,1,en,US,winter,Comedy|Family,Medium
+27579,The American,20.0,104.0,2010,8,3,2,en,GB,summer,Crime|Drama|Thriller,Low
+8068,Desperado,7.0,104.0,1995,8,3,1,en,US,summer,Thriller|Action|Crime,Medium
+18360,Night at the Museum: Battle of the Smithsonian,150.0,105.0,2009,5,5,1,en,US,spring,Adventure|Fantasy|Action|Comedy|Family,Low
+339964,Valerian and the City of a Thousand Planets,177.2,137.0,2017,7,3,2,en,FR,summer,Adventure|Science Fiction|Action,Medium
+9257,S.W.A.T.,80.0,117.0,2003,8,3,3,en,US,summer,Action|Thriller|Crime,Low
+19912,The Final Destination,40.0,82.0,2009,8,2,1,en,US,summer,Horror|Mystery,Low
+17202,Why Did I Get Married?,15.0,113.0,2007,10,2,1,en,US,fall,Comedy|Drama,Medium
+9408,Surf's Up,85.0,85.0,2007,6,3,1,en,US,summer,Animation|Comedy|Family,Medium
+71672,Wrong Turn 4: Bloody Beginnings,3.0,93.0,2011,10,2,1,en,DE,fall,Horror|Thriller,Low
+9869,Patriot Games,45.0,117.0,1992,6,4,1,en,US,summer,Drama|Action|Thriller|Crime,Medium
+399404,Darkest Hour,30.0,125.0,2017,11,2,1,en,GB,fall,Drama|History,High
+4147,Road to Perdition,80.0,117.0,2002,7,3,1,en,US,summer,Crime|Drama|Thriller,High
+482373,Don't Breathe 2,15.0,98.0,2021,8,2,1,en,US,summer,Thriller|Horror,Medium
+151960,Planes,50.0,91.0,2013,8,4,1,en,US,summer,Animation|Family|Adventure|Comedy,Low
+9954,The Covenant,20.0,97.0,2006,9,3,1,en,US,fall,Fantasy|Horror|Adventure,Low
+71552,American Reunion,50.0,113.0,2012,4,1,1,en,US,spring,Comedy,Low
+274854,The Last Witch Hunter,90.0,106.0,2015,10,3,1,en,CA,fall,Action|Adventure|Fantasy,Low
+642885,Hocus Pocus 2,30.0,104.0,2022,9,2,1,en,US,fall,Fantasy|Comedy,Medium
+442249,The First Purge,13.0,97.0,2018,7,3,1,en,US,summer,Action|Horror|Thriller,Low
+184345,A Haunted House 2,4.0,87.0,2014,4,2,1,en,US,spring,Comedy|Horror,Low
+814889,Never Let Go,20.0,101.0,2024,9,1,1,en,US,fall,Horror,Low
+107985,The World's End,20.0,109.0,2013,7,3,1,en,GB,summer,Comedy|Action|Science Fiction,Medium
+10567,Dinosaur,127.5,82.0,2000,5,4,1,en,US,spring,Adventure|Animation|Drama|Family,Medium
+1082195,The Order,20.0,116.0,2024,12,3,1,en,GB,winter,Crime|Drama|Thriller,Medium
+10603,George of the Jungle,55.0,92.0,1997,7,4,2,en,US,summer,Adventure|Comedy|Family|Romance,Low
+407436,Mowgli: Legend of the Jungle,175.0,105.0,2018,11,2,2,en,GB,fall,Adventure|Drama,Low
+1541,Thelma & Louise,16.0,130.0,1991,5,3,1,en,GB,spring,Drama|Crime|Adventure,High
+848326,Rebel Moon - Part One: A Child of Fire,83.0,134.0,2023,12,3,1,en,US,winter,Science Fiction|Action|Adventure,Low
+592831,Megalopolis,120.0,138.0,2024,9,3,4,en,US,fall,Science Fiction|Drama|Fantasy,Low
+10184,He's Just Not That Into You,40.0,129.0,2009,2,3,1,en,US,winter,Comedy|Romance|Drama,Medium
+224141,Into the Woods,50.0,125.0,2014,12,2,1,en,US,winter,Fantasy|Comedy,Low
+130150,Labor Day,18.0,111.0,2013,12,3,1,en,US,winter,Drama|Romance|Thriller,Medium
+9757,Norbit,10.0,102.0,2007,2,1,2,en,US,winter,Comedy,Low
+617,Wild Things,20.0,108.0,1998,3,3,1,en,US,spring,Mystery|Thriller|Drama,Low
+45317,The Fighter,25.0,116.0,2010,12,1,1,en,US,winter,Drama,High
+97020,RoboCop,120.0,118.0,2014,1,3,1,en,US,winter,Action|Science Fiction|Thriller,Low
+334541,Manchester by the Sea,9.0,138.0,2016,11,1,1,en,US,fall,Drama,High
+467244,The Zone of Interest,15.0,105.0,2023,12,3,3,en,US,winter,Drama|History|War,Medium
+1072342,Night Swim,15.0,98.0,2024,1,1,1,en,US,winter,Horror,Low
+6466,Freddy vs. Jason,30.0,97.0,2003,8,1,1,en,US,summer,Horror,Low
+1278101,Big World,7.0,131.0,2024,12,2,1,zh,CN,winter,Drama|Family,High
+157353,Transcendence,100.0,119.0,2014,4,4,1,en,US,spring,Thriller|Science Fiction|Drama|Mystery,Low
+82693,Silver Linings Playbook,21.0,122.0,2012,11,3,1,en,US,fall,Drama|Comedy|Romance,Medium
+134,"O Brother, Where Art Thou?",26.0,107.0,2000,8,3,1,en,FR,summer,Adventure|Comedy|Crime,High
+384680,Hostiles,55.0,134.0,2017,12,4,1,en,US,winter,Drama|Western|History|Adventure,Medium
+809140,Father Stu,4.0,124.0,2022,4,1,2,en,US,spring,Drama,Medium
+8920,Garfield,50.0,80.0,2004,6,2,1,en,US,summer,Comedy|Family,Low
+820525,After Everything,14.0,93.0,2023,9,2,2,en,US,fall,Romance|Drama,Medium
+2135,The Time Machine,80.0,96.0,2002,3,3,1,en,US,spring,Science Fiction|Adventure|Action,Low
+1071215,Thanksgiving,15.0,106.0,2023,11,2,1,en,US,fall,Horror|Mystery,Low
+3021,1408,25.0,104.0,2007,6,2,1,en,US,summer,Horror|Mystery,Medium
+868759,Ghosted,40.0,117.0,2023,4,3,1,en,US,spring,Action|Comedy|Romance,Medium
+11453,Deuce Bigalow: European Gigolo,22.0,83.0,2005,8,1,1,en,US,summer,Comedy,Low
+4234,Scream 3,40.0,116.0,2000,2,2,1,en,US,winter,Horror|Mystery,Low
+227973,The Peanuts Movie,99.0,88.0,2015,11,3,1,en,US,fall,Animation|Comedy|Family,Medium
+9594,Double Impact,15.0,110.0,1991,7,4,1,en,US,summer,Thriller|Action|Crime|Drama,Low
+60747,Red Dawn,65.0,93.0,2012,3,2,2,en,US,spring,Action|Thriller,Low
+75174,The Grey,25.0,117.0,2012,1,3,1,en,GB,winter,Action|Adventure|Thriller,Medium
+250546,Annabelle,6.5,99.0,2014,10,1,1,en,US,fall,Horror,Low
+369885,Allied,106.0,124.0,2016,11,5,4,en,CN,fall,Action|Drama|War|Romance|Thriller,Medium
+11774,Lemony Snicket's A Series of Unfortunate Events,140.0,108.0,2004,12,3,1,en,US,winter,Adventure|Comedy|Family,Medium
+38321,Priest,60.0,87.0,2011,5,3,3,en,US,spring,Action|Fantasy|Horror,Low
+14926,Uptown Girls,20.0,92.0,2003,8,2,1,en,US,summer,Comedy|Drama,Medium
+314,Catwoman,100.0,104.0,2004,7,3,2,en,CA,summer,Action|Fantasy|Crime,Low
+338952,Fantastic Beasts: The Crimes of Grindelwald,200.0,134.0,2018,11,2,2,en,GB,fall,Fantasy|Adventure,Medium
+27022,The Sorcerer's Apprentice,150.0,109.0,2010,7,3,1,en,US,summer,Fantasy|Adventure|Action,Low
+646389,Plane,25.0,107.0,2023,1,3,2,en,GB,winter,Action|Adventure|Thriller,Medium
+877703,Teen Wolf: The Movie,15.0,140.0,2023,1,3,2,en,US,winter,Action|Fantasy|TV Movie,High
+82703,Mr. Peabody & Sherman,145.0,92.0,2014,2,5,1,en,US,winter,Animation|Science Fiction|Comedy|Adventure|Family,Medium
+13161,Big Stan,7.5,109.0,2007,11,2,1,en,US,fall,Comedy|Crime,Medium
+43949,Flipped,14.0,89.0,2010,8,2,1,en,US,summer,Romance|Drama,High
+10398,Double Jeopardy,70.0,105.0,1999,9,3,1,en,DE,fall,Thriller|Crime|Mystery,Medium
+253412,Everest,55.0,121.0,2015,9,3,1,en,IS,fall,Adventure|Drama|History,Medium
+7191,Cloverfield,25.0,85.0,2008,1,3,2,en,US,winter,Action|Thriller|Science Fiction,Medium
+59436,Midnight in Paris,17.0,94.0,2011,5,3,4,en,FR,spring,Fantasy|Comedy|Romance,High
+2655,What Lies Beneath,100.0,130.0,2000,7,4,1,en,US,summer,Drama|Horror|Mystery|Thriller,Low
+283566,Evangelion: 3.0+1.0 Thrice Upon a Time,29.7,155.0,2021,3,4,1,ja,JP,spring,Animation|Action|Science Fiction|Drama,High
+399361,Triple Frontier,115.0,125.0,2019,3,4,3,en,US,spring,Action|Thriller|Crime|Adventure,Low
+1903,Vanilla Sky,68.0,136.0,2001,12,3,3,en,US,winter,Mystery|Romance|Science Fiction,Medium
+59859,Kick-Ass 2,28.0,103.0,2013,7,3,1,en,GB,summer,Action|Adventure|Crime,Low
+36643,The World Is Not Enough,135.0,128.0,1999,11,3,2,en,GB,fall,Adventure|Action|Thriller,Low
+1817,Phone Booth,13.0,81.0,2003,1,2,2,en,US,winter,Thriller|Crime,Medium
+11978,Men of Honor,32.0,129.0,2000,9,1,1,en,US,fall,Drama,High
+758866,Drive My Car,1.3,179.0,2021,8,1,8,ja,JP,summer,Drama,High
+109424,Captain Phillips,55.0,134.0,2013,10,3,2,en,US,fall,Action|Drama|Thriller,High
+8838,Mercury Rising,60.0,111.0,1998,4,4,1,en,US,spring,Action|Crime|Drama|Thriller,Low
+641,Requiem for a Dream,4.5,102.0,2000,10,2,1,en,US,fall,Crime|Drama,High
+9378,Thir13en Ghosts,42.0,91.0,2001,10,2,1,en,US,fall,Horror|Thriller,Low
+760161,Orphan: First Kill,10.0,99.0,2022,7,2,2,en,CA,summer,Horror|Thriller,Medium
+11322,Public Enemies,100.0,140.0,2009,7,3,1,en,US,summer,Crime|History|Drama,Medium
+1598,Cape Fear,35.0,128.0,1991,11,3,1,en,US,fall,Drama|Crime|Thriller,High
+11968,Into the Blue,50.0,110.0,2005,9,4,1,en,US,fall,Action|Thriller|Adventure|Crime,Low
+535292,21 Bridges,33.0,100.0,2019,10,3,1,en,US,fall,Crime|Action|Drama,Medium
+400617,Phantom Thread,35.0,130.0,2017,12,2,2,en,US,winter,Drama|Romance,High
+55931,The Animatrix,5.0,102.0,2003,5,2,2,en,JP,spring,Animation|Science Fiction,High
+136400,2 Guns,61.0,109.0,2013,8,3,2,en,US,summer,Action|Comedy|Crime,Low
+480414,The Curse of La Llorona,9.0,93.0,2019,4,1,2,en,US,spring,Horror,Low
+817,Austin Powers: The Spy Who Shagged Me,33.0,95.0,1999,6,3,2,en,US,summer,Comedy|Adventure|Crime,Low
+347375,Mile 22,35.0,94.0,2018,8,2,3,en,CN,summer,Action|Thriller,Low
+2100,The Last Castle,72.0,131.0,2001,10,3,1,en,US,fall,Action|Drama|Thriller,Medium
+2330,Taxi,8.7,86.0,1998,4,4,4,fr,FR,spring,Action|Comedy|Crime|Adventure,Medium
+50348,The Lincoln Lawyer,40.0,119.0,2011,3,3,1,en,US,spring,Crime|Drama|Thriller,High
+4614,The Sum of All Fears,68.0,124.0,2002,5,3,5,en,CA,spring,Thriller|Action|Drama,Low
+649609,Renfield,65.0,93.0,2023,4,3,2,en,US,spring,Comedy|Fantasy|Horror,Low
+333371,10 Cloverfield Lane,15.0,104.0,2016,3,4,1,en,US,spring,Thriller|Science Fiction|Drama|Horror,Medium
+6075,Carlito's Way,30.0,144.0,1993,11,3,2,en,US,fall,Crime|Drama|Thriller,High
+1255,The Host,11.0,120.0,2006,7,3,2,ko,KR,summer,Horror|Drama|Science Fiction,Medium
+9946,End of Days,100.0,122.0,1999,11,3,1,en,US,fall,Action|Horror|Fantasy,Low
+8839,Casper,50.0,100.0,1995,5,3,1,en,US,spring,Fantasy|Comedy|Family,Low
+3049,Ace Ventura: Pet Detective,15.0,86.0,1994,2,3,1,en,US,winter,Comedy|Crime|Mystery,Medium
+10665,The Strangers,9.0,86.0,2008,5,1,1,en,US,spring,Horror,Low
+11808,U.S. Marshals,60.0,131.0,1998,3,3,1,en,US,spring,Thriller|Crime|Action,Medium
+14784,The Fall,30.0,117.0,2006,9,3,3,en,US,fall,Adventure|Fantasy|Drama,High
+12163,The Wrestler,6.0,109.0,2008,12,2,1,en,US,winter,Drama|Romance,High
+455207,Crazy Rich Asians,30.0,121.0,2018,8,2,3,en,US,summer,Comedy|Romance,Medium
+20048,Confessions of a Shopaholic,40.0,104.0,2009,2,2,3,en,US,winter,Comedy|Romance,Low
+2277,Bicentennial Man,100.0,131.0,1999,12,3,1,en,DE,winter,Drama|Romance|Science Fiction,High
+76025,Shame,6.5,102.0,2011,10,1,1,en,CA,fall,Drama,Medium
+1196470,Survive,5.27,90.0,2024,6,4,2,fr,FR,summer,Science Fiction|Thriller|Adventure|Action,Low
+755566,Day Shift,100.0,114.0,2022,8,5,1,en,US,summer,Action|Fantasy|Horror|Comedy|Thriller,Medium
+724495,The Woman King,50.0,135.0,2022,9,4,2,en,CA,fall,Action|Drama|History|War,High
+372343,The Snowman,35.0,119.0,2017,8,4,1,en,SE,summer,Crime|Thriller|Mystery|Horror,Low
+4442,The Brothers Grimm,88.0,118.0,2005,8,5,4,en,US,summer,Adventure|Fantasy|Action|Comedy|Thriller,Low
+9986,Charlotte's Web,85.0,97.0,2006,12,3,1,en,DE,winter,Comedy|Family|Fantasy,Low
+513310,Boss Level,45.0,101.0,2021,2,3,1,en,GB,winter,Action|Science Fiction|Thriller,Medium
+1491,The Illusionist,16.5,110.0,2006,8,4,1,en,US,summer,Fantasy|Drama|Thriller|Romance,High
+1587,What's Eating Gilbert Grape,11.0,118.0,1993,12,2,1,en,GB,winter,Romance|Drama,High
+7840,"10,000 BC",105.0,109.0,2008,3,4,2,en,US,spring,Adventure|Action|Drama|Fantasy,Low
+49021,Killer Elite,66.0,116.0,2011,9,3,1,en,AU,fall,Action|Adventure|Thriller,Low
+9486,Johnny English,40.0,87.0,2003,3,3,3,en,GB,spring,Adventure|Action|Comedy,Low
+614917,King Richard,50.0,144.0,2021,11,2,1,en,US,fall,Drama|History,High
+355547,The Star,10.0,86.0,2017,11,5,1,en,US,fall,Animation|Comedy|Adventure|Family|Fantasy,Low
+39513,Paul,40.0,104.0,2011,2,3,1,en,GB,winter,Adventure|Comedy|Science Fiction,Medium
+10802,Showgirls,45.0,131.0,1995,9,1,1,en,US,fall,Drama,Low
+77016,End of Watch,7.0,109.0,2012,9,3,2,en,US,fall,Crime|Drama|Thriller,High
+7299,Equilibrium,20.0,107.0,2002,12,3,1,en,US,winter,Action|Science Fiction|Thriller,Medium
+293767,Billy Lynn's Long Halftime Walk,40.0,113.0,2016,11,2,1,en,CN,fall,Drama|War,Low
+125509,Wrong Turn 5: Bloodlines,3.0,91.0,2012,10,2,1,en,DE,fall,Horror|Thriller,Low
+109451,Cloudy with a Chance of Meatballs 2,78.0,95.0,2013,9,3,1,en,US,fall,Animation|Family|Comedy,Low
+11782,Hard Boiled,4.5,126.0,1992,4,3,3,cn,HK,spring,Action|Thriller|Crime,High
+7347,Elite Squad,4.0,115.0,2007,10,3,1,pt,BR,fall,Drama|Action|Crime,High
+8456,Never Back Down,20.0,113.0,2008,3,2,1,en,US,spring,Drama|Action,Medium
+356305,Why Him?,38.0,111.0,2016,12,1,1,en,US,winter,Comedy,Low
+10047,The Messenger: The Story of Joan of Arc,85.0,158.0,1999,10,5,2,en,FR,fall,Adventure|Drama|Action|History|War,Low
+6877,Failure to Launch,50.0,97.0,2006,3,2,1,en,US,spring,Romance|Comedy,Low
+2082,Halloween,15.0,110.0,2007,8,1,1,en,US,summer,Horror,Low
+41439,Saw 3D,17.0,90.0,2010,10,2,1,en,US,fall,Horror|Crime,Low
+867,Sliver,40.0,107.0,1993,5,2,1,en,US,spring,Drama|Thriller,Low
+9411,Fallen,46.0,124.0,1998,1,4,2,en,US,winter,Crime|Drama|Thriller|Fantasy,Medium
+13920,Radio,35.0,109.0,2003,10,1,1,en,US,fall,Drama,High
+614934,Elvis,85.0,159.0,2022,6,3,1,en,AU,summer,Music|History|Drama,High
+13600,City of Ember,55.0,95.0,2008,10,3,1,en,US,fall,Adventure|Family|Fantasy,Low
+284293,Still Alice,5.0,101.0,2014,12,1,1,en,FR,winter,Drama,High
+11087,The Hand That Rocks the Cradle,11.7,110.0,1992,1,2,1,en,US,winter,Drama|Thriller,Medium
+334533,Captain Fantastic,5.0,119.0,2016,7,2,2,en,US,summer,Drama|Comedy,High
+719221,Tarot,8.0,92.0,2024,5,1,1,en,US,spring,Horror,Low
+97370,Under the Skin,13.3,108.0,2014,3,3,1,en,GB,spring,Thriller|Science Fiction|Drama,Low
+474395,Teen Titans Go! To the Movies,10.0,84.0,2018,7,4,1,en,US,summer,Animation|Action|Comedy|Science Fiction,Medium
+49017,Dracula Untold,70.0,92.0,2014,10,3,1,en,US,fall,Horror|Action|Fantasy,Low
+9481,The Bone Collector,73.0,118.0,1999,11,4,1,en,US,fall,Crime|Thriller|Drama|Mystery,Medium
+888,The Flintstones,46.0,91.0,1994,5,3,1,en,US,spring,Fantasy|Comedy|Family,Low
+68728,Oz the Great and Powerful,200.0,130.0,2013,3,3,1,en,US,spring,Fantasy|Adventure|Family,Low
+799379,Project Wolf Hunting,9.0,122.0,2022,9,4,3,ko,KR,fall,Action|Thriller|Horror|Crime,Low
+10637,Remember the Titans,30.0,113.0,2000,9,1,1,en,US,fall,Drama,High
+9539,Martyrs,6.5,99.0,2008,6,3,2,fr,FR,summer,Horror|Drama|Thriller,High
+6279,Sister Act 2: Back in the Habit,38.0,107.0,1993,12,2,1,en,US,winter,Music|Comedy,Low
+2899,Asterix & Obelix: Mission Cleopatra,58.5,108.0,2002,1,4,5,fr,FR,winter,Family|Fantasy|Comedy|Adventure,High
+634,Bridget Jones's Diary,25.0,97.0,2001,4,3,1,en,IE,spring,Comedy|Romance|Drama,Medium
+9619,Dante's Peak,116.0,108.0,1997,2,4,1,en,US,winter,Action|Adventure|Drama|Thriller,Low
+292431,Love,3.0,134.0,2015,7,2,1,fr,BE,summer,Drama|Romance,Low
+186,Lucky Number Slevin,27.0,110.0,2006,2,4,1,en,CA,winter,Drama|Thriller|Crime|Mystery,High
+71668,Piranha 3DD,5.0,83.0,2012,5,3,1,en,US,spring,Horror|Thriller|Comedy,Low
+381289,A Dog's Purpose,22.0,100.0,2017,1,4,1,en,IN,winter,Adventure|Fantasy|Family|Drama,High
+337844,In Dubious Battle,10.0,110.0,2016,10,1,1,en,US,fall,Drama,Low
+9944,The Pelican Brief,45.0,141.0,1993,9,3,1,en,US,fall,Thriller|Crime|Drama,Medium
+23629,Sucker Punch,82.0,110.0,2011,3,3,2,en,US,spring,Action|Fantasy|Thriller,Low
+11000,The Birdcage,31.0,119.0,1996,3,2,2,en,US,spring,Comedy|Romance,Medium
+531309,Brightburn,6.0,91.0,2019,5,3,1,en,US,spring,Horror|Science Fiction|Drama,Low
+2252,Eastern Promises,51.5,100.0,2007,9,3,5,en,CA,fall,Thriller|Crime|Mystery,High
+385103,Scoob!,90.0,94.0,2020,7,4,1,en,US,summer,Animation|Comedy|Family|Mystery,Medium
+807172,The Exorcist: Believer,30.0,111.0,2023,10,1,4,en,US,fall,Horror,Low
+308504,Last Knights,40.0,115.0,2015,4,2,1,en,CZ,spring,Action|Adventure,Low
+10663,The Waterboy,23.0,90.0,1998,11,1,1,en,US,fall,Comedy,Low
+290595,The Huntsman: Winter's War,115.0,114.0,2016,4,3,1,en,US,spring,Action|Adventure|Drama,Low
+51608,The Man from Nowhere,1.255,119.0,2010,8,3,2,ko,KR,summer,Action|Thriller|Crime,High
+267935,The BFG,140.0,117.0,2016,6,3,1,en,IN,summer,Adventure|Family|Fantasy,Low
+975511,The Return,20.0,116.0,2024,11,3,1,en,GR,fall,History|Drama|Adventure,Medium
+8960,Hancock,150.0,92.0,2008,7,2,4,en,US,summer,Fantasy|Action,Low
+994108,All of Us Strangers,5.0,105.0,2023,12,3,1,en,GB,winter,Romance|Drama|Fantasy,High
+48340,Sanctum,30.0,108.0,2011,2,2,1,en,US,winter,Action|Thriller,Low
+12139,Dennis the Menace,35.0,96.0,1993,6,2,1,en,US,summer,Family|Comedy,Low
+5528,The Chorus,5.3,97.0,2004,3,3,1,fr,FR,spring,Drama|Comedy|Music,High
+97367,The Place Beyond the Pines,15.0,140.0,2013,3,2,2,en,US,spring,Drama|Crime,Medium
+334,Magnolia,37.0,189.0,1999,12,1,3,en,US,winter,Drama,High
+6795,Zathura: A Space Adventure,65.0,101.0,2005,11,3,1,en,US,fall,Science Fiction|Adventure|Family,Low
+333669,Bastille Day,20.0,92.0,2016,4,1,2,en,FR,spring,Action,Low
+49040,The Bourne Legacy,130.0,135.0,2012,8,2,2,en,US,summer,Action|Thriller,Low
+16320,Serenity,39.0,119.0,2005,9,4,2,en,US,fall,Science Fiction|Action|Adventure|Thriller,High
+123553,The Mortal Instruments: City of Bones,60.0,130.0,2013,8,3,1,en,CA,summer,Fantasy|Action|Mystery,Low
+2043,Along Came a Spider,60.0,104.0,2001,4,4,2,en,CA,spring,Crime|Mystery|Thriller|Action,Low
+4564,Sex and the City,65.0,146.0,2008,5,3,1,en,US,spring,Comedy|Drama|Romance,Medium
+481848,The Call of the Wild,109.0,100.0,2020,2,3,2,en,US,winter,Adventure|Family|Drama,High
+1064486,Memoir of a Snail,4.35,94.0,2024,10,3,2,en,AU,fall,Animation|Comedy|Drama,High
+8277,American Pie Presents: Beta House,10.0,89.0,2007,12,1,1,en,US,winter,Comedy,Low
+9334,The Scorpion King,60.0,92.0,2002,4,3,4,en,US,spring,Action|Adventure|Fantasy,Low
+60308,Moneyball,50.0,134.0,2011,9,1,1,en,US,fall,Drama,High
+1965,A Perfect Murder,60.0,107.0,1998,6,3,2,en,US,summer,Crime|Thriller|Drama,Medium
+258509,Alvin and the Chipmunks: The Road Chip,90.0,92.0,2015,12,5,1,en,US,winter,Family|Comedy|Music|Adventure|Animation,Low
+978,Seven Years in Tibet,70.0,136.0,1997,9,3,6,en,US,fall,Adventure|Drama|History,Medium
+830788,The Invitation,10.0,105.0,2022,8,2,2,en,US,summer,Horror|Thriller,Low
+634528,The Marksman,23.0,108.0,2021,1,3,2,en,US,winter,Action|Drama|Thriller,Medium
+257445,Goosebumps,58.0,103.0,2015,8,3,1,en,US,summer,Adventure|Horror|Comedy,Low
+214,Saw III,10.0,108.0,2006,10,3,1,en,US,fall,Horror|Thriller|Crime,Low
+100,"Lock, Stock and Two Smoking Barrels",1.35,105.0,1998,8,2,1,en,GB,summer,Comedy|Crime,High
+10779,The Frighteners,30.0,110.0,1996,7,2,1,en,NZ,summer,Horror|Comedy,Medium
+60935,The Thing,35.0,103.0,2011,10,3,3,en,US,fall,Horror|Science Fiction|Mystery,Low
+2636,The Specialist,45.0,110.0,1994,10,2,1,en,US,fall,Action|Thriller,Low
+8065,21,35.0,123.0,2008,3,2,1,en,US,spring,Drama|Crime,Medium
+64328,The Muppets,45.0,103.0,2011,11,3,1,en,US,fall,Comedy|Family|Adventure,Medium
+823625,Blacklight,43.0,104.0,2022,2,3,1,en,AU,winter,Action|Thriller|Adventure,Low
+457332,Hidden Strike,80.0,103.0,2023,7,4,2,en,CN,summer,Action|Comedy|Thriller|Adventure,Medium
+365045,Heidi,8.8,111.0,2015,12,3,1,de,DE,winter,Adventure|Family|Drama,High
+204922,Before I Go to Sleep,22.0,92.0,2014,9,2,1,en,FR,fall,Thriller|Mystery,Low
+249070,Hitman: Agent 47,35.0,96.0,2015,8,3,1,en,GB,summer,Action|Crime|Thriller,Low
+55301,Alvin and the Chipmunks: Chipwrecked,75.0,87.0,2011,12,5,1,en,US,winter,Comedy|Fantasy|Family|Music|Animation,Low
+8195,Ronin,55.0,122.0,1998,9,3,3,en,GB,fall,Action|Thriller|Crime,Medium
+1542,Office Space,10.0,90.0,1999,2,1,1,en,US,winter,Comedy,High
+539681,DC League of Super-Pets,90.0,105.0,2022,7,6,1,en,US,summer,Family|Comedy|Adventure|Animation|Science Fiction|Action,Medium
+45772,Gnomeo & Juliet,36.0,84.0,2011,1,2,1,en,GB,winter,Animation|Family,Low
+559907,The Green Knight,15.0,130.0,2021,7,3,1,en,CA,summer,Adventure|Drama|Fantasy,Medium
+68734,Argo,44.5,120.0,2012,10,2,4,en,US,fall,Drama|Thriller,High
+582014,Promising Young Woman,10.0,114.0,2020,12,3,1,en,US,winter,Thriller|Crime|Drama,High
+870360,The Day the Earth Blew Up: A Looney Tunes Movie,15.0,91.0,2024,8,5,1,en,US,summer,Family|Comedy|Adventure|Animation|Science Fiction,High
+744276,After Ever Happy,14.0,95.0,2022,8,2,1,en,US,summer,Romance|Drama,Medium
+590223,Love and Monsters,30.0,109.0,2020,10,3,1,en,US,fall,Adventure|Comedy|Fantasy,High
+51828,One Day,15.0,107.0,2011,3,2,1,en,GB,spring,Drama|Romance,High
+13680,The Game Plan,22.0,110.0,2007,9,2,1,en,US,fall,Comedy|Family,Medium
+22894,Legion,26.0,100.0,2010,1,3,1,en,US,winter,Action|Fantasy|Horror,Low

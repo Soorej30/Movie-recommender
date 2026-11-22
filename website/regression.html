@@ -22,9 +22,10 @@
     <a href="pca.html">PCA</a>
     <a href="naive_bayes.html">Naive Bayes</a>
     <a href="decision_trees.html">Decision Trees</a>
-    <a href="svm.html">SVMs</a>
     <a href="regression.html" class="active">Regression</a>
-    <a href="neural_networks.html">Neural Networks</a>
+    <a href="adaboost.html">AdaBoost</a>
+    <a href="gradient_boosting.html">GradientBoosting</a>
+    <a href="xgboost.html">XGBoost</a>
     <a href="conclusions.html">Conclusions</a>
     <a href="about.html">About Me</a>
   </nav>
@@ -34,32 +35,328 @@
 <main>
   <h2 class="page-title">Regression</h2>
 
+  <!-- ============================================================ OVERVIEW -->
   <section class="block">
     <h3>Overview</h3>
     <p>
-      Linear regression will be used to model a continuous outcome, such as box-office revenue or
-      popularity score, as a function of measurable movie attributes like budget, runtime, vote
-      count, and release timing. Rather than predicting a category, this method estimates how
-      much a change in one attribute is associated with a change in the outcome, which speaks
-      directly to questions about how strongly budget and other factors relate to a film's
-      commercial performance.
+      Regression covers a family of supervised models that predict an outcome from a set of input
+      features. This tab uses the two most common ones. They look alike on paper but answer
+      different kinds of questions.
     </p>
-    <p class="status-note">Full analysis arrives in Module 5.</p>
+    <ul>
+      <li>
+        <strong>Linear regression predicts a number.</strong> It assumes the outcome is roughly a
+        weighted sum of the inputs: <em>y = b<sub>0</sub> + b<sub>1</sub>x<sub>1</sub> +
+        b<sub>2</sub>x<sub>2</sub> + &hellip;</em>. Each weight (coefficient) says how much the
+        prediction moves when that one feature goes up by 1 and everything else stays the same. The
+        model picks the weights that make the squared gaps between the predictions and the real
+        values (the <strong>residuals</strong>) as small as possible. That's called <em>ordinary
+        least squares</em>. Here I use it to predict a movie's <strong>box office revenue in
+        millions of dollars</strong>.
+      </li>
+      <li>
+        <strong>Logistic regression predicts a class.</strong> Despite the name, it's a
+        classifier. It still starts from the same kind of weighted sum, but that sum, called the
+        score <em>z</em>, can be any number from minus infinity to plus infinity, and a probability
+        has to stay between 0 and 1. So logistic regression passes the score through the
+        <strong>sigmoid</strong> function, <em>p = 1 / (1 + e<sup>&minus;z</sup>)</em>. A score
+        of 0 becomes a probability of 0.5, large positive scores get close to 1, and large negative
+        scores get close to 0. To turn the probability into a class, you use a cutoff. The default
+        is 0.5, so if <em>p</em> &ge; 0.5 (which is the same as <em>z</em> &ge; 0) the movie is
+        called <strong>High</strong>, and otherwise <strong>Not High</strong>. Here I use it to
+        predict whether a movie will be <strong>highly rated</strong> by audiences.
+      </li>
+    </ul>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/regression/concept_linear_vs_logistic.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/regression/concept_linear_vs_logistic.png" alt="Linear regression line through numeric data next to a logistic S-curve through 0/1 data"></a>
+        <figcaption><strong>Same idea, different output.</strong> Left: linear regression fits a straight line through numeric values. The grey lines are the residuals it tries to shrink. Right: logistic regression fits an S-shaped curve through 0/1 labels. The height of the curve is the predicted probability of the class "High", and the dotted 0.5 line is where the predicted class flips.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/regression/concept_sigmoid.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/regression/concept_sigmoid.png" alt="The sigmoid function mapping a linear score to a probability"></a>
+        <figcaption><strong>The sigmoid.</strong> The linear score <em>z</em> goes in, a probability comes out. A score of &minus;3 becomes 0.05, 0 becomes 0.50, and 2 becomes 0.88. Everything to the right of <em>z</em> = 0 is classified High.</figcaption>
+      </figure>
+    </div>
+    <p><strong>How the two differ</strong></p>
+    <div class="table-wrap">
+      <table class="results-table">
+        <tr><th></th><th>Linear regression</th><th>Logistic regression</th></tr>
+        <tr><td>Predicts</td><td>A number (revenue in $M)</td><td>A probability, then a class (High or Not High)</td></tr>
+        <tr><td>Output range</td><td>Any number, even a negative one</td><td>Between 0 and 1</td></tr>
+        <tr><td>How it's fit</td><td>Least squares (minimize squared residuals)</td><td>Maximum likelihood (minimize log loss)</td></tr>
+        <tr><td>A coefficient means</td><td>Change in <em>y</em> per 1-unit change in <em>x</em></td><td>Change in the <em>log-odds</em> per 1-unit change in <em>x</em>. e<sup>coef</sup> is the factor that multiplies the odds.</td></tr>
+        <tr><td>Graded with</td><td>RMSE, MAE, R&sup2;</td><td>Accuracy, confusion matrix, precision and recall</td></tr>
+      </table>
+    </div>
+    <p>
+      The score <em>z</em> in logistic regression is the <strong>log-odds</strong>, meaning
+      log(<em>p</em> / (1 &minus; <em>p</em>)). That's what makes its coefficients readable. If a
+      feature goes up by 1, the log-odds go up by its coefficient <em>b</em>, which means the odds
+      get multiplied by e<sup><em>b</em></sup>. That number is the <strong>odds ratio</strong>.
+      An odds ratio above 1 makes the class more likely, and one below 1 makes it less likely.
+    </p>
   </section>
 
+  <!-- ============================================================ DATA PREP -->
   <section class="block">
-    <h3>Data</h3>
-    <p class="status-note">Prepared dataset preview and links arrive in Module 5.</p>
+    <h3>Data Prep</h3>
+    <p>
+      Both models are supervised, so every movie needs a known answer. I used the same features as
+      the Decision Trees tab. They're all things a studio knows <em>before</em> release: budget (in
+      $M), runtime, release year, release month, number of genres, number of spoken languages, an
+      <code>is_english</code> flag, an <code>is_us</code> flag, and one 0/1 column for each of the
+      18 genres. That makes 26 numeric features. Vote count and popularity are left out because
+      they're only known after release, so including them would leak the answer.
+    </p>
+    <ul>
+      <li>
+        <strong>Linear regression needs a numeric target.</strong> I used
+        <code>revenue_musd</code>, which is worldwide box office revenue in millions of dollars.
+        Movies with no revenue figure, or a placeholder value under $1M (TMDB sometimes stores
+        things like "7"), are dropped from this model only. That leaves 1,325 training and 439
+        testing movies.
+      </li>
+      <li>
+        <strong>Logistic regression needs a two-class label.</strong> I used
+        <code>is_high_rated</code>, which is 1 if <code>vote_average</code> is above 7.2 and 0
+        otherwise. That's exactly the "High" class from the Naive Bayes and Decision Trees tabs,
+        with Low and Medium merged into "Not High". 646 of the 1,828 movies (35%) are High.
+      </li>
+      <li>
+        <strong>Scaling.</strong> Linear regression is fit on the raw units, so its coefficients
+        read directly as "dollars per minute" and so on. For logistic regression, the six numeric
+        columns are standardized (mean 0, standard deviation 1) because the solver works much better
+        when features are on similar scales. The scaler is fit on the training set only. The 0/1
+        columns are left alone, so their odds ratios still mean "has this genre vs. doesn't".
+      </li>
+    </ul>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/naive_bayes/data_before.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/naive_bayes/data_before.png" alt="Cleaned movie data before feature prep"></a>
+        <figcaption><strong>Starting point.</strong> The cleaned TMDB movies with raw genre text, dates, revenue and rating. This is the same starting point as the other supervised tabs.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/regression/data_labeled.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/regression/data_labeled.png" alt="Prepared data with numeric features and both targets"></a>
+        <figcaption><strong>Data used for both models.</strong> All-numeric features plus the two targets: <code>revenue_musd</code> for linear regression and <code>is_high_rated</code> for logistic regression. Only some of the 26 feature columns fit in the picture.</figcaption>
+      </figure>
+    </div>
+
+    <p><strong>Training set and testing set</strong></p>
+    <p>
+      I reused the <em>exact same</em> stratified 75/25 split as the Naive Bayes and Decision Trees
+      tabs. That's 1,371 movies for training and 457 for testing, chosen by movie id with a fixed
+      random seed. Because it's the same split, logistic regression and Naive Bayes are graded on
+      the same 457 movies. The models are fit only on the training set, and the testing set is used
+      once at the end.
+    </p>
+    <p>
+      The two sets <strong>must be disjoint</strong>. A model can always do well on movies it has
+      already seen. Linear regression can bend its coefficients to fit quirks of the training
+      movies, and logistic regression can do the same with its probabilities. If any test movie were
+      also in training, the test score would partly measure memory and not prediction, and it would
+      look better than the model really is. The code checks that the two sets of ids don't
+      overlap, and they don't.
+    </p>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/regression/train_sample.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/regression/train_sample.png" alt="Sample rows from the training set"></a>
+        <figcaption><strong>Training set sample.</strong> A few of the 1,371 movies the models learn from.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/regression/test_sample.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/regression/test_sample.png" alt="Sample rows from the testing set"></a>
+        <figcaption><strong>Testing set sample.</strong> A few of the 457 held-out movies. No id appears in both sets.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/regression/train_test_split.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/regression/train_test_split.png" alt="Bar chart of High vs Not High counts in training and testing sets"></a>
+        <figcaption><strong>The split.</strong> Both sides have the same share of High movies, about 35%.</figcaption>
+      </figure>
+    </div>
+    <div class="data-links">
+      <a href="../data/prepared/reg_labeled.csv">Labeled data sample (CSV)</a>
+      <a href="../data/prepared/reg_train.csv">Training set (CSV)</a>
+      <a href="../data/prepared/reg_test.csv">Testing set (CSV)</a>
+    </div>
   </section>
 
+  <!-- ============================================================ CODE -->
   <section class="block">
     <h3>Code</h3>
-    <p class="status-note">Link to regression code, language, and core packages arrives in Module 5.</p>
+    <p>
+      Everything is in Python, using scikit-learn's <code>LinearRegression</code>,
+      <code>LogisticRegression</code>, <code>StandardScaler</code> and metrics, along with
+      <code>pandas</code> and <code>matplotlib</code>. The label and the split come from the shared
+      file that every supervised tab uses.
+    </p>
+    <div class="data-links">
+      <a href="../scripts/regression.py">regression.py (full code)</a>
+      <a href="../scripts/supervised_prep.py">supervised_prep.py (label and split)</a>
+    </div>
+<pre><code># linear regression: revenue in $M
+lin = LinearRegression().fit(X_train, revenue_train)
+pred = lin.predict(X_test)
+rmse = mean_squared_error(revenue_test, pred) ** 0.5
+r2 = r2_score(revenue_test, pred)
+
+# logistic regression: is_high_rated (scale only the 6 numeric columns)
+logit = make_pipeline(
+    ColumnTransformer([("scale", StandardScaler(), NUMERIC)], remainder="passthrough"),
+    LogisticRegression(max_iter=5000))
+logit.fit(X_train, high_train)
+print(accuracy_score(high_test, logit.predict(X_test)))
+odds_ratios = np.exp(logit[-1].coef_[0])</code></pre>
   </section>
 
+  <!-- ============================================================ RESULTS -->
   <section class="block">
     <h3>Results</h3>
-    <p class="status-note">Model fit, residual diagnostics, and visualizations arrive in Module 5.</p>
+
+    <p><strong>Linear regression: predicting box office revenue</strong></p>
+    <div class="table-wrap">
+      <table class="results-table">
+        <tr><th>Model</th><th>Test RMSE</th><th>Test MAE</th><th>Test R&sup2;</th><th>Train R&sup2;</th></tr>
+        <tr><td>Linear regression (26 features)</td><td><strong>$224M</strong></td><td><strong>$140M</strong></td><td><strong>0.42</strong></td><td>0.50</td></tr>
+        <tr><td>Baseline: always predict the training mean ($252M)</td><td>$295M</td><td>$198M</td><td>0.00</td><td></td></tr>
+      </table>
+    </div>
+    <p>
+      On the 439 test movies, the model explains <strong>42% of the variation in revenue</strong>
+      (R&sup2; = 0.42). It cuts the typical error (MAE) from $198M to $140M compared with just
+      guessing the average. The training R&sup2; is only a bit higher (0.50), so it isn't badly
+      overfitting. The RMSE ($224M) is much bigger than the MAE because RMSE squares the errors,
+      and a few blockbusters are missed by a billion dollars or more.
+    </p>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/regression/linreg_pred_vs_actual.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/regression/linreg_pred_vs_actual.png" alt="Predicted versus actual revenue for the test movies"></a>
+        <figcaption><strong>Predicted vs. actual revenue.</strong> Points on the dashed line are perfect predictions. The model does reasonably well under about $500M. Above that, the points sit below the line: 47 of the 52 movies over $500M, and all 19 over $1B, are under-predicted. It can't tell a $1.5 billion hit like Frozen II or Jurassic World from an ordinary $500M one, because nothing in the pre-release features says "this will become a phenomenon". Joker ($1.08B on a $55M budget) is the most extreme miss.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/regression/linreg_residuals.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/regression/linreg_residuals.png" alt="Residuals versus predicted revenue"></a>
+        <figcaption><strong>Residuals.</strong> The errors spread out as predictions get bigger (a fan shape). That means the model is least reliable for big-budget movies, which is exactly where the money is.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/regression/linreg_coefficients.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/regression/linreg_coefficients.png" alt="Linear regression coefficients"></a>
+        <figcaption><strong>All 26 coefficients.</strong> Each bar is the change in predicted revenue for a 1-unit increase, holding everything else fixed. For the 0/1 columns, that's the effect of having that genre or flag.</figcaption>
+      </figure>
+    </div>
+    <p>Two coefficients in plain words:</p>
+    <ul>
+      <li>
+        <strong>budget_musd = +2.52.</strong> If two movies are the same in every other way, the
+        one with $1M more budget is predicted to earn about <strong>$2.52M more</strong> at the box
+        office. So on average every budget dollar comes back about 2.5 times in gross revenue
+        (before marketing costs and the theaters' cut). Budget is the main driver of this model.
+      </li>
+      <li>
+        <strong>genre_animation = +140.4.</strong> At the same budget, runtime, year and so on, an
+        animated movie is predicted to earn about <strong>$140M more</strong> than a non-animated
+        one. Family audiences and repeat viewing make animation the most bankable genre.
+      </li>
+    </ul>
+    <p>
+      For contrast, <strong>genre_drama = &minus;48.4</strong>. Being a drama lowers predicted
+      revenue by about $48M. And <strong>runtime = +2.41</strong>, so each extra minute adds about
+      $2.4M, which mostly reflects that long movies tend to be big event films.
+    </p>
+
+    <p><strong>Logistic regression: predicting a High rating</strong></p>
+    <p>
+      On the 457 test movies, logistic regression was right <strong>75.5%</strong> of the time
+      (training: 75.3%). The baseline of always guessing "Not High" gets 64.8%, so the model adds
+      about 11 points. It's careful about calling a movie High. When it does, it's right 74% of the
+      time (precision), but it only finds 47% of the truly High movies (recall). Many High
+      movies get probabilities below 0.5.
+    </p>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/regression/logreg_confusion.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/regression/logreg_confusion.png" alt="Confusion matrix for logistic regression"></a>
+        <figcaption><strong>Confusion matrix (75.5% accuracy).</strong> 269 Not High and 76 High movies were classified correctly. The main mistake is 85 High movies being called Not High. Only 27 movies went the other way.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/regression/logreg_probabilities.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/regression/logreg_probabilities.png" alt="Histogram of predicted probabilities by true class"></a>
+        <figcaption><strong>Predicted probabilities.</strong> Not High movies pile up near 0.1 to 0.3. High movies are spread across the whole range, and about half of them get between 0.15 and 0.5, so they end up below the cutoff. Lowering the cutoff would catch more High movies but would also flag more Not High ones.</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/regression/logreg_odds_ratios.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/regression/logreg_odds_ratios.png" alt="Odds ratios for each feature"></a>
+        <figcaption><strong>Odds ratios (e<sup>coef</sup>).</strong> Bars to the right of 1 make a High rating more likely, and bars to the left make it less likely. Numeric features are per 1 standard deviation.</figcaption>
+      </figure>
+    </div>
+    <p>What the coefficients mean for the odds:</p>
+    <ul>
+      <li>
+        <strong>genre_animation: coefficient 2.12, odds ratio 8.3.</strong> Keeping everything
+        else the same, being animated <strong>multiplies the odds of a High rating by about 8</strong>.
+        For example, a movie with even odds (1 to 1, so p = 0.5) would go to about 8 to 1 (p &asymp;
+        0.89) just by being animated.
+      </li>
+      <li>
+        <strong>runtime: odds ratio 2.1 per standard deviation.</strong> One standard deviation is
+        21.7 minutes, so a movie about 22 minutes longer has roughly <strong>twice the odds</strong>
+        of being High.
+      </li>
+      <li>
+        <strong>genre_horror and is_english: odds ratio 0.23.</strong> Each one cuts the odds to
+        about a quarter. The English effect is a selection effect. The non-English films that make
+        it into a popularity-sorted TMDB sample are mostly acclaimed imports (Studio Ghibli,
+        Parasite and so on), so "not English" ends up meaning "already recognized as great". In my data, 80% of the non-English films are High, compared with 32% of the English ones.
+      </li>
+      <li>
+        <strong>budget: odds ratio 0.74 per $66M.</strong> More money slightly <em>lowers</em> the
+        odds of a High rating, even though linear regression shows it strongly <em>raises</em>
+        revenue.
+      </li>
+    </ul>
+
+    <p><strong>Logistic regression vs. Naive Bayes</strong></p>
+    <p>
+      The Naive Bayes model from Part 3 predicted three classes (Low, Medium, High) and got 57.8%.
+      You can't compare that directly to a two-class score. To make it fair, I retrained the same
+      Multinomial Naive Bayes, with its own banded 0/1 features from the Naive Bayes tab, on the
+      <em>same two-class label</em> and the <em>same split</em>.
+    </p>
+    <div class="table-wrap">
+      <table class="results-table">
+        <tr><th>Model (High vs. Not High, same 457 test movies)</th><th>Accuracy</th><th>Precision (High)</th><th>Recall (High)</th></tr>
+        <tr><td>Baseline: always Not High</td><td>64.8%</td><td></td><td>0%</td></tr>
+        <tr><td>Logistic regression</td><td><strong>75.5%</strong></td><td>73.8%</td><td>47.2%</td></tr>
+        <tr><td>Multinomial Naive Bayes</td><td><strong>77.0%</strong></td><td>75.5%</td><td>51.6%</td></tr>
+      </table>
+    </div>
+    <div class="gallery">
+      <figure>
+        <a class="zoom" href="assets/img/regression/nb_binary_confusion.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/regression/nb_binary_confusion.png" alt="Confusion matrix for Naive Bayes on the two-class label"></a>
+        <figcaption><strong>Naive Bayes on the same task (77.0%).</strong> It makes exactly the same 27 false alarms as logistic regression, but finds 7 more High movies (83 vs. 76).</figcaption>
+      </figure>
+      <figure>
+        <a class="zoom" href="assets/img/regression/logreg_vs_nb.png" target="_blank" rel="noopener" title="Click to view full size"><img src="assets/img/regression/logreg_vs_nb.png" alt="Accuracy of logistic regression vs Naive Bayes vs baseline"></a>
+        <figcaption><strong>Head to head.</strong> Both beat the baseline by more than 10 points and finish within 1.5 points of each other.</figcaption>
+      </figure>
+    </div>
+    <p>
+      Naive Bayes edges out logistic regression by <strong>1.5 points</strong> (7 more correct
+      movies out of 457). That's a very small gap. Both are linear models in the end, since Naive
+      Bayes also adds up one weight per feature, and here they mostly make the same mistakes. Naive
+      Bayes probably gets a small boost from its <em>banded</em> features. Its runtime and budget
+      bands let it say "140+ minutes is very different from 120 to 139" without forcing a straight
+      line, while logistic regression treats each extra minute the same. Logistic regression's
+      advantage is that its coefficients are easy to read as odds ratios, and it gives
+      better-calibrated probabilities, because it doesn't assume the features are independent.
+    </p>
+  </section>
+
+  <!-- ============================================================ CONCLUSIONS -->
+  <section class="block">
+    <h3>Conclusions</h3>
+    <p>
+      The two regressions answer the two halves of my question, <em>commercial</em> success and
+      <em>critical</em> success. They point in different directions.
+    </p>
+    <ul>
+      <li><strong>Money predicts money.</strong> Using only what's known before release, I can predict a movie's box office to within about $140M on average and explain 42% of the variation. Budget does most of the work: each extra $1M of budget comes with about $2.5M more revenue. Animation and adventure add a lot on top of that, and drama, history and westerns subtract.</li>
+      <li><strong>Money doesn't predict acclaim.</strong> In the rating model, budget points the other way. Bigger budgets come with slightly <em>lower</em> odds of a High rating. The things that raise the odds are animation (8 times the odds), longer runtimes and drama. The things that lower them are horror, comedy and action. This matches what the trees and clustering found: cheaper, longer, serious films rate well, and expensive spectacle earns money without earning top scores.</li>
+      <li><strong>The biggest hits can't be predicted.</strong> The linear model underestimates all 19 billion-dollar movies in the testing set. Whatever turns a solid release into a phenomenon (franchise hype, cultural moment, word of mouth) isn't in pre-release data like budget, runtime and genre.</li>
+      <li><strong>"Will it be highly rated?" is about 75% predictable</strong> from genre, runtime, language and budget alone. That's well above guessing, but the model still misses half of the truly great films. A lot of what makes a movie great is the craft itself, which these features can't measure.</li>
+    </ul>
   </section>
 </main>
 
